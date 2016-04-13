@@ -1,5 +1,5 @@
 {
-  "name": "angular2-quickstart",
+  "name": "Angular2TS-Starter-Kit",
   "version": "1.0.0",
   "description": "A simple starter project for Angular 2",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Shyam-Chen/angular2-quickstart.git"
+    "url": "git+https://github.com/Shyam-Chen/Angular2TS-Starter-Kit.git"
   },
   "keywords": [
     "angular2"
@@ -18,9 +18,9 @@
   "author": "Shyam Chen, 陳彥澄",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Shyam-Chen/angular2-quickstart/issues"
+    "url": "https://github.com/Shyam-Chen/Angular2TS-Starter-Kit/issues"
   },
-  "homepage": "https://github.com/Shyam-Chen/angular2-quickstart#readme",
+  "homepage": "https://github.com/Shyam-Chen/Angular2TS-Starter-Kit#readme",
   "dependencies": {
     "angular2": "2.0.0-beta.14",
     "es6-module-loader": "^0.17.11",
