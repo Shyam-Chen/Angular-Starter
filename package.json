@@ -1,0 +1,47 @@
+{
+  "name": "angular2-quickstart",
+  "version": "1.0.0",
+  "description": "A simple starter project for Angular 2",
+  "scripts": {
+    "start": "rimraf dist && gulp",
+    "postinstall": "typings install",
+    "clean": "rimraf dist",
+    "reinstall": "npm cache clean && git clean -dfx -e '.*' && npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shyam-Chen/angular2-quickstart.git"
+  },
+  "keywords": [
+    "angular2"
+  ],
+  "author": "Shyam Chen, 陳彥澄",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Shyam-Chen/angular2-quickstart/issues"
+  },
+  "homepage": "https://github.com/Shyam-Chen/angular2-quickstart#readme",
+  "dependencies": {
+    "angular2": "2.0.0-beta.14",
+    "es6-module-loader": "^0.17.11",
+    "es6-promise": "^3.1.2",
+    "es6-shim": "^0.35.0",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.2",
+    "systemjs": "^0.19.26",
+    "zone.js": "^0.6.10"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.12.2",
+    "gulp": "^3.9.1",
+    "gulp-changed": "^1.3.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-stylus": "^2.3.1",
+    "gulp-typescript": "^2.13.0",
+    "poststylus": "^0.2.3",
+    "rucksack-css": "^0.8.5",
+    "run-sequence": "^1.1.5",
+    "ts-node": "^0.7.1",
+    "typescript": "^1.8.10"
+  }
+}

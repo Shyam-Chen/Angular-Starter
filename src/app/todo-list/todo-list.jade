@@ -1,0 +1,14 @@
+input(
+  #newItem='',
+  (keyup.enter)="addItem(newItem.value); newItem.value=''",
+  (keyup)='values=newItem.value'
+)
+  
+p {{values}}
+  
+button(
+  (click)="addItem(newItem.value); newItem.value=''; values=''"
+) Add
+  
+ul
+  li(*ngFor='#item of list') {{item}}

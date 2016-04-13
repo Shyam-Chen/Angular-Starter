@@ -1,0 +1,11 @@
+h4 Wikipedia
+
+p: i Fetches after each keystroke
+
+input(
+  #term='',
+  (keyup)='search(term.value)'
+)
+
+ul
+  li(*ngFor='#item of list | async') {{item}}
