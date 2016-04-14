@@ -1,19 +1,20 @@
 {
   "name": "Angular2TS-Starter-Kit",
   "version": "1.0.0",
-  "description": "A simple starter project for Angular 2",
+  "description": "A starter kit for Angular 2 applications with TypeScript",
   "scripts": {
     "start": "rimraf dist && gulp",
-    "postinstall": "typings install",
     "clean": "rimraf dist",
-    "reinstall": "npm cache clean && git clean -dfx -e '.*' && npm install"
+    "reinstall": "npm cache clean && git clean -dfx -e '.*' && npm install",
+    "postinstall": "typings install"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Shyam-Chen/Angular2TS-Starter-Kit.git"
   },
   "keywords": [
-    "angular2"
+    "Angular 2",
+    "TypeScript"
   ],
   "author": "Shyam Chen, 陳彥澄",
   "license": "MIT",
@@ -29,19 +30,20 @@
     "reflect-metadata": "0.1.2",
     "rxjs": "5.0.0-beta.2",
     "systemjs": "^0.19.26",
-    "zone.js": "^0.6.10"
+    "zone.js": "^0.6.11"
   },
   "devDependencies": {
-    "browser-sync": "^2.12.2",
+    "browser-sync": "^2.12.3",
     "gulp": "^3.9.1",
     "gulp-changed": "^1.3.0",
     "gulp-jade": "^1.1.0",
     "gulp-stylus": "^2.3.1",
     "gulp-typescript": "^2.13.0",
     "poststylus": "^0.2.3",
+    "rimraf": "^2.5.2",
     "rucksack-css": "^0.8.5",
     "run-sequence": "^1.1.5",
-    "ts-node": "^0.7.1",
+    "ts-node": "^0.7.2",
     "typescript": "^1.8.10"
   }
 }

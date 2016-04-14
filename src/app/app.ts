@@ -48,10 +48,15 @@ import { HighlightDirective } from './shared/directives/highlight';
   viewProviders: [],
   pipes: []
 })
-@RouteConfig([
-  { path: '/click-me', name: 'ClickMe', component: ClickMeComponent },
-  { path: '/todo-list', name: 'TodoList', component: TodoListComponent }
-])
+@RouteConfig([{
+    path: '/click-me',
+    name: 'ClickMe',
+    component: ClickMeComponent
+  }, {
+    path: '/todo-list',
+    name: 'TodoList',
+    component: TodoListComponent
+}])
 export class App {
 
   constructor() {

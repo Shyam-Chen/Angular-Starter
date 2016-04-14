@@ -1,5 +1,5 @@
-import { TEMPLATES_SRC, STYLES_SRC, SCRIPTS_SRC, IMAGES_SRC, LIBS_SRC  } from './tools/config';
-import { APP_DEST, IMAGES_DEST, LIBS_DEST } from './tools/config';
+import { TEMPLATES_SRC, STYLES_SRC, SCRIPTS_SRC, IMAGES_SRC, FONTS_SRC, LIBS_SRC  } from './tools/config';
+import { APP_DEST, IMAGES_DEST, FONTS_DEST, LIBS_DEST } from './tools/config';
 import * as gulp from 'gulp';
 import * as changed from 'gulp-changed';
 import * as jade from 'gulp-jade';
@@ -19,16 +19,11 @@ gulp.task('compile-jade', () => {
 });
 
 gulp.task('compile-stylus', () => {
+  let customOpts = { use: [poststylus(['rucksack-css'])] };
   gulp
     .src(STYLES_SRC)
     .pipe(changed(APP_DEST))
-    .pipe(stylus({
-      use: [
-        poststylus([
-          'rucksack-css'
-        ])
-      ]
-    }))
+    .pipe(stylus(customOpts))
     .pipe(gulp.dest(APP_DEST))
     .pipe(browserSync.stream());
 });
@@ -50,6 +45,12 @@ gulp.task('copy-images', () => {
     .pipe(gulp.dest(IMAGES_DEST));
 });
 
+gulp.task('copy-fonts', () => {
+  gulp
+    .src(FONTS_SRC)
+    .pipe(gulp.dest(FONTS_DEST));
+});
+
 gulp.task('copy-libs', () => {
   gulp
     .src(LIBS_SRC)
@@ -62,6 +63,7 @@ gulp.task('build', () => {
     'compile-stylus',
     'compile-typescript',
     'copy-images',
+    'copy-fonts',
     'copy-libs'
   );
 });
