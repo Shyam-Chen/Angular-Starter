@@ -3,15 +3,15 @@ import { Component } from 'angular2/core';
 @Component({
   template: `
     <button (click)="onClickMe()">Click Me</button>
-    <p>{{clickMessage}}</p>
+    <p>{{ clickMessage }}</p>
   `
 })
 export class ClickMeComponent {
 
-  clickMessage = '';
+  public clickMessage: string = '';
 
   onClickMe() {
-    this.clickMessage = 'Angular 2';
+    this.clickMessage = 'Hello Angular 2';
   }
 
 }

@@ -10,6 +10,6 @@ import { Component } from 'angular2/core';
 })
 export class HelloWorldComponent {
 
-  yourName: string = '';
+  public yourName: string = '';
 
 }

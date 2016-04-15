@@ -6,7 +6,7 @@ import { Component } from 'angular2/core';
 })
 export class TodoListComponent {
 
-  list = ['Angular', 'Material', 'Firebase'];
+  public list: string[] = ['Angular', 'Material', 'Firebase'];
 
   addItem(newItem: string) {
     if (newItem) {

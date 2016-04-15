@@ -11,14 +11,14 @@ export class HighlightDirective {
 
   @Input('highlight') highlightColor: string;
 
-  private _defaultColor = 'red';
+  private defaultColor = 'red';
 
   constructor(private el: ElementRef) { }
 
-  onMouseEnter() { this._highlight(this.highlightColor || this._defaultColor); }
-  onMouseLeave() { this._highlight(null); }
+  onMouseEnter() { this.highlight(this.highlightColor || this.defaultColor); }
+  onMouseLeave() { this.highlight(null); }
 
-  private _highlight(color: string) {
+  private highlight(color: string) {
     this.el.nativeElement.style.backgroundColor = color;
   }
 
