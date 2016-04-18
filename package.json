@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/Shyam-Chen/Angular2TS-Starter-Kit#readme",
   "dependencies": {
-    "angular2": "2.0.0-beta.14",
+    "angular2": "2.0.0-beta.15",
     "es6-module-loader": "^0.17.11",
     "es6-promise": "^3.1.2",
     "es6-shim": "^0.35.0",
@@ -41,7 +41,7 @@
     "gulp-typescript": "^2.13.0",
     "poststylus": "^0.2.3",
     "rimraf": "^2.5.2",
-    "rucksack-css": "^0.8.5",
+    "rucksack-css": "^0.8.6",
     "run-sequence": "^1.1.5",
     "ts-node": "^0.7.2",
     "typescript": "^1.8.10"
