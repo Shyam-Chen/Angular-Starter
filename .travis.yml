@@ -9,6 +9,7 @@ cache:
   directories: node_modules
 
 before_script:
+  - npm install typings -g
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
   - nohup bash -c webdriver-manager start 2>&1 &
