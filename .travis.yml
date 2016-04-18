@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - 4
+  - stable
+
+sudo: false
+
+cache:
+  directories: node_modules
+
+before_script:
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  - nohup bash -c webdriver-manager start 2>&1 &
+  - sleep 1
+
+script:
+  - npm test

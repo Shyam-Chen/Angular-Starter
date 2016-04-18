@@ -8,6 +8,7 @@
     "gulp": "github:DefinitelyTyped/DefinitelyTyped/gulp/gulp.d.ts#5c3e47967affa3c4128a3875d1664ba206ae1b0f",
     "gulp-changed": "registry:dt/gulp-changed#0.0.0+20160316155526",
     "gulp-jade": "registry:dt/gulp-jade#0.0.0+20160316171810",
+    "gulp-protractor": "registry:dt/gulp-protractor#1.0.0+20160316155526",
     "gulp-typescript": "registry:dt/gulp-typescript#0.0.0+20160317120654",
     "micromatch": "registry:dt/micromatch#2.3.7+20160123140905",
     "mime": "github:DefinitelyTyped/DefinitelyTyped/mime/mime.d.ts#5c3e47967affa3c4128a3875d1664ba206ae1b0f",
