@@ -1,5 +1,5 @@
-import { TEMPLATES_SRC, STYLES_SRC, SCRIPTS_SRC, IMAGES_SRC, FONTS_SRC, LIBS_SRC  } from './tools/config';
-import { APP_DEST, IMAGES_DEST, FONTS_DEST, LIBS_DEST } from './tools/config';
+import { TEMPLATES_SRC, STYLES_SRC, SCRIPTS_SRC, IMAGES_SRC, FONTS_SRC, LIBS_SRC  } from './config';
+import { APP_DEST, IMAGES_DEST, FONTS_DEST, LIBS_DEST } from './config';
 import * as gulp from 'gulp';
 import * as changed from 'gulp-changed';
 import * as jade from 'gulp-jade';
@@ -90,8 +90,6 @@ gulp.task('default', () => {
 import * as express from 'express';
 import { protractor, webdriver_update } from 'gulp-protractor';
 
-// tools/utils/seed/server.ts
-// class Protractor
 const e2eServer = function({ port, dir }) {
   let app = express();
   app.use(express.static(dir));
@@ -103,7 +101,6 @@ const e2eServer = function({ port, dir }) {
   });
 };
 
-// tools/tasks/seed/protractor.start.ts
 gulp.task('postinstall', webdriver_update);
 
 gulp.task('e2e', (done: any) => {
