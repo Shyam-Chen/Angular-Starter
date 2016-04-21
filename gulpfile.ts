@@ -118,7 +118,7 @@ gulp.task('e2e', (done: any) => {
     .then((server: any) => {
       gulp
         .src('./src/**/*.e2e.js')
-        .pipe(protractor({ configFile: 'protractor.conf.js' }))
+        .pipe(protractor({ configFile: 'protractor.conf.coffee' }))
         .on('error', (error: string) => { throw error; })
         .on('end', () => { server.close(done); });
     });
