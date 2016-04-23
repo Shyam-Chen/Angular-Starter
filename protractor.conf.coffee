@@ -16,4 +16,7 @@ class Config
     includeStackTrace: false
   @useAllAngular2AppRoots: true
 
+if process.env.TRAVIS
+  Config.capabilities = browserName: 'firefox'
+
 exports.config = Config
