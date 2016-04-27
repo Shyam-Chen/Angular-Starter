@@ -10,7 +10,7 @@ cache:
   directories: node_modules
 
 before_install:
-  - npm install typings glup -g
+  - npm install typings -g
 
 before_script:
   - export DISPLAY=:99.0
@@ -19,5 +19,4 @@ before_script:
   - sleep 1
 
 script:
-  - gulp build
-  - gulp e2e
+  - npm test
