@@ -4,7 +4,7 @@ class Config
   @exclude: []
   @capabilities:
     browserName: 'chrome'
-  @baseUrl: 'http://localhost:3000/'
+  @baseUrl: 'http://localhost:9876/'
   @onPrepare: ->
     SpecReporter = require 'jasmine-spec-reporter'
     jasmine.getEnv().addReporter new SpecReporter displayStacktrace: true
