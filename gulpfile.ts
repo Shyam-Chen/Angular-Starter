@@ -104,7 +104,7 @@ const e2eServer = function(port: number, dir: string): any {
 gulp.task('postinstall', webdriver_update);
 
 gulp.task('e2e', (done: any) => {
-  e2eServer(9876, './dist')
+  e2eServer(9876, './public')
     .then((server: any) => {
       gulp
         .src('./src/**/*.e2e.js')

@@ -19,7 +19,7 @@ class Config {
   ];
   WATCH_SRC = `${this.APP_SRC}/**/*`;
 
-  APP_DEST = './dist';
+  APP_DEST = './public';
   IMAGES_DEST = `${this.APP_DEST}/assets/images`;
   FONTS_DEST = `${this.APP_DEST}/assets/fonts`;
   LIBS_DEST = `${this.APP_DEST}/libs`;
