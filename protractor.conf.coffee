@@ -10,7 +10,6 @@ class Config
     jasmine.getEnv().addReporter new SpecReporter displayStacktrace: true
     browser.ignoreSynchronization = false
     browser.driver.manage().window().maximize()
-    return browser.get('http://localhost:9876/')
   @framework: 'jasmine2'
   @jasmineNodeOpts:
     isVerbose: false
