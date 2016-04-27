@@ -1,10 +1,10 @@
 describe('Hello World', function() {
   beforeEach(function() {
     browser.get('http://localhost:9876/');
+    browser.ignoreSynchronization = false;
   });
   it('should have a content', function() {
     element(by.css('hello-world')).click();
-    var el = element(by.css('hello-world p'));
-    expect(el.getText()).toEqual('Hello Angular 2');
+    expect(element(by.css('hello-world p')).getText()).toEqual('Hello Angular 2');
   });
 });
