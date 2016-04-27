@@ -9,7 +9,6 @@ class Config
     SpecReporter = require 'jasmine-spec-reporter'
     jasmine.getEnv().addReporter new SpecReporter displayStacktrace: true
     browser.ignoreSynchronization = true
-    browser.driver.manage().window().maximize()
   @framework: 'jasmine2'
   @jasmineNodeOpts:
     isVerbose: false
