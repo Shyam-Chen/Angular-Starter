@@ -18,5 +18,6 @@ class Config
 
 if process.env.TRAVIS
   Config.capabilities = browserName: 'firefox'
+  Config.rootElement = 'app'
 
 exports.config = Config
