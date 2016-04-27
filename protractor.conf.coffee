@@ -8,7 +8,7 @@ class Config
   @onPrepare: ->
     SpecReporter = require 'jasmine-spec-reporter'
     jasmine.getEnv().addReporter new SpecReporter displayStacktrace: true
-    browser.ignoreSynchronization = false
+    browser.ignoreSynchronization = true
   @framework: 'jasmine2'
   @jasmineNodeOpts:
     isVerbose: false
