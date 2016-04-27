@@ -1,6 +1,6 @@
 class Config
   @directConnect: true
-  @specs: ['dist/dev/**/*.e2e.js']
+  @specs: ['./src/**/*.e2e.js']
   @exclude: []
   @capabilities:
     browserName: 'chrome'
