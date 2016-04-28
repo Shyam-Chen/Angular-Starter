@@ -7,7 +7,7 @@
 [![devDependency Status](https://david-dm.org/Shyam-Chen/Angular2TS-Starter-Kit/dev-status.svg)](https://david-dm.org/Shyam-Chen/Angular2TS-Starter-Kit#info=devDependencies)
 
 ### Key Features
-* Angular 2, <s>Material</s> and <s>Firebase</s>
+* Angular, <s>Material</s> and <s>Firebase</s>
 * Bash, Atom, Git and NPM
 * Pug, Stylus and TypeScript
 * Gulp, PostCSS, SystemJS, Typings, <s>HotLoader</s> and BrowserSync
