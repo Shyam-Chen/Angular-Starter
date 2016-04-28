@@ -1,4 +1,3 @@
-
 {
   "disallowAttributeConcatenation": true,
   "disallowAttributeInterpolation": true,
