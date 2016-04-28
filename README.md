@@ -30,6 +30,3 @@ $ npm install
 ```bash
 $ npm start
 ```
-
-### Cheat Sheet
-[Angular2TS-Cheat-Sheet: A cheat sheet for Angular2TS-Starter-Kit](https://github.com/Shyam-Chen/Angular2TS-Cheat-Sheet)

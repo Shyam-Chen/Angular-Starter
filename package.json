@@ -6,6 +6,7 @@
     "start": "rimraf public && gulp",
     "test": "gulp build && gulp e2e",
     "clean": "rimraf public",
+    "reset": "git reset --hard HEAD && git clean -df",
     "reinstall": "npm cache clean && git clean -dfx -e '.*' && npm install",
     "postinstall": "typings install && gulp postinstall"
   },
