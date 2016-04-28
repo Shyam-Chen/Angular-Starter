@@ -8,7 +8,8 @@
     "clean": "rimraf public",
     "reset": "git reset --hard HEAD && git clean -df",
     "reinstall": "npm cache clean && git clean -dfx -e '.*' && npm install",
-    "postinstall": "typings install && gulp postinstall"
+    "postinstall": "npm run typings -- install && gulp postinstall",
+    "typings": "typings"
   },
   "repository": {
     "type": "git",
@@ -42,6 +43,7 @@
     "gulp-changed": "^1.3.0",
     "gulp-jade": "^1.1.0",
     "gulp-protractor": "^2.3.0",
+    "gulp-pug": "^2.0.0",
     "gulp-stylus": "^2.3.1",
     "gulp-typescript": "^2.13.0",
     "jasmine-spec-reporter": "^2.4.0",
@@ -50,6 +52,7 @@
     "rucksack-css": "^0.8.6",
     "run-sequence": "^1.1.5",
     "ts-node": "^0.7.2",
-    "typescript": "^1.8.10"
+    "typescript": "^1.8.10",
+    "typings": "^0.8.1"
   }
 }

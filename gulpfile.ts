@@ -2,18 +2,18 @@ import { TEMPLATES_SRC, STYLES_SRC, SCRIPTS_SRC, IMAGES_SRC, FONTS_SRC, LIBS_SRC
 import { APP_DEST, IMAGES_DEST, FONTS_DEST, LIBS_DEST } from './config';
 import * as gulp from 'gulp';
 import * as changed from 'gulp-changed';
-import * as jade from 'gulp-jade';
+import * as pug from 'gulp-pug';
 import * as stylus from 'gulp-stylus';
 import * as poststylus from 'poststylus';
 import * as typescript from 'gulp-typescript';
 import * as browserSync from 'browser-sync';
 import * as runSequence from 'run-sequence';
 
-gulp.task('compile-jade', () => {
+gulp.task('compile-pug', () => {
   gulp
     .src(TEMPLATES_SRC)
     .pipe(changed(APP_DEST))
-    .pipe(jade())
+    .pipe(pug())
     .pipe(gulp.dest(APP_DEST))
     .pipe(browserSync.stream());
 });
@@ -59,7 +59,7 @@ gulp.task('copy-libs', () => {
 
 gulp.task('build', () => {
   runSequence(
-    'compile-jade',
+    'compile-pug',
     'compile-stylus',
     'compile-typescript',
     'copy-images',
@@ -77,7 +77,7 @@ gulp.task('serve', () => {
 });
 
 gulp.task('watch', () => {
-  gulp.watch(TEMPLATES_SRC, ['compile-jade']);
+  gulp.watch(TEMPLATES_SRC, ['compile-pug']);
   gulp.watch(STYLES_SRC, ['compile-stylus']);
   gulp.watch(SCRIPTS_SRC, ['compile-typescript']);
 });
