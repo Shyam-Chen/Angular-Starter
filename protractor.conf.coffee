@@ -9,7 +9,7 @@ class Config
     SpecReporter = require 'jasmine-spec-reporter'
     jasmine.getEnv().addReporter new SpecReporter displayStacktrace: true
     browser.ignoreSynchronization = true
-  @framework: 'jasmine'
+  @framework: 'jasmine2'
   @jasmineNodeOpts:
     isVerbose: false
     showColors: true

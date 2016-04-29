@@ -90,21 +90,23 @@ gulp.task('default', () => {
 import * as express from 'express';
 import { protractor, webdriver_update } from 'gulp-protractor';
 
-const e2eServer = function(port: number, dir: string): any {
-  let app = express();
-  app.use(express.static(dir));
-
-  return new Promise((resolve, reject) => {
-    let server = app.listen(port, () => {
-      resolve(server);
+class Protractor {
+  server(port: number, dir: string) {
+    let app = express();
+    app.use(express.static(dir));
+    return new Promise((resolve, reject) => {
+      let server = app.listen(port, () => {
+        resolve(server);
+      });
     });
-  });
-};
+  }
+}
 
 gulp.task('postinstall', webdriver_update);
 
 gulp.task('e2e', (done: any) => {
-  e2eServer(9876, './public')
+  new Protractor()
+    .server(9876, './public')
     .then((server: any) => {
       gulp
         .src('./src/**/*.e2e.js')
