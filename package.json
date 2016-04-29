@@ -36,7 +36,7 @@
     "zone.js": "^0.6.12"
   },
   "devDependencies": {
-    "browser-sync": "^2.12.3",
+    "browser-sync": "^2.12.5",
     "coffee-script": "^1.10.0",
     "express": "^4.13.4",
     "gulp": "^3.9.1",
