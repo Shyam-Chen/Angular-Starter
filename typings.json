@@ -7,7 +7,6 @@
     "express": "github:DefinitelyTyped/DefinitelyTyped/express/express.d.ts#5c3e47967affa3c4128a3875d1664ba206ae1b0f",
     "gulp": "github:DefinitelyTyped/DefinitelyTyped/gulp/gulp.d.ts#5c3e47967affa3c4128a3875d1664ba206ae1b0f",
     "gulp-changed": "registry:dt/gulp-changed#0.0.0+20160316155526",
-    "gulp-jade": "registry:dt/gulp-jade#0.0.0+20160316171810",
     "gulp-protractor": "registry:dt/gulp-protractor#1.0.0+20160316155526",
     "gulp-tslint": "registry:dt/gulp-tslint#3.6.0+20160316155526",
     "gulp-typescript": "registry:dt/gulp-typescript#0.0.0+20160317120654",
