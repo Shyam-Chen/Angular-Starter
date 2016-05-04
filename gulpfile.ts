@@ -1,5 +1,5 @@
-import { TEMPLATES_SRC, STYLES_SRC, SCRIPTS_SRC, IMAGES_SRC, FONTS_SRC, LIBS_SRC  } from './config';
-import { APP_DEST, IMAGES_DEST, FONTS_DEST, LIBS_DEST } from './config';
+import { TEMPLATES_SRC, STYLES_SRC, SCRIPTS_SRC, IMAGES_SRC, FONTS_SRC, LIBS_SRC  } from './tools/config/config';
+import { APP_DEST, IMAGES_DEST, FONTS_DEST, LIBS_DEST } from './tools/config/config';
 import * as gulp from 'gulp';
 import * as changed from 'gulp-changed';
 import * as pug from 'gulp-pug';
