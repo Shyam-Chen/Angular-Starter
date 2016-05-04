@@ -1,7 +1,7 @@
 class Config {
 
   APP_SRC = './src';
-  TEMPLATES_SRC = `${this.APP_SRC}/**/*.jade`;
+  TEMPLATES_SRC = `${this.APP_SRC}/**/*.pug`;
   STYLES_SRC = `${this.APP_SRC}/**/*.styl`;
   SCRIPTS_SRC = [
     'typings/browser.d.ts',
