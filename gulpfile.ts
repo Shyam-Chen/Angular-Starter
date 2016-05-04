@@ -6,6 +6,7 @@ import * as pug from 'gulp-pug';
 import * as stylus from 'gulp-stylus';
 import * as poststylus from 'poststylus';
 import * as typescript from 'gulp-typescript';
+import * as tslint from 'gulp-tslint';
 import * as browserSync from 'browser-sync';
 import * as runSequence from 'run-sequence';
 
@@ -38,6 +39,13 @@ gulp.task('compile-typescript', () => {
     .pipe(gulp.dest(APP_DEST))
     .pipe(browserSync.stream());
 });
+
+gulp.task('lint-ts', () =>
+  gulp
+    .src(SCRIPTS_SRC)
+    .pipe(tslint())
+    .pipe(tslint.report('verbose'))
+);
 
 gulp.task('copy-images', () => {
   gulp

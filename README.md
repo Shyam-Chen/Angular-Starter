@@ -10,9 +10,9 @@
 * Angular, <s>Material</s> and <s>Firebase</s>
 * Bash, Atom, Git and NPM
 * Pug, Stylus and TypeScript
-* Gulp, PostCSS, SystemJS, Typings, <s>HotLoader</s> and BrowserSync
+* Gulp, PostCSS, SystemJS, Typings, HotLoader and BrowserSync
 * PugLint, Stylint and TSLint
-* <s>Codelyzer</s>, Jasmine, <s>Karma</s>, Protractor and Travis CI
+* Codelyzer, Jasmine, Karma, Protractor and Travis CI
 
 ### Getting Started
 ##### Clone Angular2TS-Starter-Kit

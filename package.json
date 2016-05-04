@@ -43,6 +43,7 @@
   },
   "devDependencies": {
     "browser-sync": "^2.12.5",
+    "codelyzer": "0.0.19",
     "coffee-script": "^1.10.0",
     "express": "^4.13.4",
     "gulp": "^3.9.1",
@@ -50,6 +51,7 @@
     "gulp-protractor": "^2.3.0",
     "gulp-pug": "^2.0.0",
     "gulp-stylus": "^2.3.1",
+    "gulp-tslint": "^5.0.0",
     "gulp-typescript": "^2.13.0",
     "jasmine-spec-reporter": "^2.4.0",
     "poststylus": "^0.2.3",
@@ -57,6 +59,7 @@
     "rucksack-css": "^0.8.6",
     "run-sequence": "^1.1.5",
     "ts-node": "^0.7.2",
+    "tslint": "^3.9.0",
     "typescript": "^1.8.10",
     "typings": "^0.8.1"
   }
