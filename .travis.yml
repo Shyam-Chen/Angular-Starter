@@ -16,4 +16,7 @@ before_script:
   - sleep 1
 
 script:
-  - npm test
+  - gulp build
+  # - gulp lint
+  # - gulp unit
+  # - gulp e2e
