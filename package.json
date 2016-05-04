@@ -26,14 +26,20 @@
   },
   "homepage": "https://github.com/Shyam-Chen/Angular2TS-Starter-Kit#readme",
   "dependencies": {
-    "angular2": "2.0.0-beta.17",
-    "es6-module-loader": "^0.17.11",
-    "es6-promise": "^3.1.2",
-    "es6-shim": "^0.35.0",
+    "@angular/common": "2.0.0-rc.0",
+    "@angular/compiler": "2.0.0-rc.0",
+    "@angular/core": "2.0.0-rc.0",
+    "@angular/platform-browser": "2.0.0-rc.0",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.0",
+    "@angular/router": "2.0.0-rc.0",
+    "@angular/router-deprecated": "2.0.0-rc.0",
+    "es6-module-loader": "0.17.8",
+    "es6-promise": "3.1.2",
+    "es6-shim": "0.35.0",
     "reflect-metadata": "0.1.2",
     "rxjs": "5.0.0-beta.6",
-    "systemjs": "^0.19.26",
-    "zone.js": "^0.6.12"
+    "systemjs": "0.19.26",
+    "zone.js": "0.6.12"
   },
   "devDependencies": {
     "browser-sync": "^2.12.5",
