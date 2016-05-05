@@ -4,21 +4,8 @@ html(lang='')
     title Angular2TS Starter Kit
     script(src='./libs/angular2-polyfills.js')
     script(src='./libs/system.src.js')
-    script(src='./libs/Rx.js')
-    script(src='./libs/angular2.dev.js')
-    script(src='./libs/router.dev.js')
-    script(src='./libs/http.dev.js')
     base(href='/')
     script.
-      System.config({
-        packages: {
-          app: {
-            format: 'register',
-            defaultExtension: 'js'
-          }
-        }
-      });
-      System.import('app/bootstrap')
-        .catch(console.error.bind(console));
+      System.import('app').catch(function(err){ console.error(err); });
   body
     app Loading...

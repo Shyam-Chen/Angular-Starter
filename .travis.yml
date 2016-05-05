@@ -19,4 +19,4 @@ script:
   - gulp build
   # - gulp lint
   # - gulp unit
-  # - gulp e2e
+  - gulp e2e
