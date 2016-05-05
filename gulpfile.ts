@@ -30,7 +30,7 @@ gulp.task('compile-stylus', () => {
 });
 
 gulp.task('compile-typescript', () => {
-  let customOpts = { module: 'system', moduleResolution: 'node' };
+  let customOpts = { };
   let tsProject = typescript.createProject('tsconfig.json', customOpts);
   gulp
     .src(SCRIPTS_SRC)

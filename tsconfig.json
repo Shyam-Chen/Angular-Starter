@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
+    "moduleResolution": "node",
     "declaration": false,
     "removeComments": true,
     "noLib": false,
@@ -18,9 +19,9 @@
   },
   "exclude": [
     "node_modules",
-    "typings/browser.d.ts",
-    "typings/browser",
-    "dist"
+    "typings/main",
+    "typings/main.d.ts"
+    "public"
   ],
   "compileOnSave": false
 }
