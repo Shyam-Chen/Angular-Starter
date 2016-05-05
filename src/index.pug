@@ -2,8 +2,11 @@ doctype html
 html(lang='')
   head
     title Angular2TS Starter Kit
-    script(src='./libs/angular2-polyfills.js')
+    script(src='./libs/es6-shim.min.js')
+    script(src='./libs/zone.js')
+    script(src='./libs/Reflect.js')
     script(src='./libs/system.src.js')
+    script(src='./libs/system.config.js')
     base(href='/')
     script.
       System.import('app').catch(function(err){ console.error(err); });

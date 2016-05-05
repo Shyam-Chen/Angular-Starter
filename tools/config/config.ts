@@ -10,12 +10,11 @@ class Config {
   IMAGES_SRC = `${this.APP_SRC}/assets/images/**/*`;
   FONTS_SRC = `${this.APP_SRC}/assets/fonts/**/*`;
   LIBS_SRC = [
-    'node_modules/@angular/bundles/angular2-polyfills.js',
+    'node_modules/es6-shim/es6-shim.min.js',
+    'node_modules/zone.js/dist/zone.js',
+    'node_modules/reflect-metadata/Reflect.js',
     'node_modules/systemjs/dist/system.src.js',
-    'node_modules/rxjs/bundles/Rx.js',
-    'node_modules/angular2/bundles/angular2.dev.js',
-    'node_modules/angular2/bundles/router.dev.js',
-    'node_modules/angular2/bundles/http.dev.js'
+    'system.config.js'
   ];
   WATCH_SRC = `${this.APP_SRC}/**/*`;
 
