@@ -14,7 +14,6 @@ class Config {
     'node_modules/zone.js/dist/zone.js',
     'node_modules/reflect-metadata/Reflect.js',
     'node_modules/systemjs/dist/system.src.js',
-    'system.config.js'
   ];
   WATCH_SRC = `${this.APP_SRC}/**/*`;
 

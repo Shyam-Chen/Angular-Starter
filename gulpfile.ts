@@ -1,5 +1,8 @@
-import { TEMPLATES_SRC, STYLES_SRC, SCRIPTS_SRC, IMAGES_SRC, FONTS_SRC, LIBS_SRC  } from './tools/config/config';
-import { APP_DEST, IMAGES_DEST, FONTS_DEST, LIBS_DEST } from './tools/config/config';
+import {
+  TEMPLATES_SRC, STYLES_SRC, SCRIPTS_SRC, IMAGES_SRC, FONTS_SRC, LIBS_SRC,
+  APP_DEST, IMAGES_DEST, FONTS_DEST, LIBS_DEST
+} from './tools/config/config';
+
 import * as gulp from 'gulp';
 import * as changed from 'gulp-changed';
 import * as pug from 'gulp-pug';
@@ -40,7 +43,7 @@ gulp.task('compile-typescript', () => {
     .pipe(browserSync.stream());
 });
 
-gulp.task('lint-ts', () =>
+gulp.task('lint-typescript', () =>
   gulp
     .src(SCRIPTS_SRC)
     .pipe(tslint())
