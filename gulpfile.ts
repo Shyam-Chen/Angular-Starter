@@ -1,5 +1,5 @@
 import {
-  TEMPLATES_SRC, STYLES_SRC, SCRIPTS_SRC, IMAGES_SRC, FONTS_SRC, LIBS_SRC,
+  TEMPLATES_SRC, STYLES_SRC, SCRIPTS_SRC, IMAGES_SRC, FONTS_SRC,
   APP_DEST, IMAGES_DEST, FONTS_DEST, LIBS_DEST
 } from './tools/config/config';
 
@@ -64,13 +64,28 @@ gulp.task('copy-fonts', () => {
 
 gulp.task('copy-libs', () => {
   gulp
-    .src(LIBS_SRC)
+    .src([
+          'es6-shim/es6-shim.min.js',
+          'systemjs/dist/system-polyfills.js',
+          'systemjs/dist/system.src.js',
+          'reflect-metadata/Reflect.js',
+          'rxjs/**',
+          'zone.js/dist/**',
+          '@angular/**'
+        ], {cwd: "node_modules/**"})
     .pipe(gulp.dest(LIBS_DEST));
+});
+
+gulp.task('copy-config', () => {
+  gulp
+    .src('./systemjs.config.js')
+    .pipe(gulp.dest(APP_DEST));
 });
 
 gulp.task('build', () => {
   runSequence(
     'compile-pug',
+    'copy-config',
     'compile-stylus',
     'compile-typescript',
     'copy-images',

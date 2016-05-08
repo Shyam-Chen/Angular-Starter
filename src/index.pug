@@ -2,62 +2,11 @@ doctype html
 html(lang='')
   head
     title Angular2TS Starter Kit
-    script(src='./libs/es6-shim.min.js')
-    script(src='./libs/zone.js')
-    script(src='./libs/Reflect.js')
-    script(src='./libs/system.src.js')
-    script.
-      (function(global) {
-        var map = {
-          'app': 'app',
-          'rxjs': 'libs/rxjs',
-          'angular2-in-memory-web-api': 'libs/angular2-in-memory-web-api',
-          '@angular': 'libs/@angular'
-        };
-
-        var packages = {
-          'app': {
-            main: 'main.js',
-            defaultExtension: 'js'
-          },
-          'rxjs': {
-            defaultExtension: 'js'
-          },
-          'angular2-in-memory-web-api': {
-            defaultExtension: 'js'
-          }
-        };
-
-        var packageNames = [
-          '@angular/common',
-          '@angular/compiler',
-          '@angular/core',
-          '@angular/http',
-          '@angular/platform-browser',
-          '@angular/platform-browser-dynamic',
-          '@angular/router',
-          '@angular/testing',
-          '@angular/upgrade',
-        ];
-
-        packageNames.forEach(function(pkgName) {
-          packages[pkgName] = {
-            main: 'index.js',
-            defaultExtension: 'js'
-          };
-        });
-
-        var config = {
-          map: map,
-          packages: packages
-        }
-
-        if (global.filterSystemConfig) {
-          global.filterSystemConfig(config);
-        }
-
-        System.config(config);
-      })(this);
+    script(src='./lib/es6-shim/es6-shim.min.js')
+    script(src='./lib/zone.js/dist/zone.js')
+    script(src='./lib/reflect-metadata/Reflect.js')
+    script(src='./lib/systemjs/dist/system.src.js')
+    script(src='./systemjs.config.js')
     script.
       System
         .import('app')
