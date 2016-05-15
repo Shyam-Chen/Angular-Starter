@@ -17,6 +17,6 @@ before_script:
 
 script:
   - gulp build
-  # - gulp lint
+  - gulp lint
   # - gulp unit
   - gulp e2e

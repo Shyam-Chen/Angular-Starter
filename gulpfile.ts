@@ -5,13 +5,20 @@ import {
 
 import * as gulp from 'gulp';
 import * as changed from 'gulp-changed';
+import * as cache from 'gulp-cached';
+import * as remember from 'gulp-remember';
 import * as pug from 'gulp-pug';
+import * as pugLint from 'gulp-pug-linter';
 import * as stylus from 'gulp-stylus';
+import * as stylint from 'gulp-stylint';
 import * as poststylus from 'poststylus';
 import * as typescript from 'gulp-typescript';
 import * as tslint from 'gulp-tslint';
 import * as browserSync from 'browser-sync';
 import * as runSequence from 'run-sequence';
+
+import * as express from 'express';
+import { protractor, webdriver_update } from 'gulp-protractor';
 
 gulp.task('compile-pug', () => {
   gulp
@@ -22,6 +29,13 @@ gulp.task('compile-pug', () => {
     .pipe(browserSync.stream());
 });
 
+gulp.task('lint-pug', () => {
+  gulp
+    .src(TEMPLATES_SRC)
+    .pipe(pugLint({ config: '.pug-lintrc' }))
+    .pipe(pugLint.reporter());
+});
+
 gulp.task('compile-stylus', () => {
   let customOpts = { use: [poststylus(['rucksack-css'])] };
   gulp
@@ -30,6 +44,13 @@ gulp.task('compile-stylus', () => {
     .pipe(stylus(customOpts))
     .pipe(gulp.dest(APP_DEST))
     .pipe(browserSync.stream());
+});
+
+gulp.task('lint-stylus', () => {
+  gulp
+    .src(STYLES_SRC)
+    .pipe(stylint({ config: '.stylintrc' }))
+    .pipe(stylint.reporter());
 });
 
 gulp.task('compile-typescript', () => {
@@ -112,9 +133,14 @@ gulp.task('default', () => {
   runSequence('build', 'serve', 'watch');
 });
 
-// try it
-import * as express from 'express';
-import { protractor, webdriver_update } from 'gulp-protractor';
+gulp.task('lint', (done: any) => {
+  runSequence(
+    'lint-pug',
+    'lint-stylus',
+    'lint-typescript',
+    done
+  );
+});
 
 class Protractor {
   server(port: number, dir: string) {

@@ -1,3 +1,5 @@
+jasmineSpecReporter = require 'jasmine-spec-reporter'
+
 class Config
   @directConnect: true
   @specs: ['./src/**/*.e2e.js']
@@ -6,10 +8,10 @@ class Config
     browserName: 'chrome'
   @baseUrl: 'http://localhost:9876/'
   @onPrepare: ->
-    SpecReporter = require 'jasmine-spec-reporter'
+    SpecReporter = jasmineSpecReporter
     jasmine.getEnv().addReporter new SpecReporter displayStacktrace: true
     browser.ignoreSynchronization = false
-  @framework: 'jasmine2'
+  @framework: 'jasmine'
   @jasmineNodeOpts:
     isVerbose: false
     showColors: true
