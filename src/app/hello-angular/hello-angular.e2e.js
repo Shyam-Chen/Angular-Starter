@@ -1,6 +1,6 @@
 describe('HelloAngularComponent', function() {
   beforeEach(function() {
-    browser.get('http://localhost:9876/');
+    browser.get('/');
   });
   it('should have a content', function() {
     element(by.css('hello-angular')).click();
