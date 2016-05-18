@@ -77,11 +77,11 @@ gulp.task('copy-images', () => {
     .pipe(gulp.dest(IMAGES_DEST));
 });
 
-gulp.task('copy-fonts', () => {
+gulp.task('copy-fonts', () =>
   gulp
     .src(FONTS_SRC)
-    .pipe(gulp.dest(FONTS_DEST));
-});
+    .pipe(gulp.dest(FONTS_DEST))
+);
 
 gulp.task('copy-libs', () => {
   gulp
@@ -103,17 +103,17 @@ gulp.task('copy-config', () => {
     .pipe(gulp.dest(APP_DEST));
 });
 
-gulp.task('build', () => {
+gulp.task('build', () =>
   runSequence(
-    'compile-pug',
     'copy-config',
+    'compile-pug',
     'compile-stylus',
     'compile-typescript',
     'copy-images',
     'copy-fonts',
     'copy-libs'
-  );
-});
+  )
+);
 
 gulp.task('serve', () => {
   browserSync({
@@ -161,7 +161,7 @@ gulp.task('e2e', (done: any) => {
     .server(9876, './public')
     .then((server: any) => {
       gulp
-        .src('./src/**/*.e2e.js')
+        .src('./src/**/*.e2e-spec.js')
         .pipe(protractor({ configFile: 'protractor.conf.coffee' }))
         .on('error', (error: string) => { throw error; })
         .on('end', () => { server.close(done); });

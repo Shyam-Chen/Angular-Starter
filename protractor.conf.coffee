@@ -2,7 +2,7 @@ jasmineSpecReporter = require 'jasmine-spec-reporter'
 
 class Config
   @directConnect: true
-  @specs: ['./src/**/*.e2e.js']
+  @specs: ['./src/**/*.e2e-spec.js']
   @exclude: []
   @capabilities:
     browserName: 'chrome'
