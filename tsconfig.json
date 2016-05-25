@@ -17,10 +17,7 @@
     "noFallthroughCasesInSwitch": true
   },
   "exclude": [
-    "node_modules",
-    "typings/browser.d.ts",
-    "typings/browser",
-    "public"
+    "node_modules"
   ],
   "compileOnSave": false
 }

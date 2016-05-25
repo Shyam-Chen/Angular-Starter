@@ -1,9 +1,9 @@
 {
-  "ambientDependencies": {
+  "globalDependencies": {
     "Q": "github:DefinitelyTyped/DefinitelyTyped/q/Q.d.ts#5c3e47967affa3c4128a3875d1664ba206ae1b0f",
     "browser-sync": "registry:dt/browser-sync#0.0.0+20160316155526",
     "chokidar": "registry:dt/chokidar#1.4.3+20160316155526",
-    "es6-shim": "github:DefinitelyTyped/DefinitelyTyped/es6-shim/es6-shim.d.ts#6697d6f7dadbf5773cb40ecda35a76027e0783b2",
+    "core-js": "registry:dt/core-js#0.0.0+20160317120654",
     "express": "github:DefinitelyTyped/DefinitelyTyped/express/express.d.ts#5c3e47967affa3c4128a3875d1664ba206ae1b0f",
     "gulp": "github:DefinitelyTyped/DefinitelyTyped/gulp/gulp.d.ts#5c3e47967affa3c4128a3875d1664ba206ae1b0f",
     "gulp-changed": "registry:dt/gulp-changed#0.0.0+20160316155526",

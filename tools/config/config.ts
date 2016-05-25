@@ -4,7 +4,7 @@ class Config {
   TEMPLATES_SRC = `${this.APP_SRC}/**/*.pug`;
   STYLES_SRC = `${this.APP_SRC}/**/*.styl`;
   SCRIPTS_SRC = [
-    'typings/browser.d.ts',
+    'typings/index.d.ts',
     `${this.APP_SRC}/**/*.ts`
   ];
   IMAGES_SRC = `${this.APP_SRC}/assets/images/**/*`;

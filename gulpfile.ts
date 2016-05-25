@@ -103,7 +103,7 @@ gulp.task('copy-config', () => {
     .pipe(gulp.dest(APP_DEST));
 });
 
-gulp.task('build', () =>
+gulp.task('build', (done: any) =>
   runSequence(
     'copy-config',
     'compile-pug',
@@ -111,7 +111,8 @@ gulp.task('build', () =>
     'compile-typescript',
     'copy-images',
     'copy-fonts',
-    'copy-libs'
+    'copy-libs',
+    done
   )
 );
 
@@ -129,9 +130,9 @@ gulp.task('watch', () => {
   gulp.watch(SCRIPTS_SRC, ['compile-typescript']);
 });
 
-gulp.task('default', () => {
-  runSequence('build', 'serve', 'watch');
-});
+gulp.task('default', (done: any) =>
+  runSequence('build', 'serve', 'watch', done)
+);
 
 gulp.task('lint', (done: any) => {
   runSequence(
