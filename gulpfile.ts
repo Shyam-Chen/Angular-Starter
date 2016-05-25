@@ -134,14 +134,14 @@ gulp.task('default', (done: any) =>
   runSequence('build', 'serve', 'watch', done)
 );
 
-gulp.task('lint', (done: any) => {
+gulp.task('lint', (done: any) =>
   runSequence(
     'lint-pug',
     'lint-stylus',
     'lint-typescript',
     done
-  );
-});
+  )
+);
 
 class Protractor {
   server(port: number, dir: string) {
