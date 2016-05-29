@@ -1,3 +1,4 @@
+tsNode = require 'ts-node'
 jasmineSpecReporter = require 'jasmine-spec-reporter'
 
 class Config
@@ -7,6 +8,8 @@ class Config
   @capabilities:
     browserName: 'chrome'
   @baseUrl: 'http://localhost:9876/'
+  @beforeLaunch: ->
+    tsNode.register project: 'e2e'
   @onPrepare: ->
     SpecReporter = jasmineSpecReporter
     jasmine.getEnv().addReporter new SpecReporter displayStacktrace: true
