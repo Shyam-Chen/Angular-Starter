@@ -1,5 +1,6 @@
 {
   "globalDependencies": {
+    "angular-protractor": "github:DefinitelyTyped/DefinitelyTyped/angular-protractor/angular-protractor.d.ts#64b25f63f0ec821040a5d3e049a976865062ed9d",
     "browser-sync": "registry:dt/browser-sync#0.0.0+20160316155526",
     "chokidar": "registry:dt/chokidar#1.4.3+20160316155526",
     "core-js": "registry:dt/core-js#0.0.0+20160524134847",
@@ -17,6 +18,7 @@
     "parse-glob": "registry:dt/parse-glob#3.0.4+20160110125512",
     "q": "registry:dt/q#0.0.0+20160417152954",
     "run-sequence": "registry:dt/run-sequence#0.0.0+20160316155526",
+    "serve-static": "github:DefinitelyTyped/DefinitelyTyped/serve-static/serve-static.d.ts#5c3e47967affa3c4128a3875d1664ba206ae1b0f",
     "vinyl": "registry:dt/vinyl#1.1.0+20160316155526"
   }
 }
