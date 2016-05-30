@@ -9,6 +9,7 @@
     "gulp-protractor": "registry:dt/gulp-protractor#1.0.0+20160316155526",
     "gulp-tslint": "registry:dt/gulp-tslint#3.6.0+20160316155526",
     "gulp-typescript": "registry:dt/gulp-typescript#0.0.0+20160317120654",
+    "jasmine": "registry:dt/jasmine#2.2.0+20160505161446",
     "micromatch": "registry:dt/micromatch#2.3.7+20160123140905",
     "mime": "registry:dt/mime#0.0.0+20160316155526",
     "node": "registry:dt/node#6.0.0+20160523035754",
@@ -16,7 +17,6 @@
     "parse-glob": "registry:dt/parse-glob#3.0.4+20160110125512",
     "q": "registry:dt/q#0.0.0+20160417152954",
     "run-sequence": "registry:dt/run-sequence#0.0.0+20160316155526",
-    "serve-static": "registry:dt/serve-static#0.0.0+20160501131543",
     "vinyl": "registry:dt/vinyl#1.1.0+20160316155526"
   }
 }
