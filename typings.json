@@ -3,7 +3,7 @@
     "angular-protractor": "github:DefinitelyTyped/DefinitelyTyped/angular-protractor/angular-protractor.d.ts#64b25f63f0ec821040a5d3e049a976865062ed9d",
     "browser-sync": "registry:dt/browser-sync#0.0.0+20160316155526",
     "chokidar": "registry:dt/chokidar#1.4.3+20160316155526",
-    "core-js": "registry:dt/core-js#0.0.0+20160524134847",
+    "core-js": "registry:dt/core-js#0.0.0+20160602141332",
     "express": "github:DefinitelyTyped/DefinitelyTyped/express/express.d.ts#5c3e47967affa3c4128a3875d1664ba206ae1b0f",
     "gulp": "registry:dt/gulp#3.8.0+20160316155526",
     "gulp-changed": "registry:dt/gulp-changed#0.0.0+20160316155526",
