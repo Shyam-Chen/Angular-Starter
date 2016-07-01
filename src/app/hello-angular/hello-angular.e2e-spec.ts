@@ -1,6 +1,6 @@
 describe('HelloAngularComponent', () => {
 
-  beforeEach( () => {
+  beforeEach(() => {
     browser.get('/');
   });
 

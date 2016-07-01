@@ -18,6 +18,8 @@ import * as browserSync from 'browser-sync';
 import * as runSequence from 'run-sequence';
 
 import * as express from 'express';
+import * as history from 'express-history-api-fallback';
+import { resolve } from 'path';
 import { protractor, webdriver_update } from 'gulp-protractor';
 
 gulp.task('compile-pug', () => {
@@ -147,7 +149,9 @@ gulp.task('lint', (done: any) =>
 class Protractor {
   server(port: number, dir: string) {
     let app = express();
-    app.use(express.static(dir));
+    let root = resolve(process.cwd(), dir);
+    app.use(express.static(root));
+    app.use(history('index.html', { root }));
     return new Promise((resolve, reject) => {
       let server = app.listen(port, () => {
         resolve(server);
@@ -156,7 +160,7 @@ class Protractor {
   }
 }
 
-gulp.task('postinstall', webdriver_update);
+gulp.task('webdriver', webdriver_update);
 
 gulp.task('e2e', (done: any) => {
   new Protractor()
