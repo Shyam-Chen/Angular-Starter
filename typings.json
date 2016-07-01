@@ -13,6 +13,7 @@
     "jasmine": "registry:dt/jasmine#2.2.0+20160505161446",
     "micromatch": "registry:dt/micromatch#2.3.7+20160123140905",
     "mime": "registry:dt/mime#0.0.0+20160316155526",
+    "ng2": "github:gdi2290/typings-ng2/ng2.d.ts#32998ff5584c0eab0cd9dc7704abb1c5c450701c",
     "node": "registry:dt/node#6.0.0+20160523035754",
     "orchestrator": "registry:dt/orchestrator#0.0.0+20160316155526",
     "parse-glob": "registry:dt/parse-glob#3.0.4+20160110125512",
@@ -20,6 +21,7 @@
     "run-sequence": "registry:dt/run-sequence#0.0.0+20160316155526",
     "selenium-webdriver": "github:DefinitelyTyped/DefinitelyTyped/selenium-webdriver/selenium-webdriver.d.ts#a83677ed13add14c2ab06c7325d182d0ba2784ea",
     "serve-static": "github:DefinitelyTyped/DefinitelyTyped/serve-static/serve-static.d.ts#5c3e47967affa3c4128a3875d1664ba206ae1b0f",
-    "vinyl": "registry:dt/vinyl#1.1.0+20160316155526"
+    "vinyl": "registry:dt/vinyl#1.1.0+20160316155526",
+    "zone.js": "github:DefinitelyTyped/DefinitelyTyped/zone.js/zone.js.d.ts#b923a5aaf013ac84c566f27ba6b5843211981c7a"
   }
 }
