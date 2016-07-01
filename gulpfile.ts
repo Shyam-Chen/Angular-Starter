@@ -86,14 +86,15 @@ gulp.task('copy-fonts', () =>
 gulp.task('copy-libs', () => {
   gulp
     .src([
-          'core-js/client/shim.min.js',
-          'systemjs/dist/system-polyfills.js',
-          'systemjs/dist/system.src.js',
-          'reflect-metadata/Reflect.js',
-          'rxjs/**',
-          'zone.js/dist/**',
-          '@angular/**'
-        ], {cwd: "node_modules/**"})
+      'core-js/client/shim.min.js',
+      'systemjs/dist/system.src.js',
+      'reflect-metadata/Reflect.js',
+      'zone.js/dist/zone.js',
+      '@angular/**',
+      'rxjs/**'
+    ], {
+      cwd: 'node_modules/**'
+    })
     .pipe(gulp.dest(LIBS_DEST));
 });
 
