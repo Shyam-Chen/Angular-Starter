@@ -48,12 +48,12 @@ gulp.task('compile-stylus', () => {
     .pipe(browserSync.stream());
 });
 
-gulp.task('lint-stylus', () => {
+gulp.task('lint-stylus', () =>
   gulp
     .src(STYLES_SRC)
     .pipe(stylint({ config: '.stylintrc' }))
-    .pipe(stylint.reporter());
-});
+    .pipe(stylint.reporter())
+);
 
 gulp.task('compile-typescript', () => {
   let customOpts = { module: 'system', moduleResolution: 'node' };
@@ -100,21 +100,17 @@ gulp.task('copy-libs', () => {
     .pipe(gulp.dest(LIBS_DEST));
 });
 
-gulp.task('copy-config', () => {
+gulp.task('copy-config', () =>
   gulp
-    .src('./systemjs.config.js')
-    .pipe(gulp.dest(APP_DEST));
-});
+    .src('./system.config.js')
+    .pipe(gulp.dest(APP_DEST))
+);
 
 gulp.task('build', (done: any) =>
   runSequence(
-    'copy-config',
-    'compile-pug',
-    'compile-stylus',
-    'compile-typescript',
-    'copy-images',
-    'copy-fonts',
-    'copy-libs',
+    'copy-libs', 'copy-config',
+    'compile-pug', 'compile-stylus', 'compile-typescript',
+    'copy-images', 'copy-fonts',
     done
   )
 );
@@ -138,12 +134,7 @@ gulp.task('default', (done: any) =>
 );
 
 gulp.task('lint', (done: any) =>
-  runSequence(
-    'lint-pug',
-    'lint-stylus',
-    'lint-typescript',
-    done
-  )
+  runSequence('lint-pug', 'lint-stylus', 'lint-typescript', done)
 );
 
 class Protractor {
