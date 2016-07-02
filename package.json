@@ -44,6 +44,7 @@
     "browser-sync": "^2.13.0",
     "codelyzer": "0.0.24",
     "coffee-script": "^1.10.0",
+    "connect-history-api-fallback": "^1.2.0",
     "express": "^4.14.0",
     "express-history-api-fallback": "^2.0.0",
     "gulp": "^3.9.1",
