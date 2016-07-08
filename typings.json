@@ -1,10 +1,10 @@
 {
   "globalDependencies": {
-    "angular-protractor": "github:DefinitelyTyped/DefinitelyTyped/angular-protractor/angular-protractor.d.ts#64b25f63f0ec821040a5d3e049a976865062ed9d",
+    "angular-protractor": "registry:dt/angular-protractor#1.5.0+20160425143459",
     "browser-sync": "registry:dt/browser-sync#0.0.0+20160316155526",
     "chokidar": "registry:dt/chokidar#1.4.3+20160316155526",
     "core-js": "registry:dt/core-js#0.0.0+20160602141332",
-    "express": "github:DefinitelyTyped/DefinitelyTyped/express/express.d.ts#5c3e47967affa3c4128a3875d1664ba206ae1b0f",
+    "express": "registry:dt/express#4.0.0+20160317120654",
     "gulp": "registry:dt/gulp#3.8.0+20160316155526",
     "gulp-changed": "registry:dt/gulp-changed#0.0.0+20160316155526",
     "gulp-protractor": "registry:dt/gulp-protractor#1.0.0+20160316155526",
@@ -19,9 +19,9 @@
     "parse-glob": "registry:dt/parse-glob#3.0.4+20160110125512",
     "q": "registry:dt/q#0.0.0+20160417152954",
     "run-sequence": "registry:dt/run-sequence#0.0.0+20160316155526",
-    "selenium-webdriver": "github:DefinitelyTyped/DefinitelyTyped/selenium-webdriver/selenium-webdriver.d.ts#a83677ed13add14c2ab06c7325d182d0ba2784ea",
-    "serve-static": "github:DefinitelyTyped/DefinitelyTyped/serve-static/serve-static.d.ts#5c3e47967affa3c4128a3875d1664ba206ae1b0f",
+    "selenium-webdriver": "registry:dt/selenium-webdriver#2.44.0+20160317120654",
+    "serve-static": "registry:dt/serve-static#0.0.0+20160606155157",
     "vinyl": "registry:dt/vinyl#1.1.0+20160316155526",
-    "zone.js": "github:DefinitelyTyped/DefinitelyTyped/zone.js/zone.js.d.ts#b923a5aaf013ac84c566f27ba6b5843211981c7a"
+    "zone.js": "registry:dt/zone.js#0.0.0+20160316155526"
   }
 }

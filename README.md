@@ -7,12 +7,12 @@
 [![devDependency Status](https://david-dm.org/Shyam-Chen/Angular2TS-Starter-Kit/dev-status.svg)](https://david-dm.org/Shyam-Chen/Angular2TS-Starter-Kit#info=devDependencies)
 
 ### Key Features
-* Angular, Material and Firebase
+* Angular, <s>Material</s> and <s>Firebase</s>
 * Bash, Atom, Git and NPM
 * Pug, Stylus and TypeScript
-* Gulp, PostCSS, SystemJS, Typings, HotLoader and BrowserSync
+* Gulp, PostCSS, SystemJS, Typings, <s>HotLoader</s> and BrowserSync
 * PugLint, Stylint and TSLint
-* Codelyzer, Jasmine, Karma, Protractor and Travis CI
+* Codelyzer, Jasmine, <s>Karma</s>, Protractor and Travis CI
 
 ### Getting Started
 ##### Clone Angular2TS-Starter-Kit
@@ -29,4 +29,9 @@ $ npm install
 ##### Run the Application
 ```bash
 $ npm start
+```
+
+##### Test the Application
+```bash
+$ npm test
 ```

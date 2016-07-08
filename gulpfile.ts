@@ -23,21 +23,35 @@ import * as expressHistory from 'express-history-api-fallback';
 import { resolve } from 'path';
 import { protractor, webdriver_update } from 'gulp-protractor';
 
-gulp.task('compile-pug', () => {
+gulp.task('copy-libs', () =>
+  gulp
+    .src([
+      'core-js/client/shim.min.js',
+      'systemjs/dist/system.src.js',
+      'reflect-metadata/Reflect.js',
+      'zone.js/dist/zone.js',
+      '@angular/**',
+      'rxjs/**'
+    ], {
+      cwd: 'node_modules/**'
+    })
+    .pipe(gulp.dest(LIBS_DEST))
+);
+
+gulp.task('copy-config', () =>
+  gulp
+    .src('./system.config.js')
+    .pipe(gulp.dest(APP_DEST))
+);
+
+gulp.task('compile-pug', () =>
   gulp
     .src(TEMPLATES_SRC)
     .pipe(changed(APP_DEST))
     .pipe(pug())
     .pipe(gulp.dest(APP_DEST))
-    .pipe(browserSync.stream());
-});
-
-gulp.task('lint-pug', () => {
-  gulp
-    .src(TEMPLATES_SRC)
-    .pipe(pugLint({ config: '.pug-lintrc' }))
-    .pipe(pugLint.reporter());
-});
+    .pipe(browserSync.stream())
+);
 
 gulp.task('compile-stylus', () => {
   let customOpts = { use: [poststylus(['rucksack-css'])] };
@@ -48,13 +62,6 @@ gulp.task('compile-stylus', () => {
     .pipe(gulp.dest(APP_DEST))
     .pipe(browserSync.stream());
 });
-
-gulp.task('lint-stylus', () =>
-  gulp
-    .src(STYLES_SRC)
-    .pipe(stylint({ config: '.stylintrc' }))
-    .pipe(stylint.reporter())
-);
 
 gulp.task('compile-typescript', () => {
   let customOpts = { module: 'system', moduleResolution: 'node' };
@@ -67,44 +74,16 @@ gulp.task('compile-typescript', () => {
     .pipe(browserSync.stream());
 });
 
-gulp.task('lint-typescript', () =>
-  gulp
-    .src(SCRIPTS_SRC)
-    .pipe(tslint())
-    .pipe(tslint.report('verbose'))
-);
-
-gulp.task('copy-images', () => {
+gulp.task('copy-images', () =>
   gulp
     .src(IMAGES_SRC)
-    .pipe(gulp.dest(IMAGES_DEST));
-});
+    .pipe(gulp.dest(IMAGES_DEST))
+);
 
 gulp.task('copy-fonts', () =>
   gulp
     .src(FONTS_SRC)
     .pipe(gulp.dest(FONTS_DEST))
-);
-
-gulp.task('copy-libs', () => {
-  gulp
-    .src([
-      'core-js/client/shim.min.js',
-      'systemjs/dist/system.src.js',
-      'reflect-metadata/Reflect.js',
-      'zone.js/dist/zone.js',
-      '@angular/**',
-      'rxjs/**'
-    ], {
-      cwd: 'node_modules/**'
-    })
-    .pipe(gulp.dest(LIBS_DEST));
-});
-
-gulp.task('copy-config', () =>
-  gulp
-    .src('./system.config.js')
-    .pipe(gulp.dest(APP_DEST))
 );
 
 gulp.task('build', (done: any) =>
@@ -116,14 +95,14 @@ gulp.task('build', (done: any) =>
   )
 );
 
-gulp.task('serve', () => {
+gulp.task('serve', () =>
   browserSync({
     server: {
       baseDir: APP_DEST,
       middleware: [connectHistory()]
     }
-  });
-});
+  })
+);
 
 gulp.task('watch', () => {
   gulp.watch(TEMPLATES_SRC, ['compile-pug']);
@@ -131,8 +110,29 @@ gulp.task('watch', () => {
   gulp.watch(SCRIPTS_SRC, ['compile-typescript']);
 });
 
-gulp.task('default', (done: any) =>
+gulp.task('start', (done: any) =>
   runSequence('build', 'serve', 'watch', done)
+);
+
+gulp.task('lint-pug', () =>
+  gulp
+    .src(TEMPLATES_SRC)
+    .pipe(pugLint({ config: '.pug-lintrc' }))
+    .pipe(pugLint.reporter())
+);
+
+gulp.task('lint-stylus', () =>
+  gulp
+    .src(STYLES_SRC)
+    .pipe(stylint({ config: '.stylintrc' }))
+    .pipe(stylint.reporter())
+);
+
+gulp.task('lint-typescript', () =>
+  gulp
+    .src(SCRIPTS_SRC)
+    .pipe(tslint())
+    .pipe(tslint.report('verbose'))
 );
 
 gulp.task('lint', (done: any) =>
@@ -140,11 +140,13 @@ gulp.task('lint', (done: any) =>
 );
 
 class Protractor {
-  server(port: number, dir: string) {
+  server(port: number, dir: string): any {
     let app = express();
     let root = resolve(process.cwd(), dir);
+
     app.use(express.static(root));
     app.use(expressHistory('index.html', { root }));
+
     return new Promise((resolve, reject) => {
       let server = app.listen(port, () => {
         resolve(server);
@@ -160,9 +162,13 @@ gulp.task('e2e', (done: any) => {
     .server(9876, './public')
     .then((server: any) => {
       gulp
-        .src('./src/**/*.e2e-spec.js')
+        .src('./src/**/*.e2e-spec.ts')
         .pipe(protractor({ configFile: 'protractor.conf.coffee' }))
         .on('error', (error: string) => { throw error; })
         .on('end', () => { server.close(done); });
     });
 });
+
+gulp.task('test', (done: any) =>
+  runSequence('build', 'lint', 'e2e', done)
+);

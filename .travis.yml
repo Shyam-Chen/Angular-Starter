@@ -18,6 +18,4 @@ before_install:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew outdated xctool || brew upgrade xctool; fi
 
 script:
-  - npm run gulp -- build
-  - npm run gulp -- lint
-  - npm run gulp -- e2e
+  - npm test
