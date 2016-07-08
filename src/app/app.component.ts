@@ -15,6 +15,7 @@ import { HelloAngularComponent } from './hello-angular/hello-angular';
   `],
   directives: [HelloAngularComponent],
   providers: [],
+  viewProviders: [],
   pipes: []
 })
 export class AppComponent { }

@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 export class HelloAngularComponent {
   public message: string = '';
 
-  onClick() {
+  onClick(): void {
     this.message = 'Hello Angular';
   }
 }
