@@ -5,8 +5,6 @@ import {
 
 import * as gulp from 'gulp';
 import * as changed from 'gulp-changed';
-import * as cache from 'gulp-cached';
-import * as remember from 'gulp-remember';
 import * as pug from 'gulp-pug';
 import * as pugLint from 'gulp-pug-linter';
 import * as stylus from 'gulp-stylus';
@@ -28,7 +26,6 @@ gulp.task('copy-libs', () =>
     .src([
       'core-js/client/shim.min.js',
       'systemjs/dist/system.src.js',
-      'reflect-metadata/Reflect.js',
       'zone.js/dist/zone.js',
       '@angular/**',
       'rxjs/**'
@@ -55,6 +52,7 @@ gulp.task('compile-pug', () =>
 
 gulp.task('compile-stylus', () => {
   let customOpts = { use: [poststylus(['rucksack-css'])] };
+
   gulp
     .src(STYLES_SRC)
     .pipe(changed(APP_DEST))
@@ -66,6 +64,7 @@ gulp.task('compile-stylus', () => {
 gulp.task('compile-typescript', () => {
   let customOpts = { module: 'system', moduleResolution: 'node' };
   let tsProject = typescript.createProject('tsconfig.json', customOpts);
+
   gulp
     .src(SCRIPTS_SRC)
     .pipe(changed(APP_DEST))

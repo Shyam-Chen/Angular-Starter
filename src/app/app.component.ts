@@ -10,7 +10,7 @@ import { HelloAngularComponent } from './hello-angular/hello-angular';
   `,
   styles: [`
     .title {
-      color: #3F51B5
+      color: #3F51B5;
     }
   `],
   directives: [HelloAngularComponent],
