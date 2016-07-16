@@ -130,8 +130,8 @@ gulp.task('lint-stylus', () =>
 gulp.task('lint-typescript', () =>
   gulp
     .src(SCRIPTS_SRC)
-    .pipe(tslint())
-    .pipe(tslint.report('verbose'))
+    .pipe(tslint({ configuration: 'tslint.json' }))
+    .pipe(tslint.report())
 );
 
 gulp.task('lint', (done: any) =>

@@ -54,7 +54,7 @@
     "gulp-pug-linter": "^0.3.0",
     "gulp-stylint": "^3.0.0",
     "gulp-stylus": "^2.5.0",
-    "gulp-tslint": "^5.0.0",
+    "gulp-tslint": "^6.0.1",
     "gulp-typescript": "^2.13.6",
     "jasmine-spec-reporter": "^2.5.0",
     "poststylus": "^0.2.3",
