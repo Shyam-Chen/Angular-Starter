@@ -5,6 +5,7 @@
     "chokidar": "registry:dt/chokidar#1.4.3+20160316155526",
     "core-js": "registry:dt/core-js#0.0.0+20160602141332",
     "express": "registry:dt/express#4.0.0+20160317120654",
+    "express-serve-static-core": "registry:dt/express-serve-static-core#4.0.0+20160715232503",
     "gulp": "registry:dt/gulp#3.8.0+20160316155526",
     "gulp-changed": "registry:dt/gulp-changed#0.0.0+20160316155526",
     "gulp-protractor": "registry:dt/gulp-protractor#1.0.0+20160316155526",
