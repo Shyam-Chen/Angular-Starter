@@ -37,11 +37,11 @@
     "@angular/router": "3.0.0-beta.2",
     "core-js": "2.4.1",
     "rxjs": "5.0.0-beta.6",
-    "systemjs": "0.19.35",
+    "systemjs": "0.19.36",
     "zone.js": "0.6.12"
   },
   "devDependencies": {
-    "browser-sync": "^2.13.0",
+    "browser-sync": "^2.14.0",
     "codelyzer": "^0.0.26",
     "coffee-script": "^1.10.0",
     "connect-history-api-fallback": "^1.2.0",
@@ -50,7 +50,7 @@
     "gulp": "^3.9.1",
     "gulp-changed": "^1.3.1",
     "gulp-protractor": "^2.4.0",
-    "gulp-pug": "^3.0.3",
+    "gulp-pug": "^3.0.4",
     "gulp-pug-linter": "^0.3.0",
     "gulp-stylint": "^3.0.0",
     "gulp-stylus": "^2.5.0",
@@ -58,13 +58,12 @@
     "gulp-typescript": "^2.13.6",
     "jasmine-spec-reporter": "^2.5.0",
     "poststylus": "^0.2.3",
-    "rimraf": "^2.5.2",
+    "rimraf": "^2.5.4",
     "rucksack-css": "^0.8.6",
     "run-sequence": "^1.2.2",
     "systemjs-builder": "^0.15.26",
     "ts-node": "^0.9.3",
-    "tslint": "^3.13.0",
     "typescript": "^1.8.10",
-    "typings": "^1.3.1"
+    "typings": "^1.3.2"
   }
 }
