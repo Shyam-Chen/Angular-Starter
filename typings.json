@@ -1,30 +1,30 @@
 {
   "globalDependencies": {
-    "angular-protractor": "registry:dt/angular-protractor#1.5.0+20160425143459",
-    "browser-sync": "registry:dt/browser-sync#0.0.0+20160316155526",
-    "chokidar": "registry:dt/chokidar#1.4.3+20160316155526",
     "core-js": "registry:dt/core-js#0.0.0+20160602141332",
-    "express-serve-static-core": "registry:dt/express-serve-static-core#4.0.0+20160715232503",
-    "gulp-tslint": "registry:dt/gulp-tslint#3.6.0+20160316155526",
-    "gulp-typescript": "registry:dt/gulp-typescript#0.0.0+20160317120654",
-    "jasmine": "registry:dt/jasmine#2.2.0+20160505161446",
-    "micromatch": "registry:dt/micromatch#2.3.7+20160123140905",
-    "mime": "registry:dt/mime#0.0.0+20160316155526",
     "ng2": "github:gdi2290/typings-ng2/ng2.d.ts#32998ff5584c0eab0cd9dc7704abb1c5c450701c",
-    "node": "registry:dt/node#6.0.0+20160523035754",
-    "orchestrator": "registry:dt/orchestrator#0.0.0+20160316155526",
-    "parse-glob": "registry:dt/parse-glob#3.0.4+20160110125512",
-    "q": "registry:dt/q#0.0.0+20160417152954",
-    "selenium-webdriver": "registry:dt/selenium-webdriver#2.44.0+20160317120654",
-    "serve-static": "registry:dt/serve-static#0.0.0+20160606155157",
-    "vinyl": "registry:dt/vinyl#1.1.0+20160316155526",
     "zone.js": "registry:dt/zone.js#0.0.0+20160316155526"
   },
   "globalDevDependencies": {
+    "angular-protractor": "registry:dt/angular-protractor#1.5.0+20160425143459",
+    "browser-sync": "registry:dt/browser-sync#0.0.0+20160524142403",
+    "chokidar": "registry:dt/chokidar#1.4.3+20160316155526",
     "express": "registry:dt/express#4.0.0+20160708185218",
+    "express-serve-static-core": "registry:dt/express-serve-static-core#4.0.0+20160715232503",
     "gulp": "registry:dt/gulp#3.8.0+20160724062653",
     "gulp-changed": "registry:dt/gulp-changed#0.0.0+20160316155526",
     "gulp-protractor": "registry:dt/gulp-protractor#1.0.0+20160316155526",
-    "run-sequence": "registry:dt/run-sequence#0.0.0+20160316155526"
+    "gulp-tslint": "registry:dt/gulp-tslint#3.6.0+20160316155526",
+    "gulp-typescript": "registry:dt/gulp-typescript#0.0.0+20160317120654",
+    "jasmine": "registry:dt/jasmine#2.2.0+20160621224255",
+    "micromatch": "registry:dt/micromatch#2.3.7+20160123140905",
+    "mime": "registry:dt/mime#0.0.0+20160316155526",
+    "node": "registry:dt/node#6.0.0+20160805072842",
+    "orchestrator": "registry:dt/orchestrator#0.0.0+20160316155526",
+    "parse-glob": "registry:dt/parse-glob#3.0.4+20160110125512",
+    "q": "registry:dt/q#0.0.0+20160613154756",
+    "run-sequence": "registry:dt/run-sequence#0.0.0+20160316155526",
+    "selenium-webdriver": "registry:dt/selenium-webdriver#2.44.0+20160317120654",
+    "serve-static": "registry:dt/serve-static#0.0.0+20160606155157",
+    "vinyl": "registry:dt/vinyl#1.1.0+20160316155526"
   }
 }
