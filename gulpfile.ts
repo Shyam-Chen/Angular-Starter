@@ -32,11 +32,14 @@ gulp.task('copy-libs', () =>
     .pipe(gulp.dest(LIBS_DEST))
 );
 
-gulp.task('copy-config', () =>
+gulp.task('system-config', () => {
+  let tsProject = typescript.createProject('tsconfig.json');
+
   gulp
-    .src('./system.config.js')
-    .pipe(gulp.dest(APP_DEST))
-);
+    .src('./system.config.ts')
+    .pipe(typescript(tsProject))
+    .pipe(gulp.dest(APP_DEST));
+});
 
 gulp.task('compile-pug', () =>
   gulp
@@ -84,7 +87,7 @@ gulp.task('copy-fonts', () =>
 
 gulp.task('build', (done: any) =>
   runSequence(
-    'copy-libs', 'copy-config',
+    'copy-libs', 'system-config',
     'compile-pug', 'compile-stylus', 'compile-typescript',
     'copy-images', 'copy-fonts',
     done

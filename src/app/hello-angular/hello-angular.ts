@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
   `
 })
 export class HelloAngularComponent {
-  public message: string = '';
+  public message: string;
 
-  onClick(): void {
-    this.message = 'Hello Angular';
+  public onClick(): void {
+    this.message = 'Hello Angular 2';
   }
 }
