@@ -1,7 +1,6 @@
 {
   "globalDependencies": {
     "core-js": "registry:dt/core-js#0.0.0+20160602141332",
-    "ng2": "github:gdi2290/typings-ng2/ng2.d.ts#32998ff5584c0eab0cd9dc7704abb1c5c450701c",
     "zone.js": "registry:dt/zone.js#0.0.0+20160316155526"
   },
   "globalDevDependencies": {
