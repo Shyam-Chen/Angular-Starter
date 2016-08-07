@@ -3,7 +3,12 @@ class Config {
   APP_SRC = './src';
   TEMPLATES_SRC = `${this.APP_SRC}/**/*.pug`;
   STYLES_SRC = `${this.APP_SRC}/**/*.styl`;
-  SCRIPTS_SRC = ['typings/index.d.ts', `${this.APP_SRC}/**/*.ts`];
+  SCRIPTS_SRC = [
+    'typings/index.d.ts',
+    `${this.APP_SRC}/**/*.ts`,
+    `!${this.APP_SRC}/**/*.spec.ts`,
+    `!${this.APP_SRC}/**/*.e2e-spec.ts`
+  ];
   IMAGES_SRC = `${this.APP_SRC}/assets/images/**/*`;
   FONTS_SRC = `${this.APP_SRC}/assets/fonts/**/*`;
 
