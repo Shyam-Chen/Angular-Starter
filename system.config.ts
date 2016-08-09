@@ -1,7 +1,8 @@
 const map: any = {
   'app': 'app',
+  'rxjs': 'lib/rxjs',
   '@angular': 'lib/@angular',
-  'rxjs': 'lib/rxjs'
+  '@angular2-material': 'lib/@angular2-material'
 };
 
 const packages: any = {
@@ -29,6 +30,17 @@ packageNames.forEach((pkgName: any) => {
   packages[pkgName] = {
     main: 'index.js',
     defaultExtension: 'js'
+  };
+});
+
+const materialPkgs: string[] = [
+  'core',
+  'button'
+];
+
+materialPkgs.forEach((pkg: any) => {
+  packages[`@angular2-material/${pkg}`] = {
+    main: `${pkg}.js`
   };
 });
 

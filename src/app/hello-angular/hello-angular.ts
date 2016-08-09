@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
+import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
 
 @Component({
   selector: 'hello-angular',
   template: `
-    <button (click)="onClick()">Click Me</button>
+    <button md-raised-button (click)="onClick()">Click Me</button>
     <p>{{ message }}</p>
-  `
+  `,
+  directives: [MD_BUTTON_DIRECTIVES]
 })
 export class HelloAngularComponent {
   public message: string;

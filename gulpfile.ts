@@ -24,8 +24,9 @@ gulp.task('copy-libs', () =>
       'core-js/client/shim.min.js',
       'systemjs/dist/system.src.js',
       'zone.js/dist/zone.js',
+      'rxjs/**',
       '@angular/**',
-      'rxjs/**'
+      '@angular2-material/**/*'
     ], {
       cwd: 'node_modules/**'
     })
