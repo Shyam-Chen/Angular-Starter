@@ -1,21 +1,27 @@
 language: node_js
 node_js: stable
 
-sudo: required
-
-services: docker
+sudo: false
+# sudo: required
 
 os:
   - linux
   - osx
 
+# matrix:
+#   include:
+#     - os: linux
+#       services: docker
+#     - os: osx
+#       language: generic
+
 cache:
   directories: node_modules
 
 before_install:
-  - docker build -t Angular2TS-Starter-Kit .
-  - docker run -d --name app Angular2TS-Starter-Kit
-  - docker ps -a
+  # - docker build -t Angular2TS-Starter-Kit .
+  # - docker run -d --name app Angular2TS-Starter-Kit
+  # - docker ps -a
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then export DISPLAY=:99.0; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sh -e /etc/init.d/xvfb start; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then nohup bash -c "webdriver-manager start 2>&1 &"; fi
@@ -23,10 +29,12 @@ before_install:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew outdated xctool || brew upgrade xctool; fi
 
 script:
+  # - docker run -p 3000:3000 -d Angular2TS-Starter-Kit
+  # - curl --retry 10 --retry-delay 5 -v http://localhost:3000
   - npm run gulp -- build
   - npm run gulp -- lint
   # - npm run gulp -- unit
   - npm run gulp -- e2e
 
 after_script:
-  - docker rm -f app
+  # - docker rm -f app
