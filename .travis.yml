@@ -13,6 +13,9 @@ cache:
   directories: node_modules
 
 before_install:
+  - docker build -t Angular2TS-Starter-Kit .
+  - docker run -d --name app Angular2TS-Starter-Kit
+  - docker ps -a
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then export DISPLAY=:99.0; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sh -e /etc/init.d/xvfb start; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then nohup bash -c "webdriver-manager start 2>&1 &"; fi
@@ -24,3 +27,6 @@ script:
   - npm run gulp -- lint
   # - npm run gulp -- unit
   - npm run gulp -- e2e
+
+after_script:
+  - docker rm -f app
