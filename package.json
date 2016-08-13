@@ -37,7 +37,9 @@
     "@angular/router": "3.0.0-rc.1",
     "@angular2-material/button": "^2.0.0-alpha.6",
     "@angular2-material/core": "^2.0.0-alpha.6",
+    "angularfire2": "^2.0.0-beta.2",
     "core-js": "2.4.1",
+    "firebase": "^3.2.1",
     "rxjs": "5.0.0-beta.6",
     "systemjs": "0.19.36",
     "zone.js": "0.6.12"
@@ -65,6 +67,7 @@
     "run-sequence": "^1.2.2",
     "systemjs-builder": "^0.15.26",
     "ts-node": "^0.9.3",
+    "tslint": "^3.14.0",
     "typescript": "^1.8.10",
     "typings": "^1.3.2"
   }
