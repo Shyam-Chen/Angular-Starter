@@ -1,7 +1,9 @@
 language: node_js
 node_js: stable
 
-sudo: false
+sudo: required
+
+services: docker
 
 os:
   - linux
@@ -20,4 +22,5 @@ before_install:
 script:
   - npm run gulp -- build
   - npm run gulp -- lint
+  # - npm run gulp -- unit
   - npm run gulp -- e2e
