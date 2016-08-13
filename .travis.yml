@@ -1,11 +1,4 @@
 language: node_js
-node_js: stable
-
-# sudo: false
-
-# os:
-#   - linux
-#   - osx
 
 matrix:
   include:
@@ -21,9 +14,9 @@ cache:
   directories: node_modules
 
 before_install:
-  # - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then docker build -t angular2ts-starter-kit .; fi
-  # - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then docker run -d --name app angular2ts-starter-kit; fi
-  # - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then docker ps -a; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then docker build -t angular2ts-starter-kit .; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then docker run -d --name app angular2ts-starter-kit; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then docker ps -a; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then export DISPLAY=:99.0; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sh -e /etc/init.d/xvfb start; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then nohup bash -c "webdriver-manager start 2>&1 &"; fi
@@ -31,15 +24,17 @@ before_install:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew outdated xctool || brew upgrade xctool; fi
 
 before_script:
-  # - npm install karma-firefox-launcher
+  - npm install karma-firefox-launcher
 
 script:
-  # - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then docker run -p 3000:3000 -d angular2ts-starter-kit; fi
-  # - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then curl --retry 10 --retry-delay 5 -v http://localhost:3000; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then docker run -p 3000:3000 -d angular2ts-starter-kit; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then docker exec app npm run gulp -- lint; fi
+  # - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then docker exec app npm run gulp -- unit; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then docker exec app npm run gulp -- e2e; fi
   - npm run gulp -- build
   - npm run gulp -- lint
   # - npm run gulp -- unit
   - npm run gulp -- e2e
 
 after_script:
-  # - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then docker rm -f app; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then docker rm -f app; fi
