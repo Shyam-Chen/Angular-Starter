@@ -1,4 +1,11 @@
 language: node_js
+node_js: stable
+
+# sudo: false
+
+# os:
+#   - linux
+#   - osx
 
 matrix:
   include:
@@ -14,22 +21,25 @@ cache:
   directories: node_modules
 
 before_install:
-  # - docker build -t Angular2TS-Starter-Kit .
-  # - docker run -d --name app Angular2TS-Starter-Kit
-  # - docker ps -a
+  # - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then docker build -t angular2ts-starter-kit .; fi
+  # - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then docker run -d --name app angular2ts-starter-kit; fi
+  # - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then docker ps -a; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then export DISPLAY=:99.0; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sh -e /etc/init.d/xvfb start; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then nohup bash -c "webdriver-manager start 2>&1 &"; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew outdated xctool || brew upgrade xctool; fi
 
+before_script:
+  # - npm install karma-firefox-launcher
+
 script:
-  # - docker run -p 3000:3000 -d Angular2TS-Starter-Kit
-  # - curl --retry 10 --retry-delay 5 -v http://localhost:3000
+  # - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then docker run -p 3000:3000 -d angular2ts-starter-kit; fi
+  # - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then curl --retry 10 --retry-delay 5 -v http://localhost:3000; fi
   - npm run gulp -- build
   - npm run gulp -- lint
   # - npm run gulp -- unit
   - npm run gulp -- e2e
 
 after_script:
-  # - docker rm -f app
+  # - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then docker rm -f app; fi
