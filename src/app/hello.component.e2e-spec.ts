@@ -5,8 +5,8 @@ describe('HelloAngularComponent', () => {
   });
 
   it('should have a content', () => {
-    element(by.css('hello-angular')).click();
-    expect(element(by.css('hello-angular p')).getText()).toEqual('Hello Angular 2');
+    element(by.css('hello')).click();
+    expect(element(by.css('hello p')).getText()).toEqual('Hello Angular 2');
   });
 
 });
