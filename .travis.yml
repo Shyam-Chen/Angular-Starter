@@ -28,9 +28,6 @@ before_script:
 
 script:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then docker run -p 3000:3000 -d angular2ts-starter-kit; fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then docker exec app npm run gulp -- lint; fi
-  # - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then docker exec app npm run gulp -- unit; fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then docker exec app npm run gulp -- e2e; fi
   - npm run gulp -- build
   - npm run gulp -- lint
   # - npm run gulp -- unit
