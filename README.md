@@ -8,11 +8,11 @@
 
 ### Key Features
 * Angular, Material and Firebase
-* Bash, Atom, Git and NPM
+* Bash, Atom, Git, NPM and Docker
 * Pug, Stylus and TypeScript
 * Gulp, PostCSS, SystemJS, Typings, HotLoader and BrowserSync
 * PugLint, Stylint and TSLint
-* Codelyzer, Jasmine, Karma, Protractor, Docker and Travis
+* Codelyzer, Jasmine, Karma, Protractor and Travis
 
 ### Getting Started
 
@@ -42,4 +42,4 @@ $ npm test
 * Production builds
 * Unit tests with Karma
 * Integration with Angular 2 Hot Loader
-* Integration with Docker
+* Integration with Docker builds
