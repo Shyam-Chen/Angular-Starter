@@ -36,3 +36,10 @@ $ npm start
 ```bash
 $ npm test
 ```
+
+### ToDo List
+* Integration with Firebase
+* Production builds
+* Unit tests with Karma
+* Integration with Angular 2 Hot Loader
+* Integration with Docker
