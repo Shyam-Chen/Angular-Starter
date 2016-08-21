@@ -38,8 +38,8 @@ $ npm test
 ```
 
 ## ToDo List
+* Migrate to Webpack
 * Integration with Firebase
 * Production builds
 * Unit tests with Karma
-* Integration with Angular 2 Hot Loader
-* Integration with Docker build and deploy
+* Integration with Docker
