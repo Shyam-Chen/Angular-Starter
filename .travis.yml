@@ -32,6 +32,3 @@ script:
   - npm run gulp -- lint
   # - npm run gulp -- unit
   - npm run gulp -- e2e
-
-after_script:
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then docker rm -f app; fi
