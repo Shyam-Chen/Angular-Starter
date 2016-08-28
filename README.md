@@ -15,3 +15,15 @@
 * Gulp, Webpack, PostStylus, Typings, HMR and BrowserSync
 * PugLint, Stylint and TSLint
 * Codelyzer, Jasmine, Karma, Protractor and Travis
+
+## Getting Started
+
+### Install Dependencies
+```bash
+$ npm install
+```
+
+### Run the Application
+```bash
+$ npm start
+```
