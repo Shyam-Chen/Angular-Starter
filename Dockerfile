@@ -1,9 +1,26 @@
-FROM node:latest
+FROM buildpack-deps:jessie
 
-WORKDIR /Angular2TS-Starter-Kit
+ENV app /Angular2TS-Starter-Kit
+ENV DEBIAN_FRONTEND noninteractive
+ENV DISPLAY :99.0
+ENV CHROME_BIN /usr/bin/chromium
 
-ADD . /Angular2TS-Starter-Kit
-RUN npm install
+WORKDIR ${app}
+ADD . $app
 
-EXPOSE 3000
+RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - && \
+    apt-get update && \
+    apt-get install -y --no-install-recommends \
+    nodejs xvfb chromium libgconf-2-4 openjdk-7-jre-headless && \
+    rm -rf /var/lib/apt/lists/*
+
+ADD entrypoint.sh /entrypoint.sh
+RUN chmod a+x /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
+
+RUN npm install --unsafe-perm
+
+EXPOSE 3000 9876
+
 CMD npm start
