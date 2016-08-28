@@ -18,83 +18,6 @@ import * as connectHistory from 'connect-history-api-fallback';
 import * as runSequence from 'run-sequence';
 import { protractor, webdriver_update } from 'gulp-protractor';
 
-gulp.task('copy-libs', () =>
-  gulp
-    .src([
-      'core-js/client/shim.min.js',
-      'systemjs/dist/system.src.js',
-      'zone.js/dist/zone.js',
-      'rxjs/**',
-      '@angular/**',
-      '@angular2-material/**/*'
-    ], {
-      cwd: 'node_modules/**'
-    })
-    .pipe(gulp.dest(LIBS_DEST))
-);
-
-gulp.task('system-config', () => {
-  let tsProject = typescript.createProject('tsconfig.json');
-
-  gulp
-    .src('./system.config.ts')
-    .pipe(typescript(tsProject))
-    .pipe(gulp.dest(APP_DEST));
-});
-
-gulp.task('compile-pug', () =>
-  gulp
-    .src(TEMPLATES_SRC)
-    .pipe(changed(APP_DEST))
-    .pipe(pug())
-    .pipe(gulp.dest(APP_DEST))
-    .pipe(browserSync.stream())
-);
-
-gulp.task('compile-stylus', () => {
-  let customOpts = { use: [poststylus(['rucksack-css'])] };
-
-  gulp
-    .src(STYLES_SRC)
-    .pipe(changed(APP_DEST))
-    .pipe(stylus(customOpts))
-    .pipe(gulp.dest(APP_DEST))
-    .pipe(browserSync.stream());
-});
-
-gulp.task('compile-typescript', () => {
-  let customOpts = { module: 'system', moduleResolution: 'node' };
-  let tsProject = typescript.createProject('tsconfig.json', customOpts);
-
-  gulp
-    .src(SCRIPTS_SRC)
-    .pipe(changed(APP_DEST))
-    .pipe(typescript(tsProject))
-    .pipe(gulp.dest(APP_DEST))
-    .pipe(browserSync.stream());
-});
-
-gulp.task('copy-images', () =>
-  gulp
-    .src(IMAGES_SRC)
-    .pipe(gulp.dest(IMAGES_DEST))
-);
-
-gulp.task('copy-fonts', () =>
-  gulp
-    .src(FONTS_SRC)
-    .pipe(gulp.dest(FONTS_DEST))
-);
-
-gulp.task('build', (done: any) =>
-  runSequence(
-    'copy-libs', 'system-config',
-    'compile-pug', 'compile-stylus', 'compile-typescript',
-    'copy-images', 'copy-fonts',
-    done
-  )
-);
-
 gulp.task('serve', () =>
   browserSync({
     server: {
@@ -102,16 +25,6 @@ gulp.task('serve', () =>
       middleware: [connectHistory()]
     }
   })
-);
-
-gulp.task('watch', () => {
-  gulp.watch(TEMPLATES_SRC, ['compile-pug']);
-  gulp.watch(STYLES_SRC, ['compile-stylus']);
-  gulp.watch(SCRIPTS_SRC, ['compile-typescript']);
-});
-
-gulp.task('start', (done: any) =>
-  runSequence('build', 'serve', 'watch', done)
 );
 
 gulp.task('lint-pug', () =>
@@ -152,7 +65,3 @@ gulp.task('e2e', (done: any) => {
         .on('end', () => { server.close(done); });
     });
 });
-
-gulp.task('test', (done: any) =>
-  runSequence('build', 'lint', 'e2e', done)
-);

@@ -21,6 +21,6 @@ ENTRYPOINT ["/entrypoint.sh"]
 
 RUN npm install --unsafe-perm
 
-EXPOSE 3000 9876
+EXPOSE 3000 9876 8080
 
 CMD npm start
