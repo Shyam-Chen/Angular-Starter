@@ -5,7 +5,7 @@
   "scripts": {
     "start": "webpack-dev-server --inline --progress --port 8080",
     "test": "karma start",
-    "build": "webpack --config config/webpack.prod.js --progress --profile --bail",
+    "build": "webpack --config tools/config/webpack.prod.js --progress --profile --bail",
     "clean": "rimraf public",
     "reset": "git reset --hard HEAD && git clean -df",
     "reinstall": "npm cache clean && git clean -dfx -e '.*' && npm install",

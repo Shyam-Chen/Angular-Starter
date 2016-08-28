@@ -1,3 +1,7 @@
+import {
+  TEMPLATES_SRC, STYLES_SRC, SCRIPTS_SRC, IMAGES_SRC, FONTS_SRC,
+  APP_DEST, IMAGES_DEST, FONTS_DEST, LIBS_DEST
+} from './tools/config/gulp.config';
 import { E2EServer } from './tools/utils/e2eserver';
 
 import * as gulp from 'gulp';

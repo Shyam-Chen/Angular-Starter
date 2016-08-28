@@ -9,8 +9,5 @@ before_install:
   - docker-compose up -d
 
 script:
-  - docker exec -it app npm run gulp -- build
-  - docker exec -it app npm run gulp -- lint
-  - docker exec -it app npm run gulp -- unit
-  - docker exec -it app npm run gulp -- e2e
-  - docker-compose exec app npm run gulp -- bundle
+  - docker exec -it app npm run build
+  - docker-compose exec app npm run build
