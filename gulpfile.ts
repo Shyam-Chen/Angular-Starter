@@ -56,7 +56,7 @@ gulp.task('webdriver', webdriver_update);
 
 gulp.task('e2e', (done: any) => {
   new E2EServer()
-    .server(9876, APP_DEST)
+    .server(9876, 'public')
     .then((server: any) => {
       gulp
         .src('./src/**/*.e2e-spec.ts')
