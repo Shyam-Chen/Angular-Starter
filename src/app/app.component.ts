@@ -4,7 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app',
   template: `
     <h3 class="title">Angular2TS Starter Kit</h3>
-    <hello></hello>
   `,
   styles: [`
     .title {
