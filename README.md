@@ -18,6 +18,12 @@
 
 ## Getting Started
 
+### Clone Angular2TS-Starter-Kit
+```bash
+$ git clone https://github.com/Shyam-Chen/Angular2TS-Starter-Kit
+$ cd angular2ts-starter-kit
+```
+
 ### Install Dependencies
 ```bash
 $ npm install
@@ -26,4 +32,22 @@ $ npm install
 ### Run the Application
 ```bash
 $ npm start
+```
+
+### Test the Application
+```bash
+$ npm test
+```
+
+## Using Docker
+
+### Run the Application
+```bash
+$ docker build -t angular2ts-starter-kit .
+$ docker run -it -p 3000:3000 --name app angular2ts-starter-kit
+```
+
+### Run the Application with Compose
+```bash
+$ docker-compose up
 ```

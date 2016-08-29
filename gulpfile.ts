@@ -1,31 +1,12 @@
-import {
-  TEMPLATES_SRC, STYLES_SRC, SCRIPTS_SRC, IMAGES_SRC, FONTS_SRC,
-  APP_DEST, IMAGES_DEST, FONTS_DEST, LIBS_DEST
-} from './tools/config/gulp.config';
-import { E2EServer } from './tools/utils/e2eserver';
-
 import * as gulp from 'gulp';
-import * as changed from 'gulp-changed';
-import * as pug from 'gulp-pug';
 import * as pugLint from 'gulp-pug-linter';
-import * as stylus from 'gulp-stylus';
 import * as stylint from 'gulp-stylint';
-import * as poststylus from 'poststylus';
-import * as typescript from 'gulp-typescript';
 import * as tslint from 'gulp-tslint';
-import * as browserSync from 'browser-sync';
-import * as connectHistory from 'connect-history-api-fallback';
 import * as runSequence from 'run-sequence';
 import { protractor, webdriver_update } from 'gulp-protractor';
 
-gulp.task('serve', () =>
-  browserSync({
-    server: {
-      baseDir: APP_DEST,
-      middleware: [connectHistory()]
-    }
-  })
-);
+import { TEMPLATES_SRC, STYLES_SRC, SCRIPTS_SRC, APP_DEST } from './tools/config/gulp.config';
+import { E2EServer } from './tools/utils/e2eserver';
 
 gulp.task('lint-pug', () =>
   gulp
@@ -56,7 +37,7 @@ gulp.task('webdriver', webdriver_update);
 
 gulp.task('e2e', (done: any) => {
   new E2EServer()
-    .server(9876, 'public')
+    .server(9876, APP_DEST)
     .then((server: any) => {
       gulp
         .src('./src/**/*.e2e-spec.ts')
