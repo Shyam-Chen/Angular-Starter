@@ -7,6 +7,8 @@ class Config
   @exclude: []
   @capabilities:
     browserName: 'chrome'
+    chromeOptions:
+      args: ['no-sandbox']
   @baseUrl: 'http://localhost:9876/'
   @beforeLaunch: ->
     tsNode.register project: 'e2e'
