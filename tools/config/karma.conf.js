@@ -17,12 +17,17 @@ module.exports = function(config) {
     webpackServer: {
       noInfo: true
     },
-    reporters: ['progress'],
+    reporters: ['mocha'],
     port: 9876,
     colors: true,
-    logLevel: config.LOG_INFO,
     autoWatch: false,
-    browsers: ['PhantomJS'],
+    customLaunchers: {
+      Chrome_no_sandbox: {
+        base: 'Chrome',
+        flags: ['--no-sandbox']
+      }
+    },
+    browsers: ['Chrome_no_sandbox'],
     singleRun: true
   };
 
