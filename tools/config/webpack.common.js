@@ -18,8 +18,8 @@ module.exports = {
         test: /\.ts$/,
         loaders: ['ts', 'angular2-template-loader']
       }, {
-        test: /\.pug$/,
-        loader: 'pug'
+        test: /\.html$/,
+        loader: 'html'
       }, {
         test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
         loader: 'file?name=assets/[name].[hash].[ext]'
@@ -39,7 +39,7 @@ module.exports = {
       name: ['app', 'vendor', 'polyfills']
     }),
     new HtmlWebpackPlugin({
-      template: 'src/index.pug'
+      template: 'src/index.html'
     })
   ]
 };
