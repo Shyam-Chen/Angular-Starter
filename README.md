@@ -34,11 +34,6 @@ $ npm install
 $ npm start
 ```
 
-### Test the Application
-```bash
-$ npm test
-```
-
 ## Using Docker
 
 ### Run the Application
@@ -50,4 +45,33 @@ $ docker run -it -p 3000:3000 --name app angular2ts-starter-kit
 ### Run the Application with Compose
 ```bash
 $ docker-compose up
+```
+
+## Other Commands
+
+### Build the Application
+```bash
+$ npm run build
+```
+
+### Test the Application
+```bash
+$ npm run lint
+$ npm run unit
+$ npm run e2e
+```
+
+### Clean the Application
+```bash
+$ npm run clean
+```
+
+### Reset the Application
+```bash
+$ npm run reset
+```
+
+### Reinstall the Application
+```bash
+$ npm run reinstall
 ```
