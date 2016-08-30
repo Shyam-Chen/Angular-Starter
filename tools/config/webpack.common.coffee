@@ -1,8 +1,8 @@
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+webpack = require 'webpack'
+HtmlWebpackPlugin = require 'html-webpack-plugin'
+ExtractTextPlugin = require 'extract-text-webpack-plugin'
 
-const helpers = require('../utils/helpers');
+helpers = require '../utils/helpers'
 
 module.exports = {
   entry: {
@@ -46,4 +46,4 @@ module.exports = {
       template: 'src/index.html'
     })
   ]
-};
+}

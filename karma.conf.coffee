@@ -4,11 +4,11 @@ class Config
   @basePath: ''
   @frameworks: ['jasmine']
   @files: [
-    pattern: './tools/utils/test-shim.js', watched: false
+    pattern: './tools/utils/test-shim.coffee', watched: false
   ]
   @exclude: []
   @preprocessors:
-    './tools/utils/test-shim.js': ['webpack', 'sourcemap']
+    './tools/utils/test-shim.coffee': ['webpack', 'sourcemap']
   @webpack: webpackConfig
   @webpackMiddleware:
     stats: 'errors-only'

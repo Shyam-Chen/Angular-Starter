@@ -1,11 +1,11 @@
-const webpack = require('webpack');
-const webpackMerge = require('webpack-merge');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+webpack = require 'webpack'
+webpackMerge = require 'webpack-merge'
+ExtractTextPlugin = require 'extract-text-webpack-plugin'
 
-const commonConfig = require('./webpack.common.js');
-const helpers = require('../utils/helpers');
+commonConfig = require './webpack.common'
+helpers = require '../utils/helpers'
 
-const ENV = process.env.NODE_ENV = process.env.ENV = 'production';
+ENV = process.env.NODE_ENV = process.env.ENV = 'production'
 
 module.exports = webpackMerge(commonConfig, {
   output: {
@@ -16,7 +16,7 @@ module.exports = webpackMerge(commonConfig, {
   },
 
   htmlLoader: {
-    minimize: false // workaround for ng2
+    minimize: false
   },
 
   plugins: [
@@ -30,4 +30,4 @@ module.exports = webpackMerge(commonConfig, {
       }
     })
   ]
-});
+})

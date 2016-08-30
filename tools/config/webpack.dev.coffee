@@ -1,9 +1,9 @@
-const webpackMerge = require('webpack-merge');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+webpackMerge = require 'webpack-merge'
+ExtractTextPlugin = require 'extract-text-webpack-plugin'
+BrowserSyncPlugin = require 'browser-sync-webpack-plugin'
 
-const commonConfig = require('./webpack.common.js');
-const helpers = require('../utils/helpers');
+commonConfig = require './webpack.common'
+helpers = require '../utils/helpers'
 
 module.exports = webpackMerge(commonConfig, {
   debug: true,
@@ -33,4 +33,4 @@ module.exports = webpackMerge(commonConfig, {
     historyApiFallback: true,
     stats: 'minimal'
   }
-});
+})
