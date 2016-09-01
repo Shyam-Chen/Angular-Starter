@@ -19,7 +19,7 @@ RUN chmod a+x /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
 
-RUN npm install --unsafe-perm
+RUN npm install
 
 EXPOSE 3000 9876 8080
 
