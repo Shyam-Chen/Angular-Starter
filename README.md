@@ -1,7 +1,5 @@
 # Angular2TS Starter Kit
 
-**Work in Progress**
-
 ## Project Status
 [![Build Status](https://travis-ci.org/Shyam-Chen/Angular2TS-Starter-Kit.svg?branch=master)](https://travis-ci.org/Shyam-Chen/Angular2TS-Starter-Kit)
  //
