@@ -1,10 +1,5 @@
 # Angular2TS Starter Kit
 
-## ToDo List
-* webpack.config.ts
-* karma.conf.ts
-* protractor.conf.ts
-
 ## Project Status
 [![Build Status](https://travis-ci.org/Shyam-Chen/Angular2TS-Starter-Kit.svg?branch=master)](https://travis-ci.org/Shyam-Chen/Angular2TS-Starter-Kit)
  //
