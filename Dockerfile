@@ -14,13 +14,12 @@ RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - && \
     nodejs xvfb chromium libgconf-2-4 openjdk-7-jre-headless && \
     rm -rf /var/lib/apt/lists/*
 
-ADD entrypoint.sh /entrypoint.sh
-RUN chmod a+x /entrypoint.sh
+RUN chmod a+x entrypoint.sh
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/Angular2TS-Starter-Kit/entrypoint.sh"]
 
 RUN npm install --unsafe-perm
 
-EXPOSE 3000 9876 8080
+EXPOSE 3000 9876
 
 CMD npm start
