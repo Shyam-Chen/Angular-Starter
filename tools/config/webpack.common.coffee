@@ -19,8 +19,8 @@ module.exports = {
         test: /\.ts$/,
         loaders: ['ts', 'angular2-template-loader']
       }, {
-        test: /\.html$/,
-        loader: 'html'
+        test: /\.pug$/,
+        loader: 'pug-html-loader'
       }, {
         test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot)$/,
         loader: 'file?name=assets/[name].[hash].[ext]'
@@ -43,7 +43,7 @@ module.exports = {
       name: ['app', 'vendor', 'polyfills']
     }),
     new HtmlWebpackPlugin({
-      template: 'src/index.html'
+      template: 'src/index.pug'
     })
   ]
 }
