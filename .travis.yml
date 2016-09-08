@@ -10,7 +10,7 @@ before_install:
 
 script:
   - docker exec -it app npm run build
-  # - docker exec -it app npm run lint
+  - docker exec -it app npm run lint
   # - docker exec -it app npm run unit
   # - docker exec -it app npm run e2e
   # - docker-compose exec app npm run build

@@ -1,6 +1,8 @@
 import * as express from 'express';
-import * as expressHistory from 'express-history-api-fallback';
+const expressHistory = require('express-history-api-fallback');  // import * as expressHistory from 'express-history-api-fallback';
 import { resolve } from 'path';
+
+declare const Promise: any;
 
 export class E2EServer {
   server(port: number, dir: string): any {
@@ -10,7 +12,7 @@ export class E2EServer {
     app.use(express.static(root));
     app.use(expressHistory('index.html', { root }));
 
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve: any, reject: any) => {
       let server = app.listen(port, () => {
         resolve(server);
       });
