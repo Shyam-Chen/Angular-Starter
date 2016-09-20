@@ -1,7 +1,16 @@
+import { protractor, browser } from 'protractor/globals';
+
+declare let describe: any;
+declare let beforeEach: any;
+declare let it: any;
+declare let expect: any;
+declare let element: any;
+declare let by: any;
+
 describe('AppComponent', () => {
 
   beforeEach(() => {
-    browser.get('/');
+    protractor.browser.get('/');
   });
 
   it('should have a content', () => {

@@ -23,11 +23,11 @@ export const commonConfig = {
       loader: 'file?name=assets/[name].[hash].[ext]'
     }, {
       test: /\.css$/,
-      exclude: '.src/app',
+      exclude: './src/app',
       loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
     }, {
       test: /\.css$/,
-      include: '.src/app',
+      include: './src/app',
       loader: 'raw'
     }]
   },

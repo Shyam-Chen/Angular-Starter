@@ -18,8 +18,8 @@ RUN chmod a+x entrypoint.sh
 
 ENTRYPOINT ["/Angular2TS-Starter-Kit/entrypoint.sh"]
 
-RUN npm install
-# RUN npm install --unsafe-perm
+RUN npm install && \
+    npm install -g firebase-tools
 
 EXPOSE 3000 9876
 

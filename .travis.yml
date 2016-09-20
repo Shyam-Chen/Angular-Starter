@@ -17,3 +17,7 @@ script:
   # - docker-compose exec app npm run lint
   # - docker-compose exec app npm run unit
   # - docker-compose exec app npm run e2e
+
+after_success:
+  - docker exec -it app npm run build
+  # - docker exec -it app firebase deploy --token ${FIREBASE_TOKEN}

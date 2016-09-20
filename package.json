@@ -4,14 +4,14 @@
   "description": "A starter kit for Angular 2 applications with TypeScript",
   "scripts": {
     "start": "tsc webpack.dev.ts && webpack-dev-server --config webpack.dev.js --inline --progress --port 3001",
-    "build": "tsc webpack.prod.ts && webpack --config webpack.prod.js --progress --profile --bail",
+    "build": "tsc webpack.prod.ts && rimraf public && webpack --config webpack.prod.js --progress --profile --bail",
     "lint": "gulp lint",
-    "unit": "karma start",
-    "e2e": "gulp e2e",
+    "unit": "tsc karma.conf.ts test-shim.ts && karma start",
+    "e2e": "tsc protractor.conf.ts && gulp e2e",
     "clean": "rimraf public",
     "reset": "git reset --hard HEAD && git clean -df",
     "reinstall": "npm cache clean && git clean -dfx -e '.*' && npm install",
-    "postinstall": "npm run gulp -- webdriver"
+    "postinstall": "gulp webdriver"
   },
   "repository": {
     "type": "git",
@@ -48,7 +48,9 @@
     "@types/core-js": "^0.9.32",
     "@types/express": "^4.0.32",
     "@types/gulp": "^3.8.31",
+    "@types/gulp-protractor": "^1.0.29",
     "@types/gulp-tslint": "^3.6.29",
+    "@types/jasmine": "^2.2.34",
     "@types/protractor": "^1.5.18",
     "@types/run-sequence": "0.0.27",
     "@types/selenium-webdriver": "^2.44.28",
