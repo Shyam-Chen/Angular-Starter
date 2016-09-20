@@ -1,4 +1,4 @@
-import { protractor, browser } from 'protractor/globals';
+import { protractor } from 'protractor/globals';
 
 declare let describe: any;
 declare let beforeEach: any;
