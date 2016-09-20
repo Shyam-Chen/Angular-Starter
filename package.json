@@ -11,7 +11,8 @@
     "clean": "rimraf public",
     "reset": "git reset --hard HEAD && git clean -df",
     "reinstall": "npm cache clean && git clean -dfx -e '.*' && npm install",
-    "postinstall": "gulp webdriver"
+    "postinstall": "npm run gulp -- webdriver",
+    "gulp": "gulp"
   },
   "repository": {
     "type": "git",
