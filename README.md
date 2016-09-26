@@ -18,7 +18,7 @@
 
 ### Clone Angular2TS-Starter-Kit
 ```bash
-$ git clone https://github.com/Shyam-Chen/Angular2TS-Starter-Kit
+$ git clone --depth 1 https://github.com/Shyam-Chen/Angular2TS-Starter-Kit.git
 $ cd angular2ts-starter-kit
 ```
 
