@@ -1,11 +1,3 @@
-declare let describe: any;
-declare let browser: any;
-declare let beforeEach: any;
-declare let it: any;
-declare let expect: any;
-declare let element: any;
-declare let by: any;
-
 describe('AppComponent', () => {
 
   beforeEach(() => {
