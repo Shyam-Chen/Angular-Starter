@@ -1,6 +1,5 @@
-import { protractor } from 'protractor/globals';
-
 declare let describe: any;
+declare let browser: any;
 declare let beforeEach: any;
 declare let it: any;
 declare let expect: any;
@@ -10,7 +9,7 @@ declare let by: any;
 describe('AppComponent', () => {
 
   beforeEach(() => {
-    protractor.browser.get('/');
+    browser.get('/');
   });
 
   it('should have a content', () => {

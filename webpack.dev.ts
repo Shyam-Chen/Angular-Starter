@@ -9,7 +9,7 @@ export = webpackMerge(commonConfig, {
   devtool: 'cheap-module-eval-source-map',
   output: {
     path: './public',
-    publicPath: 'http://localhost:3001/',
+    publicPath: 'http://localhost:2999/',
     filename: '[name].js',
     chunkFilename: '[id].chunk.js'
   },
@@ -18,7 +18,7 @@ export = webpackMerge(commonConfig, {
     new BrowserSyncPlugin({
       host: 'localhost',
       port: 3000,
-      proxy: 'http://localhost:3001/'
+      proxy: 'http://localhost:2999/'
     }, {
       reload: false
     })
