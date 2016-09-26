@@ -21,6 +21,6 @@ script:
 
 after_success:
   - docker exec -it app npm run build
-  # - docker exec -it app firebase deploy --token ${FIREBASE_TOKEN}
+  - docker exec -it app firebase deploy --token ${FIREBASE_TOKEN}
   # - docker-compose exec app npm run build
   # - docker-compose exec app firebase deploy --token ${FIREBASE_TOKEN}
