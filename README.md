@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/Shyam-Chen/Angular2TS-Starter-Kit.svg?branch=master)](https://travis-ci.org/Shyam-Chen/Angular2TS-Starter-Kit)
  //
 [![Dependency Status](https://david-dm.org/Shyam-Chen/Angular2TS-Starter-Kit.svg)](https://david-dm.org/Shyam-Chen/Angular2TS-Starter-Kit)
-[![devDependency Status](https://david-dm.org/Shyam-Chen/Angular2TS-Starter-Kit/dev-status.svg)](https://david-dm.org/Shyam-Chen/Angular2TS-Starter-Kit#info=devDependencies)
+[![devDependency Status](https://david-dm.org/Shyam-Chen/Angular2TS-Starter-Kit/dev-status.svg)](https://david-dm.org/Shyam-Chen/Angular2TS-Starter-Kit?type=dev)
 
 ## Key Features
 * Angular, Material and Firebase
