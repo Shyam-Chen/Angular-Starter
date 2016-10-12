@@ -1,5 +1,7 @@
 # Angular2TS Starter Kit
 
+Think about using [Rollup](https://github.com/rollup/rollup)
+
 ## Project Status
 [![Build Status](https://travis-ci.org/Shyam-Chen/Angular2TS-Starter-Kit.svg?branch=master)](https://travis-ci.org/Shyam-Chen/Angular2TS-Starter-Kit)
  //
