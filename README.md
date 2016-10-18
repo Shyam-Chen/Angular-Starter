@@ -1,37 +1,37 @@
-# Angular2TS Starter Kit
+# Angular Starter Kit
 
-Think about using [Rollup](https://github.com/rollup/rollup)
+ToDo: Migrate to [Rollup](https://github.com/rollup/rollup) from Webpack.
 
 ## Project Status
-[![Build Status](https://travis-ci.org/Shyam-Chen/Angular2TS-Starter-Kit.svg?branch=master)](https://travis-ci.org/Shyam-Chen/Angular2TS-Starter-Kit)
+[![Build Status](https://travis-ci.org/Shyam-Chen/Angular-Starter-Kit.svg?branch=master)](https://travis-ci.org/Shyam-Chen/Angular-Starter-Kit)
  //
-[![Dependency Status](https://david-dm.org/Shyam-Chen/Angular2TS-Starter-Kit.svg)](https://david-dm.org/Shyam-Chen/Angular2TS-Starter-Kit)
-[![devDependency Status](https://david-dm.org/Shyam-Chen/Angular2TS-Starter-Kit/dev-status.svg)](https://david-dm.org/Shyam-Chen/Angular2TS-Starter-Kit?type=dev)
+[![Dependency Status](https://david-dm.org/Shyam-Chen/Angular-Starter-Kit.svg)](https://david-dm.org/Shyam-Chen/Angular-Starter-Kit)
+[![devDependency Status](https://david-dm.org/Shyam-Chen/Angular-Starter-Kit/dev-status.svg)](https://david-dm.org/Shyam-Chen/Angular-Starter-Kit?type=dev)
 
 ## Key Features
 * Angular, Material and Firebase
-* Ubuntu, Atom, Git, NPM and Docker
+* Ubuntu, Atom, Git, Yarn and Docker
 * Pug, Stylus and TypeScript
-* Gulp, Webpack, PostStylus, Types and BrowserSync
+* Gulp, Rollup, PostStylus, Types and BrowserSync
 * PugLint, Stylint and TSLint
 * Codelyzer, Jasmine, Karma, Protractor and Travis
 
 ## Getting Started
 
-### Clone Angular2TS-Starter-Kit
+### Clone Angular-Starter-Kit
 ```bash
-$ git clone --depth 1 https://github.com/Shyam-Chen/Angular2TS-Starter-Kit.git
-$ cd angular2ts-starter-kit
+$ git clone --depth 1 https://github.com/Shyam-Chen/Angular-Starter-Kit.git
+$ cd angular-starter-kit
 ```
 
 ### Install Dependencies
 ```bash
-$ npm install
+$ yarn install
 ```
 
 ### Run the Application
 ```bash
-$ npm start
+$ yarn start
 ```
 
 ## Using Docker
@@ -51,27 +51,27 @@ $ docker-compose up
 
 ### Build the Application
 ```bash
-$ npm run build
+$ yarn run build
 ```
 
 ### Test the Application
 ```bash
-$ npm run lint
-$ npm run unit
-$ npm run e2e
+$ yarn run lint
+$ yarn run unit
+$ yarn run e2e
 ```
 
 ### Clean the Application
 ```bash
-$ npm run clean
+$ yarn run clean
 ```
 
 ### Reset the Application
 ```bash
-$ npm run reset
+$ yarn run reset
 ```
 
 ### Reinstall the Application
 ```bash
-$ npm run reinstall
+$ yarn run reinstall
 ```

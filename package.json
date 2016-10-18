@@ -1,7 +1,7 @@
 {
-  "name": "Angular2TS-Starter-Kit",
+  "name": "Angular-Starter-Kit",
   "version": "1.0.0",
-  "description": "A starter kit for Angular 2 apps with TypeScript",
+  "description": "A starter kit for Angular apps",
   "scripts": {
     "start": "tsc webpack.dev.ts && webpack-dev-server --config webpack.dev.js --inline --progress --port 3001",
     "build": "tsc webpack.prod.ts && rimraf public && webpack --config webpack.prod.js --progress --profile --bail",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Shyam-Chen/Angular2TS-Starter-Kit.git"
+    "url": "git+https://github.com/Shyam-Chen/Angular-Starter-Kit.git"
   },
   "keywords": [
     "Angular 2",
@@ -25,9 +25,9 @@
   "author": "Shyam Chen, 陳彥澄",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Shyam-Chen/Angular2TS-Starter-Kit/issues"
+    "url": "https://github.com/Shyam-Chen/Angular-Starter-Kit/issues"
   },
-  "homepage": "https://github.com/Shyam-Chen/Angular2TS-Starter-Kit#readme",
+  "homepage": "https://github.com/Shyam-Chen/Angular-Starter-Kit#readme",
   "dependencies": {
     "@angular/common": "^2.0.0",
     "@angular/compiler": "^2.0.0",
