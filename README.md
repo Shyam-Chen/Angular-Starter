@@ -11,9 +11,8 @@ ToDo: Migrate to [Rollup](https://github.com/rollup/rollup) from Webpack.
 ## Key Features
 * Angular, Material and Firebase
 * Ubuntu, Atom, Git, Yarn and Docker
-* Pug, Stylus and TypeScript
+* Pug, Stylus, TypeScript, PugLint, Stylint and TSLint
 * Gulp, Rollup, PostStylus, Types and BrowserSync
-* PugLint, Stylint and TSLint
 * Codelyzer, Jasmine, Karma, Protractor and Travis
 
 ## Getting Started
