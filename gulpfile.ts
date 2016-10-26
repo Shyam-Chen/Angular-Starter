@@ -8,6 +8,51 @@ const gProtractor = require('gulp-protractor');  // import { protractor, webdriv
 import { TEMPLATES_SRC, STYLES_SRC, SCRIPTS_SRC, APP_DEST } from './tools/config/gulp.config';
 import { E2EServer } from './tools/utils/e2eserver';
 
+
+
+
+const rollup = require('rollup-stream');
+const typescript = require('rollup-plugin-typescript');
+const stylus = require('rollup-plugin-stylus');
+const resolve = require('rollup-plugin-node-resolve');
+const commonjs = require('rollup-plugin-commonjs');
+const uglify = require('rollup-plugin-uglify');
+const source = require('vinyl-source-stream');
+const buffer = require('vinyl-buffer');
+
+gulp.task('compile-typescript-vendor', () => {
+  rollup({
+    entry: './src/vendor.ts',
+    format: 'iife',
+    plugins: [
+      typescript(),
+      stylus(),
+      resolve({ jsnext: true, browser: true }),
+      commonjs(),
+      uglify()
+    ]
+  })
+  .pipe(source('vendor.js', APP_DEST))
+  .pipe(buffer())
+  .pipe(gulp.dest(APP_DEST));
+});
+
+gulp.task('compile-typescript-main', () => {
+  rollup({
+    entry: './src/public/scripts/main.ts',
+    format: 'iife',
+    plugins: [
+      typescript(),
+      stylus()
+    ]
+  })
+  .pipe(source('main.js', APP_DEST))
+  .pipe(buffer())
+  .pipe(gulp.dest(APP_DEST));
+});
+
+
+
 gulp.task('lint-pug', () =>
   gulp
     .src(TEMPLATES_SRC)
