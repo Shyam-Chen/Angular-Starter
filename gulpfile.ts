@@ -1,11 +1,12 @@
 import * as gulp from 'gulp';
+
 const pugLint = require('gulp-pug-linter');  // import * as pugLint from 'gulp-pug-linter';
 const stylint = require('gulp-stylint');  // import * as stylint from 'gulp-stylint';
 const tslint = require('gulp-tslint');  // import * as tslint from 'gulp-tslint';
 import * as runSequence from 'run-sequence';
 const gProtractor = require('gulp-protractor');  // import { protractor, webdriver_update } from 'gulp-protractor';
 
-import { TEMPLATES_SRC, STYLES_SRC, SCRIPTS_SRC, APP_DEST } from './tools/config/gulp.config';
+import { TEMPLATES_SRC, STYLES_SRC, SCRIPTS_SRC, APP_DEST } from './tools/constants';
 import { E2EServer } from './tools/utils/e2eserver';
 
 const pug = require('gulp-pug');

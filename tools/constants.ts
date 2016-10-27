@@ -1,3 +1,5 @@
+// import { join } from 'path';
+
 class Config {
   APP_SRC = './src';
   APP_DEST = './public';
