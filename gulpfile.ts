@@ -8,8 +8,13 @@ const gProtractor = require('gulp-protractor');  // import { protractor, webdriv
 import { TEMPLATES_SRC, STYLES_SRC, SCRIPTS_SRC, APP_DEST } from './tools/config/gulp.config';
 import { E2EServer } from './tools/utils/e2eserver';
 
+const pug = require('gulp-pug');
 
-
+gulp.task('cpi', () => {
+  gulp.src('./src/index.pug')
+    .pipe(pug())
+    .pipe(gulp.dest(APP_DEST));
+});
 
 const rollup = require('rollup-stream');
 const typescript = require('rollup-plugin-typescript');
@@ -20,7 +25,24 @@ const uglify = require('rollup-plugin-uglify');
 const source = require('vinyl-source-stream');
 const buffer = require('vinyl-buffer');
 
-gulp.task('compile-typescript-vendor', () => {
+gulp.task('ctp', () => {
+  rollup({
+    entry: './src/polyfills.ts',
+    format: 'iife',
+    plugins: [
+      typescript(),
+      stylus(),
+      resolve({ jsnext: true, browser: true }),
+      commonjs(),
+      uglify()
+    ]
+  })
+  .pipe(source('polyfills.js', APP_DEST))
+  .pipe(buffer())
+  .pipe(gulp.dest(APP_DEST));
+});
+
+gulp.task('ctv', () => {
   rollup({
     entry: './src/vendor.ts',
     format: 'iife',
@@ -37,13 +59,16 @@ gulp.task('compile-typescript-vendor', () => {
   .pipe(gulp.dest(APP_DEST));
 });
 
-gulp.task('compile-typescript-main', () => {
+gulp.task('ctm', () => {
   rollup({
-    entry: './src/public/scripts/main.ts',
+    entry: './src/main.ts',
     format: 'iife',
     plugins: [
       typescript(),
-      stylus()
+      stylus(),
+      resolve({ jsnext: true, browser: true }),
+      commonjs(),
+      uglify()
     ]
   })
   .pipe(source('main.js', APP_DEST))
