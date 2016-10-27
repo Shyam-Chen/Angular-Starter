@@ -31,7 +31,6 @@ gulp.task('ctp', () => {
     format: 'iife',
     plugins: [
       typescript(),
-      stylus(),
       resolve({ jsnext: true, browser: true }),
       commonjs(),
       uglify()
@@ -65,7 +64,7 @@ gulp.task('ctm', () => {
     format: 'iife',
     plugins: [
       typescript(),
-      stylus(),
+      stylus({ output: './public/main.css' }),
       resolve({ jsnext: true, browser: true }),
       commonjs(),
       uglify()

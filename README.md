@@ -1,7 +1,5 @@
 # Angular Starter Kit
 
-ToDo: Migrate to [Rollup](https://github.com/rollup/rollup) from Webpack.
-
 ## Project Status
 [![Build Status](https://travis-ci.org/Shyam-Chen/Angular-Starter-Kit.svg?branch=master)](https://travis-ci.org/Shyam-Chen/Angular-Starter-Kit)
  //
@@ -19,8 +17,8 @@ ToDo: Migrate to [Rollup](https://github.com/rollup/rollup) from Webpack.
 
 ### Clone Angular-Starter-Kit
 ```bash
-$ git clone --depth 1 https://github.com/Shyam-Chen/Angular-Starter-Kit.git
-$ cd angular-starter-kit
+$ git clone --depth 1 https://github.com/Shyam-Chen/Angular-Starter-Kit.git <PROJECT_NAME>
+$ cd <PROJECT_NAME>
 ```
 
 ### Install Dependencies
@@ -37,8 +35,8 @@ $ yarn start
 
 ### Run the Application
 ```bash
-$ docker build -t angular2ts-starter-kit .
-$ docker run -it -p 3000:3000 --name app angular2ts-starter-kit
+$ docker build -t angular-starter-kit .
+$ docker run -it -p 3000:3000 --name app angular-starter-kit
 ```
 
 ### Run the Application with Compose
