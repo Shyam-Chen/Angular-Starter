@@ -26,7 +26,7 @@ const source = require('vinyl-source-stream');
 const buffer = require('vinyl-buffer');
 
 gulp.task('ctp', () => {
-  rollup({
+  return rollup({
     entry: './src/polyfills.ts',
     format: 'iife',
     plugins: [
@@ -42,7 +42,7 @@ gulp.task('ctp', () => {
 });
 
 gulp.task('ctv', () => {
-  rollup({
+  return rollup({
     entry: './src/vendor.ts',
     format: 'iife',
     plugins: [
@@ -59,7 +59,7 @@ gulp.task('ctv', () => {
 });
 
 gulp.task('ctm', () => {
-  rollup({
+  return rollup({
     entry: './src/main.ts',
     format: 'iife',
     plugins: [
@@ -75,7 +75,30 @@ gulp.task('ctm', () => {
   .pipe(gulp.dest(APP_DEST));
 });
 
+let cache: any;
+gulp.task('rollup-dev', () => {
+  return rollup({
+      entry: './src/main.ts',
+      format: 'iife',
+      plugins: [
+        typescript(),
+        stylus({ output: './public/main.css' }),
+        resolve({ jsnext: true, browser: true }),
+        commonjs()
+      ],
+      cache: cache
+    })
+    .on('bundle', (bundle: any) => {
+      cache = bundle;
+    })
+    .pipe(source('main.js', APP_DEST))
+    .pipe(buffer())
+    .pipe(gulp.dest(APP_DEST));
+});
 
+gulp.task('watch', () => {
+  gulp.watch('./src/**/*.ts', ['rollup-dev']);
+});
 
 gulp.task('lint-pug', () =>
   gulp
