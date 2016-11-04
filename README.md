@@ -1,4 +1,6 @@
-# Angular Starter Kit
+# Angular Starter Kit (beta)
+
+[Live Demo](https://angular2ts-starter-kit.firebaseapp.com/)
 
 ## Project Status
 [![Build Status](https://travis-ci.org/Shyam-Chen/Angular-Starter-Kit.svg?branch=master)](https://travis-ci.org/Shyam-Chen/Angular-Starter-Kit)
@@ -7,11 +9,11 @@
 [![devDependency Status](https://david-dm.org/Shyam-Chen/Angular-Starter-Kit/dev-status.svg)](https://david-dm.org/Shyam-Chen/Angular-Starter-Kit?type=dev)
 
 ## Key Features
-* Angular, Material and Firebase
-* Ubuntu, Atom, Git, Yarn and Docker
-* Pug, Stylus, TypeScript, PugLint, Stylint and TSLint
-* Gulp, Rollup, PostStylus, Types and BrowserSync
-* Codelyzer, Jasmine, Karma, Protractor and Travis
+* Angular, Material, and Firebase
+* Linux, Atom, Git, Yarn, and Docker
+* Pug, Stylus, TypeScript, PugLint, Stylint, and TSLint
+* Gulp, Rollup, PostStylus, Types, and BrowserSync
+* Codelyzer, Jasmine, Karma, Protractor, and Travis
 
 ## Getting Started
 
