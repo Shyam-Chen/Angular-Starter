@@ -8,22 +8,22 @@
 [![devDependency Status](https://david-dm.org/Shyam-Chen/Angular-Starter-Kit/dev-status.svg)](https://david-dm.org/Shyam-Chen/Angular-Starter-Kit?type=dev)
 
 This repository provides the following features:
-* [x] Angular
-* [ ] Material
-* [ ] Firebase
-* [x] Git
-* [x] Yarn
-* [x] Docker
-* [x] Pug, Stylus, and TypeScript
-* [x] PugLint, Stylint, and TSLint
-* [ ] Gulp, Rollup
-* [ ] PostStylus
-* [x] Types
-* [x] BrowserSync
-* [x] Codelyzer
-* [x] Jasmine and Karma
-* [x] Protractor
-* [x] Travis
+* [x] Web framework wtih **Angular**.
+* [ ] UI components with **Material**.
+* [ ] Back-end services with **Firebase**.
+* [x] Start coding **Pug/Stylus/TypeScript** right now.
+* [x] Static code analyzer with **PugLint**, **Stylint**, and **TSLint**.
+* [ ] Build system using **Gulp** and **Rollup** for working.
+* [ ] Stylus super powers with **PostStylus**.
+* [x] TypeScript type definitions with **Types**.
+* [x] Development server with **BrowserSync**.
+* [x] Static code analysis of Angular TypeScript projects with **Codelyzer**.
+* [x] Unit tests with **Jasmine** and **Karma**.
+* [x] End-to-end tests with **Protractor**.
+* [x] Version control with **Git**.
+* [x] Fast and determinsitic builds with **Yarn**.
+* [x] Virtual machine with **Docker** and **Compose**.
+* [x] Continuous Integration and Continous Delivery with **Travis**.
 
 ## Getting Started
 
