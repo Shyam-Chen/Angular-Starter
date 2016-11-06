@@ -11,6 +11,7 @@ This repository provides the following features:
 * [x] Web framework wtih **Angular**.
 * [ ] UI components with **Material**.
 * [ ] Back-end services with **Firebase**.
+* [ ] Functional reactive programming with **Rxjs**.
 * [ ] Redux style state management with **Ngrx**.
 * [ ] Internationalization with **Translate**.
 * [ ] Vendor-agnostic analytics for Angular applications with **Angulartics**.
