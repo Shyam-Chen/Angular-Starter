@@ -1,19 +1,29 @@
-# Angular Starter Kit (beta)
+# Angular Starter Kit (Beta)
 
-[Live Demo](https://angular2ts-starter-kit.firebaseapp.com/)
+> A boilerplate for Angular, Gulp, and Rollup. ([Live Demo](https://angular2ts-starter-kit.firebaseapp.com/))
 
-## Project Status
 [![Build Status](https://travis-ci.org/Shyam-Chen/Angular-Starter-Kit.svg?branch=master)](https://travis-ci.org/Shyam-Chen/Angular-Starter-Kit)
  //
 [![Dependency Status](https://david-dm.org/Shyam-Chen/Angular-Starter-Kit.svg)](https://david-dm.org/Shyam-Chen/Angular-Starter-Kit)
 [![devDependency Status](https://david-dm.org/Shyam-Chen/Angular-Starter-Kit/dev-status.svg)](https://david-dm.org/Shyam-Chen/Angular-Starter-Kit?type=dev)
 
-## Key Features
-* Angular, Material, and Firebase
-* Linux, Atom, Git, Yarn, and Docker
-* Pug, Stylus, TypeScript, PugLint, Stylint, and TSLint
-* Gulp, Rollup, PostStylus, Types, and BrowserSync
-* Codelyzer, Jasmine, Karma, Protractor, and Travis
+This repository provides the following features:
+* [x] Angular
+* [ ] Material
+* [ ] Firebase
+* [x] Git
+* [x] Yarn
+* [x] Docker
+* [x] Pug, Stylus, and TypeScript
+* [x] PugLint, Stylint, and TSLint
+* [ ] Gulp, Rollup
+* [ ] PostStylus
+* [x] Types
+* [x] BrowserSync
+* [x] Codelyzer
+* [x] Jasmine and Karma
+* [x] Protractor
+* [x] Travis
 
 ## Getting Started
 
