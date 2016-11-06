@@ -11,6 +11,9 @@ This repository provides the following features:
 * [x] Web framework wtih **Angular**.
 * [ ] UI components with **Material**.
 * [ ] Back-end services with **Firebase**.
+* [ ] Redux style state management with **Ngrx**.
+* [ ] Internationalization with **Translate**.
+* [ ] Vendor-agnostic analytics for Angular applications with **Angulartics**.
 * [x] Start coding **Pug/Stylus/TypeScript** right now.
 * [x] Static code analyzer with **PugLint**, **Stylint**, and **TSLint**.
 * [ ] Build system using **Gulp** and **Rollup** for working.
