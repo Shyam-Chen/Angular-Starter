@@ -1,4 +1,4 @@
-# Angular Starter Kit (Beta)
+# Angular Starter Kit (Alpha)
 
 > A boilerplate for Angular, Gulp, and Rollup. ([Live Demo](https://angular2ts-starter-kit.firebaseapp.com/))
 
@@ -8,6 +8,8 @@
 [![devDependency Status](https://david-dm.org/Shyam-Chen/Angular-Starter-Kit/dev-status.svg)](https://david-dm.org/Shyam-Chen/Angular-Starter-Kit?type=dev)
 
 This repository provides the following features:
+* [x] Start coding **Pug/Stylus/TypeScript** right now.
+* [ ] Build system using **Gulp** and **Rollup** for working.
 * [x] Web framework wtih **Angular**.
 * [ ] UI components with **Material**.
 * [ ] Back-end services with **Firebase**.
@@ -15,19 +17,20 @@ This repository provides the following features:
 * [ ] Redux style state management with **Ngrx**.
 * [ ] Internationalization with **Translate**.
 * [ ] Vendor-agnostic analytics for Angular applications with **Angulartics**.
-* [x] Start coding **Pug/Stylus/TypeScript** right now.
-* [x] Static code analyzer with **PugLint**, **Stylint**, and **TSLint**.
-* [ ] Build system using **Gulp** and **Rollup** for working.
+* [ ] Data visualization with **Highcharts**.
+* [ ] Utility library with **Lodash**.
 * [ ] Stylus super powers with **PostStylus**.
 * [x] TypeScript type definitions with **Types**.
 * [x] Development server with **BrowserSync**.
+* [x] Static code analyzer with **PugLint**, **Stylint**, and **TSLint**.
 * [x] Static code analysis of Angular TypeScript projects with **Codelyzer**.
-* [x] Unit tests with **Jasmine** and **Karma**.
+* [x] Testing framework with **Jasmine**.
+* [x] Unit tests with **Karma**.
 * [x] End-to-end tests with **Protractor**.
 * [x] Version control with **Git**.
 * [x] Fast and determinsitic builds with **Yarn**.
 * [x] Virtual machine with **Docker** and **Compose**.
-* [x] Continuous Integration and Continous Delivery with **Travis**.
+* [x] Continuous integration and deployment with  **Travis**.
 
 ## Getting Started
 
