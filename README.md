@@ -15,10 +15,10 @@ This repository provides the following features:
 * [ ] Back-end services with **Firebase**.
 * [ ] Functional reactive programming with **Rxjs**.
 * [ ] Redux style state management with **Ngrx**.
+* [ ] Utility Functions with **Lodash**.
 * [ ] Internationalization with **Translate**.
 * [ ] Vendor-agnostic analytics for Angular applications with **Angulartics**.
 * [ ] Data visualization with **Highcharts**.
-* [ ] Utility library with **Lodash**.
 * [ ] Stylus super powers with **PostStylus**.
 * [x] TypeScript type definitions with **Types**.
 * [x] Development server with **BrowserSync**.
