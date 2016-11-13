@@ -9,16 +9,18 @@
 
 This repository provides the following features:
 * [x] Start coding **Pug/Stylus/TypeScript** right now.
-* [ ] Build system using **Gulp** and **Rollup** for working.
 * [x] Web framework wtih **Angular**.
 * [ ] UI components with **Material**.
 * [ ] Back-end services with **Firebase**.
-* [ ] Functional reactive programming with **Rxjs**.
-* [ ] Redux style state management with **Ngrx**.
+* [ ] Functional reactive programming with **RxJS**.
+* [ ] RxJS powered state management with **NgRx**.
+* [ ] Immutable persistent data collections with **Immutable**.
 * [ ] Utility Functions with **Lodash**.
 * [ ] Internationalization with **Translate**.
 * [ ] Vendor-agnostic analytics for Angular applications with **Angulartics**.
 * [ ] Data visualization with **Highcharts**.
+* [x] Build system with **Gulp**.
+* [ ] Module bundler with **Rollup**.
 * [ ] Stylus super powers with **PostStylus**.
 * [x] TypeScript type definitions with **Types**.
 * [x] Development server with **BrowserSync**.
