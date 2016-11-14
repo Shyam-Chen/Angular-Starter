@@ -7,18 +7,12 @@
 [![Dependency Status](https://david-dm.org/Shyam-Chen/Angular-Starter-Kit.svg)](https://david-dm.org/Shyam-Chen/Angular-Starter-Kit)
 [![devDependency Status](https://david-dm.org/Shyam-Chen/Angular-Starter-Kit/dev-status.svg)](https://david-dm.org/Shyam-Chen/Angular-Starter-Kit?type=dev)
 
-This repository provides the following features:
+This seed repository provides the following features:
 * [x] Start coding **Pug/Stylus/TypeScript** right now.
 * [x] Web framework wtih **Angular**.
 * [ ] UI components with **Material**.
 * [ ] Back-end services with **Firebase**.
 * [ ] Functional reactive programming with **RxJS**.
-* [ ] RxJS powered state management with **NgRx**.
-* [ ] Immutable persistent data collections with **Immutable**.
-* [ ] Utility Functions with **Lodash**.
-* [ ] Internationalization with **Translate**.
-* [ ] Vendor-agnostic analytics for Angular applications with **Angulartics**.
-* [ ] Data visualization with **Highcharts**.
 * [x] Build system with **Gulp**.
 * [ ] Module bundler with **Rollup**.
 * [ ] Stylus super powers with **PostStylus**.
@@ -33,6 +27,16 @@ This repository provides the following features:
 * [x] Fast and determinsitic builds with **Yarn**.
 * [x] Virtual machine with **Docker** and **Compose**.
 * [x] Continuous integration and deployment with  **Travis**.
+
+Advanced options:
+* [ ] RxJS powered state management with **NgRx**.
+* [ ] Immutable persistent data collections with **Immutable**.
+* [ ] Utility Functions with **Lodash**.
+* [ ] Internationalization with **Translate**.
+* [ ] Vendor-agnostic analytics for Angular applications with **Angulartics**.
+* [ ] Data visualization with **Highcharts**.
+* [ ] Cross platform mobile applications (iOS and Android) with **NativeScript**.
+* [ ] Cross platform desktop applications (Mac, Windows and Linux) with **Electron**.
 
 ## Getting Started
 
