@@ -1,11 +1,13 @@
 # Angular Starter Kit (Alpha)
 
-> A boilerplate for Angular, Gulp, and Rollup. ([Live Demo](https://angular2ts-starter-kit.firebaseapp.com/))
+> A boilerplate written in Pug, Stylus, and TypeScript using Angular, Material, Firebase, Gulp, and Rollup.
 
 [![Build Status](https://travis-ci.org/Shyam-Chen/Angular-Starter-Kit.svg?branch=master)](https://travis-ci.org/Shyam-Chen/Angular-Starter-Kit)
  //
 [![Dependency Status](https://david-dm.org/Shyam-Chen/Angular-Starter-Kit.svg)](https://david-dm.org/Shyam-Chen/Angular-Starter-Kit)
 [![devDependency Status](https://david-dm.org/Shyam-Chen/Angular-Starter-Kit/dev-status.svg)](https://david-dm.org/Shyam-Chen/Angular-Starter-Kit?type=dev)
+
+[Live Demo](https://angular2ts-starter-kit.firebaseapp.com/)
 
 This seed repository provides the following features:
 * [x] Start coding **Pug/Stylus/TypeScript** right now.
@@ -14,19 +16,22 @@ This seed repository provides the following features:
 * [ ] Back-end services with **Firebase**.
 * [x] Functional reactive programming with **RxJS**.
 * [ ] RxJS powered state management with **NgRx**.
+* [ ] Data visualization with **Highcharts**.
 * [x] Build system with **Gulp**.
 * [ ] Module bundler with **Rollup**.
-* [ ] Stylus super powers with **PostStylus**.
+* [ ] Stylus superpowers with **PostStylus**.
 * [x] TypeScript type definitions with **Types**.
 * [x] Development server with **BrowserSync**.
-* [x] Static code analyzer with **PugLint**, **Stylint**, and **TSLint**.
-* [x] Static code analysis of Angular TypeScript projects with **Codelyzer**.
+* [x] Pug static code analyzer with **PugLint**.
+* [x] Stylus static code analyzer with **Stylint**.
+* [x] TypeScript static code analyzer with **TSLint**.
+* [x] Angular static code analysis with **Codelyzer**.
 * [x] Testing framework with **Jasmine**.
 * [x] Unit tests with **Karma**.
 * [x] End-to-end tests with **Protractor**.
 * [x] Version control with **Git**.
 * [x] Fast and determinsitic builds with **Yarn**.
-* [x] Virtual machine with **Docker** and **Compose**.
+* [x] Virtual machine with **Docker**.
 * [x] Continuous integration and deployment with  **Travis**.
 
 ## Getting Started
