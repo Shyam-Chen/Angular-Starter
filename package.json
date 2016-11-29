@@ -19,36 +19,30 @@
     "url": "git+https://github.com/Shyam-Chen/Angular-Starter-Kit.git"
   },
   "keywords": [
-    "Angular 2",
-    "TypeScript"
+    "Angular"
   ],
-  "author": "Shyam Chen, 陳彥澄",
+  "author": "陳彥澄",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Shyam-Chen/Angular-Starter-Kit/issues"
   },
   "homepage": "https://github.com/Shyam-Chen/Angular-Starter-Kit#readme",
   "dependencies": {
-    "@angular/common": "^2.1.0",
-    "@angular/compiler": "^2.1.0",
-    "@angular/core": "^2.1.0",
-    "@angular/forms": "^2.1.0",
-    "@angular/http": "^2.1.0",
-    "@angular/platform-browser": "^2.1.0",
-    "@angular/platform-browser-dynamic": "^2.1.0",
-    "@angular/router": "3.1.0",
-    "@angular2-material/button": "^2.0.0-alpha.9",
-    "@angular2-material/core": "^2.0.0-alpha.9",
-    "@ngrx/core": "^1.2.0",
-    "@ngrx/effects": "^2.0.0",
-    "@ngrx/store": "^2.2.1",
-    "@reactivex/rxjs": "^5.0.0-rc.1",
-    "angular2-highcharts": "^0.4.1",
-    "angularfire2": "^2.0.0-beta.6",
+    "@angular/common": "2.2.3",
+    "@angular/compiler": "2.2.3",
+    "@angular/core": "2.2.3",
+    "@angular/forms": "2.2.3",
+    "@angular/http": "2.2.3",
+    "@angular/platform-browser": "2.2.3",
+    "@angular/platform-browser-dynamic": "2.2.3",
+    "@angular/router": "3.2.3",
+    "@angular2-material/button": "2.0.0-alpha.9",
+    "@angular2-material/core": "2.0.0-alpha.9",
+    "angularfire2": "2.0.0-beta.6",
     "core-js": "2.4.1",
-    "firebase": "^3.5.0",
+    "firebase": "3.6.1",
     "rxjs": "5.0.0-beta.12",
-    "zone.js": "0.6.23"
+    "zone.js": "0.6.26"
   },
   "devDependencies": {
     "@types/core-js": "^0.9.32",

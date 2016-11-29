@@ -11,15 +11,13 @@
 
 This seed repository provides the following features:
 * [x] Start coding **Pug/Stylus/TypeScript** right now.
-* [x] Web framework wtih **Angular**.
+* [x] App framework wtih **Angular**.
 * [ ] UI components with **Material**.
 * [ ] Back-end services with **Firebase**.
 * [x] Functional reactive programming with **RxJS**.
-* [ ] RxJS powered state management with **NgRx**.
-* [ ] Data visualization with **Highcharts**.
 * [x] Build system with **Gulp**.
 * [ ] Module bundler with **Rollup**.
-* [ ] Stylus superpowers with **PostStylus**.
+* [x] Stylus superpowers with **PostStylus**.
 * [x] TypeScript type definitions with **Types**.
 * [x] Development server with **BrowserSync**.
 * [x] Pug static code analyzer with **PugLint**.
@@ -30,9 +28,9 @@ This seed repository provides the following features:
 * [x] Unit tests with **Karma**.
 * [x] End-to-end tests with **Protractor**.
 * [x] Version control with **Git**.
-* [x] Fast and determinsitic builds with **Yarn**.
+* [x] Fast and deterministic builds with **Yarn**.
 * [x] Virtual machine with **Docker**.
-* [x] Continuous integration and deployment with  **Travis**.
+* [x] Continuous integration and delivery with **Travis**.
 
 ## Getting Started
 
