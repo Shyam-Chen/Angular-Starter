@@ -14,10 +14,10 @@ This seed repository provides the following features:
 * [x] App framework wtih **Angular**.
 * [ ] UI components with **Material**.
 * [ ] Back-end services with **Firebase**.
-* [x] Functional reactive programming with **RxJS**.
+* [x] Observables type with **RxJS**.
 * [x] Build system with **Gulp**.
 * [ ] Module bundler with **Rollup**.
-* [x] Stylus superpowers with **PostStylus**.
+* [ ] Stylus superpowers with **PostStylus**.
 * [x] TypeScript type definitions with **Types**.
 * [x] Development server with **BrowserSync**.
 * [x] Pug static code analyzer with **PugLint**.
