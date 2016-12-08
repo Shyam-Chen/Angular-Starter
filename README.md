@@ -15,6 +15,9 @@ This seed repository provides the following features:
 * [ ] UI components with **Material**.
 * [ ] Back-end services with **Firebase**.
 * [x] Observables type with **RxJS**.
+* [ ] Predictable state with **NgRx**.
+* [ ] Internationalization with **NgXi18n**.
+* [ ] Data visualization with **Chart**.
 * [x] Build system with **Gulp**.
 * [ ] Module bundler with **Rollup**.
 * [ ] Stylus superpowers with **PostStylus**.
