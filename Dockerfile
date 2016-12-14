@@ -14,9 +14,8 @@ RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - && \
     nodejs xvfb chromium libgconf-2-4 openjdk-7-jre-headless && \
     rm -rf /var/lib/apt/lists/*
 
-RUN chmod a+x entrypoint.sh
-
-ENTRYPOINT ["/Angular-Starter-Kit/entrypoint.sh"]
+RUN chmod a+x scripts/window.sh
+ENTRYPOINT ["/Angular-Starter-Kit/scripts/window.sh"]
 
 RUN npm install && \
     npm install -g firebase-tools
