@@ -39,9 +39,15 @@
     "@angular2-material/button": "2.0.0-alpha.8",
     "@angular2-material/core": "2.0.0-alpha.8",
     "angularfire2": "2.0.0-beta.6",
+    "chart.js": "^2.4.0",
     "core-js": "2.4.1",
     "firebase": "3.6.1",
-    "rxjs": "5.0.0-beta.12",
+    "intl": "^1.2.5",
+    "localize-router": "^0.4.0",
+    "lodash-es": "^4.17.2",
+    "ng2-charts": "^1.4.4",
+    "ng2-translate": "^4.2.0",
+    "rxjs": "^5.0.1",
     "zone.js": "0.6.26"
   },
   "devDependencies": {

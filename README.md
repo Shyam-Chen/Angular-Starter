@@ -12,11 +12,12 @@
 This seed repository provides the following features:
 * [x] Start coding **Pug/Stylus/TypeScript** right now.
 * [x] App framework wtih **Angular**.
+* [x] Functional programming with **Lodash**.
+* [x] Reactive programming with **ReactiveX**.
+* [ ] Predictable state with **NgRx**.
 * [ ] UI components with **Material**.
 * [ ] Back-end services with **Firebase**.
-* [x] Observables type with **RxJS**.
-* [ ] Predictable state with **NgRx**.
-* [ ] Internationalization with **NgXi18n**.
+* [ ] Globalization with **Translate** and **Localize**.
 * [ ] Data visualization with **Chart**.
 * [x] Build system with **Gulp**.
 * [ ] Module bundler with **Rollup**.
