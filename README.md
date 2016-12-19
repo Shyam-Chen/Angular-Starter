@@ -1,6 +1,6 @@
 # Angular Starter Kit (Alpha)
 
-> A boilerplate written in Pug, Stylus, and TypeScript using Angular, Material, Firebase, Gulp, and Rollup.
+> A boilerplate written in Pug, Stylus, TypeScript using Angular, ReactiveX, NgRx, Material, Firebase, Gulp, and Rollup.
 
 [![Build Status](https://travis-ci.org/Shyam-Chen/Angular-Starter-Kit.svg?branch=master)](https://travis-ci.org/Shyam-Chen/Angular-Starter-Kit)
  //
@@ -10,31 +10,43 @@
 [Live Demo](https://angular2ts-starter-kit.firebaseapp.com/)
 
 This seed repository provides the following features:
-* [x] Start coding **Pug/Stylus/TypeScript** right now.
-* [x] App framework wtih **Angular**.
-* [x] Functional programming with **Lodash**.
-* [x] Reactive programming with **ReactiveX**.
-* [ ] Predictable state with **NgRx**.
-* [ ] UI components with **Material**.
-* [ ] Back-end services with **Firebase**.
-* [ ] Globalization with **Translate** and **Localize**.
-* [ ] Data visualization with **Chart**.
-* [x] Build system with **Gulp**.
-* [ ] Module bundler with **Rollup**.
-* [ ] Stylus superpowers with **PostStylus**.
-* [x] TypeScript type definitions with **Types**.
-* [x] Development server with **BrowserSync**.
-* [x] Pug static code analyzer with **PugLint**.
-* [x] Stylus static code analyzer with **Stylint**.
-* [x] TypeScript static code analyzer with **TSLint**.
-* [x] Angular static code analysis with **Codelyzer**.
-* [x] Testing framework with **Jasmine**.
-* [x] Unit tests with **Karma**.
-* [x] End-to-end tests with **Protractor**.
-* [x] Version control with **Git**.
-* [x] Fast and deterministic builds with **Yarn**.
-* [x] Virtual machine with **Docker**.
-* [x] Continuous integration and delivery with **Travis**.
+* ---------- **Primary Key** ----------
+* [ ] Pug/Stylus/TypeScript coding.
+* [ ] Functional/Reactive programming.
+* [ ] Material design components.
+* [ ] Back-end cloud services.
+* [ ] Single-page application.
+* [ ] Internationalization and localization.
+* [ ] Data visualization.
+* ---------- **Dev Tools** ----------
+* [x] Build system with Gulp.
+* [ ] Module bundler with Rollup.
+* [ ] Stylus superpowers with PostStylus.
+* [x] TypeScript type definitions with Types.
+* [x] Development server with BrowserSync.
+* ---------- **Test Tools** ----------
+* [x] Pug static code analyzer with PugLint.
+* [x] Stylus static code analyzer with Stylint.
+* [x] TypeScript static code analyzer with TSLint.
+* [x] Angular static code analysis with Codelyzer.
+* [x] Testing framework with Jasmine.
+* [x] Unit tests with Karma.
+* [x] End-to-end tests with Protractor.
+* ---------- **Environment** ----------
+* [x] Operating system with Linux.
+* [x] Text editor with Atom.
+* [x] Version control with Git.
+* [x] Fast and deterministic builds with Yarn.
+* [x] Containers with Docker.
+* [x] Continuous integration with Travis.
+
+## Browser Support
+* IE11
+* Edge
+* Safari
+* Firefox
+* Chrome
+* Opera
 
 ## Getting Started
 
