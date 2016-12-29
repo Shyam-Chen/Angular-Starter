@@ -11,33 +11,33 @@
 
 This seed repository provides the following features:
 * ---------- **Primary Key** ----------
-* [ ] Template engine with Pug.
-* [ ] CSS preprocessor with Stylus.
-* [x] JavaScript superset with TypeScript.
-* [x] Application framework with Angular.
-* [ ] Reactive Extensions with ReactiveX.
-* [ ] Predictable state container with NgRx.
+* [ ] Template engine with **Pug**.
+* [ ] CSS preprocessor with **Stylus**.
+* [x] JavaScript superset with **TypeScript**.
+* [x] Application framework with **Angular**.
+* [ ] Reactive Extensions with **ReactiveX**.
+* [ ] State container with **NgRx**.
 * ---------- **Dev Tools** ----------
-* [x] Build system with Gulp.
-* [ ] Module bundler with Rollup.
-* [ ] Stylus superpowers with PostStylus.
-* [x] TypeScript type definitions with Types.
-* [x] Development server with BrowserSync.
+* [ ] Build system with **Gulp**.
+* [ ] Module bundler with **Rollup**.
+* [ ] Stylus superpowers with **Rucksack**.
+* [ ] TypeScript type definitions with **Types**.
+* [ ] Development server with **BrowserSync**.
 * ---------- **Test Tools** ----------
-* [x] Pug static code analyzer with PugLint.
-* [x] Stylus static code analyzer with Stylint.
-* [x] TypeScript static code analyzer with TSLint.
-* [x] Angular static code analysis with Codelyzer.
-* [x] Testing framework with Jasmine.
-* [x] Unit tests with Karma.
-* [x] End-to-end tests with Protractor.
+* [x] Pug static code analyzer with **PugLint**.
+* [x] Stylus static code analyzer with **Stylint**.
+* [x] TypeScript static code analyzer with **TSLint**.
+* [x] Angular static code analysis with **Codelyzer**.
+* [x] Testing framework with **Jasmine**.
+* [x] Unit tests with **Karma**.
+* [x] End-to-end tests with **Protractor**.
 * ---------- **Environment** ----------
-* [x] Operating system with Linux.
-* [x] Text editor with Atom.
-* [x] Version control with Git.
-* [x] Fast and deterministic builds with Yarn.
-* [x] Containers with Docker.
-* [x] Continuous integration with Travis.
+* [x] Operating system with **Linux**.
+* [x] Text editor with **Atom**.
+* [x] Version control with **Git**.
+* [x] Fast and deterministic builds with **Yarn**.
+* [x] Containers with **Docker**.
+* [x] Continuous integration with **Travis**.
 
 ## Getting Started
 
