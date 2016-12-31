@@ -17,6 +17,13 @@ This seed repository provides the following features:
 * [x] Application framework with **Angular**.
 * [ ] Reactive Extensions with **ReactiveX**.
 * [ ] State container with **NgRx**.
+* ---------- **Accent Key** ----------
+* [ ] Utility functions with **Lodash**.
+* [ ] User interface components with **Material**.
+* [ ] Backend cloud services with **Firebase**.
+* [ ] Data visualization with **Chart**.
+* [ ] Cross platform mobile applications with **Cordova**.
+* [ ] Cross platform desktop applications with **Electron**.
 * ---------- **Dev Tools** ----------
 * [ ] Build system with **Gulp**.
 * [ ] Module bundler with **Rollup**.
