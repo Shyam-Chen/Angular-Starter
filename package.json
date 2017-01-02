@@ -1,7 +1,7 @@
 {
   "name": "Angular-Starter-Kit",
   "version": "1.0.0",
-  "description": "A boilerplate written in Pug, Stylus, and TypeScript using Angular, ReactiveX, and NgRx.",
+  "description": "A boilerplate written in Pug, Stylus, and TypeScript using Angular, Lodash, ReactiveX, and Redux.",
   "scripts": {
     "start": "tsc webpack.dev.ts && webpack-dev-server --config webpack.dev.js --inline --progress --port 3001",
     "build": "tsc webpack.prod.ts && rimraf public && webpack --config webpack.prod.js --progress --profile --bail",

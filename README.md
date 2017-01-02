@@ -1,6 +1,6 @@
 # Angular Starter Kit (Alpha)
 
-> A boilerplate written in Pug, Stylus, and TypeScript using Angular, ReactiveX, and NgRx.
+> A boilerplate written in Pug, Stylus, and TypeScript using Angular, Lodash, ReactiveX, and Redux.
 
 [![Build Status](https://travis-ci.org/Shyam-Chen/Angular-Starter-Kit.svg?branch=master)](https://travis-ci.org/Shyam-Chen/Angular-Starter-Kit)
  //
@@ -15,10 +15,10 @@ This seed repository provides the following features:
 * [ ] CSS preprocessor with **Stylus**.
 * [ ] JavaScript superset with **TypeScript**.
 * [ ] Application framework with **Angular**.
-* [ ] Reactive functions with **ReactiveX**.
-* [ ] State container with **NgRx**.
-* ---------- **Accent Key** ----------
 * [ ] Utility functions with **Lodash**.
+* [ ] Reactive functions with **ReactiveX**.
+* [ ] State container with **Redux**.
+* ---------- **Accent Key** ----------
 * [ ] User interface components with **Material**.
 * [ ] Backend cloud services with **Firebase**.
 * [ ] Data visualization with **Chart**.
