@@ -1,7 +1,7 @@
 {
   "name": "Angular-Starter-Kit",
   "version": "1.0.0",
-  "description": "A boilerplate written in Pug, Stylus, and TypeScript using Angular, ReactiveX, NgRx, Gulp, and Rollup.",
+  "description": "A boilerplate written in Pug, Stylus, and TypeScript using Angular, ReactiveX, and NgRx.",
   "scripts": {
     "start": "tsc webpack.dev.ts && webpack-dev-server --config webpack.dev.js --inline --progress --port 3001",
     "build": "tsc webpack.prod.ts && rimraf public && webpack --config webpack.prod.js --progress --profile --bail",
@@ -21,7 +21,7 @@
   "keywords": [
     "Angular"
   ],
-  "author": "陳彥澄",
+  "author": "Yen-cheng Chen, 陳彥澄",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Shyam-Chen/Angular-Starter-Kit/issues"
@@ -33,24 +33,24 @@
     "@angular/core": "2.2.3",
     "@angular/forms": "2.2.3",
     "@angular/http": "2.2.3",
+    "@angular/material": "^2.0.0-beta.1",
     "@angular/platform-browser": "2.2.3",
     "@angular/platform-browser-dynamic": "2.2.3",
     "@angular/router": "3.2.3",
-    "@angular2-material/button": "2.0.0-alpha.8",
-    "@angular2-material/core": "2.0.0-alpha.8",
     "@ngrx/core": "^1.2.0",
     "@ngrx/effects": "^2.0.0",
     "@ngrx/store": "^2.2.1",
-    "@ngrx/store-devtools": "^3.2.2",
-    "@reactivex/rxjs": "^5.0.1",
-    "angularfire2": "2.0.0-beta.6",
+    "@reactivex/rxjs": "^5.0.2",
+    "angularfire2": "^2.0.0-beta.6",
+    "angulartics2": "^1.6.3",
     "chart.js": "^2.4.0",
     "core-js": "2.4.1",
-    "firebase": "3.6.1",
+    "firebase": "^3.6.1",
     "localize-router": "^0.4.0",
-    "lodash-es": "^4.17.2",
+    "lodash-es": "^4.17.3",
     "ng2-charts": "^1.4.4",
     "ng2-translate": "^4.2.0",
+    "rxjs": "^5.0.2",
     "zone.js": "0.6.26"
   },
   "devDependencies": {
