@@ -1,4 +1,4 @@
-export  = (config: any) => {
+export = (config: any) => {
   config.set({
     basePath: '',
     frameworks: ['jasmine'],

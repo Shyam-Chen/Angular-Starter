@@ -1,5 +1,5 @@
 {
-  "name": "Angular-Starter-Kit",
+  "name": "Fullstack-Starter-Kit",
   "version": "1.0.0",
   "description": "A boilerplate written in Pug, Stylus, and TypeScript using Angular, Lodash, RxJS, and NgRx.",
   "scripts": {
@@ -16,17 +16,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Shyam-Chen/Angular-Starter-Kit.git"
+    "url": "git+https://github.com/Shyam-Chen/Fullstack-Starter-Kit.git"
   },
   "keywords": [
-    "Angular"
+    "HTML5",
+    "Node.js"
   ],
   "author": "Yen-cheng Chen, 陳彥澄",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Shyam-Chen/Angular-Starter-Kit/issues"
+    "url": "https://github.com/Shyam-Chen/Fullstack-Starter-Kit/issues"
   },
-  "homepage": "https://github.com/Shyam-Chen/Angular-Starter-Kit#readme",
+  "homepage": "https://github.com/Shyam-Chen/Fullstack-Starter-Kit#readme",
   "dependencies": {
     "@angular/common": "2.2.3",
     "@angular/compiler": "2.2.3",
