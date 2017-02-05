@@ -8,6 +8,7 @@
     "lint": "gulp lint",
     "unit": "tsc karma.conf.ts test-shim.ts && karma start",
     "e2e": "tsc protractor.conf.ts && gulp e2e",
+    "test": "echo Fullstack-Starter-Kit",
     "clean": "rimraf public",
     "reset": "git reset --hard HEAD && git clean -df",
     "reinstall": "npm cache clean && git clean -dfx -e '.*' && npm install",

@@ -4,23 +4,7 @@ sudo: required
 services: docker
 
 before_install:
-  - docker build -t angular-starter-kit .
-  - docker run -dit --name app angular-starter-kit
-  - docker exec -it app npm run gulp -- webdriver
-  # - docker-compose up -d
+  - docker-compose up -d
 
 script:
-  - docker exec -it app npm run build
-  - docker exec -it app npm run lint
-  - docker exec -it app npm run unit
-  - docker exec -it app npm run e2e
-  # - docker-compose exec app npm run build
-  # - docker-compose exec app npm run lint
-  # - docker-compose exec app npm run unit
-  # - docker-compose exec app npm run e2e
-
-after_success:
-  - docker exec -it app npm run build
-  - docker exec -it app firebase deploy --token ${FIREBASE_TOKEN}
-  # - docker-compose exec app npm run build
-  # - docker-compose exec app firebase deploy --token ${FIREBASE_TOKEN}
+  - docker-compose exec app npm test
