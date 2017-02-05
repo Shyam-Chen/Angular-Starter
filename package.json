@@ -1,7 +1,7 @@
 {
   "name": "Fullstack-Starter-Kit",
   "version": "1.0.0",
-  "description": "A boilerplate written in Pug, Stylus, and TypeScript using Angular, Lodash, RxJS, and NgRx.",
+  "description": "Building universal web applications with Angular, Material, Express, Mongoose, AWS, Gulp, Rollup, SCSS, Nodemon, PM2, and TypeScript.",
   "scripts": {
     "start": "tsc webpack.dev.ts && webpack-dev-server --config webpack.dev.js --inline --progress --port 3001",
     "build": "tsc webpack.prod.ts && rimraf public && webpack --config webpack.prod.js --progress --profile --bail",
