@@ -31,6 +31,7 @@ This seed repository provides the following features:
 * [ ] [**HTMLHint**](https://github.com/yaniswang/HTMLHint).
 * [ ] [**SCSSLint**](https://github.com/brigade/scss-lint).
 * [ ] [**TSLint**](https://github.com/palantir/tslint).
+* [ ] [**Codelyzer**](https://github.com/mgechev/codelyzer).
 * [ ] [**Jasmine**](https://github.com/jasmine/jasmine).
 * [ ] [**Karma**](https://github.com/karma-runner/karma).
 * [ ] [**Protractor**](https://github.com/angular/protractor).
