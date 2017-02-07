@@ -23,7 +23,9 @@ This seed repository provides the following features:
 * [ ] [**Gulp**](https://github.com/gulpjs/gulp).
 * [ ] [**Rollup**](https://github.com/rollup/rollup).
 * [ ] [**TypeScript**](https://github.com/Microsoft/TypeScript).
+* [ ] [**Types**](https://github.com/types).
 * [ ] [**SCSS**](https://github.com/sass/node-sass).
+* [ ] [**Rucksack**](https://github.com/simplaio/rucksack).
 * [ ] [**BrowserSync**](https://github.com/BrowserSync/browser-sync).
 * [ ] [**Nodemon**](https://github.com/remy/nodemon).
 * [ ] [**PM2**](https://github.com/Unitech/pm2).
