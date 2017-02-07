@@ -28,7 +28,6 @@ This seed repository provides the following features:
 * [ ] [**Rucksack**](https://github.com/simplaio/rucksack).
 * [ ] [**BrowserSync**](https://github.com/BrowserSync/browser-sync).
 * [ ] [**Nodemon**](https://github.com/remy/nodemon).
-* [ ] [**PM2**](https://github.com/Unitech/pm2).
 * ---------- **Test Tools** ----------
 * [ ] [**HTMLHint**](https://github.com/yaniswang/HTMLHint).
 * [ ] [**SCSSLint**](https://github.com/brigade/scss-lint).
@@ -43,6 +42,9 @@ This seed repository provides the following features:
 * ---------- **Environment** ----------
 * [ ] Operating system with [**Linux**](https://github.com/torvalds/linux).
 * [ ] Text editor with [**Atom**](https://github.com/atom/atom).
+* [ ] Keeping application alive with [**PM2**](https://github.com/Unitech/pm2).
+* [ ] Serving static resources with [**Nginx**](https://github.com/nginx/nginx).
+* [ ] HTTP caching with [**Varnish**](https://github.com/varnishcache/varnish-cache).
 * [ ] Version control with [**Git**](https://github.com/git/git).
 * [ ] Fast and deterministic builds with [**Yarn**](https://github.com/yarnpkg/yarn).
 * [ ] Software container with [**Docker**](https://github.com/docker/docker).
