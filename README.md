@@ -9,36 +9,37 @@
 
 This seed repository provides the following features:
 * ---------- **Primary Key** ----------
-* [ ] [**Angular**](https://angular.io/).
-* [ ] [**Material**](https://material.io/).
-* [ ] [**Express**](http://expressjs.com/).
-* [ ] [**Mongoose**](http://mongoosejs.com/).
-* [ ] [**AWS**](https://aws.amazon.com/).
+* [ ] Frontend application framework with [**Angular**](https://angular.io/).
+* [ ] User interface components with [**Material**](https://material.io/).
+* [ ] Backend application framework with [**Express**](http://expressjs.com/).
+* [ ] Dadabase object modeling with [**Mongoose**](http://mongoosejs.com/).
+* [ ] Cloud-computing services with [**AWS**](https://aws.amazon.com/).
 * ---------- **Secondary Key** ----------
-* [ ] [**Lodash**](https://lodash.com/).
-* [ ] [**ReactiveX**](http://reactivex.io/).
-* [ ] [**Redux**](http://redux.js.org/).
-* [ ] [**Immutable**](http://facebook.github.io/immutable-js/).
+* [ ] Utility functions with [**Lodash**](https://lodash.com/).
+* [ ] Reactive extensions with [**ReactiveX**](http://reactivex.io/).
+* [ ] State container with [**Redux**](http://redux.js.org/).
+* [ ] Immutable collections with [**Immutable**](http://facebook.github.io/immutable-js/).
+* [ ] Data visualizations with [**D3**](https://d3js.org/).
 * ---------- **Dev Tools** ----------
-* [ ] [**Gulp**](https://github.com/gulpjs/gulp).
-* [ ] [**Rollup**](https://github.com/rollup/rollup).
-* [ ] [**TypeScript**](https://github.com/Microsoft/TypeScript).
-* [ ] [**Types**](https://github.com/types).
-* [ ] [**SCSS**](https://github.com/sass/node-sass).
-* [ ] [**Rucksack**](https://github.com/simplaio/rucksack).
-* [ ] [**BrowserSync**](https://github.com/BrowserSync/browser-sync).
-* [ ] [**Nodemon**](https://github.com/remy/nodemon).
+* [ ] Build system with [**Gulp**](https://github.com/gulpjs/gulp).
+* [ ] Module bundler with [**Rollup**](https://github.com/rollup/rollup).
+* [ ] JavaScript superset with [**TypeScript**](https://github.com/Microsoft/TypeScript).
+* [ ] Type definitions with [**Types**](https://github.com/types).
+* [ ] Feature-rich CSS with [**SCSS**](https://github.com/sass/node-sass).
+* [ ] SCSS superpowers with [**Rucksack**](https://github.com/simplaio/rucksack).
+* [ ] Development server with [**BrowserSync**](https://github.com/BrowserSync/browser-sync).
+* [ ] Automatically restart with [**Nodemon**](https://github.com/remy/nodemon).
 * ---------- **Test Tools** ----------
-* [ ] [**HTMLHint**](https://github.com/yaniswang/HTMLHint).
-* [ ] [**SCSSLint**](https://github.com/brigade/scss-lint).
-* [ ] [**TSLint**](https://github.com/palantir/tslint).
-* [ ] [**Codelyzer**](https://github.com/mgechev/codelyzer).
-* [ ] [**Jasmine**](https://github.com/jasmine/jasmine).
-* [ ] [**Karma**](https://github.com/karma-runner/karma).
-* [ ] [**Protractor**](https://github.com/angular/protractor).
-* [ ] [**Mocha**](https://github.com/mochajs/mocha).
-* [ ] [**Chai**](https://github.com/chaijs/chai).
-* [ ] [**Sinon**](https://github.com/sinonjs/sinon).
+* [ ] HTML static code analyzer with [**HTMLHint**](https://github.com/yaniswang/HTMLHint).
+* [ ] SCSS static code analyzer with [**SCSSLint**](https://github.com/brigade/scss-lint).
+* [ ] TypeScript static code analyzer with [**TSLint**](https://github.com/palantir/tslint).
+* [ ] Angular static code analyzer with [**Codelyzer**](https://github.com/mgechev/codelyzer).
+* [ ] Frontend testing framework with [**Jasmine**](https://github.com/jasmine/jasmine).
+* [ ] Frontend unit tests with [**Karma**](https://github.com/karma-runner/karma).
+* [ ] End-to-end tests with [**Protractor**](https://github.com/angular/protractor).
+* [ ] Backend testing framework with [**Mocha**](https://github.com/mochajs/mocha).
+* [ ] Backend assertion library with [**Chai**](https://github.com/chaijs/chai).
+* [ ] Backend test spies with [**Sinon**](https://github.com/sinonjs/sinon).
 * ---------- **Environment** ----------
 * [ ] Operating system with [**Linux**](https://github.com/torvalds/linux).
 * [ ] Text editor with [**Atom**](https://github.com/atom/atom).
