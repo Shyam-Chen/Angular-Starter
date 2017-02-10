@@ -9,7 +9,7 @@
 
 This seed repository provides the following features:
 * ---------- **Primary Key** ----------
-* [ ] Frontend application framework with [**Angular**](https://angular.io/).
+* [ ] Application framework with [**Angular**](https://angular.io/).
 * [ ] User interface components with [**Material**](https://material.io/).
 * [ ] Backend application framework with [**Express**](http://expressjs.com/).
 * [ ] Dadabase object modeling with [**Mongoose**](http://mongoosejs.com/).
@@ -26,7 +26,7 @@ This seed repository provides the following features:
 * [ ] JavaScript superset with [**TypeScript**](https://github.com/Microsoft/TypeScript).
 * [ ] Type definitions with [**Types**](https://github.com/types).
 * [ ] Feature-rich CSS with [**SCSS**](https://github.com/sass/node-sass).
-* [ ] SCSS superpowers with [**Rucksack**](https://github.com/simplaio/rucksack).
+* [ ] CSS superpowers with [**Rucksack**](https://github.com/simplaio/rucksack).
 * [ ] Development server with [**BrowserSync**](https://github.com/BrowserSync/browser-sync).
 * [ ] Automatically restart with [**Nodemon**](https://github.com/remy/nodemon).
 * ---------- **Test Tools** ----------
@@ -34,8 +34,8 @@ This seed repository provides the following features:
 * [ ] SCSS static code analyzer with [**SCSSLint**](https://github.com/brigade/scss-lint).
 * [ ] TypeScript static code analyzer with [**TSLint**](https://github.com/palantir/tslint).
 * [ ] Angular static code analyzer with [**Codelyzer**](https://github.com/mgechev/codelyzer).
-* [ ] Frontend testing framework with [**Jasmine**](https://github.com/jasmine/jasmine).
-* [ ] Frontend unit tests with [**Karma**](https://github.com/karma-runner/karma).
+* [ ] Testing framework with [**Jasmine**](https://github.com/jasmine/jasmine).
+* [ ] Unit tests with [**Karma**](https://github.com/karma-runner/karma).
 * [ ] End-to-end tests with [**Protractor**](https://github.com/angular/protractor).
 * [ ] Backend testing framework with [**Mocha**](https://github.com/mochajs/mocha).
 * [ ] Backend assertion library with [**Chai**](https://github.com/chaijs/chai).
