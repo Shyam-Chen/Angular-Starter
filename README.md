@@ -1,6 +1,6 @@
 # Fullstack Starter Kit (Pre-alpha)
 
-:seedling: Building universal web applications with Angular, Material, Express, Mongoose, AWS, Gulp, Rollup, TypeScript, SCSS, Nodemon, and PM2. :evergreen_tree:
+:seedling: Building universal web applications with Angular, Material, Express, Mongoose, AWS, Gulp, Webpack, Rollup, TypeScript, SCSS, Nodemon, and PM2. :evergreen_tree:
 
 [![Build Status](https://travis-ci.org/Shyam-Chen/Fullstack-Starter-Kit.svg?branch=master)](https://travis-ci.org/Shyam-Chen/Fullstack-Starter-Kit)
  //
@@ -22,6 +22,7 @@ This seed repository provides the following features:
 * [ ] Data visualizations with [**D3**](https://d3js.org/).
 * ---------- **Dev Tools** ----------
 * [ ] Build system with [**Gulp**](https://github.com/gulpjs/gulp).
+* [ ] Load parts with [**Webpack**](https://github.com/webpack/webpack).
 * [ ] Module bundler with [**Rollup**](https://github.com/rollup/rollup).
 * [ ] JavaScript superset with [**TypeScript**](https://github.com/Microsoft/TypeScript).
 * [ ] Type definitions with [**Types**](https://github.com/types).
