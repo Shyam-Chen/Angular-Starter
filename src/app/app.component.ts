@@ -1,15 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { UniversalCache } from '../universal-cache';
 
 @Component({
-  selector: 'app',
+  selector: 'demo-app',
   template: `
-    <h3 class="title">Angular2TS Starter Kit</h3>
-  `,
-  styles: [`
-    .title {
-      color: #3F51B5;
-    }
-  `],
-  viewProviders: []
+    <h1>Universal Web Application</h1>
+	  <a routerLink="/">Home</a>
+	  <a routerLink="/lazy">Lazy</a>
+	  <router-outlet></router-outlet>
+	`
 })
-export class AppComponent { }
+export class AppComponent implements OnInit {
+  constructor(private cache: UniversalCache) {}
+  ngOnInit() {
+    this.cache.set('cached', true);
+  }
+}
