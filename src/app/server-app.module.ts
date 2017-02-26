@@ -9,10 +9,10 @@ import { AppModule } from './app.module';
   imports: [
     ServerModule,
     ServerUniversalCacheModule,
-	  AppModule
+    AppModule
   ],
   providers: [
 	//   { provide: NgModuleFactoryLoader, useClass: ServerRouterLoader }
   ]
 })
-export class ServerAppModule {}
+export class ServerAppModule { }

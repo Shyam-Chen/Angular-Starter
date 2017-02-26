@@ -63,9 +63,9 @@
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@ngrx/store/-/store-2.2.1.tgz#316ec1e43aa5a0166e5e6e1aa2c34a4049386510"
 
-"@ngtools/webpack@1.2.10":
-  version "1.2.10"
-  resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-1.2.10.tgz#fff23ec7d4f98d355fa58052cf0e120c5f699a21"
+"@ngtools/webpack@1.2.11":
+  version "1.2.11"
+  resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-1.2.11.tgz#b587b1e7eb88bd68b973681669c00e7b4b7f8ea0"
   dependencies:
     enhanced-resolve "^3.1.0"
     loader-utils "^0.2.16"

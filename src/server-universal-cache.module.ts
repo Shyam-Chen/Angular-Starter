@@ -6,6 +6,4 @@ import { UniversalCache } from './universal-cache';
     UniversalCache
   ]
 })
-export class ServerUniversalCacheModule {
-
-}
+export class ServerUniversalCacheModule { }
