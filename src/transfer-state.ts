@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 @Injectable()
-export class UniversalCache {
+export class TransferState {
   private _map = new Map<string, any>();
 
   keys() {

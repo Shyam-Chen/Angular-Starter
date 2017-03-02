@@ -1,7 +1,7 @@
 {
   "name": "Fullstack-Starter-Kit",
   "version": "1.0.0",
-  "description": "Building universal web applications with Angular, Material, Express, Mongoose, AWS, Gulp, Webpack, Rollup, TypeScript, SCSS, Nodemon, and PM2.",
+  "description": "Building universal web applications with Angular, Material, Firebase, Express, Mongoose, and AWS.",
   "scripts": {
     "start": "npm run build && npm run server",
     "test": "echo Fullstack-Starter-Kit",

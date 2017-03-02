@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { UniversalCache } from '../universal-cache';
+import { TransferState } from '../transfer-state';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +12,7 @@ import { UniversalCache } from '../universal-cache';
   `
 })
 export class AppComponent implements OnInit {
-  constructor(private cache: UniversalCache) { }
+  constructor(private cache: TransferState) { }
 
   ngOnInit() {
     this.cache.set('cached', true);

@@ -1,19 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { Http } from '@angular/http';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'home-view',
-  template: `<h3>{{greeting}}</h3>`
+  template: `
+    <h1>app works!</h1>
+  `
 })
-export class HomeView implements OnInit {
-  public greeting: string;
-
-  constructor(private http: Http) { }
-
-  ngOnInit() {
-    const subs = this.http.get('http://localhost:8000/data').map(res => res.json()).subscribe(data => {
-      this.greeting = `${data.greeting} ${data.name}`;
-      subs.unsubscribe();
-    });
-  }
-}
+export class HomeView { }
