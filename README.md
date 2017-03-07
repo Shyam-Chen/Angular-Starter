@@ -7,7 +7,7 @@
 [![dependencies Status](https://david-dm.org/Shyam-Chen/Fullstack-Starter-Kit/status.svg)](https://david-dm.org/Shyam-Chen/Fullstack-Starter-Kit)
 [![devDependencies Status](https://david-dm.org/Shyam-Chen/Fullstack-Starter-Kit/dev-status.svg)](https://david-dm.org/Shyam-Chen/Fullstack-Starter-Kit?type=dev)
 
-[Live Demo]()
+[Live Demo](https://fullstack-sk.herokuapp.com/)
 
 This seed repository provides the following features:
 * ---------- **Primary Key** ----------
