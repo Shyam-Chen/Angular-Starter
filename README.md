@@ -7,22 +7,22 @@
 [![dependencies Status](https://david-dm.org/Shyam-Chen/Fullstack-Starter-Kit/status.svg)](https://david-dm.org/Shyam-Chen/Fullstack-Starter-Kit)
 [![devDependencies Status](https://david-dm.org/Shyam-Chen/Fullstack-Starter-Kit/dev-status.svg)](https://david-dm.org/Shyam-Chen/Fullstack-Starter-Kit?type=dev)
 
-Live Demo
+[Live Demo]()
 
 This seed repository provides the following features:
 * ---------- **Primary Key** ----------
-* [ ] Application framework with [**Angular**](https://angular.io/).
-* [ ] Client-side platform with [**HTML5**](https://platform.html5.org/).
+* [x] Application framework with [**Angular**](https://angular.io/).
+* [x] Client-side platform with [**HTML5**](https://platform.html5.org/).
 * [ ] User interface components with [**Material**](https://material.io/).
 * [ ] Backend cloud services with [**Firebase**](https://firebase.google.com/).
-* [ ] Server-side platform with [**Node**](https://nodejs.org/en/).
-* [ ] Backend application framework with [**Express**](http://expressjs.com/).
+* [x] Server-side platform with [**Node**](https://nodejs.org/en/).
+* [x] Backend application framework with [**Express**](http://expressjs.com/).
 * [ ] Dadabase object modeling with [**Mongoose**](http://mongoosejs.com/).
-* [ ] Application cloud hosting with [**Heroku**](https://www.heroku.com/).
+* [x] Application cloud hosting with [**Heroku**](https://www.heroku.com/).
 * [ ] Dadabase cloud hosting with [**mLab**](https://mlab.com/).
 * ---------- **Secondary Key** ----------
 * [ ] Utility functions with [**Lodash**](https://lodash.com/).
-* [ ] Reactive extensions with [**ReactiveX**](http://reactivex.io/).
+* [x] Reactive extensions with [**ReactiveX**](http://reactivex.io/).
 * [ ] State container with [**Redux**](http://redux.js.org/).
 * [ ] Immutable collections with [**Immutable**](http://facebook.github.io/immutable-js/).
 * [ ] Data visualizations with [**D3**](https://d3js.org/).
@@ -31,18 +31,18 @@ This seed repository provides the following features:
 * [ ] Realtime application with [**Socket.IO**](https://socket.io/).
 * ---------- **Dev Tools** ----------
 * [ ] Build system with [**Gulp**](https://github.com/gulpjs/gulp).
-* [ ] Module bundler with [**Webpack**](https://github.com/webpack/webpack).
-* [ ] JavaScript superset with [**TypeScript**](https://github.com/Microsoft/TypeScript).
-* [ ] Type definitions with [**Types**](https://github.com/types).
+* [x] Module bundler with [**Webpack**](https://github.com/webpack/webpack).
+* [x] JavaScript superset with [**TypeScript**](https://github.com/Microsoft/TypeScript).
+* [x] Type definitions with [**Types**](https://github.com/types).
 * [ ] Feature-rich CSS with [**SCSS**](https://github.com/sass/node-sass).
 * [ ] CSS superpowers with [**Rucksack**](https://github.com/simplaio/rucksack).
 * [ ] Synchronised browser testing with [**BrowserSync**](https://github.com/BrowserSync/browser-sync).
 * [ ] Automatically restart application with [**Nodemon**](https://github.com/remy/nodemon).
 * [ ] Keeping application alive with [**PM2**](https://github.com/Unitech/pm2).
 * ---------- **Test Tools** ----------
-* [ ] HTML static code analyzer with [**HTMLHint**](https://github.com/yaniswang/HTMLHint).
-* [ ] SCSS static code analyzer with [**SCSSLint**](https://github.com/brigade/scss-lint).
-* [ ] TypeScript static code analyzer with [**TSLint**](https://github.com/palantir/tslint).
+* [x] HTML static code analyzer with [**HTMLHint**](https://github.com/yaniswang/HTMLHint).
+* [x] SCSS static code analyzer with [**SCSSLint**](https://github.com/brigade/scss-lint).
+* [x] TypeScript static code analyzer with [**TSLint**](https://github.com/palantir/tslint).
 * [ ] Angular static code analyzer with [**Codelyzer**](https://github.com/mgechev/codelyzer).
 * [ ] Testing framework with [**Jasmine**](https://github.com/jasmine/jasmine).
 * [ ] Unit tests with [**Karma**](https://github.com/karma-runner/karma).
@@ -51,10 +51,10 @@ This seed repository provides the following features:
 * [ ] Backend assertion library with [**Chai**](https://github.com/chaijs/chai).
 * [ ] Backend test spies with [**Sinon**](https://github.com/sinonjs/sinon).
 * ---------- **Environment** ----------
-* [ ] Operating system with [**Linux**](https://github.com/torvalds/linux).
-* [ ] Text editor with [**Atom**](https://github.com/atom/atom).
-* [ ] Version control with [**Git**](https://github.com/git/git).
-* [ ] Fast and deterministic builds with [**Yarn**](https://github.com/yarnpkg/yarn).
+* [x] Operating system with [**Linux**](https://github.com/torvalds/linux).
+* [x] Text editor with [**Atom**](https://github.com/atom/atom).
+* [x] Version control with [**Git**](https://github.com/git/git).
+* [x] Fast and deterministic builds with [**Yarn**](https://github.com/yarnpkg/yarn).
 * [ ] Reverse proxy and caching with [**Nginx**](https://github.com/nginx/nginx).
 * [ ] Software container with [**Docker**](https://github.com/docker/docker).
 * [ ] Continuous integration with [**Travis**](https://github.com/travis-ci/travis-ci).
