@@ -1,5 +1,2 @@
 node_modules
-dist
-lib
-src/ngfactory
 *.log

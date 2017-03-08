@@ -1,23 +1,40 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { APP_BASE_HREF } from '@angular/common';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { HomeView } from './home-view.component';
+
+@Component({
+  template: `
+    <h1>home works!</h1>
+  `
+})
+export class HomeComponent { }
+
+@Component({
+  template: `
+    <h1>about works!</h1>
+  `
+})
+export class AboutComponent { }
 
 @NgModule({
   imports: [
     HttpModule,
     RouterModule.forRoot([
-      { path: '', component: HomeView, pathMatch: 'full'},
-      { path: 'lazy', loadChildren: './lazy.module#LazyModule'}
+      { path: '', component: HomeComponent, pathMatch: 'full' },
+      { path: 'about', component: AboutComponent, pathMatch: 'full' }
     ])
   ],
   providers: [
     { provide: APP_BASE_HREF, useValue: '/'}
   ],
-  declarations: [AppComponent, HomeView],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    AboutComponent
+  ],
   exports: [AppComponent]
 })
 export class AppModule { }
