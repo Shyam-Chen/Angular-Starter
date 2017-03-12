@@ -26,7 +26,7 @@ This seed repository provides the following features:
 * [ ] State container with [**Redux**](http://redux.js.org/).
 * [ ] Immutable collections with [**Immutable**](http://facebook.github.io/immutable-js/).
 * [ ] Data visualizations with [**D3**](https://d3js.org/).
-* [ ] Authentication and information exchange with [**JWT**](https://jwt.io/).
+* [ ] Authentication with [**JWT**](https://jwt.io/).
 * [ ] Data query language with [**GraphQL**](http://graphql.org/).
 * [ ] Realtime application with [**Socket.IO**](https://socket.io/).
 * ---------- **Dev Tools** ----------
