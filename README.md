@@ -7,8 +7,6 @@
 [![dependencies Status](https://david-dm.org/Shyam-Chen/Fullstack-Starter-Kit/status.svg)](https://david-dm.org/Shyam-Chen/Fullstack-Starter-Kit)
 [![devDependencies Status](https://david-dm.org/Shyam-Chen/Fullstack-Starter-Kit/dev-status.svg)](https://david-dm.org/Shyam-Chen/Fullstack-Starter-Kit?type=dev)
 
-[Live Demo](https://fullstack-starter-kit.herokuapp.com/)
-
 This seed repository provides the following features:
 * ---------- **Primary Key** ----------
 * [x] Application framework with [**Angular**](https://angular.io/).
@@ -18,8 +16,7 @@ This seed repository provides the following features:
 * [x] Server-side platform with [**Node**](https://nodejs.org/en/).
 * [x] Backend application framework with [**Express**](http://expressjs.com/).
 * [ ] Dadabase object modeling with [**Mongoose**](http://mongoosejs.com/).
-* [x] Application cloud hosting with [**Heroku**](https://www.heroku.com/).
-* [ ] Dadabase cloud hosting with [**mLab**](https://mlab.com/).
+* [ ] Cloud computing with [**Google Cloud Platform**](https://cloud.google.com/).
 * ---------- **Secondary Key** ----------
 * [ ] Utility functions with [**Lodash**](https://lodash.com/).
 * [x] Reactive extensions with [**ReactiveX**](http://reactivex.io/).
