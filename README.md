@@ -25,20 +25,19 @@ This seed repository provides the following features:
 * [ ] Data visualizations with [**D3**](https://d3js.org/).
 * [ ] Authentication with [**JWT**](https://jwt.io/).
 * [ ] Data query language with [**GraphQL**](http://graphql.org/).
-* [ ] Realtime application with [**Socket.IO**](https://socket.io/).
+* [ ] Realtime application with [**Socket**](https://socket.io/).
 * ---------- **Dev Tools** ----------
 * [ ] Build system with [**Gulp**](https://github.com/gulpjs/gulp).
 * [x] Module bundler with [**Webpack**](https://github.com/webpack/webpack).
+* [ ] HTML transformations with [**PostHTML**](https://github.com/posthtml/posthtml).
+* [ ] Future CSS features with [**PostCSS**](https://github.com/postcss/postcss).
 * [x] JavaScript superset with [**TypeScript**](https://github.com/Microsoft/TypeScript).
-* [x] Type definitions with [**Types**](https://github.com/types).
-* [ ] Feature-rich CSS with [**SCSS**](https://github.com/sass/node-sass).
-* [ ] CSS superpowers with [**Rucksack**](https://github.com/simplaio/rucksack).
-* [ ] Synchronised browser testing with [**BrowserSync**](https://github.com/BrowserSync/browser-sync).
+* [ ] Synchronised browser with [**BrowserSync**](https://github.com/BrowserSync/browser-sync).
 * [ ] Automatically restart application with [**Nodemon**](https://github.com/remy/nodemon).
 * [ ] Keeping application alive with [**PM2**](https://github.com/Unitech/pm2).
 * ---------- **Test Tools** ----------
 * [x] HTML static code analyzer with [**HTMLHint**](https://github.com/yaniswang/HTMLHint).
-* [x] SCSS static code analyzer with [**SCSSLint**](https://github.com/brigade/scss-lint).
+* [x] CSS static code analyzer with [**StyleLint**](https://github.com/stylelint/stylelint).
 * [x] TypeScript static code analyzer with [**TSLint**](https://github.com/palantir/tslint).
 * [ ] Angular static code analyzer with [**Codelyzer**](https://github.com/mgechev/codelyzer).
 * [ ] Testing framework with [**Jasmine**](https://github.com/jasmine/jasmine).
