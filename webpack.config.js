@@ -1,4 +1,5 @@
-const ngtools = require('@ngtools/webpack');
+const { join } = require('path');
+const { AotPlugin } = require('@ngtools/webpack');
 const webpackMerge = require('webpack-merge');
 
 const serverConfig = {
@@ -8,11 +9,11 @@ const serverConfig = {
   },
 	target: 'node',
 	output: {
-		path: 'dist',
+		path: join(__dirname, 'dist'),
 		filename: 'server.js'
 	},
 	plugins: [
-		new ngtools.AotPlugin({
+		new AotPlugin({
 			tsConfigPath: './tsconfig.json',
 		})
 	],
