@@ -1,6 +1,6 @@
 # Fullstack Starter Kit (Alpha)
 
-:seedling: A boilerplate for :star2: Angular :star2:, Material, Firebase, Express, Mongoose, Heroku, and mLab. :evergreen_tree:
+:seedling: A boilerplate for :star2: Angular :star2:, Material, Firebase, Express, Mongoose, and Google Cloud Platform. :evergreen_tree:
 
 [![Build Status](https://travis-ci.org/Shyam-Chen/Fullstack-Starter-Kit.svg?branch=master)](https://travis-ci.org/Shyam-Chen/Fullstack-Starter-Kit)
  //
@@ -8,12 +8,15 @@
 [![devDependencies Status](https://david-dm.org/Shyam-Chen/Fullstack-Starter-Kit/dev-status.svg)](https://david-dm.org/Shyam-Chen/Fullstack-Starter-Kit?type=dev)
 
 This seed repository provides the following features:
+
 * ---------- **Primary Key** ----------
 * [x] Application framework with [**Angular**](https://angular.io/).
 * [x] Client-side platform with [**HTML5**](https://platform.html5.org/).
+* [ ] Cross-platform mobile applications with [**Cordova**](https://cordova.apache.org/).
+* [ ] Cross-platform desktop applications with [**Electron**](https://electron.atom.io/).
+* [ ] Server-side platform with [**Node**](https://nodejs.org/en/).
 * [ ] User interface components with [**Material**](https://material.io/).
 * [ ] Backend cloud services with [**Firebase**](https://firebase.google.com/).
-* [x] Server-side platform with [**Node**](https://nodejs.org/en/).
 * [x] Backend application framework with [**Express**](http://expressjs.com/).
 * [ ] Dadabase object modeling with [**Mongoose**](http://mongoosejs.com/).
 * [ ] Cloud computing with [**Google Cloud Platform**](https://cloud.google.com/).
@@ -23,12 +26,12 @@ This seed repository provides the following features:
 * [ ] State container with [**Redux**](http://redux.js.org/).
 * [ ] Immutable collections with [**Immutable**](http://facebook.github.io/immutable-js/).
 * [ ] Data visualizations with [**D3**](https://d3js.org/).
-* [ ] Authentication with [**JWT**](https://jwt.io/).
+* [ ] Securely authentication with [**JWT**](https://jwt.io/).
 * [ ] Data query language with [**GraphQL**](http://graphql.org/).
-* [ ] Realtime application with [**Socket**](https://socket.io/).
+* [ ] Real-time bidirectional communication with [**Socket**](https://socket.io/).
 * ---------- **Dev Tools** ----------
 * [ ] Build system with [**Gulp**](https://github.com/gulpjs/gulp).
-* [x] Module bundler with [**Webpack**](https://github.com/webpack/webpack).
+* [ ] Module bundler with [**Rollup**](https://github.com/rollup/rollup).
 * [ ] HTML transformations with [**PostHTML**](https://github.com/posthtml/posthtml).
 * [ ] Future CSS features with [**PostCSS**](https://github.com/postcss/postcss).
 * [x] JavaScript superset with [**TypeScript**](https://github.com/Microsoft/TypeScript).

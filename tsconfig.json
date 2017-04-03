@@ -1,23 +1,23 @@
 {
   "compilerOptions": {
-		"moduleResolution": "node",
+    "moduleResolution": "node",
     "module": "es2015",
     "target": "es5",
     "noImplicitAny": false,
     "sourceMap": false,
-		"experimentalDecorators": true,
-		"emitDecoratorMetadata": true,
-		"lib": [
-			"es2015",
-			"dom"
-		],
-		"outDir": "lib"
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "lib": [
+      "es2015",
+      "dom"
+    ],
+    "outDir": "lib"
   },
   "include": [
-		"src/**/*"
-	],
-	"angularCompilerOptions": {
-		"genDir": "src/ngfactory",
-		"entryModule": "./src/app/browser-app.module#BrowserAppModule"
-	}
+    "src/**/*"
+  ],
+  "angularCompilerOptions": {
+    "genDir": "src/ngfactory",
+    "entryModule": "./src/app/browser-app.module#BrowserAppModule"
+  }
 }
