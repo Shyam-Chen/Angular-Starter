@@ -78,3 +78,9 @@ $ yarn install
 ```bash
 $ yarn start
 ```
+
+***
+
+* Universal web application in Docker container on Google Compute Engine
+* Mongoose and mLab
+* Cloud Functions

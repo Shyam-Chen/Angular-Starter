@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { TransferState } from '../transfer-state';
+import { TransferState } from '../shared/transfer-state';
 
 @Component({
   selector: 'app-root',

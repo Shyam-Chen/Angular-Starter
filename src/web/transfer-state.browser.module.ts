@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 
-import { TransferState } from './transfer-state';
+import { TransferState } from '../shared/transfer-state';
 
 export function getTransferState(): TransferState {
   const transferState = new TransferState();

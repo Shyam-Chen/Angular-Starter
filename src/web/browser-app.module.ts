@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { AppModule } from './app.module';
-import { BrowserTransferStateModule } from '../transfer-state.browser.module';
+import { BrowserTransferStateModule } from './transfer-state.browser.module';
 
 @NgModule({
   bootstrap: [AppComponent],

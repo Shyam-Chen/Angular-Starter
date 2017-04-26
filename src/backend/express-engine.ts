@@ -4,7 +4,7 @@ import { Provider, NgModuleFactory, NgModuleRef, PlatformRef, ApplicationRef, Ty
 import { ɵgetDOM } from '@angular/platform-browser';
 import { platformServer, platformDynamicServer, PlatformState, INITIAL_CONFIG } from '@angular/platform-server';
 
-import { TransferState } from './transfer-state';
+import { TransferState } from '../shared/transfer-state';
 
 const templateCache: { [key: string]: string } = {};
 

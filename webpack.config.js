@@ -2,8 +2,8 @@ const { join } = require('path');
 const { AotPlugin } = require('@ngtools/webpack');
 const webpackMerge = require('webpack-merge');
 
-const serverConfig = {
-  entry: './src/main.server.ts',
+const BACKEND_CONFIG = {
+  entry: './src/backend/main.server.ts',
   resolve: {
     extensions: ['.ts', '.js']
   },
@@ -27,12 +27,12 @@ const serverConfig = {
   }
 };
 
-const clientConfig = webpackMerge({}, serverConfig, {
-  entry:  './src/main.browser.ts',
+const WEB_CONFIG = webpackMerge({}, BACKEND_CONFIG, {
+  entry:  './src/web/main.browser.ts',
   output: {
     filename: 'client.js'
   },
   target: 'web'
 });
 
-module.exports = [clientConfig, serverConfig];
+module.exports = [WEB_CONFIG, BACKEND_CONFIG];
