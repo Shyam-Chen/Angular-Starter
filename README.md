@@ -12,13 +12,11 @@ This seed repository provides the following features:
 * ---------- **Primary Key** ----------
 * [x] Application framework with [**Angular**](https://angular.io/).
 * [x] Client-side platform with [**HTML5**](https://platform.html5.org/).
-* [ ] Cross-platform mobile applications with [**Cordova**](https://cordova.apache.org/).
-* [ ] Cross-platform desktop applications with [**Electron**](https://electron.atom.io/).
 * [ ] Server-side platform with [**Node**](https://nodejs.org/en/).
 * [ ] User interface components with [**Material**](https://material.io/).
 * [ ] Backend cloud services with [**Firebase**](https://firebase.google.com/).
 * [x] Backend application framework with [**Express**](http://expressjs.com/).
-* [ ] Dadabase object modeling with [**Mongoose**](http://mongoosejs.com/).
+* [ ] Database object modeling with [**Mongoose**](http://mongoosejs.com/).
 * [ ] Cloud computing with [**Google Cloud Platform**](https://cloud.google.com/).
 * ---------- **Secondary Key** ----------
 * [ ] Utility functions with [**Lodash**](https://lodash.com/).
@@ -56,6 +54,10 @@ This seed repository provides the following features:
 * [x] Fast and deterministic builds with [**Yarn**](https://github.com/yarnpkg/yarn).
 * [ ] Reverse proxy and caching with [**Nginx**](https://github.com/nginx/nginx).
 * [ ] Software container with [**Docker**](https://github.com/docker/docker).
+* [ ] Containerized applications with [**Kubernetes**](https://github.com/kubernetes/kubernetes).
+* [ ] Build and distribute development environments with [**Vagrant**](https://github.com/mitchellh/vagrant).
+* [ ] Automate infrastructure with [**Chef**](https://github.com/chef/chef).
+* [ ] Build automated machine images with [**Packer**](https://github.com/hashicorp/packer).
 * [ ] Continuous integration with [**Travis**](https://github.com/travis-ci/travis-ci).
 
 ## Getting Started
@@ -78,9 +80,3 @@ $ yarn install
 ```bash
 $ yarn start
 ```
-
-***
-
-* Universal web application in Docker container on Google Compute Engine
-* Mongoose and mLab
-* Cloud Functions
