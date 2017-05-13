@@ -8,16 +8,11 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "lib": [
-      "es2015",
+      "es2016",
       "dom"
-    ],
-    "outDir": "lib"
+    ]
   },
   "include": [
-    "src/**/*"
-  ],
-  "angularCompilerOptions": {
-    "genDir": "src/ngfactory",
-    "entryModule": "./src/app/browser-app.module#BrowserAppModule"
-  }
+    "src"
+  ]
 }

@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
+import { BrowserTransferStateModule } from '../shared/transfer-state/browser-transfer-state.module';
+
 import { AppModule } from './app.module';
-import { BrowserTransferStateModule } from './transfer-state.browser.module';
+import { AppComponent } from './app.component';
 
 @NgModule({
-  bootstrap: [AppComponent],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'Universal Web Application' }),
+    BrowserModule.withServerTransition({ appId: 'angular-go' }),
     BrowserTransferStateModule,
     AppModule
-  ]
+  ],
+  bootstrap: [AppComponent]
 })
 export class BrowserAppModule { }

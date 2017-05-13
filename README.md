@@ -80,3 +80,41 @@ $ yarn install
 ```bash
 $ yarn start
 ```
+
+***
+
+Cloud Database:
+* Firebase Realtime Database
+* Mongoose + mLab
+* Google Cloud Datastore
+
+```
+.
+├── functions  -> Cloud functions (Firebase) ...
+├── scripts  -> shell scripts ...
+├── src
+│   ├── api  -> backend ...
+│   ├── app  -> frontend ...
+│   ├── shared
+├── tools
+│   ├── ...
+├── .babelrc
+├── .editorconfig
+├── .eslintrc
+├── .firebaserc
+├── .gitattributes
+├── .gitignore
+├── .htmlhintrc
+├── .stylelintrc
+├── .travis.yml
+├── Dockerfile
+├── LICENSE
+├── README.md
+├── database.rules.json
+├── docker-compose.yml
+├── firebase.json
+├── gulpfile.babel.js
+├── package.json
+├── storage.rules
+└── yarn.lock
+```

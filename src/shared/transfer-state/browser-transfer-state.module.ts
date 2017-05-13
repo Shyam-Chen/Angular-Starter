@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
-
-import { TransferState } from '../shared/transfer-state';
+import { TransferState } from './transfer-state';
 
 export function getTransferState(): TransferState {
   const transferState = new TransferState();
-  transferState.initialize(window[('TRANSFER_STATE')] || {});
+  transferState.initialize(window['TRANSFER_STATE'] || {});
   return transferState;
 }
 
 @NgModule({
   providers: [
-    { provide: TransferState, useFactory: getTransferState }
+    {
+      provide: TransferState,
+      useFactory: getTransferState
+    }
   ]
 })
 export class BrowserTransferStateModule { }
