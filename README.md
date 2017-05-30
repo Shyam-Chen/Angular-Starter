@@ -1,18 +1,20 @@
-# Fullstack Starter Kit (Alpha)
+# Universal Starter Kit (Alpha)
 
 :seedling: A boilerplate for :star2: Angular :star2:, Material, Firebase, Express, Mongoose, and Google Cloud Platform. :evergreen_tree:
 
-[![Build Status](https://travis-ci.org/Shyam-Chen/Fullstack-Starter-Kit.svg?branch=master)](https://travis-ci.org/Shyam-Chen/Fullstack-Starter-Kit)
+[![Build Status](https://travis-ci.org/Shyam-Chen/Universal-Starter-Kit.svg?branch=master)](https://travis-ci.org/Shyam-Chen/Universal-Starter-Kit)
  //
-[![dependencies Status](https://david-dm.org/Shyam-Chen/Fullstack-Starter-Kit/status.svg)](https://david-dm.org/Shyam-Chen/Fullstack-Starter-Kit)
-[![devDependencies Status](https://david-dm.org/Shyam-Chen/Fullstack-Starter-Kit/dev-status.svg)](https://david-dm.org/Shyam-Chen/Fullstack-Starter-Kit?type=dev)
+[![dependencies Status](https://david-dm.org/Shyam-Chen/Universal-Starter-Kit/status.svg)](https://david-dm.org/Shyam-Chen/Universal-Starter-Kit)
+[![devDependencies Status](https://david-dm.org/Shyam-Chen/Universal-Starter-Kit/dev-status.svg)](https://david-dm.org/Shyam-Chen/Universal-Starter-Kit?type=dev)
 
 This seed repository provides the following features:
 
 * ---------- **Essentials** ----------
 * [x] Application framework with [**Angular**](https://angular.io/).
 * [x] Client-side platform with [**HTML5**](https://platform.html5.org/).
-* [ ] Server-side platform with [**Node**](https://nodejs.org/en/).
+* [x] Server-side platform with [**Node**](https://nodejs.org/en/).
+* [ ] Cross-platform mobile applications with [**Cordova**](https://cordova.apache.org/).
+* [ ] Cross-platform desktop applications with [**Electron**](https://electron.atom.io/).
 * [ ] User interface components with [**Material**](https://material.io/).
 * [ ] Backend cloud services with [**Firebase**](https://firebase.google.com/).
 * [x] Backend application framework with [**Express**](http://expressjs.com/).
@@ -54,14 +56,15 @@ This seed repository provides the following features:
 * [ ] Build automated machine images with [**Packer**](https://github.com/hashicorp/packer).
 * [ ] Build and distribute development environments with [**Vagrant**](https://github.com/mitchellh/vagrant).
 * [ ] Automate infrastructure with [**Chef**](https://github.com/chef/chef).
-* [ ] Continuous integration with [**Travis**](https://github.com/travis-ci/travis-ci).
+* [ ] Continuous integration server with [**Jenkins**](https://github.com/jenkinsci/jenkins).
+* [ ] Continuous integration service with [**Travis**](https://github.com/travis-ci/travis-ci).
 
 ## Getting Started
 
 1) Clone this Boilerplate
 
 ```bash
-$ git clone --depth 1 https://github.com/Shyam-Chen/Fullstack-Starter-Kit.git <PROJECT_NAME>
+$ git clone --depth 1 https://github.com/Shyam-Chen/Universal-Starter-Kit.git <PROJECT_NAME>
 $ cd <PROJECT_NAME>
 ```
 
