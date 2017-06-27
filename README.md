@@ -56,8 +56,7 @@ This seed repository provides the following features:
 * [ ] Build automated machine images with [**Packer**](https://github.com/hashicorp/packer).
 * [ ] Build and distribute development environments with [**Vagrant**](https://github.com/mitchellh/vagrant).
 * [ ] Automate infrastructure with [**Chef**](https://github.com/chef/chef).
-* [ ] Continuous integration server with [**Jenkins**](https://github.com/jenkinsci/jenkins).
-* [ ] Continuous integration service with [**Travis**](https://github.com/travis-ci/travis-ci).
+* [ ] Continuous integration with [**CircleCI**](https://github.com/circleci).
 
 ## Getting Started
 
