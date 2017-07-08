@@ -7,7 +7,7 @@ describe('App', () => {
 
   it('should have a title', () => {
     const el = element(by.css('app-root h3'));
-    expect(el.getText()).toEqual('MEAN Stack RESTful API');
+    expect(el.getText()).toEqual('Universal Starter Kit');
   });
 
   it('should have an input', () => {
@@ -28,7 +28,7 @@ describe('App', () => {
   //   const addButton = element(by.css('app-root #add'));
   //   addButton.click();
   //
-  //   const spanEl = element(by.css('app-root .list span'));
+  //   const spanEl = element(by.css('app-root #list span'));
   //   expect(spanEl.getText()).toEqual('MEAN Stack');
   // });
 });

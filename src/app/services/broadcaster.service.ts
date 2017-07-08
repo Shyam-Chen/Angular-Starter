@@ -4,22 +4,22 @@ import 'rxjs/add/operator/map';
 import { Subject } from 'rxjs/Subject';
 import { Observable } from 'rxjs/Observable';
 
-import { BroadcastEvent } from '../models/broadcast.model';
+import { Broadcaster } from '../models/broadcaster.model';
 
-export class BroadcastService {
-  private eventBusinessLogic: Subject<BroadcastEvent>;
+export class BroadcasterService {
+  private broadcaster: Subject<Broadcaster>;
 
   constructor() {
-    this.eventBusinessLogic = new Subject<BroadcastEvent>();
+    this.broadcaster = new Subject<Broadcaster>();
   }
 
   public broadcast(key: any, data?: any): void {
-    this.eventBusinessLogic
+    this.broadcaster
       .next({ key, data });
   }
 
   public on<T>(key: any): Observable<T> {
-    return this.eventBusinessLogic
+    return this.broadcaster
       .asObservable()
       .filter(event => event.key === key)
       .map(event => <T>event.data);

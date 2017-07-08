@@ -5,7 +5,7 @@ import { MdDialog, MD_DIALOG_DATA } from '@angular/material';
 import { List } from '../models/list.model';
 import { ListService } from '../services/list.service';
 
-import { BroadcastService } from '../services/broadcast.service';
+import { BroadcasterService } from '../services/broadcaster.service';
 
 @Component({
   selector: 'app-list-edit-dialog',
@@ -24,7 +24,7 @@ export class AppListEditDialogComponent implements OnInit {
   constructor(
     private listService: ListService,
     @Inject(MD_DIALOG_DATA) public list: List,
-    private broadcaster: BroadcastService
+    private broadcaster: BroadcasterService
   ) { }
 
   public save(): void {

@@ -11,7 +11,7 @@ import { AppComponent } from './app.component';
 import { AppListEditDialogComponent } from './components/app-list-edit-dialog.component';
 
 import { ListService } from './services/list.service';
-import { BroadcastService } from './services/broadcast.service';
+import { BroadcasterService } from './services/broadcaster.service';
 
 import { ReversePipe } from './pipes/reverse.pipe';
 
@@ -41,7 +41,7 @@ import { ReversePipe } from './pipes/reverse.pipe';
   ],
   providers: [
     ListService,
-    BroadcastService,
+    BroadcasterService,
   ],
   bootstrap: [AppComponent]
 })

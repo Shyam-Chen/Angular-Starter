@@ -5,14 +5,14 @@ import { MdDialog } from '@angular/material';
 import { List } from './models/list.model';
 import { ListService } from './services/list.service';
 
-import { BroadcastService } from './services/broadcast.service';
+import { BroadcasterService } from './services/broadcaster.service';
 
 import { AppListEditDialogComponent } from './components/app-list-edit-dialog.component';
 
 @Component({
   selector: 'app-root',
   template: `
-    <h3>MEAN Stack RESTful API</h3>
+    <h3>Universal Starter Kit</h3>
 
     <md-input-container>
       <input id="text" #newList mdInput placeholder="Text" [(ngModel)]="text" (keyup.enter)="create(newList.value)">
@@ -22,7 +22,7 @@ import { AppListEditDialogComponent } from './components/app-list-edit-dialog.co
 
     <span>{{ response }}</span>
 
-    <md-card class="list">
+    <md-card id="list">
       <md-progress-bar mode="indeterminate" [style.display]="display"></md-progress-bar>
       <md-list>
         <md-list-item *ngFor="let item of list | reverse">
@@ -34,7 +34,7 @@ import { AppListEditDialogComponent } from './components/app-list-edit-dialog.co
     </md-card>
   `,
   styles: [`
-    .list {
+    #list {
       width: 25rem;
     }
   `]
@@ -48,7 +48,7 @@ export class AppComponent implements OnInit {
   constructor(
     private listService: ListService,
     public dialog: MdDialog,
-    private broadcaster: BroadcastService
+    private broadcaster: BroadcasterService
   ) {
     this.broadcaster.on<string>('updateList')
       .subscribe(res => {
