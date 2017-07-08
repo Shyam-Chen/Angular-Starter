@@ -4,9 +4,9 @@
   "license": "MIT",
   "scripts": {
     "start": "ng serve",
-    "build:frontend": "ng build -prod",
+    "build:web": "ng build -prod",
     "build:backend": "webpack -p",
-    "serve": "node dist/main-backend.js",
+    "serve": "node dist/backend.js",
     "e2e": "gulp e2e",
     "ng": "ng",
     "postinstall": "gulp webdriver"

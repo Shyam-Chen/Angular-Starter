@@ -4,19 +4,19 @@
 
 [![Build Status](https://circleci.com/gh/Shyam-Chen/Universal-Starter-Kit.png?circle-token=d6:b6:a6:26:4d:44:4c:67:99:20:79:07:b0:a0:36:fe)](https://circleci.com/gh/Shyam-Chen/Universal-Starter-Kit)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.3.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
-
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+
+## Running static code analysis
+
+Run `ng lint` to execute the static code analysis via [TSLint](https://github.com/palantir/tslint) and [Codelyzer](https://github.com/mgechev/codelyzer).
 
 ## Running unit tests
 
@@ -56,10 +56,10 @@ This seed repository provides the following features:
 * [x] Server-side platform with [**Node**](https://nodejs.org/en/).
 * [ ] Cross-platform mobile applications with [**Cordova**](https://cordova.apache.org/).
 * [ ] Cross-platform desktop applications with [**Electron**](https://electron.atom.io/).
-* [ ] User interface components with [**Material**](https://material.io/).
+* [x] User interface components with [**Material**](https://material.io/).
 * [ ] Backend cloud services with [**Firebase**](https://firebase.google.com/).
 * [x] Backend application framework with [**Express**](http://expressjs.com/).
-* [ ] Database object modeling with [**Mongoose**](http://mongoosejs.com/).
+* [x] Database object modeling with [**Mongoose**](http://mongoosejs.com/).
 * [ ] Cloud computing with [**Google Cloud Platform**](https://cloud.google.com/).
 * [ ] Utility functions with [**Lodash**](https://lodash.com/).
 * [x] Reactive extensions with [**ReactiveX**](http://reactivex.io/).
@@ -70,8 +70,8 @@ This seed repository provides the following features:
 * [ ] Data query language with [**GraphQL**](http://graphql.org/).
 * [ ] Real-time bidirectional communication with [**Socket**](https://socket.io/).
 * ---------- **Tools** ----------
-* [ ] Build system with [**Gulp**](https://github.com/gulpjs/gulp).
-* [ ] Module bundler with [**Rollup**](https://github.com/rollup/rollup).
+* [x] Build system with [**Gulp**](https://github.com/gulpjs/gulp).
+* [ ] Module bundler with [**Webpack**](https://github.com/webpack/webpack).
 * [ ] HTML transformations with [**PostHTML**](https://github.com/posthtml/posthtml).
 * [ ] Future CSS features with [**PostCSS**](https://github.com/postcss/postcss).
 * [x] JavaScript superset with [**TypeScript**](https://github.com/Microsoft/TypeScript).
@@ -81,10 +81,10 @@ This seed repository provides the following features:
 * [x] HTML static code analyzer with [**HTMLHint**](https://github.com/yaniswang/HTMLHint).
 * [x] CSS static code analyzer with [**StyleLint**](https://github.com/stylelint/stylelint).
 * [x] TypeScript static code analyzer with [**TSLint**](https://github.com/palantir/tslint).
-* [ ] Angular static code analyzer with [**Codelyzer**](https://github.com/mgechev/codelyzer).
-* [ ] Testing framework with [**Jasmine**](https://github.com/jasmine/jasmine).
-* [ ] Unit tests with [**Karma**](https://github.com/karma-runner/karma).
-* [ ] End-to-end tests with [**Protractor**](https://github.com/angular/protractor).
+* [x] Angular static code analyzer with [**Codelyzer**](https://github.com/mgechev/codelyzer).
+* [x] Testing framework with [**Jasmine**](https://github.com/jasmine/jasmine).
+* [x] Unit tests with [**Karma**](https://github.com/karma-runner/karma).
+* [x] End-to-end tests with [**Protractor**](https://github.com/angular/protractor).
 * [ ] Backend testing framework with [**Jest**](https://github.com/facebook/jest).
 * ---------- **Environments** ----------
 * [x] Operating system with [**Linux**](https://github.com/torvalds/linux).
@@ -92,9 +92,9 @@ This seed repository provides the following features:
 * [x] Version control with [**Git**](https://github.com/git/git).
 * [x] Fast and deterministic builds with [**Yarn**](https://github.com/yarnpkg/yarn).
 * [ ] Reverse proxy and caching with [**Nginx**](https://github.com/nginx/nginx).
-* [ ] Software container with [**Docker**](https://github.com/docker/docker).
+* [x] Software container with [**Docker**](https://github.com/docker/docker).
 * [ ] Containerized applications with [**Kubernetes**](https://github.com/kubernetes/kubernetes).
 * [ ] Build automated machine images with [**Packer**](https://github.com/hashicorp/packer).
 * [ ] Build and distribute development environments with [**Vagrant**](https://github.com/mitchellh/vagrant).
 * [ ] Automate infrastructure with [**Chef**](https://github.com/chef/chef).
-* [ ] Continuous integration with [**CircleCI**](https://github.com/circleci).
+* [x] Continuous integration with [**CircleCI**](https://github.com/circleci).
