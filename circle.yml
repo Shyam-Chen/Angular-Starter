@@ -6,7 +6,7 @@ jobs:
     docker:
       - image: circleci/node:7
 
-    working_directory: ~/mean-stack-restful-api
+    working_directory: ~/Universal-Starter-Kit
 
     branches:
       only:

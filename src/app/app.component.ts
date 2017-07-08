@@ -95,7 +95,7 @@ export class AppComponent implements OnInit {
       });
   }
 
-  private openEditDialog(item): void {
+  public openEditDialog(item): void {
     this.dialog
       .open(AppListEditDialogComponent, {
         data: item
