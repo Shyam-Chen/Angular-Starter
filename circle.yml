@@ -1,0 +1,38 @@
+# v.2
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: circleci/node:7
+
+    working_directory: ~/mean-stack-restful-api
+
+    branches:
+      only:
+        - master
+
+    steps:
+      - checkout
+
+      - setup_remote_docker
+
+      - run:
+          name: Build application
+          command: docker-compose up -d
+
+      - run:
+          name: Test application (Prod)
+          command: docker-compose exec app yarn run ng -- build -prod
+
+      - run:
+          name: Test application (Lint)
+          command: docker-compose exec app yarn run ng -- lint
+
+      - run:
+          name: Test application (Unit)
+          command: docker-compose exec app yarn run ng -- test -sr
+
+      - run:
+          name: Test application (E2E)
+          command: docker-compose exec app yarn run e2e

@@ -2,8 +2,49 @@
 
 :seedling: A boilerplate for :star2: Angular :star2:, Material, Firebase, Express, Mongoose, and Google Cloud Platform. :evergreen_tree:
 
-[![Build Status](https://travis-ci.org/Shyam-Chen/Universal-Starter-Kit.svg?branch=master)](https://travis-ci.org/Shyam-Chen/Universal-Starter-Kit)
- //
+[![Build Status](https://circleci.com/gh/Shyam-Chen/Universal-Starter-Kit.png?circle-token=d6:b6:a6:26:4d:44:4c:67:99:20:79:07:b0:a0:36:fe)](https://circleci.com/gh/Shyam-Chen/Universal-Starter-Kit)
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.3.
+
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Before running the tests make sure you are serving the app via `ng serve`.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## TODO List
+
+* Applications with Server-side Rendering
+* Set up a Node.js dev/prod/test environment
+* Set up a Node.js test (Jest) environment
+* Continuous integration and delivery with **CircleCI**
+* Applications in **Docker** containers on **Google Cloud Platform** with **App Engine** and **mLab**
+* Run **App Engine** Applications on **Container Engine**
+* Set up a Angular dev/prod environment (only `@ngtools/webpack`)
+* ~
+* Switch to Compute Engine
+
+***
+
 [![dependencies Status](https://david-dm.org/Shyam-Chen/Universal-Starter-Kit/status.svg)](https://david-dm.org/Shyam-Chen/Universal-Starter-Kit)
 [![devDependencies Status](https://david-dm.org/Shyam-Chen/Universal-Starter-Kit/dev-status.svg)](https://david-dm.org/Shyam-Chen/Universal-Starter-Kit?type=dev)
 
@@ -57,62 +98,3 @@ This seed repository provides the following features:
 * [ ] Build and distribute development environments with [**Vagrant**](https://github.com/mitchellh/vagrant).
 * [ ] Automate infrastructure with [**Chef**](https://github.com/chef/chef).
 * [ ] Continuous integration with [**CircleCI**](https://github.com/circleci).
-
-## Getting Started
-
-1) Clone this Boilerplate
-
-```bash
-$ git clone --depth 1 https://github.com/Shyam-Chen/Universal-Starter-Kit.git <PROJECT_NAME>
-$ cd <PROJECT_NAME>
-```
-
-2) Install Dependencies
-
-```bash
-$ yarn install
-```
-
-3) Run the Application
-
-```bash
-$ yarn start
-```
-
-***
-
-Cloud Database:
-* Firebase Realtime Database
-* Mongoose + mLab
-* Google Cloud Datastore
-
-```
-.
-├── functions  -> Cloud functions (Firebase) ...
-├── scripts  -> shell scripts ...
-├── src
-│   ├── api  -> backend ...
-│   ├── app  -> frontend ...
-│   ├── shared
-├── tools
-│   ├── ...
-├── .babelrc
-├── .editorconfig
-├── .eslintrc
-├── .firebaserc
-├── .gitattributes
-├── .gitignore
-├── .htmlhintrc
-├── .stylelintrc
-├── .travis.yml
-├── Dockerfile
-├── LICENSE
-├── README.md
-├── database.rules.json
-├── docker-compose.yml
-├── firebase.json
-├── gulpfile.babel.js
-├── package.json
-├── storage.rules
-└── yarn.lock
-```

@@ -1,37 +1,48 @@
-import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { APP_BASE_HREF, CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router';
 
-import { TransferHttpModule } from '../shared/transfer-http/transfer-http.module';
+import { MdInputModule, MdButtonModule, MdCardModule, MdListModule, MdDialogModule, MdProgressBarModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 
-@Component({
-  template: `
-    <h2>Home Page</h2>
-  `
-})
-export class HomeComponent { }
+import { AppListEditDialogComponent } from './components/app-list-edit-dialog.component';
+
+import { ListService } from './services/list.service';
+import { BroadcastService } from './services/broadcast.service';
+
+import { ReversePipe } from './pipes/reverse.pipe';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    HttpModule,
-    TransferHttpModule,
-    RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'about', loadChildren: './about/about.module#AboutModule' }
-    ])
-  ],
-  providers: [
-    { provide: APP_BASE_HREF, useValue: '/' }
-  ],
   declarations: [
     AppComponent,
-    HomeComponent
+    AppListEditDialogComponent,
+
+    ReversePipe,
   ],
-  exports: [AppComponent]
+  imports: [
+    BrowserModule.withServerTransition({ appId: 'mean-stack-restful-api' }),
+    BrowserAnimationsModule,
+    FormsModule,
+    HttpModule,
+
+    MdInputModule,
+    MdButtonModule,
+    MdCardModule,
+    MdListModule,
+    MdDialogModule,
+    MdProgressBarModule,
+  ],
+  entryComponents: [
+    AppListEditDialogComponent,
+    // AppListDeleteDialogComponent,
+  ],
+  providers: [
+    ListService,
+    BroadcastService,
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
