@@ -34,14 +34,16 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## TODO List
 
 * Applications with Server-side Rendering
-* Set up a Node.js dev/prod/test environment
+* Set up a Node.js dev/prod environment
 * Set up a Node.js test (Jest) environment
 * Continuous integration and delivery with **CircleCI**
 * Applications in **Docker** containers on **Google Cloud Platform** with **App Engine** and **mLab**
 * Run **App Engine** Applications on **Container Engine**
-* Set up a Angular dev/prod environment (only `@ngtools/webpack`)
+* Set up a Angular dev/prod environment (Gulp + `@ngtools/webpack`)
 * ~
-* Switch to Compute Engine
+* Use **Cloud Functions**
+* ~
+* Use **Compute Engine**
 
 ***
 

@@ -12,12 +12,12 @@ describe('App', () => {
 
   it('should have an input', () => {
     const textInput = element(by.css('app-root #text'));
-    expect(textInput.isPresent()).toEqual(true);
+    expect(textInput.isPresent()).toBeTruthy();
   });
 
   it('should have a button', () => {
     const addButton = element(by.css('app-root #add'));
-    expect(addButton.isPresent()).toEqual(true);
+    expect(addButton.isPresent()).toBeTruthy();
   });
 
   // TODO: Mock
