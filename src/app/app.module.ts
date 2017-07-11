@@ -13,12 +13,16 @@ import { AppListEditDialogComponent } from './components/app-list-edit-dialog.co
 import { ListService } from './services/list.service';
 import { BroadcasterService } from './services/broadcaster.service';
 
+import { HiddenDirective } from './directives/hidden.directive';
+
 import { ReversePipe } from './pipes/reverse.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppListEditDialogComponent,
+
+    HiddenDirective,
 
     ReversePipe,
   ],
@@ -37,7 +41,6 @@ import { ReversePipe } from './pipes/reverse.pipe';
   ],
   entryComponents: [
     AppListEditDialogComponent,
-    // AppListDeleteDialogComponent,
   ],
   providers: [
     ListService,
