@@ -1,8 +1,8 @@
-# Universal Starter Kit (Alpha)
+# Angular Starter Kit (Alpha)
 
 :seedling: A boilerplate for :star2: Angular :star2:, Material, Firebase, Express, Mongoose, and Google Cloud Platform. :evergreen_tree:
 
-[![Build Status](https://circleci.com/gh/Shyam-Chen/Universal-Starter-Kit.png?circle-token=d6:b6:a6:26:4d:44:4c:67:99:20:79:07:b0:a0:36:fe)](https://circleci.com/gh/Shyam-Chen/Universal-Starter-Kit)
+[![Build Status](https://circleci.com/gh/Shyam-Chen/Angular-Starter-Kit.png?circle-token=d6:b6:a6:26:4d:44:4c:67:99:20:79:07:b0:a0:36:fe)](https://circleci.com/gh/Shyam-Chen/Angular-Starter-Kit)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
 
@@ -47,22 +47,17 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ***
 
-[![dependencies Status](https://david-dm.org/Shyam-Chen/Universal-Starter-Kit/status.svg)](https://david-dm.org/Shyam-Chen/Universal-Starter-Kit)
-[![devDependencies Status](https://david-dm.org/Shyam-Chen/Universal-Starter-Kit/dev-status.svg)](https://david-dm.org/Shyam-Chen/Universal-Starter-Kit?type=dev)
+[![dependencies Status](https://david-dm.org/Shyam-Chen/Angular-Starter-Kit/status.svg)](https://david-dm.org/Shyam-Chen/Angular-Starter-Kit)
+[![devDependencies Status](https://david-dm.org/Shyam-Chen/Angular-Starter-Kit/dev-status.svg)](https://david-dm.org/Shyam-Chen/Angular-Starter-Kit?type=dev)
 
 This seed repository provides the following features:
 
 * ---------- **Essentials** ----------
 * [x] Application framework with [**Angular**](https://angular.io/).
-* [x] Client-side platform with [**HTML5**](https://platform.html5.org/).
-* [x] Server-side platform with [**Node**](https://nodejs.org/en/).
-* [ ] Cross-platform mobile applications with [**Cordova**](https://cordova.apache.org/).
-* [ ] Cross-platform desktop applications with [**Electron**](https://electron.atom.io/).
 * [x] User interface components with [**Material**](https://material.io/).
 * [ ] Backend cloud services with [**Firebase**](https://firebase.google.com/).
 * [x] Backend application framework with [**Express**](http://expressjs.com/).
 * [x] Database object modeling with [**Mongoose**](http://mongoosejs.com/).
-* [ ] Cloud computing with [**Google Cloud Platform**](https://cloud.google.com/).
 * [ ] Utility functions with [**Lodash**](https://lodash.com/).
 * [x] Reactive extensions with [**ReactiveX**](http://reactivex.io/).
 * [ ] State container with [**Redux**](http://redux.js.org/).
@@ -74,7 +69,6 @@ This seed repository provides the following features:
 * ---------- **Tools** ----------
 * [x] Build system with [**Gulp**](https://github.com/gulpjs/gulp).
 * [ ] Module bundler with [**Webpack**](https://github.com/webpack/webpack).
-* [ ] HTML transformations with [**PostHTML**](https://github.com/posthtml/posthtml).
 * [ ] Future CSS features with [**PostCSS**](https://github.com/postcss/postcss).
 * [x] JavaScript superset with [**TypeScript**](https://github.com/Microsoft/TypeScript).
 * [ ] Synchronised browser with [**BrowserSync**](https://github.com/BrowserSync/browser-sync).
@@ -89,6 +83,8 @@ This seed repository provides the following features:
 * [x] End-to-end tests with [**Protractor**](https://github.com/angular/protractor).
 * [ ] Backend testing framework with [**Jest**](https://github.com/facebook/jest).
 * ---------- **Environments** ----------
+* [x] Client-side platform with [**HTML5**](https://platform.html5.org/).
+* [x] Server-side platform with [**Node**](https://nodejs.org/en/).
 * [x] Operating system with [**Linux**](https://github.com/torvalds/linux).
 * [x] Text editor with [**Atom**](https://github.com/atom/atom).
 * [x] Version control with [**Git**](https://github.com/git/git).
@@ -100,3 +96,4 @@ This seed repository provides the following features:
 * [ ] Build and distribute development environments with [**Vagrant**](https://github.com/mitchellh/vagrant).
 * [ ] Automate infrastructure with [**Chef**](https://github.com/chef/chef).
 * [x] Continuous integration with [**CircleCI**](https://github.com/circleci).
+* [ ] Cloud services with [**Google Cloud Platform**](https://cloud.google.com/).

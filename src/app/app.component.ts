@@ -12,7 +12,7 @@ import { AppListEditDialogComponent } from './components/app-list-edit-dialog.co
 @Component({
   selector: 'app-root',
   template: `
-    <h3>Universal Starter Kit</h3>
+    <h3>Angular Starter Kit</h3>
 
     <md-input-container>
       <input id="text" #newList mdInput placeholder="Text" [(ngModel)]="text" (keyup.enter)="create(newList.value)">
@@ -32,6 +32,8 @@ import { AppListEditDialogComponent } from './components/app-list-edit-dialog.co
         </md-list-item>
       </md-list>
     </md-card>
+
+    <app-counter></app-counter>
   `,
   styles: [`
     #list {

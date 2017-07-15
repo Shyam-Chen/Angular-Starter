@@ -1,7 +1,7 @@
 {
-  "name": "Universal-Starter-Kit",
-  "version": "0.0.0",
-  "license": "MIT",
+  "name": "Angular-Starter-Kit",
+  "version": "1.0.0",
+  "description": "A boilerplate for Angular, Material, Firebase, Express, Mongoose, and Google Cloud Platform.",
   "scripts": {
     "start": "ng serve",
     "build:web": "ng build -prod",
@@ -11,7 +11,19 @@
     "ng": "ng",
     "postinstall": "gulp webdriver"
   },
-  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shyam-Chen/Angular-Starter-Kit.git"
+  },
+  "keywords": [
+    "Angular"
+  ],
+  "author": "Yen-cheng Chen, 陳彥澄",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Shyam-Chen/Angular-Starter-Kit/issues"
+  },
+  "homepage": "https://github.com/Shyam-Chen/Angular-Starter-Kit#readme",
   "dependencies": {
     "@angular/animations": "4.2.5",
     "@angular/common": "4.2.5",
@@ -25,6 +37,9 @@
     "@angular/platform-server": "4.2.5",
     "@angular/router": "4.2.5",
     "@google/cloud-trace": "0.6.3",
+    "@ngrx/core": "1.2.0",
+    "@ngrx/effects": "2.0.4",
+    "@ngrx/store": "2.2.3",
     "core-js": "2.4.1",
     "cors": "2.8.3",
     "express": "4.15.3",

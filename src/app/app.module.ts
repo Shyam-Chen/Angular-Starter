@@ -6,6 +6,9 @@ import { HttpModule } from '@angular/http';
 
 import { MdInputModule, MdButtonModule, MdCardModule, MdListModule, MdDialogModule, MdProgressBarModule } from '@angular/material';
 
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+
 import { AppComponent } from './app.component';
 
 import { AppListEditDialogComponent } from './components/app-list-edit-dialog.component';
@@ -17,10 +20,14 @@ import { HiddenDirective } from './directives/hidden.directive';
 
 import { ReversePipe } from './pipes/reverse.pipe';
 
+import { CounterComponent } from './containers/counter.container';
+import { counterReducer, CounterEffects } from './containers/counter';
+
 @NgModule({
   declarations: [
     AppComponent,
     AppListEditDialogComponent,
+    CounterComponent,
 
     HiddenDirective,
 
@@ -38,6 +45,9 @@ import { ReversePipe } from './pipes/reverse.pipe';
     MdListModule,
     MdDialogModule,
     MdProgressBarModule,
+
+    StoreModule.provideStore(counterReducer),
+    EffectsModule.run(CounterEffects),
   ],
   entryComponents: [
     AppListEditDialogComponent,
