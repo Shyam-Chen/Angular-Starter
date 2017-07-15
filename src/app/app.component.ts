@@ -33,7 +33,9 @@ import { AppListEditDialogComponent } from './components/app-list-edit-dialog.co
       </md-list>
     </md-card>
 
-    <app-counter></app-counter>
+    <!-- <md-card>
+      <app-counter></app-counter>
+    </md-card> -->
   `,
   styles: [`
     #list {

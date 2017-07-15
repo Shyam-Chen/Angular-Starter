@@ -6,7 +6,7 @@ jobs:
     docker:
       - image: circleci/node:7
 
-    working_directory: ~/Universal-Starter-Kit
+    working_directory: ~/Angular-Starter-Kit
 
     branches:
       only:

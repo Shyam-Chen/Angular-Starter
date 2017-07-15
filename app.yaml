@@ -1,4 +1,4 @@
-service: mean-stack-restful-api
+service: angular-starter-kit
 runtime: custom
 env: flex
 

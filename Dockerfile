@@ -1,6 +1,6 @@
 FROM buildpack-deps:jessie
 
-ENV HOME /mean-stack-restful-api
+ENV HOME /Angular-Starter-Kit
 
 WORKDIR ${HOME}
 ADD . $HOME

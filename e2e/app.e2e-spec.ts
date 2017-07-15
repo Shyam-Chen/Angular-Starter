@@ -7,7 +7,7 @@ describe('App', () => {
 
   it('should have a title', () => {
     const el = element(by.css('app-root h3'));
-    expect(el.getText()).toEqual('Universal Starter Kit');
+    expect(el.getText()).toEqual('Angular Starter Kit');
   });
 
   it('should have an input', () => {
