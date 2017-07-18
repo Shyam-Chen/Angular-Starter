@@ -1,7 +1,5 @@
-import 'rxjs/add/operator/map';
-
-import { Injectable, EventEmitter } from '@angular/core';
-import { Http } from '@angular/http';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs/Observable';
 
@@ -11,35 +9,30 @@ import { List } from '../models/list.model';
 export class ListService {
   private url = 'https://web-go-demo.herokuapp.com/__/list';
 
-  constructor(private http: Http) { }
+  constructor(private http: HttpClient) { }
 
   public getList(): Observable<List[]> {
     return this.http
-      .get(this.url)
-      .map(res => res.json());
+      .get<List[]>(this.url);
   }
 
   public getItem(id: string): Observable<List> {
     return this.http
-      .get(`${this.url}/${id}`)
-      .map(res => res.json());
+      .get<List>(`${this.url}/${id}`);
   }
 
   public postItem(data): Observable<List> {
     return this.http
-      .post(this.url, data)
-      .map(res => res.json());
+      .post<List>(this.url, data);
   }
 
   public putItem(id: string, data): Observable<List> {
     return this.http
-      .put(`${this.url}/${id}`, data)
-      .map(res => res.json());
+      .put<List>(`${this.url}/${id}`, data);
   }
 
   public deleteItem(id: string): Observable<List> {
     return this.http
-      .delete(`${this.url}/${id}`)
-      .map(res => res.json());
+      .delete<List>(`${this.url}/${id}`);
   }
 }
