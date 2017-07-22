@@ -16,6 +16,11 @@ export class ListService {
       .get<List[]>(this.url);
   }
 
+  public searchText(text) {
+    return this.http
+      .get<List[]>(`${this.url}?text=${text}`);
+  }
+
   public getItem(id: string): Observable<List> {
     return this.http
       .get<List>(`${this.url}/${id}`);

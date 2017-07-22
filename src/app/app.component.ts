@@ -14,13 +14,21 @@ import { AppListEditDialogComponent } from './components/app-list-edit-dialog.co
   template: `
     <h3>Angular Starter Kit</h3>
 
-    <md-input-container>
-      <input id="text" #newList mdInput placeholder="Text" [(ngModel)]="text" (keyup.enter)="create(newList.value)">
-    </md-input-container>
+    <div>
+      <md-input-container>
+        <input id="search-text" #searchText mdInput placeholder="Text" [(ngModel)]="searchModel" (keyup.enter)="search(searchText.value)">
+      </md-input-container>
 
-    <button id="add" md-button md-raised-button (click)="create(newList.value)">Add</button>
+      <button id="search" md-button md-raised-button (click)="search(searchText.value)">Search</button>
+    </div>
 
-    <span>{{ response }}</span>
+    <div>
+      <md-input-container>
+        <input id="text" #newList mdInput placeholder="Text" [(ngModel)]="text" (keyup.enter)="create(newList.value)">
+      </md-input-container>
+
+      <button id="add" md-button md-raised-button (click)="create(newList.value)">Add</button>
+    </div>
 
     <md-card id="list">
       <md-progress-bar mode="indeterminate" [style.display]="display"></md-progress-bar>
@@ -45,7 +53,7 @@ import { AppListEditDialogComponent } from './components/app-list-edit-dialog.co
 })
 export class AppComponent implements OnInit {
   public list: List[];
-  public response: string;
+  public searchModel: string;
   public text: string;
   public display: string;
 
@@ -57,8 +65,17 @@ export class AppComponent implements OnInit {
     this.broadcaster.on<string>('updateList')
       .subscribe(res => {
         this.updateList();
-        this.response = JSON.stringify(res);
       });
+  }
+
+  public search(text) {
+    this.listService
+      .searchText(text)
+      .subscribe(data => {
+        this.list = data;
+        this.display = 'none';
+        this.searchModel = '';
+      })
   }
 
   public create(newItem: string): void {
@@ -66,7 +83,6 @@ export class AppComponent implements OnInit {
       this.listService
         .postItem({ text: newItem })
         .subscribe(data => {
-          this.response = JSON.stringify(data);
           this.updateList();
           this.text = '';
         });
@@ -86,7 +102,6 @@ export class AppComponent implements OnInit {
     this.listService
       .deleteItem(id)
       .subscribe(data => {
-        this.response = JSON.stringify(data);
         this.updateList();
       });
   }
