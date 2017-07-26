@@ -33,6 +33,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## TODO List
 
+* Integration with Redux (@ngrx)
 * Applications with Server-side Rendering
 * Set up a Node.js dev/prod environment
 * Set up a Node.js test (Jest) environment
@@ -44,6 +45,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 * Use **Cloud Functions**
 * ~
 * Use **Compute Engine**
+
+***
+
+* Heroku -> App Engine
+* mLab -> Cloud Datastore‎
+* RabbitMQ -> Cloud Pub/Sub
 
 ***
 
@@ -63,9 +70,11 @@ This seed repository provides the following features:
 * [ ] State container with [**Redux**](http://redux.js.org/).
 * [ ] Immutable collections with [**Immutable**](http://facebook.github.io/immutable-js/).
 * [ ] Data visualizations with [**D3**](https://d3js.org/).
+* [ ] 3D scene graph with [**Three**](https://threejs.org/).
 * [ ] Secure authentication with [**JWT**](https://jwt.io/).
 * [ ] Data query language with [**GraphQL**](http://graphql.org/).
 * [ ] Real-time bidirectional communication with [**Socket**](https://socket.io/).
+* [ ] Message queuing with [**RabbitMQ**](https://www.rabbitmq.com/).
 * ---------- **Tools** ----------
 * [x] Build system with [**Gulp**](https://github.com/gulpjs/gulp).
 * [ ] Module bundler with [**Webpack**](https://github.com/webpack/webpack).
