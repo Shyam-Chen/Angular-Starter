@@ -23,4 +23,8 @@ describe('ListService', () => {
   });
 
   // TODO: ...
+
+  it('nice', () => {
+    expect(true).toBe(true);
+  });
 });

@@ -4,6 +4,7 @@
   "description": "A boilerplate for Angular, Material, Firebase, Express, Mongoose, and Google Cloud Platform.",
   "scripts": {
     "start": "ng serve",
+    "test": "jest --coverage",
     "build:web": "ng build -prod",
     "build:backend": "webpack -p",
     "serve": "node dist/backend.js",
@@ -24,6 +25,10 @@
     "url": "https://github.com/Shyam-Chen/Angular-Starter-Kit/issues"
   },
   "homepage": "https://github.com/Shyam-Chen/Angular-Starter-Kit#readme",
+  "jest": {
+    "preset": "jest-preset-angular",
+    "setupTestFrameworkScriptFile": "<rootDir>/src/jest.ts"
+  },
   "dependencies": {
     "@angular/animations": "4.3.0",
     "@angular/common": "4.3.0",
@@ -55,6 +60,7 @@
     "@google/cloud-debug": "0.9.3",
     "@types/express": "4.0.36",
     "@types/jasmine": "2.5.45",
+    "@types/jest": "^20.0.6",
     "@types/mongoose": "4.7.18",
     "@types/node": "8.0.7",
     "codelyzer": "3.1.2",
@@ -63,6 +69,8 @@
     "gulp-protractor": "4.1.0",
     "jasmine-core": "2.6.4",
     "jasmine-spec-reporter": "4.1.1",
+    "jest": "^20.0.4",
+    "jest-preset-angular": "^2.0.5",
     "karma": "1.7.0",
     "karma-chrome-launcher": "2.1.1",
     "karma-cli": "1.0.1",
