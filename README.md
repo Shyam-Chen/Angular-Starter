@@ -1,8 +1,8 @@
-# Angular Starter Kit (Alpha)
+# Angular Fullstack Starter
 
 :seedling: A boilerplate for :star2: Angular :star2:, Material, Firebase, Express, Mongoose, and Google Cloud Platform. :evergreen_tree:
 
-[![Build Status](https://circleci.com/gh/Shyam-Chen/Angular-Starter-Kit.png?circle-token=d6:b6:a6:26:4d:44:4c:67:99:20:79:07:b0:a0:36:fe)](https://circleci.com/gh/Shyam-Chen/Angular-Starter-Kit)
+[![Build Status](https://circleci.com/gh/Shyam-Chen/Angular-Fullstack-Starter.png?circle-token=d6:b6:a6:26:4d:44:4c:67:99:20:79:07:b0:a0:36:fe)](https://circleci.com/gh/Shyam-Chen/Angular-Fullstack-Starter)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
 
@@ -34,13 +34,14 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## TODO List
 
 * Integration with Redux (@ngrx)
-* Applications with Server-side Rendering
-* Set up a Node.js dev/prod environment
-* Set up a Node.js test (Jest) environment
-* Continuous integration and delivery with **CircleCI**
-* Applications in **Docker** containers on **Google Cloud Platform** with **App Engine** and **mLab**
-* Run **App Engine** Applications on **Container Engine**
-* Set up a Angular dev/prod environment (Gulp + `@ngtools/webpack`)
+  * Counter
+  * CRUD
+  * REST
+  * GraphQL
+  * DataTable
+* Server-side Rendering
+* Applications in Docker containers on **App Engine**
+* Run App Engine Applications on **Container Engine**
 * ~
 * Use **Cloud Functions**
 * ~
@@ -50,12 +51,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 * Heroku -> App Engine
 * mLab -> Cloud Datastore‎
+* ElephantSQL -> Cloud SQL
 * RabbitMQ -> Cloud Pub/Sub
 
 ***
 
-[![dependencies Status](https://david-dm.org/Shyam-Chen/Angular-Starter-Kit/status.svg)](https://david-dm.org/Shyam-Chen/Angular-Starter-Kit)
-[![devDependencies Status](https://david-dm.org/Shyam-Chen/Angular-Starter-Kit/dev-status.svg)](https://david-dm.org/Shyam-Chen/Angular-Starter-Kit?type=dev)
+[![dependencies Status](https://david-dm.org/Shyam-Chen/Angular-Fullstack-Starter/status.svg)](https://david-dm.org/Shyam-Chen/Angular-Fullstack-Starter)
+[![devDependencies Status](https://david-dm.org/Shyam-Chen/Angular-Fullstack-Starter/dev-status.svg)](https://david-dm.org/Shyam-Chen/Angular-Fullstack-Starter?type=dev)
 
 This seed repository provides the following features:
 
