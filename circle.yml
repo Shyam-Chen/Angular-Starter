@@ -1,4 +1,3 @@
-# v.2
 version: 2
 
 jobs:
@@ -31,8 +30,8 @@ jobs:
 
       - run:
           name: Test application (Unit)
-          command: docker-compose exec app yarn run ng -- test -sr
+          command: docker-compose exec app yarn test
 
       - run:
           name: Test application (E2E)
-          command: docker-compose exec app yarn run e2e
+          command: docker-compose exec app yarn e2e
