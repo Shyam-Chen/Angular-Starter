@@ -1,8 +1,9 @@
-# Angular Fullstack Starter
+# Angular Fullstack Starter [![Build Status](https://circleci.com/gh/Shyam-Chen/Angular-Fullstack-Starter.png)](https://circleci.com/gh/Shyam-Chen/Angular-Fullstack-Starter)
 
 :seedling: A boilerplate for :star2: Angular :star2:, Material, Firebase, Express, Mongoose, and Google Cloud Platform. :evergreen_tree:
 
-[![Build Status](https://circleci.com/gh/Shyam-Chen/Angular-Fullstack-Starter.png?circle-token=d6:b6:a6:26:4d:44:4c:67:99:20:79:07:b0:a0:36:fe)](https://circleci.com/gh/Shyam-Chen/Angular-Fullstack-Starter)
+[![dependencies Status](https://david-dm.org/Shyam-Chen/Angular-Fullstack-Starter/status.svg)](https://david-dm.org/Shyam-Chen/Angular-Fullstack-Starter)
+[![devDependencies Status](https://david-dm.org/Shyam-Chen/Angular-Fullstack-Starter/dev-status.svg)](https://david-dm.org/Shyam-Chen/Angular-Fullstack-Starter?type=dev)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
 
@@ -55,9 +56,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 * RabbitMQ -> Cloud Pub/Sub
 
 ***
-
-[![dependencies Status](https://david-dm.org/Shyam-Chen/Angular-Fullstack-Starter/status.svg)](https://david-dm.org/Shyam-Chen/Angular-Fullstack-Starter)
-[![devDependencies Status](https://david-dm.org/Shyam-Chen/Angular-Fullstack-Starter/dev-status.svg)](https://david-dm.org/Shyam-Chen/Angular-Fullstack-Starter?type=dev)
 
 This seed repository provides the following features:
 

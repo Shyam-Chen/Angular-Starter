@@ -12,7 +12,7 @@ import { AppListEditDialogComponent } from './components/app-list-edit-dialog.co
 @Component({
   selector: 'app-root',
   template: `
-    <h3>Angular Starter Kit</h3>
+    <h3>Angular by Example</h3>
 
     <div>
       <md-input-container>
