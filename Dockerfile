@@ -59,4 +59,4 @@ RUN rm -rf /var/lib/apt/lists/*
 
 RUN yarn
 
-EXPOSE 8000
+EXPOSE 4200 9876
