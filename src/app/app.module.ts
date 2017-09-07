@@ -10,7 +10,8 @@ import { HiddenDirective } from './shared/directives/hidden.directive';
 import { ReversePipe } from './shared/pipes/reverse.pipe';
 
 import { RESTComponent } from './rest/rest.component';
-import { AppRESTEditDialogComponent } from './rest/app-rest-edit-dialog.component';
+import { AppRESTEditDialogComponent } from './rest/edit-dialog.component';
+import { AppRESTDeleteDialogComponent } from './rest/delete-dialog.component';
 import { ListService } from './rest/list.service';
 
 import { AppComponent } from './app.component';
@@ -22,6 +23,7 @@ import { AppComponent } from './app.component';
     // RESTModule,
     RESTComponent,
     AppRESTEditDialogComponent,
+    AppRESTDeleteDialogComponent,
 
     HiddenDirective,
 
@@ -41,7 +43,8 @@ import { AppComponent } from './app.component';
     MdProgressBarModule,
   ],
   entryComponents: [
-    AppRESTEditDialogComponent
+    AppRESTEditDialogComponent,
+    AppRESTDeleteDialogComponent
   ],
   providers: [
     ListService,

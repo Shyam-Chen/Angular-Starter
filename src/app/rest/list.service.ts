@@ -11,32 +11,26 @@ export class ListService {
   constructor(private http: HttpClient) { }
 
   public getList(): Observable<List[]> {
-    return this.http
-      .get<List[]>(this.url);
+    return this.http.get<List[]>(this.url);
   }
 
-  public searchText(text) {
-    return this.http
-      .get<List[]>(`${this.url}?text=${text}`);
+  public searchText(text: string) {
+    return this.http.get<List[]>(`${this.url}?text=${text}`);
   }
 
   public getItem(id: string): Observable<List> {
-    return this.http
-      .get<List>(`${this.url}/${id}`);
+    return this.http.get<List>(`${this.url}/${id}`);
   }
 
-  public postItem(data): Observable<List> {
-    return this.http
-      .post<List>(this.url, data);
+  public postItem(data: any): Observable<List> {
+    return this.http.post<List>(this.url, data);
   }
 
-  public putItem(id: string, data): Observable<List> {
-    return this.http
-      .put<List>(`${this.url}/${id}`, data);
+  public putItem(id: string, data: any): Observable<List> {
+    return this.http.put<List>(`${this.url}/${id}`, data);
   }
 
   public deleteItem(id: string): Observable<List> {
-    return this.http
-      .delete<List>(`${this.url}/${id}`);
+    return this.http.delete<List>(`${this.url}/${id}`);
   }
 }

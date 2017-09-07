@@ -5,7 +5,8 @@ import { BroadcasterService } from '../shared/broadcaster/broadcaster.service';
 
 import { List } from './list.model';
 import { ListService } from './list.service';
-import { AppRESTEditDialogComponent } from './app-rest-edit-dialog.component';
+import { AppRESTEditDialogComponent } from './edit-dialog.component';
+import { AppRESTDeleteDialogComponent } from './delete-dialog.component';
 
 @Component({
   selector: 'app-rest',
@@ -20,7 +21,7 @@ import { AppRESTEditDialogComponent } from './app-rest-edit-dialog.component';
 
     <div>
       <md-input-container>
-        <input id="text" #newList mdInput placeholder="Text" [(ngModel)]="text" (keyup.enter)="create(newList.value)">
+        <input id="text" #newList mdInput placeholder="Text" [(ngModel)]="createText" (keyup.enter)="create(newList.value)">
       </md-input-container>
 
       <button id="add" md-button md-raised-button (click)="create(newList.value)">Add</button>
@@ -32,7 +33,7 @@ import { AppRESTEditDialogComponent } from './app-rest-edit-dialog.component';
         <md-list-item *ngFor="let item of list | reverse">
           <span>{{ item.text }}　</span>
           <button md-button (click)="openEditDialog(item)">Edit</button>
-          <button md-button (click)="delete(item._id)">Delete</button>
+          <button md-button (click)="openDeleteDialog(item)">Delete</button>
         </md-list-item>
       </md-list>
     </md-card>
@@ -46,21 +47,23 @@ import { AppRESTEditDialogComponent } from './app-rest-edit-dialog.component';
 export class RESTComponent implements OnInit {
   public list: List[];
   public searchModel: string;
-  public text: string;
+  public createText: string;
   public display: string;
 
   constructor(
     private listService: ListService,
-    public dialog: MdDialog,
+    public editDialog: MdDialog,
+    public deleteDialog: MdDialog,
     private broadcaster: BroadcasterService
   ) {
     this.broadcaster.on<string>('updateList')
-      .subscribe(res => {
-        this.updateList();
-      });
+      .subscribe(() => this.updateList());
+
+    this.broadcaster.on<string>('deleteList')
+      .subscribe(() => this.updateList());
   }
 
-  public search(text) {
+  public search(text: string) {
     this.listService
       .searchText(text)
       .subscribe(data => {
@@ -74,9 +77,9 @@ export class RESTComponent implements OnInit {
     if (newItem) {
       this.listService
         .postItem({ text: newItem })
-        .subscribe(data => {
+        .subscribe(() => {
           this.updateList();
-          this.text = '';
+          this.createText = '';
         });
     }
   }
@@ -90,27 +93,18 @@ export class RESTComponent implements OnInit {
       });
   }
 
-  public delete(id: string): void {
-    this.listService
-      .deleteItem(id)
-      .subscribe(data => {
-        this.updateList();
-      });
-  }
-
   public updateList(): void {
     this.listService
       .getList()
-      .subscribe(data => {
-        this.list = data;
-      });
+      .subscribe(data => this.list = data);
   }
 
-  public openEditDialog(item): void {
-    this.dialog
-      .open(AppRESTEditDialogComponent, {
-        data: item
-      });
+  public openEditDialog(data: any): void {
+    this.editDialog.open(AppRESTEditDialogComponent, { data });
+  }
+
+  public openDeleteDialog(data: any): void {
+    this.deleteDialog.open(AppRESTDeleteDialogComponent, { data });
   }
 
   ngOnInit() {

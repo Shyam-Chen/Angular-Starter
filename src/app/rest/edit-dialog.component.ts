@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { MdDialog, MD_DIALOG_DATA } from '@angular/material';
+import { MD_DIALOG_DATA } from '@angular/material';
 
 import { BroadcasterService } from '../shared/broadcaster/broadcaster.service';
 
@@ -22,21 +22,19 @@ export class AppRESTEditDialogComponent implements OnInit {
 
   constructor(
     private listService: ListService,
-    @Inject(MD_DIALOG_DATA) public list: List,
+    @Inject(MD_DIALOG_DATA) public item: List,
     private broadcaster: BroadcasterService
   ) { }
 
   public save(): void {
     if (this.text) {
       this.listService
-        .putItem(this.list._id, { text: this.text })
-        .subscribe(res => {
-          this.broadcaster.broadcast('updateList', res);
-        });
+        .putItem(this.item._id, { text: this.text })
+        .subscribe(res => this.broadcaster.broadcast('updateList', res));
     }
   }
 
   ngOnInit() {
-    this.text = this.list.text;
+    this.text = this.item.text;
   }
 }
