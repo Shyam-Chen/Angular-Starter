@@ -1,14 +1,13 @@
 import { Component, OnInit, Inject } from '@angular/core';
-
 import { MdDialog, MD_DIALOG_DATA } from '@angular/material';
 
-import { List } from '../models/list.model';
-import { ListService } from '../services/list.service';
+import { BroadcasterService } from '../shared/broadcaster/broadcaster.service';
 
-import { BroadcasterService } from '../services/broadcaster.service';
+import { List } from './list.model';
+import { ListService } from './list.service';
 
 @Component({
-  selector: 'app-list-edit-dialog',
+  selector: 'app-rest-edit-dialog',
   template: `
     <md-input-container>
       <input id="input" mdInput placeholder="Text" [(ngModel)]="text">
@@ -18,7 +17,7 @@ import { BroadcasterService } from '../services/broadcaster.service';
     <button md-button [md-dialog-close]="true">Cancel</button>
   `
 })
-export class AppListEditDialogComponent implements OnInit {
+export class AppRESTEditDialogComponent implements OnInit {
   public text: string;
 
   constructor(

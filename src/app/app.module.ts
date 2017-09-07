@@ -3,52 +3,25 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
 import { MdInputModule, MdButtonModule, MdCardModule, MdListModule, MdDialogModule, MdProgressBarModule } from '@angular/material';
 
-import { StoreModule, combineReducers, ActionReducer } from '@ngrx/store';
-import { EffectsModule } from '@ngrx/effects';
+import { BroadcasterService } from './shared/broadcaster/broadcaster.service';
+import { HiddenDirective } from './shared/directives/hidden.directive';
+import { ReversePipe } from './shared/pipes/reverse.pipe';
+
+import { RESTComponent } from './rest/rest.component';
+import { AppRESTEditDialogComponent } from './rest/app-rest-edit-dialog.component';
+import { ListService } from './rest/list.service';
 
 import { AppComponent } from './app.component';
-
-import { AppListEditDialogComponent } from './components/app-list-edit-dialog.component';
-
-import { ListService } from './services/list.service';
-import { BroadcasterService } from './services/broadcaster.service';
-
-import { HiddenDirective } from './directives/hidden.directive';
-
-import { ReversePipe } from './pipes/reverse.pipe';
-
-// import { CounterComponent } from './containers/counter.container';
-// import { counterReducer, CounterState, CounterEffects } from './containers/counter';
-
-// import { environment } from '../../environments/environment';
-
-// export interface State {
-//   counter: CounterState;
-// }
-//
-// const reducers = {
-//   counter: counterReducer,
-// };
-
-// const developmentReducer: ActionReducer<State> = compose(storeFreeze, combineReducers)(reducers);
-// const productionReducer: ActionReducer<State> = combineReducers(reducers);
-//
-// export function reducer(state: any, action: any) {
-//   // if (environment.production) {
-//     return productionReducer(state, action);
-//   // } else {
-//   //   return developmentReducer(state, action);
-//   // }
-// }
+// import { RESTModule } from './rest/rest.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppListEditDialogComponent,
-    // CounterComponent,
+    // RESTModule,
+    RESTComponent,
+    AppRESTEditDialogComponent,
 
     HiddenDirective,
 
@@ -66,12 +39,9 @@ import { ReversePipe } from './pipes/reverse.pipe';
     MdListModule,
     MdDialogModule,
     MdProgressBarModule,
-
-    // StoreModule.provideStore(reducer),
-    // EffectsModule.run(CounterEffects),
   ],
   entryComponents: [
-    AppListEditDialogComponent,
+    AppRESTEditDialogComponent
   ],
   providers: [
     ListService,

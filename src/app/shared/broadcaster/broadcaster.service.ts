@@ -4,7 +4,7 @@ import 'rxjs/add/operator/map';
 import { Subject } from 'rxjs/Subject';
 import { Observable } from 'rxjs/Observable';
 
-import { Broadcaster } from '../models/broadcaster.model';
+import { Broadcaster } from './broadcaster.model';
 
 export class BroadcasterService {
   private broadcaster: Subject<Broadcaster>;
