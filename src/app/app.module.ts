@@ -4,6 +4,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MdInputModule, MdButtonModule, MdCardModule, MdListModule, MdDialogModule, MdProgressBarModule } from '@angular/material';
+// import { StoreModule, ActionReducer, combineReducers } from '@ngrx/store';
+// import { EffectsModule } from '@ngrx/effects';
+// import { StoreRouterConnectingModule } from '@ngrx/router-store';
 
 import { BroadcasterService } from './shared/broadcaster/broadcaster.service';
 import { HiddenDirective } from './shared/directives/hidden.directive';
@@ -41,6 +44,10 @@ import { AppComponent } from './app.component';
     MdListModule,
     MdDialogModule,
     MdProgressBarModule,
+
+    // StoreModule.forRoot(<any>{ app:  }),
+    // EffectsModule.forRoot([]),
+    // StoreRouterConnectingModule
   ],
   entryComponents: [
     AppRESTEditDialogComponent,
