@@ -34,4 +34,6 @@ jobs:
 
       - run:
           name: Test application (E2E)
-          command: docker-compose exec app yarn e2e
+          command: |
+            docker-compose exec app yarn postinstall
+            docker-compose exec app yarn e2e

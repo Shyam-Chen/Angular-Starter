@@ -17,7 +17,7 @@ ENTRYPOINT ["Xvfb", "-ac", ":99", "-screen", "0", "1280x720x16"]
 # -- chrome
 
 # node --
-ENV NODE 7
+ENV NODE 8
 ENV PATH $HOME/.yarn/bin:$PATH
 
 RUN \
@@ -57,6 +57,7 @@ RUN \
 
 RUN rm -rf /var/lib/apt/lists/*
 
-RUN yarn
+# RUN yarn install
+RUN npm install
 
 EXPOSE 4200 9876
