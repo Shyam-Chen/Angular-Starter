@@ -34,17 +34,17 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## TODO List
 
-* Integration with Redux (@ngrx)
+* Integration with @ngrx
   * Counter
   * CRUD
   * REST
   * GraphQL
-  * DataTable
 * Server-side Rendering
 * Applications in Docker containers on **App Engine**
 * Run App Engine Applications on **Container Engine**
 * ~
 * Use **Cloud Functions**
+  * Server-side Rendering
 * ~
 * Use **Compute Engine**
 
@@ -64,16 +64,18 @@ This seed repository provides the following features:
 * [x] User interface components with [**Material**](https://material.io/).
 * [ ] Backend cloud services with [**Firebase**](https://firebase.google.com/).
 * [x] Backend application framework with [**Express**](http://expressjs.com/).
-* [x] Database object modeling with [**Mongoose**](http://mongoosejs.com/).
+* [x] Data query language with [**GraphQL**](http://graphql.org/).
+* [ ] Object modeling mapping with [**Mongoose**](http://mongoosejs.com/).
+* [ ] Object relational mapping with [**Sequelize**](http://docs.sequelizejs.com/).
 * [ ] Utility functions with [**Lodash**](https://lodash.com/).
 * [x] Reactive extensions with [**ReactiveX**](http://reactivex.io/).
 * [ ] State container with [**Redux**](http://redux.js.org/).
 * [ ] Immutable collections with [**Immutable**](http://facebook.github.io/immutable-js/).
 * [ ] Data visualizations with [**D3**](https://d3js.org/).
 * [ ] 3D scene graph with [**Three**](https://threejs.org/).
-* [ ] Secure authentication with [**JWT**](https://jwt.io/).
-* [ ] Data query language with [**GraphQL**](http://graphql.org/).
-* [ ] Real-time bidirectional communication with [**Socket**](https://socket.io/).
+* [x] Secure authentication with [**JWT**](https://jwt.io/).
+* [ ] Third-party authentication with [**Passport**](http://passportjs.org/).
+* [x] Real-time bidirectional communication with [**Socket**](https://socket.io/).
 * [ ] Message queuing with [**RabbitMQ**](https://www.rabbitmq.com/).
 * ---------- **Tools** ----------
 * [x] Build system with [**Gulp**](https://github.com/gulpjs/gulp).
@@ -97,6 +99,7 @@ This seed repository provides the following features:
 * [x] Operating system with [**Linux**](https://github.com/torvalds/linux).
 * [x] Text editor with [**Atom**](https://github.com/atom/atom).
 * [x] Version control with [**Git**](https://github.com/git/git).
+* [x] Code repository with [**GitHub**](https://github.com/).
 * [x] Fast and deterministic builds with [**Yarn**](https://github.com/yarnpkg/yarn).
 * [ ] Reverse proxy and caching with [**Nginx**](https://github.com/nginx/nginx).
 * [x] Software container with [**Docker**](https://github.com/docker/docker).
@@ -104,5 +107,5 @@ This seed repository provides the following features:
 * [ ] Build automated machine images with [**Packer**](https://github.com/hashicorp/packer).
 * [ ] Build and distribute development environments with [**Vagrant**](https://github.com/mitchellh/vagrant).
 * [ ] Automate infrastructure with [**Chef**](https://github.com/chef/chef).
-* [x] Continuous integration with [**CircleCI**](https://github.com/circleci).
+* [ ] Continuous integration with [**Drone**](https://drone.io/).
 * [ ] Cloud services with [**Google Cloud Platform**](https://cloud.google.com/).
