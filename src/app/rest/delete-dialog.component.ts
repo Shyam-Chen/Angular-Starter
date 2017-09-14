@@ -1,7 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { MD_DIALOG_DATA } from '@angular/material';
 
-import { BroadcasterService } from '../shared/broadcaster/broadcaster.service';
+import { BroadcasterService } from '../shared/services/broadcaster/broadcaster.service';
 
 import { List } from './list.model';
 import { ListService } from './list.service';

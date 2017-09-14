@@ -8,7 +8,7 @@ import { MdInputModule, MdButtonModule, MdCardModule, MdListModule, MdDialogModu
 // import { EffectsModule } from '@ngrx/effects';
 // import { StoreRouterConnectingModule } from '@ngrx/router-store';
 
-import { BroadcasterService } from './shared/broadcaster/broadcaster.service';
+import { BroadcasterService } from './shared/services/broadcaster/broadcaster.service';
 import { HiddenDirective } from './shared/directives/hidden.directive';
 import { ReversePipe } from './shared/pipes/reverse.pipe';
 

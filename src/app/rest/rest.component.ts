@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MdDialog } from '@angular/material';
 
-import { BroadcasterService } from '../shared/broadcaster/broadcaster.service';
+import { BroadcasterService } from '../shared/services/broadcaster/broadcaster.service';
 
 import { List } from './list.model';
 import { ListService } from './list.service';
