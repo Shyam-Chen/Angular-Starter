@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
     <h3>Angular by Example</h3>
 
     <app-rest></app-rest>
+    <app-counter></app-counter>
   `,
   styles: [``]
 })
