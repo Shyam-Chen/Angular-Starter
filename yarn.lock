@@ -240,13 +240,13 @@
     shimmer "^1.0.0"
     uuid "^3.0.1"
 
-"@ngrx/core@1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@ngrx/core/-/core-1.2.0.tgz#882b46abafa2e0e6d887cb71a1b2c2fa3e6d0dc6"
-
 "@ngrx/effects@4.0.5":
   version "4.0.5"
   resolved "https://registry.yarnpkg.com/@ngrx/effects/-/effects-4.0.5.tgz#1224763800621b7305f9b18bc17ee09b25c861d1"
+
+"@ngrx/router-store@4.0.4":
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/@ngrx/router-store/-/router-store-4.0.4.tgz#ab59f35aae93465088384faf009e21b22edd456a"
 
 "@ngrx/store@4.0.3":
   version "4.0.3"

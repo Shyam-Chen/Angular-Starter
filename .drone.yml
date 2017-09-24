@@ -1,6 +1,0 @@
-pipeline:
-  app:
-    image: node:8
-    commands:
-      - npm install
-      - npm test

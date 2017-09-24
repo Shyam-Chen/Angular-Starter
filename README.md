@@ -5,7 +5,7 @@
 [![dependencies Status](https://david-dm.org/Shyam-Chen/Angular-Fullstack-Starter/status.svg)](https://david-dm.org/Shyam-Chen/Angular-Fullstack-Starter)
 [![devDependencies Status](https://david-dm.org/Shyam-Chen/Angular-Fullstack-Starter/dev-status.svg)](https://david-dm.org/Shyam-Chen/Angular-Fullstack-Starter?type=dev)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
 
 ## Development server
 
@@ -107,5 +107,5 @@ This seed repository provides the following features:
 * [ ] Build automated machine images with [**Packer**](https://github.com/hashicorp/packer).
 * [ ] Build and distribute development environments with [**Vagrant**](https://github.com/mitchellh/vagrant).
 * [ ] Automate infrastructure with [**Chef**](https://github.com/chef/chef).
-* [ ] Continuous integration with [**Drone**](https://drone.io/).
+* [x] Continuous integration with [**Circle**](https://circleci.com/).
 * [ ] Cloud services with [**Google Cloud Platform**](https://cloud.google.com/).
