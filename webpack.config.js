@@ -32,7 +32,7 @@ if (process.env.NODE_ENV === 'production') {
   plugins.push(
     new AotPlugin({
       tsConfigPath: './tsconfig.json',
-      entryModule: 'src/app/app.module#AppModule'
+      entryModule: './src/app/app.module#AppModule'
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: true,

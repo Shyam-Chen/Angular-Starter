@@ -4,7 +4,8 @@
   "description": "A boilerplate for Angular, Material, and Express.",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --inline --hot",
-    "build": "cross-env NODE_ENV=production webpack -p"
+    "build": "cross-env NODE_ENV=production ngc -p tsconfig.json && webpack -p",
+    "deploy": "firebase deploy"
   },
   "repository": {
     "type": "git",
@@ -30,7 +31,12 @@
     "@angular/material": "2.0.0-beta.11",
     "@angular/platform-browser": "4.4.3",
     "@angular/platform-browser-dynamic": "4.4.3",
+    "@angular/platform-server": "4.4.3",
     "@angular/router": "4.4.3",
+    "@ngrx/effects": "4.0.5",
+    "@ngrx/router-store": "4.0.4",
+    "@ngrx/store": "4.0.3",
+    "@ngrx/store-devtools": "4.0.0",
     "core-js": "2.5.1",
     "rxjs": "5.4.3",
     "tslib": "1.7.1",
@@ -50,6 +56,7 @@
     "codelyzer": "3.2.0",
     "cross-env": "5.0.1",
     "file-loader": "0.11.2",
+    "firebase-tools": "3.12.0",
     "html-loader": "0.4.5",
     "html-webpack-plugin": "2.30.1",
     "jasmine-core": "2.6.4",
