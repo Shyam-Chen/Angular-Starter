@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const rules = [
   { test: /\.html$/, loader: 'html-loader' },
-  { test: /\.scss$/, loaders: ['raw-loader', 'sass-loader'] },
+  // { test: /\.css/,  },
   { test: /\.(jpe?g|png|gif|svg)$/i, loader: 'file-loader' }
 ];
 
@@ -22,7 +22,7 @@ const plugins = [
   }),
   new webpack.optimize.CommonsChunkPlugin({
     name: 'vendor',
-    minChunks: (module) => module.context && /node_modules/.test(module.context)
+    minChunks: module => module.context && /node_modules/.test(module.context)
   })
 ];
 

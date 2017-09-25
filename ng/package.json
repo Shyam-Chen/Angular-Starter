@@ -3,11 +3,8 @@
   "version": "1.0.0",
   "description": "A boilerplate for React, Material, and Express.",
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack -p",
-    "build:dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot",
-    "build:production": "npm run clean && npm run build",
-    "clean": "rimraf build",
-    "start": "npm run build:dev"
+    "start": "cross-env NODE_ENV=development webpack-dev-server --inline --hot",
+    "build": "cross-env NODE_ENV=production webpack -p"
   },
   "repository": {
     "type": "git",
@@ -24,11 +21,13 @@
   "homepage": "https://github.com/Shyam-Chen/Angular-Fullstack-Starter#readme",
   "dependencies": {
     "@angular/animations": "4.4.3",
+    "@angular/cdk": "2.0.0-beta.11",
     "@angular/common": "4.4.3",
     "@angular/compiler": "4.4.3",
     "@angular/core": "4.4.3",
     "@angular/forms": "4.4.3",
     "@angular/http": "4.4.3",
+    "@angular/material": "2.0.0-beta.11",
     "@angular/platform-browser": "4.4.3",
     "@angular/platform-browser-dynamic": "4.4.3",
     "@angular/router": "4.4.3",
@@ -48,6 +47,7 @@
     "angular-router-loader": "0.6.0",
     "angular2-template-loader": "0.6.2",
     "awesome-typescript-loader": "3.2.1",
+    "codelyzer": "3.2.0",
     "cross-env": "5.0.1",
     "file-loader": "0.11.2",
     "html-loader": "0.4.5",
@@ -59,10 +59,7 @@
     "karma-sourcemap-loader": "0.3.7",
     "karma-spec-reporter": "0.0.31",
     "karma-webpack": "2.0.3",
-    "node-sass": "4.5.3",
-    "raw-loader": "0.5.1",
-    "rimraf": "2.6.1",
-    "sass-loader": "6.0.6",
+    "tslint": "5.7.0",
     "typescript": "2.5.2",
     "webpack": "3.6.0",
     "webpack-dev-server": "2.8.2"

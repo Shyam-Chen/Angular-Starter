@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Routes, RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 
@@ -14,6 +15,7 @@ export const ROUTES: Routes = [
 @NgModule({
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(ROUTES)
   ],
   declarations: [
