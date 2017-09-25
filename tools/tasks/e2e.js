@@ -11,8 +11,8 @@ gulp.task('e2e', done => {
   new Protractor()
     .server(TEST_PORT, DIST_ROOT)
     .then(server => {
-      gulp.src(join(SOURCE_ROOT, '**/*.e2e-spec.js'))
-        .pipe(protractor({ configFile: join(__dirname, '../../protractor.conf.js') }))
+      gulp.src(join(SOURCE_ROOT, '**/*.e2e-spec.ts'))
+        .pipe(protractor({ configFile: join(__dirname, '../config/protractor.js') }))
         .on('error', error => { throw error; })
         .on('end', () => server.close(done));
     });

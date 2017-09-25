@@ -5,8 +5,10 @@ const { AotPlugin } = require('@ngtools/webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const rules = [
-  { test: /\.html$/, loader: 'html-loader' },
   {
+    test: /\.html$/,
+    use: ['html-loader']
+  }, {
     test: /\.css$/,
     use: [
       'style-loader',
@@ -17,8 +19,10 @@ const rules = [
         }
       }
     ]
-  },
-  { test: /\.(jpe?g|png|gif|svg)$/i, loader: 'file-loader' }
+  }, {
+    test: /\.(jpe?g|png|gif|svg)$/i,
+    use: ['file-loader']
+  }
 ];
 
 const plugins = [
@@ -38,7 +42,10 @@ const plugins = [
 ];
 
 if (process.env.NODE_ENV === 'production') {
-  rules.push({ test: /\.ts$/, loaders: ['@ngtools/webpack'] });
+  rules.push({
+    test: /\.ts$/,
+    use: ['@ngtools/webpack']
+  });
 
   plugins.push(
     new AotPlugin({
@@ -73,7 +80,7 @@ if (process.env.NODE_ENV === 'production') {
 } else {
   rules.push({
     test: /\.ts$/,
-    loaders: [
+    use: [
       'awesome-typescript-loader',
       'angular-router-loader',
       'angular2-template-loader'
@@ -103,20 +110,18 @@ module.exports = {
       modules: false,
       warnings: false
     },
-    // publicPath: '/build/',
     port: 8000
   },
   devtool: 'sourcemap',
   entry: {
     app: [
-      './src/polyfills', './src/main.ts'
+      './src/polyfills',
+      './src/main.ts'
     ]
   },
   output: {
-    filename: '[name].[hash].js',
-    // chunkFilename: '[name]-chunk.js',
-    // publicPath: '/build/',
-    path: path.join(__dirname, 'build')
+    path: path.join(__dirname, 'build'),
+    filename: '[name].[hash].js'
   },
   node: {
     console: false,
