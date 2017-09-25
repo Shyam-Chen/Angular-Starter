@@ -1,34 +1,29 @@
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { MdInputModule, MdButtonModule, MdCardModule, MdListModule, MdDialogModule, MdProgressBarModule } from '@angular/material';
-import { StoreModule } from '@ngrx/store';
-import { EffectsModule } from '@ngrx/effects';
-// import { StoreRouterConnectingModule, RouterStateSerializer } from '@ngrx/router-store';
+import { Routes, RouterModule } from '@angular/router';
+import { APP_BASE_HREF } from '@angular/common';
 
 import { AppComponent } from './app.component';
-import { RESTModule } from './rest/rest.module';
-import { CounterModule } from './counter/counter.module';
-import counter from './counter/reducer';
+
+export const ROUTES: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: '' },
+  { path: 'counter', loadChildren: './counter/counter.module#CounterModule' },
+  { path: 'rest', loadChildren: './rest/rest.module#RESTModule' }
+];
 
 @NgModule({
-  declarations: [AppComponent],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'angular-fullstack-starter' }),
-
-    StoreModule.forRoot(<any>{ counter }),
-    EffectsModule.forRoot([]),
-    // StoreRouterConnectingModule,
-
-    RESTModule,
-    CounterModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    RouterModule.forRoot(ROUTES)
   ],
-  entryComponents: [],
+  declarations: [
+    AppComponent
+  ],
   providers: [
-    // { provide: RouterStateSerializer, useClass: CustomRouterStateSerializer },
+    { provide: APP_BASE_HREF, useValue: '/' }
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

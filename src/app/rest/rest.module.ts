@@ -1,39 +1,42 @@
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { MdInputModule, MdButtonModule, MdCardModule, MdListModule, MdDialogModule, MdProgressBarModule } from '@angular/material';
 
 import { BroadcasterService } from '../shared/services/broadcaster/broadcaster.service';
-import { HiddenDirective } from '../shared/directives/hidden.directive';
 import { ReversePipe } from '../shared/pipes/reverse.pipe';
 
 import { RESTComponent } from './rest.component';
-import { AppRESTEditDialogComponent } from './edit-dialog.component';
-import { AppRESTDeleteDialogComponent } from './delete-dialog.component';
+import { AppRESTEditDialogComponent } from './dialog-edit.component';
+import { AppRESTDeleteDialogComponent } from './dialog-delete.component';
 import { ListService } from './list.service';
 
+export const ROUTES: Routes = [
+  { path: '', component: RESTComponent }
+];
+
 @NgModule({
-  declarations: [
-    RESTComponent,
-    AppRESTEditDialogComponent,
-    AppRESTDeleteDialogComponent,
-
-    HiddenDirective,
-
-    ReversePipe,
-  ],
   imports: [
-    BrowserAnimationsModule,
     FormsModule,
+    CommonModule,
     HttpClientModule,
-
     MdInputModule,
     MdButtonModule,
     MdCardModule,
     MdListModule,
     MdDialogModule,
-    MdProgressBarModule
+    MdProgressBarModule,
+
+    RouterModule.forChild(ROUTES)
+  ],
+  declarations: [
+    RESTComponent,
+    AppRESTEditDialogComponent,
+    AppRESTDeleteDialogComponent,
+
+    ReversePipe,
   ],
   entryComponents: [
     AppRESTEditDialogComponent,
@@ -42,7 +45,6 @@ import { ListService } from './list.service';
   providers: [
     ListService,
     BroadcasterService,
-  ],
-  exports: [RESTComponent]
+  ]
 })
-export class RESTModule { }
+export class RESTModule {}

@@ -5,8 +5,8 @@ import { BroadcasterService } from '../shared/services/broadcaster/broadcaster.s
 
 import { List } from './list.model';
 import { ListService } from './list.service';
-import { AppRESTEditDialogComponent } from './edit-dialog.component';
-import { AppRESTDeleteDialogComponent } from './delete-dialog.component';
+import { AppRESTEditDialogComponent } from './dialog-edit.component';
+import { AppRESTDeleteDialogComponent } from './dialog-delete.component';
 
 @Component({
   selector: 'app-rest',

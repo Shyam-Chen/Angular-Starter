@@ -5,9 +5,9 @@ import { Pipe, PipeTransform } from '@angular/core';
   pure: false
 })
 export class ReversePipe implements PipeTransform {
-  transform(value) {
-    if (value) {
-      return value.reverse();
+  transform(arr: any[]) {
+    if (arr) {
+      return arr.reverse();
     }
   }
 }

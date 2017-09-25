@@ -18,13 +18,13 @@ ENTRYPOINT ["Xvfb", "-ac", ":99", "-screen", "0", "1280x720x16"]
 
 # node --
 ENV NODE 8
-ENV PATH $HOME/.yarn/bin:$PATH
 
 RUN \
   curl -sL https://deb.nodesource.com/setup_$NODE.x | bash - && \
-  curl -o- -L https://yarnpkg.com/install.sh | bash && \
+  curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
+  echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
   apt-get update && \
-  apt-get install -y nodejs
+  apt-get install -y nodejs yarn
 # -- node
 
 # java --
@@ -57,7 +57,6 @@ RUN \
 
 RUN rm -rf /var/lib/apt/lists/*
 
-# RUN yarn install
-RUN npm install
+RUN yarn install
 
 EXPOSE 4200 9876

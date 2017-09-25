@@ -6,31 +6,31 @@ import { List } from './list.model';
 
 @Injectable()
 export class ListService {
-  private url = 'https://web-go-demo.herokuapp.com/__/list';
+  readonly API_LIST = 'https://web-go-demo.herokuapp.com/__/list';
 
   constructor(private http: HttpClient) { }
 
   public getList(): Observable<List[]> {
-    return this.http.get<List[]>(this.url);
+    return this.http.get<List[]>(this.API_LIST);
   }
 
   public searchText(text: string) {
-    return this.http.get<List[]>(`${this.url}?text=${text}`);
+    return this.http.get<List[]>(`${this.API_LIST}?text=${text}`);
   }
 
   public getItem(id: string): Observable<List> {
-    return this.http.get<List>(`${this.url}/${id}`);
+    return this.http.get<List>(`${this.API_LIST}/${id}`);
   }
 
   public postItem(data: any): Observable<List> {
-    return this.http.post<List>(this.url, data);
+    return this.http.post<List>(this.API_LIST, data);
   }
 
   public putItem(id: string, data: any): Observable<List> {
-    return this.http.put<List>(`${this.url}/${id}`, data);
+    return this.http.put<List>(`${this.API_LIST}/${id}`, data);
   }
 
   public deleteItem(id: string): Observable<List> {
-    return this.http.delete<List>(`${this.url}/${id}`);
+    return this.http.delete<List>(`${this.API_LIST}/${id}`);
   }
 }
