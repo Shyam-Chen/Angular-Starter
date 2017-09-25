@@ -6,7 +6,18 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const rules = [
   { test: /\.html$/, loader: 'html-loader' },
-  // { test: /\.css/,  },
+  {
+    test: /\.css$/,
+    use: [
+      'style-loader',
+      {
+        loader: 'css-loader',
+        options: {
+          importLoaders: 1
+        }
+      }
+    ]
+  },
   { test: /\.(jpe?g|png|gif|svg)$/i, loader: 'file-loader' }
 ];
 
@@ -79,7 +90,7 @@ module.exports = {
   cache: true,
   context: __dirname,
   devServer: {
-    contentBase: './src',
+    contentBase: path.join(__dirname, 'build'),
     historyApiFallback: true,
     stats: {
       chunks: false,
@@ -92,7 +103,7 @@ module.exports = {
       modules: false,
       warnings: false
     },
-    publicPath: '/build/',
+    // publicPath: '/build/',
     port: 8000
   },
   devtool: 'sourcemap',
@@ -102,10 +113,10 @@ module.exports = {
     ]
   },
   output: {
-    filename: '[name].js',
-    chunkFilename: '[name]-chunk.js',
-    publicPath: '/build/',
-    path: path.resolve(__dirname, 'build')
+    filename: '[name].[hash].js',
+    // chunkFilename: '[name]-chunk.js',
+    // publicPath: '/build/',
+    path: path.join(__dirname, 'build')
   },
   node: {
     console: false,
