@@ -34,8 +34,8 @@
     "zone.js": "0.8.17"
   },
   "devDependencies": {
-    "@ngtools/webpack": "1.7.1",
     "@types/node": "8.0.30",
+    "angular-router-loader": "0.6.0",
     "awesome-typescript-loader": "3.2.3",
     "html-webpack-plugin": "2.30.1",
     "typescript": "2.5.2",

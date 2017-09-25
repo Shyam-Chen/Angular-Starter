@@ -1,6 +1,5 @@
 const { join } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const { AotPlugin } = require('@ngtools/webpack');
 
 module.exports = {
   context: join(__dirname, 'src'),
@@ -16,19 +15,10 @@ module.exports = {
     rules: [
       {
         test: /\.ts$/,
-        loader: 'awesome-typescript-loader'
-        // loader: '@ngtools/webpack'
-      // }, {
-      //   test: /\.html$/,
-      //   loader: 'html-loader'
-      // }, {
-      //   test: /\.css$/,
-      //   exclude: join(__dirname, 'src/app'),
-      //   loader: ExtractTextPlugin.extract({ fallbackLoader: 'style-loader', loader: 'css-loader?sourceMap' })
-      // }, {
-      //   test: /\.css$/,
-      //   include: join(__dirname, 'src/app'),
-      //   loader: 'raw-loader'
+        use: [
+          'awesome-typescript-loader',
+          'angular-router-loader'
+        ]
       }
     ]
   },
@@ -39,11 +29,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'index.html'
-    }),
-    // new AotPlugin({
-    //   tsConfigPath: 'tsconfig.json',
-    //   entryModule: 'src/app/app.module#AppModule'
-    // })
+    })
   ],
   devServer: {
     contentBase: join(__dirname, 'build'),
