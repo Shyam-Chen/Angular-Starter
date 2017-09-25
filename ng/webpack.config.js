@@ -1,41 +1,128 @@
-const { join } = require('path');
+const path = require('path');
+const webpack = require('webpack');
+const typescript = require('typescript');
+const { AotPlugin } = require('@ngtools/webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = {
-  context: join(__dirname, 'src'),
-  entry: {
-    polyfills: './polyfills.ts',
-    main: './main.ts'
-  },
-  output: {
-    path: join(__dirname, 'build'),
-    filename: '[name].[hash].js'
-  },
-  module: {
-    rules: [
-      {
-        test: /\.ts$/,
-        use: [
-          'awesome-typescript-loader',
-          'angular-router-loader'
-        ]
-      }
-    ]
-  },
-  resolve: {
-    extensions: ['.js', '.ts']
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: 'index.html'
+const rules = [
+  { test: /\.html$/, loader: 'html-loader' },
+  { test: /\.scss$/, loaders: ['raw-loader', 'sass-loader'] },
+  { test: /\.(jpe?g|png|gif|svg)$/i, loader: 'file-loader' }
+];
+
+const plugins = [
+  new HtmlWebpackPlugin({
+    filename: 'index.html',
+    template: 'src/index.html'
+  }),
+  new webpack.DefinePlugin({
+    'process.env': {
+      'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+    }
+  }),
+  new webpack.optimize.CommonsChunkPlugin({
+    name: 'vendor',
+    minChunks: (module) => module.context && /node_modules/.test(module.context)
+  })
+];
+
+if (process.env.NODE_ENV === 'production') {
+  rules.push({ test: /\.ts$/, loaders: ['@ngtools/webpack'] });
+
+  plugins.push(
+    new AotPlugin({
+      tsConfigPath: './tsconfig.json',
+      entryModule: 'src/app/app.module#AppModule'
+    }),
+    new webpack.LoaderOptionsPlugin({
+      minimize: true,
+      debug: false
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      sourceMap: true,
+      beautify: false,
+      mangle: {
+        screw_ie8: true
+      },
+      compress: {
+        unused: true,
+        dead_code: true,
+        drop_debugger: true,
+        conditionals: true,
+        evaluate: true,
+        drop_console: true,
+        sequences: true,
+        booleans: true,
+        screw_ie8: true,
+        warnings: false
+      },
+      comments: false
     })
-  ],
+  );
+} else {
+  rules.push({
+    test: /\.ts$/,
+    loaders: [
+      'awesome-typescript-loader',
+      'angular-router-loader',
+      'angular2-template-loader'
+    ]
+  });
+
+  plugins.push(
+    new webpack.NamedModulesPlugin(),
+    new webpack.ContextReplacementPlugin(/angular(\\|\/)core(\\|\/)@angular/, path.resolve(__dirname, './notfound'))
+  );
+}
+
+module.exports = {
+  cache: true,
+  context: __dirname,
   devServer: {
-    contentBase: join(__dirname, 'build'),
+    contentBase: './src',
     historyApiFallback: true,
-    inline: true,
+    stats: {
+      chunks: false,
+      chunkModules: false,
+      chunkOrigins: false,
+      errors: true,
+      errorDetails: false,
+      hash: false,
+      timings: false,
+      modules: false,
+      warnings: false
+    },
+    publicPath: '/build/',
     port: 8000
   },
-  devtool: 'source-map'
+  devtool: 'sourcemap',
+  entry: {
+    app: [
+      './src/polyfills', './src/main.ts'
+    ]
+  },
+  output: {
+    filename: '[name].js',
+    chunkFilename: '[name]-chunk.js',
+    publicPath: '/build/',
+    path: path.resolve(__dirname, 'build')
+  },
+  node: {
+    console: false,
+    global: true,
+    process: true,
+    Buffer: false,
+    setImmediate: false
+  },
+  module: {
+    rules
+  },
+  resolve: {
+    extensions: ['.ts', '.js'],
+    modules: [
+      'src',
+      'node_modules'
+    ]
+  },
+  plugins
 };

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-rest',
@@ -9,8 +9,4 @@ import { Component, OnInit } from '@angular/core';
   `,
   styles: [``]
 })
-export class RESTComponent implements OnInit {
-  ngOnInit() {
-
-  }
-}
+export class RESTComponent {}

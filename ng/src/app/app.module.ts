@@ -1,15 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { Routes, RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
+
+export const ROUTES: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: '' },
+  { path: 'counter', loadChildren: './counter/counter.module#CounterModule' },
+  { path: 'rest', loadChildren: './rest/rest.module#RESTModule' }
+];
 
 @NgModule({
   imports: [
     BrowserModule,
-
-    AppRoutingModule
+    RouterModule.forRoot(ROUTES)
   ],
   declarations: [
     AppComponent

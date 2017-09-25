@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -11,11 +11,6 @@ import { Component, OnInit } from '@angular/core';
     </nav>
 
     <router-outlet></router-outlet>
-  `,
-  styles: [``]
+  `
 })
-export class AppComponent implements OnInit {
-  ngOnInit() {
-    // ...
-  }
-}
+export class AppComponent {}

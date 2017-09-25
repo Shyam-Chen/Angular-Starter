@@ -1,14 +1,18 @@
 import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
 import { RESTComponent } from './rest.component';
 
+export const ROUTES: Routes = [
+  { path: '', component: RESTComponent }
+];
+
 @NgModule({
-  imports: [],
-  declarations: [
-    RESTComponent,
+  imports: [
+    RouterModule.forChild(ROUTES)
   ],
-  entryComponents: [],
-  providers: [],
-  exports: [RESTComponent]
+  declarations: [
+    RESTComponent
+  ]
 })
 export class RESTModule {}
