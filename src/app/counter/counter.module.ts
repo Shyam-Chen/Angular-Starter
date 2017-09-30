@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { MatButtonModule } from '@angular/material';
 
 import { CounterComponent } from './counter.component';
 
@@ -9,6 +10,7 @@ export const ROUTES: Routes = [
 
 @NgModule({
   imports: [
+    MatButtonModule,
     RouterModule.forChild(ROUTES)
   ],
   declarations: [

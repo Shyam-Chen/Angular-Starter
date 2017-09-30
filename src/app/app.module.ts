@@ -4,8 +4,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Routes, RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 import { MatButtonModule } from '@angular/material';
+import { StoreModule } from '@ngrx/store';
 
 import { AppComponent } from './app.component';
+// import { counterReducer } from './counter/reducer'
 
 export const ROUTES: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '' },
@@ -18,6 +20,7 @@ export const ROUTES: Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    // StoreModule.forRoot({ counter: counterReducer }),
     RouterModule.forRoot(ROUTES)
   ],
   declarations: [
