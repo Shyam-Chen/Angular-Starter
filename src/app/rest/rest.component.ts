@@ -16,7 +16,7 @@ import { AppRESTDeleteDialogComponent } from './dialog-delete.component';
         <input id="search-text" #searchText mdInput placeholder="Text" [(ngModel)]="searchModel" (keyup.enter)="search(searchText.value)">
       </md-input-container>
 
-      <button id="search" md-button md-raised-button (click)="search(searchText.value)">Search</button>
+      <button id="search" md-raised-button (click)="search(searchText.value)">Search</button>
     </div>
 
     <div>
@@ -24,7 +24,7 @@ import { AppRESTDeleteDialogComponent } from './dialog-delete.component';
         <input id="text" #newList mdInput placeholder="Text" [(ngModel)]="createText" (keyup.enter)="create(newList.value)">
       </md-input-container>
 
-      <button id="add" md-button md-raised-button (click)="create(newList.value)">Add</button>
+      <button id="add" md-raised-button (click)="create(newList.value)">Add</button>
     </div>
 
     <md-card id="list">
@@ -32,8 +32,8 @@ import { AppRESTDeleteDialogComponent } from './dialog-delete.component';
       <md-list>
         <md-list-item *ngFor="let item of list | reverse">
           <span>{{ item.text }}　</span>
-          <button md-button (click)="openEditDialog(item)">Edit</button>
-          <button md-button (click)="openDeleteDialog(item)">Delete</button>
+          <button md-button color="primary" (click)="openEditDialog(item)">Edit</button>
+          <button md-button color="accent" (click)="openDeleteDialog(item)">Delete</button>
         </md-list-item>
       </md-list>
     </md-card>

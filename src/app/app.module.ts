@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Routes, RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
+import { MatButtonModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 
@@ -16,6 +17,7 @@ export const ROUTES: Routes = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    MatButtonModule,
     RouterModule.forRoot(ROUTES)
   ],
   declarations: [

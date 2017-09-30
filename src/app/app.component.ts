@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
     <h3>Angular by Example</h3>
 
     <nav>
-      <a routerLink="counter" routerLinkActive="active">Counter</a>
-      <a routerLink="rest" routerLinkActive="active">REST</a>
+      <button md-raised-button color="primary" routerLink="counter" routerLinkActive="active">Counter</button>
+      <button md-raised-button color="primary" routerLink="rest" routerLinkActive="active">REST</button>
     </nav>
 
     <router-outlet></router-outlet>
