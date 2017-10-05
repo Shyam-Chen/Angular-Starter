@@ -53,6 +53,5 @@ export class AppComponent {
 
   constructor(location: Location) {
     this.location = location;
-    console.log(location.path())
   }
 }

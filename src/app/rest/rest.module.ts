@@ -4,14 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { MdInputModule, MdButtonModule, MdCardModule, MdListModule, MdDialogModule, MdProgressBarModule } from '@angular/material';
+import { MobxAngularModule } from 'mobx-angular';
 
-import { BroadcasterService } from '../shared/services/broadcaster/broadcaster.service';
 import { ReversePipe } from '../shared/pipes/reverse.pipe';
 
 import { RESTComponent } from './rest.component';
 import { AppRESTEditDialogComponent } from './dialog-edit.component';
 import { AppRESTDeleteDialogComponent } from './dialog-delete.component';
-import { ListService } from './list.service';
+import { RESTStore } from './rest.store';
 
 export const ROUTES: Routes = [
   { path: '', component: RESTComponent }
@@ -28,6 +28,7 @@ export const ROUTES: Routes = [
     MdListModule,
     MdDialogModule,
     MdProgressBarModule,
+    MobxAngularModule,
 
     RouterModule.forChild(ROUTES)
   ],
@@ -43,8 +44,7 @@ export const ROUTES: Routes = [
     AppRESTDeleteDialogComponent
   ],
   providers: [
-    ListService,
-    BroadcasterService,
+    RESTStore
   ]
 })
 export class RESTModule {}

@@ -1,30 +1,23 @@
-import { Component, Inject } from '@angular/core';
-import { MD_DIALOG_DATA } from '@angular/material';
+import { Component } from '@angular/core';
 
-import { BroadcasterService } from '../shared/services/broadcaster/broadcaster.service';
-
-import { List } from './list.model';
-import { ListService } from './list.service';
+import { RESTStore } from './rest.store';
 
 @Component({
   selector: 'rest-dialog-delete',
   template: `
     <p>Are you sure you want to delete it?</p>
 
-    <button md-button [md-dialog-close]="true" (click)="confirm()">Confirm</button>
-    <button md-button [md-dialog-close]="true">Cancel</button>
+    <button md-button color="accent" [md-dialog-close]="true">Cancel</button>
+    <button
+      md-button
+      color="primary"
+      [md-dialog-close]="true"
+      (click)="this.rest.deleteItem(this.rest.deleteData._id)"
+    >
+      Confirm
+    </button>
   `
 })
 export class AppRESTDeleteDialogComponent {
-  constructor(
-    private listService: ListService,
-    private broadcaster: BroadcasterService,
-    @Inject(MD_DIALOG_DATA) public item: List
-  ) { }
-
-  public confirm(): void {
-    this.listService
-      .deleteItem(this.item._id)
-      .subscribe(res => this.broadcaster.broadcast('deleteList', res));
-  }
+  constructor(private rest: RESTStore) {}
 }
