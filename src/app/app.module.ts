@@ -2,13 +2,11 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Routes, RouterModule } from '@angular/router';
-import { APP_BASE_HREF } from '@angular/common';
-import { MatButtonModule } from '@angular/material';
-import { StoreModule } from '@ngrx/store';
+import { CommonModule, Location, APP_BASE_HREF, LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { MatToolbarModule, MatButtonModule, MatIconModule } from '@angular/material';
 import { MobxAngularModule } from 'mobx-angular';
 
 import { AppComponent } from './app.component';
-// import { counterReducer } from './counter/reducer'
 
 export const ROUTES: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '' },
@@ -20,8 +18,10 @@ export const ROUTES: Routes = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    CommonModule,
+    MatToolbarModule,
     MatButtonModule,
-    // StoreModule.forRoot({ counter: counterReducer }),
+    MatIconModule,
     MobxAngularModule,
     RouterModule.forRoot(ROUTES)
   ],
@@ -29,7 +29,9 @@ export const ROUTES: Routes = [
     AppComponent
   ],
   providers: [
-    { provide: APP_BASE_HREF, useValue: '/' }
+    Location,
+    { provide: APP_BASE_HREF, useValue: '/' },
+    { provide: LocationStrategy, useClass: PathLocationStrategy }
   ],
   bootstrap: [AppComponent]
 })

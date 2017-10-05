@@ -37,17 +37,12 @@
     "@angular/platform-browser-dynamic": "4.4.3",
     "@angular/platform-server": "4.4.3",
     "@angular/router": "4.4.3",
-    "@ngrx/effects": "4.0.5",
-    "@ngrx/router-store": "4.0.4",
-    "@ngrx/store": "4.0.3",
-    "@ngrx/store-devtools": "4.0.0",
     "core-js": "2.5.1",
     "express": "4.15.5",
     "express-history-api-fallback": "2.2.1",
     "mobx": "3.3.0",
     "mobx-angular": "1.8.0",
     "rxjs": "5.4.3",
-    "tslib": "1.7.1",
     "zone.js": "0.8.17"
   },
   "devDependencies": {
