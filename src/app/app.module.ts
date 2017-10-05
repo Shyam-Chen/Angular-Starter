@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 import { MatButtonModule } from '@angular/material';
 import { StoreModule } from '@ngrx/store';
+import { MobxAngularModule } from 'mobx-angular';
 
 import { AppComponent } from './app.component';
 // import { counterReducer } from './counter/reducer'
@@ -21,6 +22,7 @@ export const ROUTES: Routes = [
     BrowserAnimationsModule,
     MatButtonModule,
     // StoreModule.forRoot({ counter: counterReducer }),
+    MobxAngularModule,
     RouterModule.forRoot(ROUTES)
   ],
   declarations: [

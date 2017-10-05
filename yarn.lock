@@ -190,14 +190,14 @@
   version "3.5.11"
   resolved "https://registry.yarnpkg.com/@types/bluebird/-/bluebird-3.5.11.tgz#60482b3cddce9111dee3cafd08ab54fffee4b119"
 
-"@types/body-parser@^1.16.5":
+"@types/body-parser@1.16.5":
   version "1.16.5"
   resolved "https://registry.yarnpkg.com/@types/body-parser/-/body-parser-1.16.5.tgz#d2b7daefab84e0afa9d3fae0935bc7355b6320af"
   dependencies:
     "@types/express" "*"
     "@types/node" "*"
 
-"@types/compression@^0.0.34":
+"@types/compression@0.0.34":
   version "0.0.34"
   resolved "https://registry.yarnpkg.com/@types/compression/-/compression-0.0.34.tgz#c7eb6bdd2b919099c9da62f2158934894af887f1"
   dependencies:
@@ -207,7 +207,7 @@
   version "0.9.42"
   resolved "https://registry.yarnpkg.com/@types/core-js/-/core-js-0.9.42.tgz#dd6da92cd7d5ab5ca0b4477524537c3e633b6bce"
 
-"@types/cors@^2.8.1":
+"@types/cors@2.8.1":
   version "2.8.1"
   resolved "https://registry.yarnpkg.com/@types/cors/-/cors-2.8.1.tgz#54073caf3b7a741e67fb82483f83a6cadfba7501"
   dependencies:
@@ -248,7 +248,7 @@
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@types/mime/-/mime-2.0.0.tgz#5a7306e367c539b9f6543499de8dd519fac37a8b"
 
-"@types/morgan@^1.7.33":
+"@types/morgan@1.7.33":
   version "1.7.33"
   resolved "https://registry.yarnpkg.com/@types/morgan/-/morgan-1.7.33.tgz#149a1f07335d3e51d01753493e6d7173f94f4766"
   dependencies:
@@ -4642,6 +4642,14 @@ mkdirp@0.5.x, mkdirp@0.x.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdi
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
     minimist "0.0.8"
+
+mobx-angular@1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/mobx-angular/-/mobx-angular-1.8.0.tgz#d46e28a3bf4a7b9836ce53bbd0acd6fdba51c392"
+
+mobx@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/mobx/-/mobx-3.3.0.tgz#1bc1dd7e78547065af04b49bdb7f2098cada47aa"
 
 modelo@^4.2.0:
   version "4.2.0"

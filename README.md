@@ -18,7 +18,6 @@ $ npm start
 ## TODO List
 
 * Examples:
-  * Integration with @ngrx
   * Router
   * Counter
   * CRUD
