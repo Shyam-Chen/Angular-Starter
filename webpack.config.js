@@ -89,7 +89,10 @@ if (process.env.NODE_ENV === 'production') {
 
   plugins.push(
     new webpack.NamedModulesPlugin(),
-    new webpack.ContextReplacementPlugin(/angular(\\|\/)core(\\|\/)@angular/, path.resolve(__dirname, './notfound'))
+    new webpack.ContextReplacementPlugin(
+      /angular(\\|\/)core(\\|\/)@angular/,
+      path.resolve(__dirname, './notfound')
+    )
   );
 }
 
