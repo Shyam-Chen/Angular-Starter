@@ -19,7 +19,6 @@ $ npm start
 
 * Examples:
   * CRUD
-  * REST
   * GraphQL
   * Form Controls
   * Data Table

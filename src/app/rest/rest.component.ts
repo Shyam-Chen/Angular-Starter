@@ -2,8 +2,8 @@ import { Component, Inject } from '@angular/core';
 import { MdDialog } from '@angular/material';
 
 import { RESTStore } from './rest.store';
-import { AppRESTEditDialogComponent } from './dialog-edit.component';
-import { AppRESTDeleteDialogComponent } from './dialog-delete.component';
+import { DialogEditComponent } from './dialog-edit.component';
+import { DialogDeleteComponent } from './dialog-delete.component';
 
 @Component({
   selector: 'app-rest',
@@ -50,13 +50,13 @@ export class RESTComponent {
   ) {}
 
   public openEditDialog(_id: string, text: string): void {
-    this.editDialog.open(AppRESTEditDialogComponent);
+    this.editDialog.open(DialogEditComponent);
     this.rest.editData._id = _id;
     this.rest.editData.text = text;
   }
 
   public openDeleteDialog(_id: string): void {
-    this.deleteDialog.open(AppRESTDeleteDialogComponent);
+    this.deleteDialog.open(DialogDeleteComponent);
     this.rest.deleteData._id = _id;
   }
 }

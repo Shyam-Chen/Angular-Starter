@@ -13,8 +13,8 @@ import { RESTStore } from './rest.store';
     <button md-button color="primary" [md-dialog-close]="true" (click)="save()">Save</button>
   `
 })
-export class AppRESTEditDialogComponent {
-  constructor(private rest: RESTStore) {}
+export class DialogEditComponent {
+  constructor(public rest: RESTStore) {}
 
   public save(): void {
     if (this.rest.editData.text) {

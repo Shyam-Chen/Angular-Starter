@@ -9,8 +9,8 @@ import { MobxAngularModule } from 'mobx-angular';
 import { ReversePipe } from '../shared/pipes/reverse.pipe';
 
 import { RESTComponent } from './rest.component';
-import { AppRESTEditDialogComponent } from './dialog-edit.component';
-import { AppRESTDeleteDialogComponent } from './dialog-delete.component';
+import { DialogEditComponent } from './dialog-edit.component';
+import { DialogDeleteComponent } from './dialog-delete.component';
 import { RESTStore } from './rest.store';
 
 export const ROUTES: Routes = [
@@ -29,19 +29,17 @@ export const ROUTES: Routes = [
     MdDialogModule,
     MdProgressBarModule,
     MobxAngularModule,
-
     RouterModule.forChild(ROUTES)
   ],
   declarations: [
     RESTComponent,
-    AppRESTEditDialogComponent,
-    AppRESTDeleteDialogComponent,
-
-    ReversePipe,
+    DialogEditComponent,
+    DialogDeleteComponent,
+    ReversePipe
   ],
   entryComponents: [
-    AppRESTEditDialogComponent,
-    AppRESTDeleteDialogComponent
+    DialogEditComponent,
+    DialogDeleteComponent,
   ],
   providers: [
     RESTStore

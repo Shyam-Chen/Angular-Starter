@@ -7,6 +7,7 @@ import { MatToolbarModule, MatButtonModule, MatIconModule } from '@angular/mater
 import { MobxAngularModule } from 'mobx-angular';
 
 import { AppComponent } from './app.component';
+import { AppStore } from './app.store';
 
 export const ROUTES: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '' },
@@ -31,7 +32,8 @@ export const ROUTES: Routes = [
   providers: [
     Location,
     { provide: APP_BASE_HREF, useValue: '/' },
-    { provide: LocationStrategy, useClass: PathLocationStrategy }
+    { provide: LocationStrategy, useClass: PathLocationStrategy },
+    AppStore
   ],
   bootstrap: [AppComponent]
 })

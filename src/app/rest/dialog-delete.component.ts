@@ -18,6 +18,6 @@ import { RESTStore } from './rest.store';
     </button>
   `
 })
-export class AppRESTDeleteDialogComponent {
-  constructor(private rest: RESTStore) {}
+export class DialogDeleteComponent {
+  constructor(public rest: RESTStore) {}
 }
