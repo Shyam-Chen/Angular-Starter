@@ -10,11 +10,11 @@ export class RESTStore {
 
   constructor(private http: HttpClient) {}
 
-  @observable dataset: any[] = [];
-  @observable addData: any = { text: '' };
-  @observable searchData: any = { text: '' };
-  @observable editData: any = { _id: 0, text: '' };
-  @observable deleteData: any = { _id: 0 };
+  @observable dataset: List[] = [];
+  @observable addData: List = { text: '' };
+  @observable searchData: List = { text: '' };
+  @observable editData: List = { _id: '', text: '' };
+  @observable deleteData: List = { _id: '' };
   @observable loading: boolean = false;
 
   @action
@@ -28,7 +28,7 @@ export class RESTStore {
   }
 
   @action
-  addItem(text: string) {
+  addItem(text: string): void {
     if (text) {
       this.http
         .post<List>(this.API_LIST, { text })
@@ -40,7 +40,7 @@ export class RESTStore {
   }
 
   @action
-  editItem(id: string, text: string) {
+  editItem(id: string, text: string): void {
     this.http
       .put<List>(`${this.API_LIST}/${id}`, { text })
       .subscribe(() => {
@@ -49,7 +49,7 @@ export class RESTStore {
   }
 
   @action
-  deleteItem(id: string) {
+  deleteItem(id: string): void {
     this.http
       .delete<List>(`${this.API_LIST}/${id}`)
       .subscribe(() => {

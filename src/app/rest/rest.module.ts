@@ -13,7 +13,7 @@ import { DialogEditComponent } from './dialog-edit.component';
 import { DialogDeleteComponent } from './dialog-delete.component';
 import { RESTStore } from './rest.store';
 
-export const ROUTES: Routes = [
+const ROUTES: Routes = [
   { path: '', component: RESTComponent }
 ];
 

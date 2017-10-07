@@ -38,5 +38,5 @@ $ npm start
 * Deploy:
   * Circle
   * Docker
-  * Firebase
-  * Heroku
+  * Firebase (Prerender)
+  * Heroku (Server-side Rendering)

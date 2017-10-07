@@ -6,7 +6,7 @@ import { MobxAngularModule } from 'mobx-angular';
 import { CounterComponent } from './counter.component';
 import { CounterStore } from './counter.store';
 
-export const ROUTES: Routes = [
+const ROUTES: Routes = [
   { path: '', component: CounterComponent }
 ];
 
