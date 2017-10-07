@@ -34,11 +34,29 @@ import { DialogDeleteComponent } from './dialog-delete.component';
           </md-list-item>
         </md-list>
       </md-card>
+
+      <div class="progress" [ngStyle]="{ display: rest.progress }">
+        <md-spinner></md-spinner>
+      </div>
     </div>
   `,
   styles: [`
     #list {
       width: 25rem;
+    }
+
+    .progress {
+      position: absolute;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: rgba(225, 225, 255, .7);
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
     }
   `]
 })

@@ -6,7 +6,7 @@ import { RESTStore } from './rest.store';
   selector: 'rest-dialog-edit',
   template: `
     <md-input-container>
-      <input mdInput placeholder="Text" [(ngModel)]="this.rest.editData.text">
+      <input mdInput placeholder="Text" [(ngModel)]="rest.editData.text">
     </md-input-container>
 
     <button md-button color="accent" [md-dialog-close]="true">Cancel</button>

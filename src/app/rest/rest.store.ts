@@ -19,41 +19,54 @@ export class RESTStore {
 
   @action
   searchItem(text?: string): void {
+    this.loading = true;
     this.http
       .get<List[]>(text ? `${this.API_LIST}?text=${text}` : this.API_LIST)
       .subscribe(data => {
         this.dataset = data;
         this.searchData.text = '';
+        this.loading = false;
       });
   }
 
   @action
   addItem(text: string): void {
     if (text) {
+      this.loading = true;
       this.http
         .post<List>(this.API_LIST, { text })
         .subscribe(() => {
           this.searchItem();
           this.addData.text = '';
+          this.loading = false;
         });
     }
   }
 
   @action
   editItem(id: string, text: string): void {
+    this.loading = true;
     this.http
       .put<List>(`${this.API_LIST}/${id}`, { text })
       .subscribe(() => {
         this.searchItem();
+        this.loading = false;
       });
   }
 
   @action
   deleteItem(id: string): void {
+    this.loading = true;
     this.http
       .delete<List>(`${this.API_LIST}/${id}`)
       .subscribe(() => {
         this.searchItem();
+        this.loading = false;
       });
+  }
+
+  @computed
+  get progress(): string {
+    return this.loading ? '' : 'none';
   }
 }
