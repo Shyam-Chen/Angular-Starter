@@ -24,9 +24,9 @@ jobs:
           name: Test application - Build
           command: docker-compose exec app yarn build
 
-      # - run:
-      #     name: Test application - Lint
-      #     command: docker-compose exec app yarn lint
+      - run:
+          name: Test application - Lint
+          command: docker-compose exec app yarn lint
 
       # - run:
       #     name: Test application - Unit

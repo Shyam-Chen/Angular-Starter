@@ -10,7 +10,9 @@ import { CounterStore } from './counter.store';
       <button md-raised-button (click)="counter.increment()">Increment</button>
       <button md-raised-button (click)="counter.decrement()">Decrement</button>
       <button md-raised-button (click)="counter.incrementAsync()">Increment (Async)</button>
+      <button md-raised-button (click)="counter.decrementAsync()">Decrement (Async)</button>
       <button md-raised-button (click)="counter.incrementIfOdd()">Increment (If Odd)</button>
+      <button md-raised-button (click)="counter.decrementIfEven()">Decrement (If Even)</button>
     </div>
   `,
   styles: [``]
