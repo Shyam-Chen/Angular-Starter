@@ -49,8 +49,8 @@ if (process.env.NODE_ENV === 'production') {
 
   plugins.push(
     new AotPlugin({
-      tsConfigPath: './tsconfig.json',
-      entryModule: './src/app/app.module#AppModule'
+      tsConfigPath: 'tsconfig.json',
+      entryModule: 'src/app/app.module#AppModule'
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: true,
@@ -91,7 +91,7 @@ if (process.env.NODE_ENV === 'production') {
     new webpack.NamedModulesPlugin(),
     new webpack.ContextReplacementPlugin(
       /angular(\\|\/)core(\\|\/)@angular/,
-      path.resolve(__dirname, './notfound')
+      path.resolve(__dirname, 'notfound')
     )
   );
 }
