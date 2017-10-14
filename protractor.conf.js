@@ -1,7 +1,7 @@
 const { join } = require('path');
 const { SpecReporter } = require('jasmine-spec-reporter');
 
-const { TEST_PORT } = require('../constants');
+const { TEST_PORT } = require('./gulpfile');
 
 exports.config = {
   directConnect: true,
@@ -18,7 +18,7 @@ exports.config = {
   baseUrl: `http://localhost:${TEST_PORT}`,
   onPrepare() {
     require('ts-node').register({
-      project: join(__dirname, 'tsconfig.e2e.json')
+      project: join(__dirname, 'tsconfig.e2e-spec.json')
     });
     jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
   },

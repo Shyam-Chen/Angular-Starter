@@ -20,26 +20,18 @@ $ npm start
 
 ## TODO List
 
-* Examples:
-  * CRUD
-  * GraphQL
-  * Form Controls
-  * Data Table
-  * Authorization (JWT, Google, Facebook, & Twitter)
-  * Internationalization
-  * Data Chart
-    * SVG & Canvas (D3)
-    * WebGL (Three)
-  * WebSockets (Socket.IO)
-  * Google Analytics
-  * Service Workers
-* Build:
-  * Dev/Prod Mode
-* Test:
-  * Unit Tests
-  * E2E Tests
-* Deploy:
-  * Circle
-  * Docker
-  * Firebase (Prerender)
-  * Heroku (Server-side Rendering)
+* CRUD
+* REST & GraphQL
+  * Authorization
+  * Pagination
+* Form Controls
+* Data Table
+* Internationalization
+* Data Chart
+  * SVG & Canvas (D3)
+  * WebGL (Three)
+* WebSockets (Socket.IO)
+* Google Analytics
+* Service Workers
+* Prerender
+* Server-side Rendering
