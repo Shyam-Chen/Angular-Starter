@@ -6,10 +6,11 @@
     "start": "cross-env NODE_ENV=development webpack-dev-server --inline --hot",
     "build": "ngc -p tsconfig.json && cross-env NODE_ENV=production webpack -p",
     "lint": "tslint src",
-    "unit": "gulp unit",
+    "unit": "jest --coverage",
     "e2e": "gulp e2e",
     "deploy": "firebase deploy",
-    "webdriver": "gulp webdriver"
+    "webdriver": "gulp webdriver",
+    "codecov": "codecov"
   },
   "repository": {
     "type": "git",
@@ -61,6 +62,7 @@
     "angular-router-loader": "0.6.0",
     "angular2-template-loader": "0.6.2",
     "awesome-typescript-loader": "3.2.1",
+    "codecov": "^2.3.0",
     "codelyzer": "3.2.0",
     "cross-env": "5.0.1",
     "css-loader": "0.28.7",
@@ -71,15 +73,9 @@
     "gulp-util": "3.0.8",
     "html-loader": "0.4.5",
     "html-webpack-plugin": "2.30.1",
-    "jasmine-core": "2.6.4",
     "jasmine-spec-reporter": "4.2.1",
-    "karma": "1.7.0",
-    "karma-chrome-launcher": "2.1.1",
-    "karma-jasmine": "1.1.0",
-    "karma-mocha-reporter": "2.2.4",
-    "karma-sourcemap-loader": "0.3.7",
-    "karma-spec-reporter": "0.0.31",
-    "karma-webpack": "2.0.3",
+    "jest": "21.2.1",
+    "jest-preset-angular": "4.0.1",
     "protractor": "5.1.2",
     "require-dir": "0.3.2",
     "style-loader": "0.18.2",
@@ -88,5 +84,9 @@
     "typescript": "2.5.2",
     "webpack": "3.6.0",
     "webpack-dev-server": "2.8.2"
+  },
+  "jest": {
+    "preset": "jest-preset-angular",
+    "setupTestFrameworkScriptFile": "<rootDir>/src/test.ts"
   }
 }

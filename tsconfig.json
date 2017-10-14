@@ -18,5 +18,9 @@
     "sourceMap": true,
     "skipLibCheck": true,
     "target": "es5"
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ]
 }
