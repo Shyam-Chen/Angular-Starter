@@ -117,10 +117,7 @@ module.exports = {
   },
   devtool: 'sourcemap',
   entry: {
-    app: [
-      './src/polyfills',
-      './src/main.ts'
-    ]
+    app: './src/client.ts'
   },
   output: {
     path: path.join(__dirname, 'build'),

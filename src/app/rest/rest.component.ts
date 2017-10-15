@@ -2,8 +2,8 @@ import { Component, Inject } from '@angular/core';
 import { MdDialog } from '@angular/material';
 
 import { RESTStore } from './rest.store';
-import { DialogEditComponent } from './dialog-edit.component';
-import { DialogDeleteComponent } from './dialog-delete.component';
+import { DialogEditComponent } from './components/dialog-edit.component';
+import { DialogDeleteComponent } from './components/dialog-delete.component';
 
 @Component({
   selector: 'app-rest',

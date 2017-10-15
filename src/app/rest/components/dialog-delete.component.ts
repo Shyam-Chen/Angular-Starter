@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { RESTStore } from './rest.store';
+import { RESTStore } from '../rest.store';
 
 @Component({
   selector: 'rest-dialog-delete',

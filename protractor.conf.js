@@ -18,7 +18,7 @@ exports.config = {
   baseUrl: `http://localhost:${TEST_PORT}`,
   onPrepare() {
     require('ts-node').register({
-      project: join(__dirname, 'tsconfig.e2e-spec.json')
+      project: join(__dirname, './src/tsconfig.e2e-spec.json')
     });
     jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
   },

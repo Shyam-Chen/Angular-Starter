@@ -9,8 +9,8 @@ import { MobxAngularModule } from 'mobx-angular';
 import { ReversePipe } from '../shared/pipes/reverse.pipe';
 
 import { RESTComponent } from './rest.component';
-import { DialogEditComponent } from './dialog-edit.component';
-import { DialogDeleteComponent } from './dialog-delete.component';
+import { DialogEditComponent } from './components/dialog-edit.component';
+import { DialogDeleteComponent } from './components/dialog-delete.component';
 import { RESTStore } from './rest.store';
 
 const ROUTES: Routes = [
