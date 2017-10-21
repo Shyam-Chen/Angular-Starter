@@ -4,27 +4,27 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
 @Component({
   selector: 'app-root',
   template: `
-    <md-toolbar color="primary" class="mat-elevation-z4 toolbar">
+    <mat-toolbar color="primary" class="mat-elevation-z4 toolbar">
       <div *ngIf="location.path() === ''; else locationBack">
-        <button md-icon-button>
-          <md-icon class="md-24" aria-label="Toys">toys</md-icon>
+        <button mat-icon-button>
+          <mat-icon class="mat-24" aria-label="Toys">toys</mat-icon>
         </button>
       </div>
       <ng-template #locationBack>
-        <button md-icon-button (click)="location.back()">
-          <md-icon class="md-24" aria-label="Arrow Back">arrow_back</md-icon>
+        <button mat-icon-button (click)="location.back()">
+          <mat-icon class="mat-24" aria-label="Arrow Back">arrow_back</mat-icon>
         </button>
       </ng-template>
 
       <span class="title">Angular by Example</span>
-    </md-toolbar>
+    </mat-toolbar>
 
     <div class="filling"></div>
 
     <div *ngIf="location.path() === ''">
       <nav>
-        <button md-raised-button color="primary" routerLink="counter" routerLinkActive="active">Counter</button>
-        <button md-raised-button color="primary" routerLink="rest" routerLinkActive="active">REST</button>
+        <button mat-raised-button color="primary" routerLink="counter" routerLinkActive="active">Counter</button>
+        <button mat-raised-button color="primary" routerLink="rest" routerLinkActive="active">REST</button>
       </nav>
     </div>
 

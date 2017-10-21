@@ -7,12 +7,12 @@ import { CounterStore } from './counter.store';
   template: `
     <div *mobxAutorun>
       Clicked: {{ counter.value }} times, value is {{ counter.evenOrOdd }}.
-      <button md-raised-button (click)="counter.increment()">Increment</button>
-      <button md-raised-button (click)="counter.decrement()">Decrement</button>
-      <button md-raised-button (click)="counter.incrementAsync()">Increment (Async)</button>
-      <button md-raised-button (click)="counter.decrementAsync()">Decrement (Async)</button>
-      <button md-raised-button (click)="counter.incrementIfOdd()">Increment (If Odd)</button>
-      <button md-raised-button (click)="counter.decrementIfEven()">Decrement (If Even)</button>
+      <button mat-raised-button (click)="counter.increment()">Increment</button>
+      <button mat-raised-button (click)="counter.decrement()">Decrement</button>
+      <button mat-raised-button (click)="counter.incrementAsync()">Increment (Async)</button>
+      <button mat-raised-button (click)="counter.decrementAsync()">Decrement (Async)</button>
+      <button mat-raised-button (click)="counter.incrementIfOdd()">Increment (If Odd)</button>
+      <button mat-raised-button (click)="counter.decrementIfEven()">Decrement (If Even)</button>
     </div>
   `,
   styles: [``]

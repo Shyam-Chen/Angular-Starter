@@ -7,8 +7,8 @@ import { RESTStore } from '../rest.store';
   template: `
     <p>Are you sure you want to delete it?</p>
 
-    <button md-button color="accent" [md-dialog-close]="true">Cancel</button>
-    <button md-button color="primary" [md-dialog-close]="true" (click)="rest.deleteItem(rest.deleteData._id)">Confirm</button>
+    <button mat-button color="accent" [mat-dialog-close]="true">Cancel</button>
+    <button mat-button color="primary" [mat-dialog-close]="true" (click)="rest.deleteItem(rest.deleteData._id)">Confirm</button>
   `
 })
 export class DialogDeleteComponent {

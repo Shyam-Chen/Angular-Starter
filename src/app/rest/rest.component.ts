@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { MdDialog } from '@angular/material';
+import { MatDialog } from '@angular/material';
 
 import { RESTStore } from './rest.store';
 import { DialogEditComponent } from './components/dialog-edit.component';
@@ -10,33 +10,33 @@ import { DialogDeleteComponent } from './components/dialog-delete.component';
   template: `
     <div *mobxAutorun>
       <div>
-        <md-input-container>
-          <input mdInput placeholder="Text" [(ngModel)]="rest.searchData.text">
-        </md-input-container>
+        <mat-input-container>
+          <input matInput placeholder="Text" [(ngModel)]="rest.searchData.text">
+        </mat-input-container>
 
-        <button md-raised-button (click)="rest.searchItem(rest.searchData.text)">Search</button>
+        <button mat-raised-button (click)="rest.searchItem(rest.searchData.text)">Search</button>
       </div>
 
       <div>
-        <md-input-container>
-          <input mdInput placeholder="Text" [(ngModel)]="rest.addData.text">
-        </md-input-container>
+        <mat-input-container>
+          <input matInput placeholder="Text" [(ngModel)]="rest.addData.text">
+        </mat-input-container>
 
-        <button md-raised-button (click)="rest.addItem(rest.addData.text)">Add</button>
+        <button mat-raised-button (click)="rest.addItem(rest.addData.text)">Add</button>
       </div>
 
-      <md-card id="list">
-        <md-list>
-          <md-list-item *ngFor="let item of rest.dataset | reverse">
+      <mat-card id="list">
+        <mat-list>
+          <mat-list-item *ngFor="let item of rest.dataset | reverse">
             <span>{{ item.text }}　</span>
-            <button md-button color="accent" (click)="openDeleteDialog(item._id)">Delete</button>
-            <button md-button color="primary" (click)="openEditDialog(item._id, item.text)">Edit</button>
-          </md-list-item>
-        </md-list>
-      </md-card>
+            <button mat-button color="accent" (click)="openDeleteDialog(item._id)">Delete</button>
+            <button mat-button color="primary" (click)="openEditDialog(item._id, item.text)">Edit</button>
+          </mat-list-item>
+        </mat-list>
+      </mat-card>
 
       <div class="progress" [ngStyle]="{ display: rest.progress }">
-        <md-spinner></md-spinner>
+        <mat-spinner></mat-spinner>
       </div>
     </div>
   `,
@@ -63,8 +63,8 @@ import { DialogDeleteComponent } from './components/dialog-delete.component';
 export class RESTComponent {
   constructor(
     private rest: RESTStore,
-    public editDialog: MdDialog,
-    public deleteDialog: MdDialog
+    public editDialog: MatDialog,
+    public deleteDialog: MatDialog
   ) {}
 
   public openEditDialog(_id: string, text: string): void {

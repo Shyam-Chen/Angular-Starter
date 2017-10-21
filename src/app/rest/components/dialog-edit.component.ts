@@ -5,12 +5,12 @@ import { RESTStore } from '../rest.store';
 @Component({
   selector: 'rest-dialog-edit',
   template: `
-    <md-input-container>
-      <input mdInput placeholder="Text" [(ngModel)]="rest.editData.text">
-    </md-input-container>
+    <mat-input-container>
+      <input matInput placeholder="Text" [(ngModel)]="rest.editData.text">
+    </mat-input-container>
 
-    <button md-button color="accent" [md-dialog-close]="true">Cancel</button>
-    <button md-button color="primary" [md-dialog-close]="true" (click)="save()">Save</button>
+    <button mat-button color="accent" [mat-dialog-close]="true">Cancel</button>
+    <button mat-button color="primary" [mat-dialog-close]="true" (click)="save()">Save</button>
   `
 })
 export class DialogEditComponent {
