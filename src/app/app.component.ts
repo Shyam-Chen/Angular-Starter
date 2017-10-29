@@ -4,7 +4,7 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
 @Component({
   selector: 'app-root',
   template: `
-    <mat-toolbar color="primary" class="mat-elevation-z4 toolbar">
+    <mat-toolbar color="primary" class="mat-elevation-z4 toolbar" style="z-index: 10">
       <div *ngIf="location.path() === ''; else locationBack">
         <button mat-icon-button>
           <mat-icon class="mat-24" aria-label="Toys">toys</mat-icon>
