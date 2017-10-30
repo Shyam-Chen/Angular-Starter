@@ -25,15 +25,28 @@ import { DialogDeleteComponent } from './components/dialog-delete.component';
         <button mat-raised-button (click)="rest.addItem(rest.addData.text)">Add</button>
       </div>
 
-      <mat-card id="list">
-        <mat-list>
-          <mat-list-item *ngFor="let item of rest.dataset | reverse">
-            <span>{{ item.text }}　</span>
-            <button mat-button color="accent" (click)="openDeleteDialog(item._id)">Delete</button>
-            <button mat-button color="primary" (click)="openEditDialog(item._id, item.text)">Edit</button>
-          </mat-list-item>
-        </mat-list>
-      </mat-card>
+      <div>
+        <table class="md-table">
+          <thead>
+            <tr>
+              <th>Text</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngIf="rest.dataset.length === 0">
+              <td colspan="2" style="text-align: center">No data available</td>
+            </tr>
+            <tr *ngFor="let item of rest.dataset | reverse">
+              <td>{{ item.text }}</td>
+              <td>
+                <button mat-button color="accent" (click)="openDeleteDialog(item._id)">Delete</button>
+                <button mat-button color="primary" (click)="openEditDialog(item._id, item.text)">Edit</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <div class="progress" [ngStyle]="{ display: rest.progress }">
         <mat-spinner></mat-spinner>
@@ -41,8 +54,37 @@ import { DialogDeleteComponent } from './components/dialog-delete.component';
     </div>
   `,
   styles: [`
-    #list {
+    .md-table {
       width: 25rem;
+      border-collapse: collapse;
+      white-space: nowrap;
+      background: #fff;
+      box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    }
+
+    .md-table th,
+    .md-table td {
+      padding: 15px;
+    }
+
+    .md-table th {
+      border-top: 1px solid rgba(0,0,0,0.1);
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .md-table td {
+      border: none;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .md-table tbody tr {
+      transition-duration: 0.28s;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-property: background-color;
+    }
+
+    .md-table tbody tr:hover {
+      background-color: #eee;
     }
 
     .progress {

@@ -6,7 +6,7 @@ import { CounterStore } from './counter.store';
   selector: 'app-counter',
   template: `
     <div *mobxAutorun>
-      Clicked: {{ counter.value }} times, value is {{ counter.evenOrOdd }}.
+      <p>Clicked: {{ counter.value }} times, value is {{ counter.evenOrOdd }}.</p>
       <button mat-raised-button (click)="counter.increment()">Increment</button>
       <button mat-raised-button (click)="counter.decrement()">Decrement</button>
       <button mat-raised-button (click)="counter.incrementAsync()">Increment (Async)</button>

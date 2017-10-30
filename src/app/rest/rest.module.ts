@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { MatInputModule, MatButtonModule, MatCardModule, MatListModule, MatDialogModule, MatProgressSpinnerModule } from '@angular/material';
+import { MatInputModule, MatButtonModule, MatTableModule, MatDialogModule, MatProgressSpinnerModule } from '@angular/material';
 import { MobxAngularModule } from 'mobx-angular';
 
 import { ReversePipe } from '../shared/pipes/reverse.pipe';
@@ -19,16 +19,22 @@ const ROUTES: Routes = [
 
 @NgModule({
   imports: [
+    // angular
     FormsModule,
     CommonModule,
     HttpClientModule,
+
+    // material
     MatInputModule,
     MatButtonModule,
-    MatCardModule,
-    MatListModule,
+    MatTableModule,
     MatDialogModule,
     MatProgressSpinnerModule,
+
+    // mobx
     MobxAngularModule,
+
+    // feature
     RouterModule.forChild(ROUTES)
   ],
   declarations: [
