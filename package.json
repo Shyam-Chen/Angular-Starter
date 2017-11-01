@@ -9,8 +9,8 @@
     "unit": "jest --coverage",
     "e2e": "gulp e2e",
     "deploy": "firebase deploy",
-    "webdriver": "gulp webdriver",
-    "codecov": "codecov"
+    "codecov": "codecov",
+    "webdriver": "gulp webdriver"
   },
   "repository": {
     "type": "git",
@@ -61,12 +61,12 @@
     "angular-router-loader": "0.6.0",
     "angular2-template-loader": "0.6.2",
     "awesome-typescript-loader": "3.2.3",
-    "codecov": "2.3.1",
-    "codelyzer": "3.2.1",
-    "cross-env": "5.1.0",
+    "codecov": "3.0.0",
+    "codelyzer": "3.2.2",
+    "cross-env": "5.1.1",
     "css-loader": "0.28.7",
     "file-loader": "1.1.5",
-    "firebase-tools": "3.13.1",
+    "firebase-tools": "3.14.0",
     "gulp": "3.9.1",
     "gulp-protractor": "4.1.0",
     "gulp-util": "3.0.8",

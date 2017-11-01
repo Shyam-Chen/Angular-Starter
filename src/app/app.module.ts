@@ -6,13 +6,16 @@ import { CommonModule, Location, APP_BASE_HREF, LocationStrategy, PathLocationSt
 import { MatToolbarModule, MatButtonModule, MatIconModule } from '@angular/material';
 import { MobxAngularModule } from 'mobx-angular';
 
+import { NotFoundComponent } from './shared/components/not-found.component';
+
 import { AppComponent } from './app.component';
 import { AppStore } from './app.store';
 
 export const ROUTES: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '' },
   { path: 'counter', loadChildren: './counter/counter.module#CounterModule' },
-  { path: 'rest', loadChildren: './rest/rest.module#RESTModule' }
+  { path: 'rest', loadChildren: './rest/rest.module#RESTModule' },
+  { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({
@@ -27,7 +30,8 @@ export const ROUTES: Routes = [
     RouterModule.forRoot(ROUTES)
   ],
   declarations: [
-    AppComponent
+    AppComponent,
+    NotFoundComponent
   ],
   providers: [
     Location,
