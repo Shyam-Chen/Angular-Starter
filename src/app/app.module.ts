@@ -15,6 +15,7 @@ export const ROUTES: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '' },
   { path: 'counter', loadChildren: './counter/counter.module#CounterModule' },
   { path: 'rest', loadChildren: './rest/rest.module#RESTModule' },
+  { path: 'form-controls', loadChildren: './form-controls/form-controls.module#FormControlsModule' },
   { path: '**', component: NotFoundComponent }
 ];
 

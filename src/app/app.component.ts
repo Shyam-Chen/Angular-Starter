@@ -25,6 +25,7 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
       <nav>
         <button mat-raised-button color="primary" routerLink="counter" routerLinkActive="active">Counter</button>
         <button mat-raised-button color="primary" routerLink="rest" routerLinkActive="active">REST</button>
+        <button mat-raised-button color="primary" routerLink="form-controls" routerLinkActive="active">Form Controls</button>
       </nav>
     </div>
 
