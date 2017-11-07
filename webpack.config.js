@@ -7,18 +7,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const rules = [
   {
     test: /\.html$/,
-    use: ['html-loader'],
+    use: 'html-loader',
     exclude: [path.join(__dirname, 'src/app/**/*.html')]
   }, {
     test: /\.css$/,
     use: [
       'style-loader',
-      {
-        loader: 'css-loader',
-        options: {
-          importLoaders: 1
-        }
-      }
+      { loader: 'css-loader', options: { importLoaders: 1 } }
     ],
     exclude: [path.join(__dirname, 'src/app/**/*.css')]
   }, {
@@ -27,12 +22,14 @@ const rules = [
     exclude: [path.join(__dirname, 'src/index.html')]
   }, {
     test: /\.css$/,
-    use: [
-      'to-string-loader',
-      'css-loader',
-      'postcss-loader'
-    ],
+    use: ['to-string-loader', 'css-loader', 'postcss-loader'],
     exclude: [path.join(__dirname, 'src/style.css')]
+  }, {
+    test: /\.njk$/,
+    use: ['raw-loader', 'nunjucks-loader']
+  }, {
+    test: /\.scss$/,
+    use: ['raw-loader', 'sass-loader']
   }, {
     test: /\.(jpe?g|png|gif|svg)$/i,
     use: ['file-loader']
