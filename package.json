@@ -4,6 +4,7 @@
   "description": "A boilerplate for Angular, Material, and Express.",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --inline --hot",
+    "server": "nodemon --watch 'src/api/**/*.ts' --ignore 'src/api/**/*.spec.ts' --exec 'ts-node' src/server.ts",
     "build": "ngc -p tsconfig.json && cross-env NODE_ENV=production webpack -p",
     "lint": "tslint src",
     "unit": "jest --coverage",
@@ -82,6 +83,7 @@
     "jest": "21.2.1",
     "jest-preset-angular": "4.0.1",
     "node-sass": "4.6.0",
+    "nodemon": "^1.12.1",
     "nunjucks": "3.0.1",
     "nunjucks-loader": "2.4.8",
     "postcss-loader": "2.0.8",
