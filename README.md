@@ -21,16 +21,20 @@ $ npm start
 ## TODO List
 
 * CRUD
-* REST & GraphQL
-  * Authorization
-  * Pagination
-* Form Controls
+  * Static
+  * GraphQL
 * Data Table
+  * Static
+  * REST
+  * GraphQL
+* Authorization
+  * REST
+  * GraphQL
 * Internationalization
 * Data Chart
-  * SVG & Canvas (D3)
-  * WebGL (Three)
-* WebSockets (Socket.IO)
+  * SVG & Canvas (`d3`)
+  * WebGL (`three`)
+* WebSockets (`socket.io`)
 * Service Workers
-* Prerender
+* Prerender (`rendertron`)
 * Server-side Rendering
