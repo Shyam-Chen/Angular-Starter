@@ -14,9 +14,16 @@ import { FormControlsStore } from '../form-controls.store';
             <mat-form-field>
               <input matInput placeholder="Nickname" [(ngModel)]="formControls.nickname" name="nickname">
             </mat-form-field>
-            <div class="outputs">
-              {{ formControls.nickname }}
-            </div>
+            <div class="outputs">{{ formControls.nickname }}</div>
+          </div>
+
+          <div class="row">
+            <mat-slide-toggle>Slide me!</mat-slide-toggle>
+            <div class="outputs"></div>
+          </div>
+
+          <div class="row">
+            ...
           </div>
         </form>
       </div>

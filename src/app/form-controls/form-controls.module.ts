@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { MatInputModule, MatButtonModule } from '@angular/material';
+import { MatInputModule, MatButtonModule, MatSlideToggleModule } from '@angular/material';
 import { MobxAngularModule } from 'mobx-angular';
 
 import { FormControlsComponent } from './form-controls.component';
@@ -21,6 +21,7 @@ const ROUTES: Routes = [
     FormsModule,
     MatInputModule,
     MatButtonModule,
+    MatSlideToggleModule,
     MobxAngularModule,
     RouterModule.forChild(ROUTES)
   ],
