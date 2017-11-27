@@ -1,8 +1,10 @@
 const path = require('path');
 const webpack = require('webpack');
-const typescript = require('typescript');
 const { AngularCompilerPlugin } = require('@ngtools/webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const rules = [
   {
@@ -107,49 +109,53 @@ if (process.env.NODE_ENV === 'production') {
   );
 }
 
-module.exports = {
-  cache: true,
-  context: __dirname,
-  devServer: {
-    contentBase: path.join(__dirname, 'build'),
-    historyApiFallback: true,
-    stats: {
-      chunks: false,
-      chunkModules: false,
-      chunkOrigins: false,
-      errors: true,
-      errorDetails: false,
-      hash: false,
-      timings: false,
-      modules: false,
-      warnings: false
+module.exports = ({ prod = false } = {}) => {
+  // ...
+
+  return {
+    cache: true,
+    context: __dirname,
+    devServer: {
+      contentBase: path.join(__dirname, 'build'),
+      historyApiFallback: true,
+      stats: {
+        chunks: false,
+        chunkModules: false,
+        chunkOrigins: false,
+        errors: true,
+        errorDetails: false,
+        hash: false,
+        timings: false,
+        modules: false,
+        warnings: false
+      },
+      port: 8000
     },
-    port: 8000
-  },
-  devtool: 'sourcemap',
-  entry: {
-    app: './src/client.ts'
-  },
-  output: {
-    path: path.join(__dirname, 'build'),
-    filename: '[name].[hash].js'
-  },
-  node: {
-    console: false,
-    global: true,
-    process: true,
-    Buffer: false,
-    setImmediate: false
-  },
-  module: {
-    rules
-  },
-  resolve: {
-    extensions: ['.ts', '.js'],
-    modules: [
-      'src',
-      'node_modules'
-    ]
-  },
-  plugins
+    devtool: 'sourcemap',
+    entry: {
+      app: './src/client.ts'
+    },
+    output: {
+      path: path.join(__dirname, 'build'),
+      filename: '[name].[hash].js'
+    },
+    node: {
+      console: false,
+      global: true,
+      process: true,
+      Buffer: false,
+      setImmediate: false
+    },
+    module: {
+      rules
+    },
+    resolve: {
+      extensions: ['.ts', '.js'],
+      modules: [
+        'src',
+        'node_modules'
+      ]
+    },
+    plugins
+  };
 };

@@ -71,6 +71,7 @@ $ yarn test
 * [ ] WebSockets (`socket.io`)
 * [x] Lazy Loading
 * [x] AoT Compilation
+* [ ] Preload
 * [ ] Service Workers
 * [ ] Pre-renders (`rendertron`)
 * [ ] Server-side Rendering
