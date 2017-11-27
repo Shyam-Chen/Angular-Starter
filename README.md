@@ -43,23 +43,34 @@ $ yarn build
 $ yarn test
 ```
 
-## TODO List
+## Example List
 
-* CRUD
-  * Static
-  * GraphQL
-* Data Table
-  * Static
-  * REST
-  * GraphQL
-* Authorization
-  * REST
-  * GraphQL
-* Internationalization
-* Data Chart
-  * SVG & Canvas (`d3`)
-  * WebGL (`three`)
-* WebSockets (`socket.io`)
-* Service Workers
-* Prerender (`rendertron`)
-* Server-side Rendering
+* [x] Counter
+  * [x] State management (`mobx`, `mobx-angular`)
+  * [x] Asynchronous
+    * [x] Thunk
+    * [x] Observable (`rxjs`)
+* [ ] CRUD
+  * [ ] Static
+  * [x] REST
+  * [ ] GraphQL
+* [ ] Form Controls
+  * [ ] Template-driven
+  * [ ] Reactive Forms
+* [ ] Data Table
+  * [ ] Static
+  * [ ] REST
+  * [ ] GraphQL
+* [ ] Authorization
+  * [ ] REST
+  * [ ] GraphQL
+* [ ] Internationalization
+* [ ] Data Chart
+  * [ ] SVG & Canvas (`d3`)
+  * [ ] WebGL (`three`)
+* [ ] WebSockets (`socket.io`)
+* [x] Lazy Loading
+* [x] AoT Compilation
+* [ ] Service Workers
+* [ ] Pre-renders (`rendertron`)
+* [ ] Server-side Rendering
