@@ -10,12 +10,37 @@ A boilerplate for Angular, Material, and Express.
 
 [Live Demo](https://angular-by-example.firebaseapp.com/)
 
-```bash
-$ npm install
-```
+## Getting Started
+
+1. Clone this Boilerplate
 
 ```bash
-$ npm start
+$ git clone --depth 1 https://github.com/Shyam-Chen/Angular-Fullstack-Starter <PROJECT_NAME>
+$ cd <PROJECT_NAME>
+```
+
+2. Install Dependencies
+
+```bash
+$ yarn install
+```
+
+3. Run the Application
+
+```bash
+$ yarn start
+```
+
+4. Build the Application
+
+```bash
+$ yarn build
+```
+
+5. Test the Application
+
+```bash
+$ yarn test
 ```
 
 ## TODO List

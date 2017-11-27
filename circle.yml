@@ -25,18 +25,14 @@ jobs:
           command: docker-compose exec app yarn build
 
       - run:
-          name: Static code analysis
-          command: docker-compose exec app yarn lint
-
-      - run:
           name: Unit testing
-          command: docker-compose exec app yarn unit
+          command: docker-compose exec app yarn test
 
-      - run:
-          name: End-to-End testing
-          command: |
-            docker-compose exec app yarn webdriver
-            docker-compose exec app yarn e2e
+      # - run:
+      #     name: End-to-End testing
+      #     command: |
+      #       docker-compose exec app yarn webdriver
+      #       docker-compose exec app yarn e2e
 
       - run:
           name: Test coverage integration
