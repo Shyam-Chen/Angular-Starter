@@ -27,8 +27,11 @@ describe('Counter', () => {
     await server.close();
   });
 
-  it('should display count', async () => {
+  beforeEach(async () => {
     await page.goto('http://localhost:3000/counter');
+  });
+
+  it('should display count', async () => {
     const text = await page.$eval('app-counter', el => el.textContent);
     expect(text).toMatch('Clicked: 0 times, value is even.');
   });
