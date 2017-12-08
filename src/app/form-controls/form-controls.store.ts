@@ -13,4 +13,7 @@ export class FormControlsStore {
   get displayAutoplay(): string {
     return this.autoplay ? `${this.autoplay}`.charAt(0).toUpperCase() + `${this.autoplay}`.slice(1) : '';
   }
+
+  // slider
+  @observable kilometers: number = 100;
 }

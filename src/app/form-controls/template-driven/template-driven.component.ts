@@ -23,6 +23,17 @@ import { FormControlsStore } from '../form-controls.store';
           </div>
 
           <div class="row">
+            <mat-slider
+              class="slider"
+              min="0" max="300" step="5"
+              #kilometers
+              [value]="formControls.kilometers"
+              (change)="kilometersChange(kilometers.value)"
+            ></mat-slider>
+            <div class="outputs">{{ formControls.kilometers }}</div>
+          </div>
+
+          <div class="row">
             ...
           </div>
         </form>
@@ -45,8 +56,16 @@ import { FormControlsStore } from '../form-controls.store';
       margin: 0 0 .5rem .5rem;
       color: #3F51B5;
     }
+
+    .slider {
+      width: 300px;
+    }
   `]
 })
 export class TemplateDrivenComponent {
   constructor(private formControls: FormControlsStore) {}
+
+  public kilometersChange(value: number): void {
+    this.formControls.kilometers = value;
+  }
 }
