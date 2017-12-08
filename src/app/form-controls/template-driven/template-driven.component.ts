@@ -18,8 +18,8 @@ import { FormControlsStore } from '../form-controls.store';
           </div>
 
           <div class="row">
-            <mat-slide-toggle>Slide me!</mat-slide-toggle>
-            <div class="outputs"></div>
+            <mat-slide-toggle [checked]="formControls.autoplay" (change)="formControls.autoplay = !formControls.autoplay">Autoplay</mat-slide-toggle>
+            <div class="outputs">{{ formControls.displayAutoplay }}</div>
           </div>
 
           <div class="row">

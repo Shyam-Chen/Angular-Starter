@@ -43,10 +43,10 @@ $ yarn build
 $ yarn test
 ```
 
-## Example List
+## Practical Examples
 
 * [x] Counter
-  * [x] State management (`mobx`, `mobx-angular`)
+  * [x] State Management (`mobx`, `mobx-angular`)
   * [x] Asynchronous
     * [x] Thunk
     * [x] Observable (`rxjs`)
@@ -61,17 +61,16 @@ $ yarn test
   * [ ] Static
   * [ ] REST
   * [ ] GraphQL
+* [ ] Globalization
+  * [ ] Internationalization
+  * [ ] Localization
 * [ ] Authorization
   * [ ] REST
   * [ ] GraphQL
-* [ ] Internationalization
 * [ ] Data Chart
-  * [ ] SVG & Canvas (`d3`)
+  * [ ] SVG (`d3`)
+  * [ ] Canvas (`d3`)
   * [ ] WebGL (`three`)
-* [ ] WebSockets (`socket.io`)
-* [x] Lazy Loading
-* [x] AoT Compilation
-* [ ] Preload
-* [ ] Service Workers
-* [ ] Pre-renders (`rendertron`)
-* [ ] Server-side Rendering
+* [ ] Realtime
+  * [ ] WebSockets
+  * [ ] GraphQL Subscriptions
