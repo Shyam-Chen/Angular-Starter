@@ -11,9 +11,13 @@ import { TemplateDrivenComponent } from './template-driven/template-driven.compo
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 
 const ROUTES: Routes = [
-  { path: '', component: FormControlsComponent },
-  { path: 'template-driven', component: TemplateDrivenComponent },
-  { path: 'reactive-forms', component: ReactiveFormsComponent }
+  {
+    path: '', children: [
+      { path: '', component: FormControlsComponent },
+      { path: 'template-driven', component: TemplateDrivenComponent },  // loadChildren: './template-driven/template-driven.module#TemplateDrivenModule'
+      { path: 'reactive-forms', component: ReactiveFormsComponent }
+    ]
+  }
 ];
 
 @NgModule({

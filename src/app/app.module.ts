@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { CommonModule, Location, APP_BASE_HREF, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { MatToolbarModule, MatButtonModule, MatIconModule } from '@angular/material';
 import { MobxAngularModule } from 'mobx-angular';
@@ -28,7 +28,7 @@ export const ROUTES: Routes = [
     MatButtonModule,
     MatIconModule,
     MobxAngularModule,
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES, { preloadingStrategy: PreloadAllModules })
   ],
   declarations: [
     AppComponent,
