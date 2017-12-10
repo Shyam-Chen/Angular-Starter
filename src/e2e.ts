@@ -1,9 +1,9 @@
 import { join } from 'path';
-import * as express from 'express';
-import * as history from 'express-history-api-fallback';
+import express from 'express';
+import history from 'express-history-api-fallback';
 
 const app = express();
-const root = join(__dirname, '../build');
+const root = join(__dirname, '../dist');
 
 app.use(express.static(root));
 app.use(history('index.html', { root }));
