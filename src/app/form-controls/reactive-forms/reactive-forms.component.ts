@@ -4,9 +4,14 @@ import { Component } from '@angular/core';
   selector: 'app-form-controls-reactive-forms',
   template: `
     <div class="container" *mobxAutorun>
-
       <div class="container mat-elevation-z2" style="margin-top: 1rem">
         <h3>Reactive Forms</h3>
+
+        <form class="example-form">
+          <div class="row">
+            ...
+          </div>
+        </form>
       </div>
     </div>
   `,

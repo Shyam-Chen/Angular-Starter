@@ -8,14 +8,13 @@ import { FormControlsComponent } from './form-controls.component';
 import { FormControlsStore } from './form-controls.store';
 
 import { TemplateDrivenComponent } from './template-driven/template-driven.component';
-import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 
 const ROUTES: Routes = [
   {
     path: '', children: [
       { path: '', component: FormControlsComponent },
       { path: 'template-driven', component: TemplateDrivenComponent },  // loadChildren: './template-driven/template-driven.module#TemplateDrivenModule'
-      { path: 'reactive-forms', component: ReactiveFormsComponent }
+      { path: 'reactive-forms', loadChildren: './reactive-forms/reactive-forms.module#ReactiveFormsModule' }
     ]
   }
 ];
@@ -32,8 +31,7 @@ const ROUTES: Routes = [
   ],
   declarations: [
     FormControlsComponent,
-    TemplateDrivenComponent,
-    ReactiveFormsComponent
+    TemplateDrivenComponent
   ],
   providers: [
     FormControlsStore
