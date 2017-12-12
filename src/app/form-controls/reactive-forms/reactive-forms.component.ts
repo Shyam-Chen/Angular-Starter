@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-form-controls-reactive-forms',
   template: `
-    <div class="container" *mobxAutorun>
+    <div class="container" *mobxAutorun="{ dontDetach: true }">
       <div class="container mat-elevation-z2" style="margin-top: 1rem">
         <h3>Reactive Forms</h3>
 

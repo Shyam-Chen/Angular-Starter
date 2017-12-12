@@ -5434,9 +5434,9 @@ mkdirp@0.5.x, mkdirp@0.x.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdi
   dependencies:
     minimist "0.0.8"
 
-mobx-angular@1.9.0:
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/mobx-angular/-/mobx-angular-1.9.0.tgz#d4195d4bbf66b489777eed7400c4f52a65bf1252"
+mobx-angular@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/mobx-angular/-/mobx-angular-2.0.1.tgz#2638d091618080693bbed02c5df8cd714b52c167"
 
 mobx@3.4.1:
   version "3.4.1"

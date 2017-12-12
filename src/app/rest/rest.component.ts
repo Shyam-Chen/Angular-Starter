@@ -8,7 +8,7 @@ import { DialogDeleteComponent } from './components/dialog-delete.component';
 @Component({
   selector: 'app-rest',
   template: `
-    <div *mobxAutorun>
+    <div *mobxAutorun="{ dontDetach: true }">
       <div>
         <mat-input-container>
           <input matInput placeholder="Text" [(ngModel)]="rest.searchData.text">

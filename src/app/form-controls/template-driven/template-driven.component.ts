@@ -5,7 +5,7 @@ import { TemplateDrivenStore } from './template-driven.store';
 @Component({
   selector: 'app-form-controls-template-driven',
   template: `
-    <div class="container" *mobxAutorun>
+    <div class="container" *mobxAutorun="{ dontDetach: true }">
       <div class="container mat-elevation-z2">
         <h3>Template-driven Forms</h3>
 
