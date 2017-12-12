@@ -7,13 +7,11 @@ import { MobxAngularModule } from 'mobx-angular';
 import { FormControlsComponent } from './form-controls.component';
 import { FormControlsStore } from './form-controls.store';
 
-import { TemplateDrivenComponent } from './template-driven/template-driven.component';
-
 const ROUTES: Routes = [
   {
     path: '', children: [
       { path: '', component: FormControlsComponent },
-      { path: 'template-driven', component: TemplateDrivenComponent },  // loadChildren: './template-driven/template-driven.module#TemplateDrivenModule'
+      { path: 'template-driven', loadChildren: './template-driven/template-driven.module#TemplateDrivenModule' },
       { path: 'reactive-forms', loadChildren: './reactive-forms/reactive-forms.module#ReactiveFormsModule' }
     ]
   }
@@ -30,8 +28,7 @@ const ROUTES: Routes = [
     RouterModule.forChild(ROUTES)
   ],
   declarations: [
-    FormControlsComponent,
-    TemplateDrivenComponent
+    FormControlsComponent
   ],
   providers: [
     FormControlsStore

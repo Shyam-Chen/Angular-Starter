@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { FormControlsStore } from '../form-controls.store';
+import { TemplateDrivenStore } from './template-driven.store';
 
 @Component({
   selector: 'app-form-controls-template-driven',
@@ -12,14 +12,14 @@ import { FormControlsStore } from '../form-controls.store';
         <form class="example-form">
           <div class="row">
             <mat-form-field>
-              <input matInput placeholder="Nickname" [(ngModel)]="formControls.nickname" name="nickname">
+              <input matInput placeholder="Nickname" [(ngModel)]="templateDriven.nickname" name="nickname">
             </mat-form-field>
-            <div class="outputs">{{ formControls.nickname }}</div>
+            <div class="outputs">{{ templateDriven.nickname }}</div>
           </div>
 
           <div class="row">
-            <mat-slide-toggle [checked]="formControls.autoplay" (change)="formControls.autoplay = !formControls.autoplay">Autoplay</mat-slide-toggle>
-            <div class="outputs">{{ formControls.displayAutoplay }}</div>
+            <mat-slide-toggle [checked]="templateDriven.autoplay" (change)="templateDriven.autoplay = !templateDriven.autoplay">Autoplay</mat-slide-toggle>
+            <div class="outputs">{{ templateDriven.displayAutoplay }}</div>
           </div>
 
           <div class="row">
@@ -27,10 +27,10 @@ import { FormControlsStore } from '../form-controls.store';
               class="slider"
               min="0" max="300" step="5"
               #kilometers
-              [value]="formControls.kilometers"
+              [value]="templateDriven.kilometers"
               (change)="kilometersChange(kilometers.value)"
             ></mat-slider>
-            <div class="outputs">{{ formControls.kilometers }}</div>
+            <div class="outputs">{{ templateDriven.kilometers }}</div>
           </div>
 
           <div class="row">
@@ -63,9 +63,9 @@ import { FormControlsStore } from '../form-controls.store';
   `]
 })
 export class TemplateDrivenComponent {
-  constructor(private formControls: FormControlsStore) {}
+  constructor(private templateDriven: TemplateDrivenStore) {}
 
   public kilometersChange(value: number): void {
-    this.formControls.kilometers = value;
+    this.templateDriven.kilometers = value;
   }
 }
