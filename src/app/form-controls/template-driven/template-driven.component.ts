@@ -48,6 +48,19 @@ import { TemplateDrivenStore } from './template-driven.store';
           </div>
 
           <div class="row">
+            <mat-radio-group>
+              <mat-radio-button value="male" #male (change)="genderChange(male.value)">Male</mat-radio-button>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <mat-radio-button value="female" #female (change)="genderChange(female.value)">Female</mat-radio-button>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <mat-radio-button value="other" #other (change)="genderChange(other.value)">Other</mat-radio-button>
+            </mat-radio-group>
+            <div class="outputs">
+              {{ templateDriven.gender.charAt(0).toUpperCase() + templateDriven.gender.slice(1) }}
+            </div>
+          </div>
+
+          <div class="row">
             <mat-slide-toggle labelPosition="before" [checked]="templateDriven.autoplay" (change)="templateDriven.autoplay = !templateDriven.autoplay">Autoplay</mat-slide-toggle>
             <div class="outputs">{{ templateDriven.displayAutoplay }}</div>
           </div>
@@ -95,6 +108,10 @@ import { TemplateDrivenStore } from './template-driven.store';
 })
 export class TemplateDrivenComponent {
   constructor(private templateDriven: TemplateDrivenStore) {}
+
+  public genderChange(value: string): void {
+    this.templateDriven.gender = value;
+  }
 
   public kilometersChange(value: number): void {
     this.templateDriven.kilometers = value;

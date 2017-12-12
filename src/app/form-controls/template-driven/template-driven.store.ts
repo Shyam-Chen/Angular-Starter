@@ -38,6 +38,9 @@ export class TemplateDrivenStore {
     vue: false
   };
 
+  // radio buttons
+  @observable gender: string = '';
+
   // switch
   @observable autoplay: boolean = false;
 
