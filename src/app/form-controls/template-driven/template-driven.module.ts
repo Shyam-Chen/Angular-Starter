@@ -7,6 +7,7 @@ import {
   MatInputModule,
   MatButtonModule,
   MatSelectModule,
+  MatCheckboxModule,
   MatSlideToggleModule,
   MatSliderModule
 } from '@angular/material';
@@ -28,6 +29,7 @@ const ROUTES: Routes = [
     MatInputModule,
     MatButtonModule,
     MatSelectModule,
+    MatCheckboxModule,
     MatSlideToggleModule,
     MatSliderModule,
 

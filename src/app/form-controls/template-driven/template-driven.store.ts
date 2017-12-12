@@ -31,6 +31,13 @@ export class TemplateDrivenStore {
     this.age = value;
   }
 
+  // checkboxes
+  @observable frameworks: { angular: boolean, react: boolean, vue: boolean } = {
+    angular: false,
+    react: false,
+    vue: false
+  };
+
   // switch
   @observable autoplay: boolean = false;
 

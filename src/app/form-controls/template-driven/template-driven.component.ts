@@ -34,7 +34,21 @@ import { TemplateDrivenStore } from './template-driven.store';
           </div>
 
           <div class="row">
-            <mat-slide-toggle [checked]="templateDriven.autoplay" (change)="templateDriven.autoplay = !templateDriven.autoplay">Autoplay</mat-slide-toggle>
+            <mat-checkbox [checked]="templateDriven.frameworks.angular" (change)="templateDriven.frameworks.angular = !templateDriven.frameworks.angular">Angular</mat-checkbox>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <mat-checkbox [checked]="templateDriven.frameworks.react" (change)="templateDriven.frameworks.react = !templateDriven.frameworks.react">React</mat-checkbox>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <mat-checkbox [checked]="templateDriven.frameworks.vue" (change)="templateDriven.frameworks.vue = !templateDriven.frameworks.vue">Vue</mat-checkbox>
+
+            <div class="outputs">
+              {{ templateDriven.frameworks.angular ? 'Angular' : '' }}
+              {{ templateDriven.frameworks.react ? 'React' : '' }}
+              {{ templateDriven.frameworks.vue ? 'Vue' : '' }}
+            </div>
+          </div>
+
+          <div class="row">
+            <mat-slide-toggle labelPosition="before" [checked]="templateDriven.autoplay" (change)="templateDriven.autoplay = !templateDriven.autoplay">Autoplay</mat-slide-toggle>
             <div class="outputs">{{ templateDriven.displayAutoplay }}</div>
           </div>
 

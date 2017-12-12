@@ -43,4 +43,4 @@ RUN \
 
 RUN yarn install
 
-EXPOSE 4200 9876
+EXPOSE 8000 8080
