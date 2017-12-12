@@ -18,6 +18,17 @@ import { TemplateDrivenStore } from './template-driven.store';
           </div>
 
           <div class="row">
+            <mat-form-field>
+              <mat-select placeholder="Age">
+                <!-- <mat-option *ngFor="let item of templateDriven.listOfage" [value]="item.value">
+                  {{ item.label }}
+                </mat-option> -->
+              </mat-select>
+            </mat-form-field>
+            <div class="outputs">{{ templateDriven.age }}</div>
+          </div>
+
+          <div class="row">
             <mat-slide-toggle [checked]="templateDriven.autoplay" (change)="templateDriven.autoplay = !templateDriven.autoplay">Autoplay</mat-slide-toggle>
             <div class="outputs">{{ templateDriven.displayAutoplay }}</div>
           </div>

@@ -1,7 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { MatInputModule, MatButtonModule, MatSlideToggleModule, MatSliderModule } from '@angular/material';
+import {
+  MatFormFieldModule,
+  MatInputModule,
+  MatButtonModule,
+  MatSelectModule,
+  MatSlideToggleModule,
+  MatSliderModule
+} from '@angular/material';
 import { MobxAngularModule } from 'mobx-angular';
 
 import { TemplateDrivenComponent } from './template-driven.component';
@@ -14,11 +21,16 @@ const ROUTES: Routes = [
 @NgModule({
   imports: [
     FormsModule,
+
+    MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
+    MatSelectModule,
     MatSlideToggleModule,
     MatSliderModule,
+
     MobxAngularModule,
+
     RouterModule.forChild(ROUTES)
   ],
   declarations: [
