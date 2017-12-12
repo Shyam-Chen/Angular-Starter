@@ -26,6 +26,11 @@ export class TemplateDrivenStore {
     { value: 25, label: 'Twenty five' }
   ];
 
+  @action
+  ageChange(value: number): void {
+    this.age = value;
+  }
+
   // switch
   @observable autoplay: boolean = false;
 

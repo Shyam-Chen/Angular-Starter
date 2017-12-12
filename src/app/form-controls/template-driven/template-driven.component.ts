@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { TemplateDrivenStore } from './template-driven.store';
 
@@ -19,10 +19,15 @@ import { TemplateDrivenStore } from './template-driven.store';
 
           <div class="row">
             <mat-form-field>
-              <mat-select placeholder="Age">
-                <!-- <mat-option *ngFor="let item of templateDriven.listOfage" [value]="item.value">
+              <mat-select
+                placeholder="Age"
+                #age
+                [value]="templateDriven.age"
+                (change)="templateDriven.ageChange(age.value)"
+              >
+                <mat-option *ngFor="let item of templateDriven.listOfage" [value]="item.value">
                   {{ item.label }}
-                </mat-option> -->
+                </mat-option>
               </mat-select>
             </mat-form-field>
             <div class="outputs">{{ templateDriven.age }}</div>
@@ -71,7 +76,8 @@ import { TemplateDrivenStore } from './template-driven.store';
     .slider {
       width: 300px;
     }
-  `]
+  `],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TemplateDrivenComponent {
   constructor(private templateDriven: TemplateDrivenStore) {}
