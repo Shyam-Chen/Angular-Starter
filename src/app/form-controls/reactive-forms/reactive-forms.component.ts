@@ -9,6 +9,14 @@ import { Component } from '@angular/core';
 
         <form class="example-form">
           <div class="row">
+            <p>Credit Card</p>
+          </div>
+
+          <div class="row">
+            <p>Address</p>
+          </div>
+
+          <div class="row">
             ...
           </div>
         </form>

@@ -3,10 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material';
 import { MobxAngularModule } from 'mobx-angular';
 
-import { ReactiveFormsComponent } from './reactive-forms.component';
+import { CRUDComponent } from './crud.component';
+import { CRUDStore } from './crud.store';
 
 const ROUTES: Routes = [
-  { path: '', component: ReactiveFormsComponent }
+  { path: '', component: CRUDComponent }
 ];
 
 @NgModule({
@@ -16,8 +17,10 @@ const ROUTES: Routes = [
     RouterModule.forChild(ROUTES)
   ],
   declarations: [
-    ReactiveFormsComponent
+    CRUDComponent
   ],
-  providers: []
+  providers: [
+    CRUDStore
+  ]
 })
-export class ReactiveFormsModule {}
+export class CRUDModule {}

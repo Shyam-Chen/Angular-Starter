@@ -89,11 +89,14 @@ import { TemplateDrivenStore } from './template-driven.store';
           </div>
 
           <div class="row">
-            <mat-form-field>
-              <input matInput #birthday [matDatepicker]="picker" placeholder="Choose a date" (dateChange)="templateDriven.birthdayChange(birthday.value)">
-              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-              <mat-datepicker #picker></mat-datepicker>
-            </mat-form-field>
+            <div style="flex-direction: column">
+              <p>Birthday</p>
+              <mat-form-field>
+                <input matInput #birthday [matDatepicker]="picker" placeholder="Choose a date" (dateChange)="templateDriven.birthdayChange(birthday.value)">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+            </div>
             <div class="outputs">{{ templateDriven.birthday }}</div>
           </div>
 

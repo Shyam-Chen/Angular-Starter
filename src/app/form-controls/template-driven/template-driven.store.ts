@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { observable, action, computed } from 'mobx';
 
+import { AgeList, Frameworks } from './template-driven.model';
+
 @Injectable()
 export class TemplateDrivenStore {
   // input
@@ -9,7 +11,8 @@ export class TemplateDrivenStore {
   // select
   @observable age: number;
 
-  @observable listOfage: Array<{ value: number, label: string }> = [
+  @observable
+  listOfage: AgeList[] = [
     { value: 12, label: 'Twelve' },
     { value: 13, label: 'Thirteen' },
     { value: 14, label: 'Fourteen' },
@@ -32,7 +35,8 @@ export class TemplateDrivenStore {
   }
 
   // checkboxes
-  @observable frameworks: { angular: boolean, react: boolean, vue: boolean } = {
+  @observable
+  frameworks: Frameworks = {
     angular: false,
     react: false,
     vue: false

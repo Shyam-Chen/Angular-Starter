@@ -17,6 +17,7 @@ import { AppStore } from './app.store';
 export const ROUTES: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '' },
   { path: 'counter', loadChildren: './counter/counter.module#CounterModule' },
+  { path: 'crud', loadChildren: './crud/crud.module#CRUDModule' },
   { path: 'rest', loadChildren: './rest/rest.module#RESTModule' },
   { path: 'form-controls', loadChildren: './form-controls/form-controls.module#FormControlsModule' },
   { path: '**', component: NotFoundComponent }

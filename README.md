@@ -55,7 +55,7 @@ $ yarn test
   * [x] REST
   * [ ] GraphQL
 * [ ] Form Controls
-  * [ ] Template-driven
+  * [x] Template-driven
   * [ ] Reactive Forms
 * [ ] Data Table
   * [ ] Static
