@@ -34,12 +34,16 @@ import { TemplateDrivenStore } from './template-driven.store';
           </div>
 
           <div class="row">
-            <mat-checkbox [checked]="templateDriven.frameworks.angular" (change)="templateDriven.frameworks.angular = !templateDriven.frameworks.angular">Angular</mat-checkbox>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <mat-checkbox [checked]="templateDriven.frameworks.react" (change)="templateDriven.frameworks.react = !templateDriven.frameworks.react">React</mat-checkbox>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <mat-checkbox [checked]="templateDriven.frameworks.vue" (change)="templateDriven.frameworks.vue = !templateDriven.frameworks.vue">Vue</mat-checkbox>
-
+            <div style="flex-direction: column">
+              <p>Frameworks</p>
+              <div>
+                <mat-checkbox [checked]="templateDriven.frameworks.angular" (change)="templateDriven.frameworks.angular = !templateDriven.frameworks.angular">Angular</mat-checkbox>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <mat-checkbox [checked]="templateDriven.frameworks.react" (change)="templateDriven.frameworks.react = !templateDriven.frameworks.react">React</mat-checkbox>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <mat-checkbox [checked]="templateDriven.frameworks.vue" (change)="templateDriven.frameworks.vue = !templateDriven.frameworks.vue">Vue</mat-checkbox>
+              </div>
+            </div>
             <div class="outputs">
               {{ templateDriven.frameworks.angular ? 'Angular' : '' }}
               {{ templateDriven.frameworks.react ? 'React' : '' }}
@@ -48,13 +52,18 @@ import { TemplateDrivenStore } from './template-driven.store';
           </div>
 
           <div class="row">
-            <mat-radio-group>
-              <mat-radio-button value="male" #male (change)="genderChange(male.value)">Male</mat-radio-button>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <mat-radio-button value="female" #female (change)="genderChange(female.value)">Female</mat-radio-button>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <mat-radio-button value="other" #other (change)="genderChange(other.value)">Other</mat-radio-button>
-            </mat-radio-group>
+            <div style="flex-direction: column">
+              <p>Gender</p>
+              <div>
+                <mat-radio-group>
+                  <mat-radio-button value="male" #male (change)="genderChange(male.value)">Male</mat-radio-button>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <mat-radio-button value="female" #female (change)="genderChange(female.value)">Female</mat-radio-button>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <mat-radio-button value="other" #other (change)="genderChange(other.value)">Other</mat-radio-button>
+                </mat-radio-group>
+              </div>
+            </div>
             <div class="outputs">
               {{ templateDriven.gender.charAt(0).toUpperCase() + templateDriven.gender.slice(1) }}
             </div>
@@ -66,13 +75,16 @@ import { TemplateDrivenStore } from './template-driven.store';
           </div>
 
           <div class="row">
-            <mat-slider
-              class="slider"
-              min="0" max="300" step="5"
-              #kilometers
-              [value]="templateDriven.kilometers"
-              (change)="kilometersChange(kilometers.value)"
-            ></mat-slider>
+            <div style="flex-direction: column">
+              <p>Kilometers</p>
+              <mat-slider
+                class="slider"
+                min="0" max="300" step="5"
+                #kilometers
+                [value]="templateDriven.kilometers"
+                (change)="kilometersChange(kilometers.value)"
+              ></mat-slider>
+            </div>
             <div class="outputs">{{ templateDriven.kilometers }}</div>
           </div>
 
