@@ -10,7 +10,9 @@ import {
   MatCheckboxModule,
   MatRadioModule,
   MatSlideToggleModule,
-  MatSliderModule
+  MatSliderModule,
+  MatDatepickerModule,
+  MatNativeDateModule
 } from '@angular/material';
 import { MobxAngularModule } from 'mobx-angular';
 
@@ -34,6 +36,8 @@ const ROUTES: Routes = [
     MatRadioModule,
     MatSlideToggleModule,
     MatSliderModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
 
     MobxAngularModule,
 

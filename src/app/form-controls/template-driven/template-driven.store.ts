@@ -51,4 +51,12 @@ export class TemplateDrivenStore {
 
   // slider
   @observable kilometers: number = 100;
+
+  // datepicker
+  @observable birthday: Date;
+
+  @action
+  birthdayChange(value: Date): void {
+    this.birthday = value;
+  }
 }
