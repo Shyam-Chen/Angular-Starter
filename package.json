@@ -1,7 +1,7 @@
 {
-  "name": "Angular-FullStarter-Kit",
+  "name": "Angular-Nest-Starter",
   "version": "1.0.0",
-  "description": "A boilerplate for Angular, Material, and Express.",
+  "description": "A boilerplate for Angular, Nest, TypeScript, and ReactiveX.",
   "scripts": {
     "start": "npm run webpack-dev-server -- --config config/webpack.dev.js --open --progress --profile --watch --content-base src/",
     "build": "cross-env BUILD_AOT=1 npm run webpack -- --config config/webpack.prod.js  --progress --profile --bail",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Shyam-Chen/Angular-Fullstack-Starter.git"
+    "url": "git+https://github.com/Shyam-Chen/Angular-Nest-Starter.git"
   },
   "keywords": [
     "Angular"
@@ -21,9 +21,9 @@
   "author": "Yen-cheng Chen, 陳彥澄",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Shyam-Chen/Angular-Fullstack-Starter/issues"
+    "url": "https://github.com/Shyam-Chen/Angular-Nest-Starter/issues"
   },
-  "homepage": "https://github.com/Shyam-Chen/Angular-Fullstack-Starter#readme",
+  "homepage": "https://github.com/Shyam-Chen/Angular-Nest-Starter#readme",
   "dependencies": {
     "@angular/animations": "5.0.0",
     "@angular/cdk": "5.0.0",
@@ -37,11 +37,17 @@
     "@angular/platform-browser-dynamic": "5.0.0",
     "@angular/platform-server": "5.0.0",
     "@angular/router": "5.0.0",
+    "@nestjs/common": "4.4.2",
+    "@nestjs/core": "4.4.2",
+    "@nestjs/microservices": "4.4.1",
+    "@nestjs/testing": "4.4.1",
+    "@nestjs/websockets": "4.4.1",
     "core-js": "2.5.2",
     "express": "4.16.2",
     "express-history-api-fallback": "2.2.1",
     "mobx": "3.4.1",
     "mobx-angular": "2.0.1",
+    "redis": "2.8.0",
     "rxjs": "5.5.5",
     "zone.js": "0.8.18"
   },

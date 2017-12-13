@@ -30,7 +30,9 @@
     "node_modules",
     "dist",
     "src/**/*.spec.ts",
-    "src/**/*.e2e.ts"
+    "src/**/*.e2e.ts",
+    "src/main.server.ts",
+    "src/api/**/*.ts"
   ],
   "angularCompilerOptions": {
     "skipMetadataEmit": true

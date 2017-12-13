@@ -1,12 +1,12 @@
-# Angular Fullstack Starter
+# Angular Nest Starter
 
-A boilerplate for Angular, Material, and Express.
+A boilerplate for Angular, Nest, TypeScript, and ReactiveX.
 
-[![Build Status](https://img.shields.io/circleci/project/Shyam-Chen/Angular-Fullstack-Starter/master.svg)](https://circleci.com/gh/Shyam-Chen/Angular-Fullstack-Starter)
-[![Coverage Status](https://img.shields.io/codecov/c/github/Shyam-Chen/Angular-Fullstack-Starter/master.svg)](https://codecov.io/gh/Shyam-Chen/Angular-Fullstack-Starter)
+[![Build Status](https://img.shields.io/circleci/project/Shyam-Chen/Angular-Nest-Starter/master.svg)](https://circleci.com/gh/Shyam-Chen/Angular-Nest-Starter)
+[![Coverage Status](https://img.shields.io/codecov/c/github/Shyam-Chen/Angular-Nest-Starter/master.svg)](https://codecov.io/gh/Shyam-Chen/Angular-Nest-Starter)
  //
-[![dependencies Status](https://david-dm.org/Shyam-Chen/Angular-Fullstack-Starter/status.svg)](https://david-dm.org/Shyam-Chen/Angular-Fullstack-Starter)
-[![devDependencies Status](https://david-dm.org/Shyam-Chen/Angular-Fullstack-Starter/dev-status.svg)](https://david-dm.org/Shyam-Chen/Angular-Fullstack-Starter?type=dev)
+[![dependencies Status](https://david-dm.org/Shyam-Chen/Angular-Nest-Starter/status.svg)](https://david-dm.org/Shyam-Chen/Angular-Nest-Starter)
+[![devDependencies Status](https://david-dm.org/Shyam-Chen/Angular-Nest-Starter/dev-status.svg)](https://david-dm.org/Shyam-Chen/Angular-Nest-Starter?type=dev)
 
 [Live Demo](https://angular-by-example.firebaseapp.com/)
 
@@ -15,7 +15,7 @@ A boilerplate for Angular, Material, and Express.
 1. Clone this Boilerplate
 
 ```bash
-$ git clone --depth 1 https://github.com/Shyam-Chen/Angular-Fullstack-Starter <PROJECT_NAME>
+$ git clone --depth 1 https://github.com/Shyam-Chen/Angular-Nest-Starter <PROJECT_NAME>
 $ cd <PROJECT_NAME>
 ```
 
@@ -45,6 +45,7 @@ $ yarn test
 
 ## Practical Examples
 
+* ---------- **App** ----------
 * [x] Counter
   * [x] State Management (`mobx`, `mobx-angular`)
   * [x] Asynchronous
@@ -74,3 +75,10 @@ $ yarn test
 * [ ] Realtime
   * [ ] WebSockets
   * [ ] GraphQL Subscriptions
+* ---------- **Api** ----------
+* [ ] Database
+* [ ] Storage‎
+* [ ] Authorization
+* [ ] Realtime
+* [ ] Messaging
+* [ ] Payment
