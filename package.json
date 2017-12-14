@@ -4,6 +4,7 @@
   "description": "A boilerplate for Angular, Nest, TypeScript, and ReactiveX.",
   "scripts": {
     "start": "npm run webpack-dev-server -- --config config/webpack.dev.js --open --progress --profile --watch --content-base src/",
+    "start:be": "nodemon src/main.server.ts --exec ts-node",
     "build": "cross-env BUILD_AOT=1 npm run webpack -- --config config/webpack.prod.js  --progress --profile --bail",
     "test": "tslint src && jest --coverage --forceExit",
     "webpack-dev-server": "node --max_old_space_size=4096 node_modules/webpack-dev-server/bin/webpack-dev-server.js",
@@ -82,6 +83,7 @@
     "jest-preset-angular": "4.0.2",
     "ngc-webpack": "4.1.2",
     "node-sass": "4.7.2",
+    "nodemon": "1.12.7",
     "npm-run-all": "4.1.2",
     "optimize-js-plugin": "0.0.4",
     "parse5": "3.0.3",

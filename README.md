@@ -28,7 +28,11 @@ $ yarn install
 3. Run the Application
 
 ```bash
+# app
 $ yarn start
+
+# api
+$ yarn start:be
 ```
 
 4. Build the Application
