@@ -4,9 +4,11 @@
   "description": "A boilerplate for Angular, Nest, TypeScript, and ReactiveX.",
   "scripts": {
     "start": "npm run webpack-dev-server -- --config config/webpack.dev.js --open --progress --profile --watch --content-base src/",
-    "start:be": "nodemon src/main.server.ts --exec ts-node",
+    "start:api": "nodemon src/main.server.ts --exec ts-node",
     "build": "cross-env BUILD_AOT=1 npm run webpack -- --config config/webpack.prod.js  --progress --profile --bail",
-    "test": "tslint src && jest --coverage --forceExit",
+    "build:api": "tsc",
+    "test": "tslint src && jest \"src/app/.*\\.ts$\" --coverage --forceExit",
+    "test:api": "jest \"src/api/.*\\.ts$\" --coverage --forceExit",
     "webpack-dev-server": "node --max_old_space_size=4096 node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "webpack": "node --max_old_space_size=4096 node_modules/webpack/bin/webpack.js",
     "deploy": "firebase deploy",

@@ -28,11 +28,11 @@ $ yarn install
 3. Run the Application
 
 ```bash
-# app
+# front-end
 $ yarn start
 
-# api
-$ yarn start:be
+# back-end
+$ yarn start:api
 ```
 
 4. Build the Application
