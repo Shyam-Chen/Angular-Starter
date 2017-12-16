@@ -22,11 +22,15 @@ jobs:
 
       - run:
           name: Build the application
-          command: docker-compose exec app yarn build
+          command: |
+            docker-compose exec app yarn build:app
+            # docker-compose exec app yarn build:api
 
       - run:
           name: Test the application
-          command: docker-compose exec app yarn test
+          command: |
+            docker-compose exec app yarn test:app
+            # docker-compose exec app yarn test:app
 
       - run:
           name: Test coverage integration
@@ -40,5 +44,5 @@ jobs:
       #     name: Deploy to Heroku
       #     command: |
       #       docker login -u="Shyam Chen" -p="${HEROKU_TOKEN}" registry.heroku.com
-      #       docker build -f Dockerfile.prod -t registry.heroku.com/react-by-example/web .
-      #       docker push registry.heroku.com/react-by-example/web
+      #       docker build -f Dockerfile.prod -t registry.heroku.com/nest-by-example/web .
+      #       docker push registry.heroku.com/nest-by-example/web

@@ -29,7 +29,7 @@ $ yarn install
 
 ```bash
 # front-end
-$ yarn start
+$ yarn start:app
 
 # back-end
 $ yarn start:api
@@ -38,13 +38,21 @@ $ yarn start:api
 4. Build the Application
 
 ```bash
-$ yarn build
+# front-end
+$ yarn build:app
+
+# back-end
+$ yarn build:api
 ```
 
 5. Test the Application
 
 ```bash
-$ yarn test
+# front-end
+$ yarn test:app
+
+# back-end
+$ yarn test:api
 ```
 
 ## Practical Examples

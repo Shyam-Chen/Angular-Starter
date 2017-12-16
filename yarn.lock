@@ -5978,7 +5978,7 @@ node-uuid@1.x:
   version "1.4.8"
   resolved "https://registry.yarnpkg.com/node-uuid/-/node-uuid-1.4.8.tgz#b040eb0923968afabf8d32fb1f17f1167fdab907"
 
-nodemon@^1.12.7:
+nodemon@1.12.7:
   version "1.12.7"
   resolved "https://registry.yarnpkg.com/nodemon/-/nodemon-1.12.7.tgz#4d0fa8386291c4f532f583cc102c05350722f647"
   dependencies:
@@ -8495,22 +8495,7 @@ ts-jest@^21.0.0:
     source-map-support "^0.5.0"
     yargs "^10.0.3"
 
-ts-node@^3.2.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-3.3.0.tgz#c13c6a3024e30be1180dd53038fc209289d4bf69"
-  dependencies:
-    arrify "^1.0.0"
-    chalk "^2.0.0"
-    diff "^3.1.0"
-    make-error "^1.1.1"
-    minimist "^1.2.0"
-    mkdirp "^0.5.1"
-    source-map-support "^0.4.0"
-    tsconfig "^6.0.0"
-    v8flags "^3.0.0"
-    yn "^2.0.0"
-
-ts-node@^4.0.1:
+ts-node@4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-4.0.1.tgz#4d368088b50c382d78285c029784ea0f32a4eb5c"
   dependencies:
@@ -8530,6 +8515,21 @@ ts-node@^4.0.1:
     mkdirp "^0.5.1"
     source-map-support "^0.5.0"
     tsconfig "^7.0.0"
+    v8flags "^3.0.0"
+    yn "^2.0.0"
+
+ts-node@^3.2.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-3.3.0.tgz#c13c6a3024e30be1180dd53038fc209289d4bf69"
+  dependencies:
+    arrify "^1.0.0"
+    chalk "^2.0.0"
+    diff "^3.1.0"
+    make-error "^1.1.1"
+    minimist "^1.2.0"
+    mkdirp "^0.5.1"
+    source-map-support "^0.4.0"
+    tsconfig "^6.0.0"
     v8flags "^3.0.0"
     yn "^2.0.0"
 
