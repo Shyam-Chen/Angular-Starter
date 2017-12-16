@@ -6,14 +6,14 @@ import {
   HttpStatus
 } from '@nestjs/common';
 
-import { ApiStore } from './api.store';
+import { TextListStore } from './text-list.store';
 
 @Controller()
-export class ApiController {
-  constructor(private api: ApiStore) {}
+export class TextListController {
+  constructor(private textList: TextListStore) {}
 
 	@Get()
 	findAll(): string[] {
-    return this.api.findAll();
+    return this.textList.findAll();
   }
 }
