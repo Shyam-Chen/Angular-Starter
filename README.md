@@ -58,11 +58,6 @@ $ yarn test:api
 ## Practical Examples
 
 * ---------- **App** ----------
-* [x] Counter
-  * [x] State Management (`mobx`, `mobx-angular`)
-  * [x] Asynchronous
-    * [x] Thunk
-    * [x] Observable (`rxjs`)
 * [ ] CRUD
   * [ ] Static
   * [x] REST
@@ -87,6 +82,13 @@ $ yarn test:api
 * [ ] Realtime
   * [ ] WebSockets
   * [ ] GraphQL Subscriptions
+* [ ] Playground
+  * [x] Counter
+    * [x] State Management (`mobx`, `mobx-angular`)
+    * [x] Asynchronous
+      * [x] Thunk
+      * [x] Observable (`rxjs`)
+  * ...
 * ---------- **Api** ----------
 * [ ] Database
 * [ ] Storage‎
@@ -94,3 +96,6 @@ $ yarn test:api
 * [ ] Realtime
 * [ ] Messaging
 * [ ] Payment
+* [ ] Playground
+  * [ ] QR Code
+  * ...

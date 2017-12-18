@@ -23,9 +23,16 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
 
     <div *ngIf="location.path() === ''">
       <nav>
-        <button mat-raised-button color="primary" routerLink="counter" routerLinkActive="active">Counter</button>
-        <button mat-raised-button color="primary" routerLink="rest" routerLinkActive="active">REST</button>
-        <button mat-raised-button color="primary" routerLink="form-controls" routerLinkActive="active">Form Controls</button>
+        <div>
+          <button mat-raised-button color="primary" routerLink="rest" routerLinkActive="active">REST</button>
+          <button mat-raised-button color="primary" routerLink="form-controls" routerLinkActive="active">Form Controls</button>
+        </div>
+
+        <br>
+
+        <div>
+          <button mat-raised-button color="primary" routerLink="playground" routerLinkActive="active">Playground</button>
+        </div>
       </nav>
     </div>
 
