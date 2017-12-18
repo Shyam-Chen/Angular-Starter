@@ -104,7 +104,7 @@ import { DialogDeleteComponent } from './components/dialog-delete.component';
 })
 export class RESTComponent {
   constructor(
-    private rest: RESTStore,
+    public rest: RESTStore,
     public editDialog: MatDialog,
     public deleteDialog: MatDialog
   ) {}

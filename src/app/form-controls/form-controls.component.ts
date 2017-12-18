@@ -17,5 +17,5 @@ import { FormControlsStore } from './form-controls.store';
   `]
 })
 export class FormControlsComponent {
-  constructor(private formControls: FormControlsStore) {}
+  constructor(public formControls: FormControlsStore) {}
 }

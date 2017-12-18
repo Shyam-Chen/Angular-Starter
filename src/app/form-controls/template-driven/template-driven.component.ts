@@ -131,7 +131,7 @@ import { TemplateDrivenStore } from './template-driven.store';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TemplateDrivenComponent {
-  constructor(private templateDriven: TemplateDrivenStore) {}
+  constructor(public templateDriven: TemplateDrivenStore) {}
 
   public genderChange(value: string): void {
     this.templateDriven.gender = value;

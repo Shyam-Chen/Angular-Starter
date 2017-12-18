@@ -18,5 +18,5 @@ import { CounterStore } from './counter.store';
   styles: [``]
 })
 export class CounterComponent {
-  constructor(private counter: CounterStore) {}
+  constructor(public counter: CounterStore) {}
 }
