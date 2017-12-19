@@ -1,4 +1,4 @@
-export interface List {
+export interface Element {
   id?: number;
   primary?: string;
   accent?: string;

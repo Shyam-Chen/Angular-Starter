@@ -1,36 +1,19 @@
 import { Component } from '@angular/core';
 
+import { CRUDOperationsStore } from './crud-operations.store';
+
 @Component({
   selector: 'app-crud-operations',
   template: `
     <div class="container" *mobxAutorun="{ dontDetach: true }">
 
-      <div>
-        <mat-form-field class="example-full-width">
-          <input matInput placeholder="Primary">
-        </mat-form-field>
-
-        <mat-form-field class="example-full-width">
-          <input matInput placeholder="Accent">
-        </mat-form-field>
-
-        <button mat-raised-button color="primary">Search</button>
-      </div>
-
-      <div>
-        <mat-form-field class="example-full-width">
-          <input matInput placeholder="Primary">
-        </mat-form-field>
-
-        <mat-form-field class="example-full-width">
-          <input matInput placeholder="Accent">
-        </mat-form-field>
-
-        <button mat-raised-button color="primary">Add</button>
-      </div>
+      <button mat-raised-button color="primary" routerLink="static" routerLinkActive="active">Static</button>
+      <button mat-raised-button color="primary" routerLink="rest" routerLinkActive="active">REST</button>
 
     </div>
   `,
   styles: [``]
 })
-export class CRUDOperationsComponent {}
+export class CRUDOperationsComponent {
+  constructor(public crudOperations: CRUDOperationsStore) {}
+}

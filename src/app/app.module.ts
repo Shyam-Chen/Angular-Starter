@@ -17,7 +17,6 @@ import { AppStore } from './app.store';
 export const ROUTES: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '' },
   { path: 'crud-operations', loadChildren: './crud-operations/crud-operations.module#CRUDOperationsModule' },
-  { path: 'rest', loadChildren: './rest/rest.module#RESTModule' },
   { path: 'form-controls', loadChildren: './form-controls/form-controls.module#FormControlsModule' },
   { path: 'playground', loadChildren: './playground/playground.module#PlaygroundModule' },
   { path: '**', component: NotFoundComponent }

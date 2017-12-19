@@ -7,15 +7,19 @@ import { CRUDOperationsComponent } from './crud-operations.component';
 import { CRUDOperationsStore } from './crud-operations.store';
 
 const ROUTES: Routes = [
-  { path: '', component: CRUDOperationsComponent }
+  {
+    path: '', children: [
+      { path: '', component: CRUDOperationsComponent },
+      { path: 'static', loadChildren: './static/static.module#StaticModule' },
+      { path: 'rest', loadChildren: './rest/rest.module#RESTModule' }
+    ]
+  }
 ];
 
 @NgModule({
   imports: [
     MobxAngularModule,
     MatButtonModule,
-    MatInputModule,
-    MatFormFieldModule,
     RouterModule.forChild(ROUTES)
   ],
   declarations: [

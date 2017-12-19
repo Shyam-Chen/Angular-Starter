@@ -32,7 +32,7 @@ describe('Counter', () => {
   });
 
   it('should display count', async () => {
-    const text = await page.$eval('body > app-root > app-counter > div > p', el => el.textContent);
+    const text = await page.$eval('app-root > div.container > app-counter > div > p', el => el.textContent);
     expect(text).toMatch('Clicked: 0 times, value is even.');
   });
 });

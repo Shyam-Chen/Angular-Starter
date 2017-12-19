@@ -21,22 +21,27 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
 
     <div class="filling"></div>
 
-    <div *ngIf="location.path() === ''">
-      <nav>
-        <div>
-          <button mat-raised-button color="primary" routerLink="rest" routerLinkActive="active">REST</button>
-          <button mat-raised-button color="primary" routerLink="form-controls" routerLinkActive="active">Form Controls</button>
-        </div>
+    <div class="container" *ngIf="location.path() === ''">
+      <div>
+        <button mat-raised-button color="primary" routerLink="crud-operations" routerLinkActive="active">CRUD Operations</button>
+        <button mat-raised-button color="primary" routerLink="form-controls" routerLinkActive="active">Form Controls</button>
+        <button mat-raised-button color="primary" disabled routerLink="data-table" routerLinkActive="active">Data Table</button>
+        <button mat-raised-button color="primary" disabled routerLink="globalization" routerLinkActive="active">Globalization</button>
+        <button mat-raised-button color="primary" disabled routerLink="authorization" routerLinkActive="active">Authorization</button>
+        <button mat-raised-button color="primary" disabled routerLink="data-chart" routerLinkActive="active">Data Chart</button>
+        <button mat-raised-button color="primary" disabled routerLink="Realtime" routerLinkActive="active">Realtime</button>
+      </div>
 
-        <br>
+      <br>
 
-        <div>
-          <button mat-raised-button color="primary" routerLink="playground" routerLinkActive="active">Playground</button>
-        </div>
-      </nav>
+      <div>
+        <button mat-raised-button color="accent" routerLink="playground" routerLinkActive="active">Playground</button>
+      </div>
     </div>
 
-    <router-outlet></router-outlet>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
   `,
   styles: [`
     .toolbar {
@@ -53,6 +58,10 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
 
     .filling {
       padding-top: 64px;
+    }
+
+    .container {
+      padding: 1rem;
     }
   `]
 })
