@@ -1,6 +1,6 @@
 import puppeteer from 'puppeteer';
 
-import server from '../../../e2e';
+import server from '../../../../e2e';
 
 describe('Counter', () => {
   let page = null;

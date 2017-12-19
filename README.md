@@ -58,7 +58,7 @@ $ yarn test:api
 ## Practical Examples
 
 * ---------- **App** ----------
-* [ ] CRUD
+* [ ] CRUD Operations
   * [ ] Static
   * [x] REST
   * [ ] GraphQL
@@ -88,7 +88,7 @@ $ yarn test:api
     * [x] Asynchronous
       * [x] Thunk
       * [x] Observable (`rxjs`)
-  * ...
+  * [ ] ...
 * ---------- **Api** ----------
 * [ ] Database
 * [ ] Storage‎
@@ -98,4 +98,4 @@ $ yarn test:api
 * [ ] Payment
 * [ ] Playground
   * [ ] QR Code
-  * ...
+  * [ ] ...
