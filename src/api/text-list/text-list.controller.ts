@@ -12,8 +12,8 @@ import { TextListStore } from './text-list.store';
 export class TextListController {
   constructor(private textList: TextListStore) {}
 
-	@Get()
-	findAll(): string[] {
+  @Get()
+  findAll(): string[] {
     return this.textList.findAll();
   }
 }

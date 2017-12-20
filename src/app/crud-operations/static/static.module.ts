@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 import { MatButtonModule, MatInputModule, MatFormFieldModule } from '@angular/material';
 import { MobxAngularModule } from 'mobx-angular';
 
@@ -12,6 +14,8 @@ const ROUTES: Routes = [
 
 @NgModule({
   imports: [
+    FormsModule,
+    CommonModule,
     MobxAngularModule,
     MatButtonModule,
     MatInputModule,
