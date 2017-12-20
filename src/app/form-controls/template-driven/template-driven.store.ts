@@ -45,6 +45,11 @@ export class TemplateDrivenStore {
   // radio buttons
   @observable gender: string = '';
 
+  @action
+  genderChange(value: string): void {
+    this.gender = value;
+  }
+
   // switch
   @observable autoplay: boolean = false;
 
@@ -55,6 +60,11 @@ export class TemplateDrivenStore {
 
   // slider
   @observable kilometers: number = 100;
+
+  @action
+  kilometersChange(value: number): void {
+    this.kilometers = value;
+  }
 
   // datepicker
   @observable birthday: Date;

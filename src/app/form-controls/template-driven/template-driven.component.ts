@@ -56,11 +56,11 @@ import { TemplateDrivenStore } from './template-driven.store';
               <p>Gender</p>
               <div>
                 <mat-radio-group>
-                  <mat-radio-button value="male" #male (change)="genderChange(male.value)">Male</mat-radio-button>
+                  <mat-radio-button value="male" #male (change)="templateDriven.genderChange(male.value)">Male</mat-radio-button>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <mat-radio-button value="female" #female (change)="genderChange(female.value)">Female</mat-radio-button>
+                  <mat-radio-button value="female" #female (change)="templateDriven.genderChange(female.value)">Female</mat-radio-button>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <mat-radio-button value="other" #other (change)="genderChange(other.value)">Other</mat-radio-button>
+                  <mat-radio-button value="other" #other (change)="templateDriven.genderChange(other.value)">Other</mat-radio-button>
                 </mat-radio-group>
               </div>
             </div>
@@ -82,7 +82,7 @@ import { TemplateDrivenStore } from './template-driven.store';
                 min="0" max="300" step="5"
                 #kilometers
                 [value]="templateDriven.kilometers"
-                (change)="kilometersChange(kilometers.value)"
+                (change)="templateDriven.kilometersChange(kilometers.value)"
               ></mat-slider>
             </div>
             <div class="outputs">{{ templateDriven.kilometers }}</div>
@@ -132,12 +132,4 @@ import { TemplateDrivenStore } from './template-driven.store';
 })
 export class TemplateDrivenComponent {
   constructor(public templateDriven: TemplateDrivenStore) {}
-
-  public genderChange(value: string): void {
-    this.templateDriven.gender = value;
-  }
-
-  public kilometersChange(value: number): void {
-    this.templateDriven.kilometers = value;
-  }
 }
