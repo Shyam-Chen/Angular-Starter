@@ -16,7 +16,7 @@ import { StaticStore } from './static.store';
           <input matInput placeholder="Accent" [(ngModel)]="$static.searchData.accent">
         </mat-form-field>
 
-        <button mat-raised-button color="primary">Search</button>
+        <button mat-raised-button color="primary" (click)="$static.searchItem($static.searchData.primary, $static.searchData.accent)">Search</button>
       </div>
 
       <div>
@@ -28,7 +28,7 @@ import { StaticStore } from './static.store';
           <input matInput placeholder="Accent" [(ngModel)]="$static.addData.accent">
         </mat-form-field>
 
-        <button mat-raised-button color="primary" (click)="$static.onAddItem($static.addData.primary, $static.addData.accent)">Add</button>
+        <button mat-raised-button color="primary" (click)="$static.addItem($static.addData.primary, $static.addData.accent)">Add</button>
       </div>
 
       <div>
