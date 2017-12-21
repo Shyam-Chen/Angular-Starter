@@ -32,7 +32,8 @@ describe('Counter', () => {
   });
 
   it('should display count', async () => {
-    const text = await page.$eval('app-root > div.container > app-counter > div > p', el => el.textContent);
+    const selector = 'body > app-root > mat-sidenav-container > mat-sidenav-content > div.container > app-counter > div > p';
+    const text = await page.$eval(selector, el => el.textContent);
     expect(text).toMatch('Clicked: 0 times, value is even.');
   });
 });

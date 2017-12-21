@@ -22,10 +22,26 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
     <mat-sidenav-container>
       <mat-sidenav mode="side" opened="true" style="width: 240px; height: 100vh; box-sizing: border-box; box-shadow: 3px 0 6px rgba(0,0,0,.24);">
         <div class="filling"></div>
-        Sidenav content
+
+        <nav style="margin: 0; padding: 0;">
+          <h3 class="category">CRUD Operations</h3>
+
+          <ul class="variety" style="list-style-type: none; margin: 0; padding: 0;">
+            <li>Static</li>
+            <li>REST</li>
+            <li>GraphQL</li>
+          </ul>
+
+          <h3 class="category">Form Controls</h3>
+
+          <ul class="variety" style="list-style-type: none; margin: 0; padding: 0;">
+            <li>Template-driven</li>
+            <li>Reactive Forms</li>
+          </ul>
+        </nav>
       </mat-sidenav>
 
-      <mat-sidenav-content style="height: calc(100vh - 1rem)">
+      <mat-sidenav-content style="height: 100vh">
         <div class="filling"></div>
 
         <div class="container" *ngIf="location.path() === ''">
@@ -67,6 +83,39 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
 
     .filling {
       padding-top: 64px;
+    }
+
+    .category {
+      font-size: 10px;
+      letter-spacing: 1px;
+      line-height: 24px;
+      text-transform: uppercase;
+      font-weight: 400;
+      margin: 0;
+      padding: 0 16px;
+      background: rgba(0,0,0,.32);
+      color: hsla(0,0%,100%,.87);
+    }
+
+    .variety {
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      margin: 0;
+      padding: 0;
+      border-color: rgba(0,0,0,.06);
+      color: rgba(0,0,0,.54);
+    }
+
+    .variety > li {
+      box-sizing: border-box;
+      display: block;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 47px;
+      text-decoration: none;
+      transition: all .3s;
+      padding: 0 16px;
+      position: relative;
     }
 
     .container {
