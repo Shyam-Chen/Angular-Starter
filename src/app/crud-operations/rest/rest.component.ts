@@ -25,6 +25,10 @@ import { DialogDeleteComponent } from './components/dialog-delete.component';
         <button mat-raised-button (click)="rest.addItem(rest.addData.text)">Add</button>
       </div>
 
+      <div class="progress" [ngStyle]="{ display: rest.progress }">
+        <mat-progress-bar color="accent" mode="indeterminate"></mat-progress-bar>
+      </div>
+
       <div>
         <table class="md-table">
           <thead>
@@ -46,10 +50,6 @@ import { DialogDeleteComponent } from './components/dialog-delete.component';
             </tr>
           </tbody>
         </table>
-      </div>
-
-      <div class="progress" [ngStyle]="{ display: rest.progress }">
-        <mat-spinner></mat-spinner>
       </div>
     </div>
   `,
@@ -85,20 +85,6 @@ import { DialogDeleteComponent } from './components/dialog-delete.component';
 
     .md-table tbody tr:hover {
       background-color: #eee;
-    }
-
-    .progress {
-      position: absolute;
-      position: fixed;
-      top: 0;
-      left: 0;
-      background: rgba(225, 225, 255, .7);
-      height: 100vh;
-      width: 100vw;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 10;
     }
   `]
 })

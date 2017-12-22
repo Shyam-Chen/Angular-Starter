@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { MatInputModule, MatButtonModule, MatTableModule, MatDialogModule, MatProgressSpinnerModule } from '@angular/material';
+import { MatInputModule, MatButtonModule, MatTableModule, MatDialogModule, MatProgressBarModule } from '@angular/material';
 import { MobxAngularModule } from 'mobx-angular';
 
 import { ReversePipe } from '../../shared/pipes/reverse.pipe';
@@ -29,7 +29,7 @@ const ROUTES: Routes = [
     MatButtonModule,
     MatTableModule,
     MatDialogModule,
-    MatProgressSpinnerModule,
+    MatProgressBarModule,
 
     // mobx
     MobxAngularModule,
