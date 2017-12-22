@@ -25,7 +25,6 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
 
         <nav style="margin: 0; padding: 0;">
           <h3 class="category">CRUD Operations</h3>
-
           <ul class="variety" style="list-style-type: none; margin: 0; padding: 0;">
             <li>Static</li>
             <li>REST</li>
@@ -33,10 +32,47 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
           </ul>
 
           <h3 class="category">Form Controls</h3>
-
           <ul class="variety" style="list-style-type: none; margin: 0; padding: 0;">
             <li>Template-driven</li>
             <li>Reactive Forms</li>
+          </ul>
+
+          <h3 class="category">Data Table</h3>
+          <ul class="variety" style="list-style-type: none; margin: 0; padding: 0;">
+            <li>Static</li>
+            <li>REST</li>
+            <li>GraphQL</li>
+          </ul>
+
+          <h3 class="category">Globalization</h3>
+          <ul class="variety" style="list-style-type: none; margin: 0; padding: 0;">
+            <li>Internationalization</li>
+            <li>Localization</li>
+          </ul>
+
+          <h3 class="category">Authorization</h3>
+          <ul class="variety" style="list-style-type: none; margin: 0; padding: 0;">
+            <li>REST</li>
+            <li>GraphQL</li>
+          </ul>
+
+          <h3 class="category">Data Chart</h3>
+          <ul class="variety" style="list-style-type: none; margin: 0; padding: 0;">
+            <li>SVG</li>
+            <li>Canvas</li>
+            <li>WebGL</li>
+          </ul>
+
+          <h3 class="category">Realtime</h3>
+          <ul class="variety" style="list-style-type: none; margin: 0; padding: 0;">
+            <li>WebSockets</li>
+            <li>GraphQL Subscriptions</li>
+          </ul>
+
+          <h3 class="category">Playground</h3>
+          <ul class="variety" style="list-style-type: none; margin: 0; padding: 0;">
+            <li>Counter</li>
+            <li>...</li>
           </ul>
         </nav>
       </mat-sidenav>
