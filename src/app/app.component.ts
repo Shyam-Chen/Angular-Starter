@@ -41,7 +41,7 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
         </nav>
       </mat-sidenav>
 
-      <mat-sidenav-content style="height: 100vh">
+      <mat-sidenav-content class="content">
         <div class="filling"></div>
 
         <div class="container" *ngIf="location.path() === ''">
@@ -65,6 +65,10 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
         <div class="container">
           <router-outlet></router-outlet>
         </div>
+
+        <footer>
+          Learn Angular
+        </footer>
       </mat-sidenav-content>
     </mat-sidenav-container>
   `,
@@ -118,8 +122,23 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
       position: relative;
     }
 
+    .content {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
     .container {
       padding: 1rem;
+      flex: 1 0 auto;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 12px;
+      font-size: 12px;
+      background: #3f51b5;
+      color: hsla(0,0%,100%,.87);
     }
   `]
 })
