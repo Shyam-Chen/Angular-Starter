@@ -83,21 +83,23 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
       <mat-sidenav-content class="content">
         <div class="filling"></div>
 
+        <header>
+          <div>Examples {{ location.path() }}</div>
+
+        </header>
+
         <div class="container" *ngIf="location.path() === ''">
-          <div>
-            <button mat-raised-button color="primary" routerLink="crud-operations" routerLinkActive="active">CRUD Operations</button>
-            <button mat-raised-button color="primary" routerLink="form-controls" routerLinkActive="active">Form Controls</button>
-            <button mat-raised-button color="primary" disabled routerLink="data-table" routerLinkActive="active">Data Table</button>
-            <button mat-raised-button color="primary" disabled routerLink="globalization" routerLinkActive="active">Globalization</button>
-            <button mat-raised-button color="primary" disabled routerLink="authorization" routerLinkActive="active">Authorization</button>
-            <button mat-raised-button color="primary" disabled routerLink="data-chart" routerLinkActive="active">Data Chart</button>
-            <button mat-raised-button color="primary" disabled routerLink="Realtime" routerLinkActive="active">Realtime</button>
-          </div>
-
-          <br>
-
-          <div>
-            <button mat-raised-button color="accent" routerLink="playground" routerLinkActive="active">Playground</button>
+          <div class="plane">
+            <div class="plane__cards">
+              <mat-card class="plane__card" routerLink="crud-operations">CRUD Operations</mat-card>
+              <mat-card class="plane__card" routerLink="form-controls">Form Controls</mat-card>
+              <mat-card class="plane__card plane__card--disabled" routerLink="">Data Table</mat-card>
+              <mat-card class="plane__card plane__card--disabled" routerLink="">Globalization</mat-card>
+              <mat-card class="plane__card plane__card--disabled" routerLink="">Authorization</mat-card>
+              <mat-card class="plane__card plane__card--disabled" routerLink="">Data Chart</mat-card>
+              <mat-card class="plane__card plane__card--disabled" routerLink="">Realtime</mat-card>
+              <mat-card class="plane__card" routerLink="playground">Playground</mat-card>
+            </div>
           </div>
         </div>
 
@@ -198,6 +200,37 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
     .container {
       padding: 1rem;
       flex: 1 0 auto;
+    }
+
+    .plane {
+      display: flex;
+      justify-content: center;
+    }
+
+    .plane__cards {
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    .plane__card {
+      width: 12.5rem;
+      margin: 20px;
+    }
+
+    .plane__card--disabled {
+      background-color: rgba(0, 0, 0, .12);
+      color: rgba(0, 0, 0, .38);
+      cursor: not-allowed;
+    }
+
+    header {
+      background: #3f51b5;
+      font-family: 'Roboto';
+      font-weight: 300;
+      padding: 28px;
+      font-size: 20px;
+      box-sizing: border-box;
+      color: hsla(0,0%,100%,.87);
     }
 
     footer {
