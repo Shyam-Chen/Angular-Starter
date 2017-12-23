@@ -5,18 +5,22 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
   selector: 'app-root',
   template: `
     <mat-toolbar color="primary" class="mat-elevation-z4 toolbar" style="z-index: 10">
-      <div *ngIf="location.path() === ''; else locationBack">
-        <button mat-icon-button>
-          <mat-icon class="mat-24" aria-label="Toys">toys</mat-icon>
-        </button>
+      <div style="width: 2.5rem; height: 2.5rem; outline: none; cursor: pointer;" routerLink="">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 250 250" style="enable-background:new 0 0 250 250" xml:space="preserve">
+          <g>
+            <g>
+              <polygon fill="#fff" points="125,153.4 100.3,153.4 88.6,182.6 88.6,182.6 66.9,182.6 66.8,182.6 125,52.1 125,52.2 125,52.2 125,30 125,30 31.9,63.2 46.1,186.3 125,230 125,230 125,153.4"/>
+              <polygon fill="#fff" points="108,135.4 125,135.4 125,135.4 125,94.5"/>
+            </g>
+            <g opacity=".9">
+              <polygon fill="#fff" points="125,153.4 149.7,153.4 161.4,182.6 161.4,182.6 183.1,182.6 183.2,182.6 125,52.1 125,52.2 125,52.2 125,30 125,30 218.1,63.2 203.9,186.3 125,230 125,230 125,153.4"/>
+              <polygon fill="#fff" points="142,135.4 125,135.4 125,135.4 125,94.5"/>
+            </g>
+          </g>
+        </svg>
       </div>
-      <ng-template #locationBack>
-        <button mat-icon-button (click)="location.back()">
-          <mat-icon class="mat-24" aria-label="Arrow Back">arrow_back</mat-icon>
-        </button>
-      </ng-template>
 
-      <span class="title">Angular by Example</span>
+      <span class="title" routerLink="" style="outline: none; cursor: pointer;">Angular by Example</span>
     </mat-toolbar>
 
     <mat-sidenav-container>
@@ -25,54 +29,53 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
 
         <nav style="margin: 0; padding: 0;">
           <h3 class="category">CRUD Operations</h3>
-          <ul class="variety" style="list-style-type: none; margin: 0; padding: 0;">
-            <li>Static</li>
-            <li>REST</li>
-            <li>GraphQL</li>
+          <ul class="variety">
+            <li class="enable" routerLink="crud-operations/static">Static</li>
+            <li class="enable" routerLink="crud-operations/rest">REST</li>
+            <li class="disabled">GraphQL</li>
           </ul>
 
           <h3 class="category">Form Controls</h3>
-          <ul class="variety" style="list-style-type: none; margin: 0; padding: 0;">
-            <li>Template-driven</li>
-            <li>Reactive Forms</li>
+          <ul class="variety">
+            <li class="enable" routerLink="form-controls/template-driven">Template-driven</li>
+            <li class="enable" routerLink="form-controls/reactive-forms">Reactive Forms</li>
           </ul>
 
           <h3 class="category">Data Table</h3>
-          <ul class="variety" style="list-style-type: none; margin: 0; padding: 0;">
-            <li>Static</li>
-            <li>REST</li>
-            <li>GraphQL</li>
+          <ul class="variety">
+            <li class="disabled">Static</li>
+            <li class="disabled">REST</li>
+            <li class="disabled">GraphQL</li>
           </ul>
 
           <h3 class="category">Globalization</h3>
-          <ul class="variety" style="list-style-type: none; margin: 0; padding: 0;">
-            <li>Internationalization</li>
-            <li>Localization</li>
+          <ul class="variety">
+            <li class="disabled">Internationalization</li>
+            <li class="disabled">Localization</li>
           </ul>
 
           <h3 class="category">Authorization</h3>
-          <ul class="variety" style="list-style-type: none; margin: 0; padding: 0;">
-            <li>REST</li>
-            <li>GraphQL</li>
+          <ul class="variety">
+            <li class="disabled">REST</li>
+            <li class="disabled">GraphQL</li>
           </ul>
 
           <h3 class="category">Data Chart</h3>
-          <ul class="variety" style="list-style-type: none; margin: 0; padding: 0;">
-            <li>SVG</li>
-            <li>Canvas</li>
-            <li>WebGL</li>
+          <ul class="variety">
+            <li class="disabled">SVG</li>
+            <li class="disabled">Canvas</li>
+            <li class="disabled">WebGL</li>
           </ul>
 
           <h3 class="category">Realtime</h3>
-          <ul class="variety" style="list-style-type: none; margin: 0; padding: 0;">
-            <li>WebSockets</li>
-            <li>GraphQL Subscriptions</li>
+          <ul class="variety">
+            <li class="disabled">WebSockets</li>
+            <li class="disabled">GraphQL Subscriptions</li>
           </ul>
 
           <h3 class="category">Playground</h3>
-          <ul class="variety" style="list-style-type: none; margin: 0; padding: 0;">
-            <li>Counter</li>
-            <li>...</li>
+          <ul class="variety">
+            <li class="enable" routerLink="playground/counter">Counter</li>
           </ul>
         </nav>
       </mat-sidenav>
@@ -135,7 +138,7 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
     }
 
     .title {
-      margin-left: 1rem;
+      margin-left: .5rem;
     }
 
     .filling {
@@ -155,11 +158,9 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
     }
 
     .variety {
-      border-bottom-width: 1px;
-      border-bottom-style: solid;
+      list-style-type: none;
       margin: 0;
       padding: 0;
-      border-color: rgba(0,0,0,.06);
       color: rgba(0,0,0,.54);
     }
 
@@ -173,6 +174,19 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
       transition: all .3s;
       padding: 0 16px;
       position: relative;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-color: rgba(0, 0, 0, .06);
+    }
+
+    .enable {
+      cursor: pointer;
+      outline: none;
+    }
+
+    .disabled {
+      color: rgba(0, 0, 0, .2);
+      cursor: not-allowed;
     }
 
     .content {
