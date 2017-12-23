@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MatButtonModule, MatInputModule, MatFormFieldModule } from '@angular/material';
+import { MatButtonModule } from '@angular/material';
 import { MobxAngularModule } from 'mobx-angular';
 
 import { CRUDOperationsComponent } from './crud-operations.component';

@@ -1,6 +1,8 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { MatDialog } from '@angular/material';
 
 import { StaticStore } from './static.store';
+import { DialogDeleteComponent } from './components/dialog-delete.component';
 
 @Component({
   selector: 'app-crud-operations',
@@ -44,7 +46,7 @@ import { StaticStore } from './static.store';
               <td>{{ item.primary }}</td>
               <td>{{ item.accent }}</td>
               <td>
-                <button mat-button color="accent">Delete</button>
+                <button mat-button color="accent" (click)="openDeleteDialog(item.id)">Delete</button>
                 <button mat-button color="primary">Edit</button>
               </td>
             </tr>
@@ -91,5 +93,13 @@ import { StaticStore } from './static.store';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class StaticComponent {
-  constructor(public $static: StaticStore) {}
+  constructor(
+    public $static: StaticStore,
+    public deleteDialog: MatDialog
+  ) {}
+
+  public openDeleteDialog(id: number): void {
+    this.deleteDialog.open(DialogDeleteComponent);
+    this.$static.deleteData.id = id;
+  }
 }

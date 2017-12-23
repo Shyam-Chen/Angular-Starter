@@ -187,13 +187,12 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
     }
 
     footer {
+      height: 77px;
       margin-top: 40px;
       padding: 12px;
       font-size: 12px;
       background: #3f51b5;
       color: hsla(0,0%,100%,.87);
-      display: flex;
-      flex-direction: row;
     }
   `]
 })

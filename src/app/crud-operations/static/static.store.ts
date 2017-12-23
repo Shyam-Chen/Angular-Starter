@@ -36,4 +36,9 @@ export class StaticStore {
     );
     this.searchData = { primary: '', accent: '' };
   }
+
+  @action
+  deleteItem(id: number): void {
+    this.dataset = [...this.dataset.filter(item => item.id !== Number(id))];
+  }
 }
