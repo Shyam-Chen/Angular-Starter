@@ -9,6 +9,7 @@ import { StaticComponent } from './static.component';
 import { StaticStore } from './static.store';
 
 import { DialogDeleteComponent } from './components/dialog-delete.component';
+import { DialogEditComponent } from './components/dialog-edit.component';
 
 const ROUTES: Routes = [
   { path: '', component: StaticComponent }
@@ -27,13 +28,15 @@ const ROUTES: Routes = [
   ],
   declarations: [
     StaticComponent,
-    DialogDeleteComponent
+    DialogDeleteComponent,
+    DialogEditComponent
   ],
   providers: [
     StaticStore
   ],
   entryComponents: [
-    DialogDeleteComponent
+    DialogDeleteComponent,
+    DialogEditComponent
   ]
 })
 export class StaticModule {}

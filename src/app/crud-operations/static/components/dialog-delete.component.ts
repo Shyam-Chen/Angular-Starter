@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { StaticStore } from '../static.store';
 
 @Component({
-  selector: 'app-crud-operations-static-delete',
+  selector: 'app--crud-operations--static-delete',
   template: `
     <p>Are you sure you want to delete it?</p>
 

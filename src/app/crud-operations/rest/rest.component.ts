@@ -91,18 +91,17 @@ import { DialogDeleteComponent } from './components/dialog-delete.component';
 export class RESTComponent {
   constructor(
     public rest: RESTStore,
-    public editDialog: MatDialog,
-    public deleteDialog: MatDialog
+    public dialog: MatDialog
   ) {}
 
   public openEditDialog(_id: string, text: string): void {
-    this.editDialog.open(DialogEditComponent);
+    this.dialog.open(DialogEditComponent);
     this.rest.editData._id = _id;
     this.rest.editData.text = text;
   }
 
   public openDeleteDialog(_id: string): void {
-    this.deleteDialog.open(DialogDeleteComponent);
+    this.dialog.open(DialogDeleteComponent);
     this.rest.deleteData._id = _id;
   }
 }

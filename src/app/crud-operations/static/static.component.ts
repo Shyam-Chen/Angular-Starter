@@ -3,22 +3,29 @@ import { MatDialog } from '@angular/material';
 
 import { StaticStore } from './static.store';
 import { DialogDeleteComponent } from './components/dialog-delete.component';
+import { DialogEditComponent } from './components/dialog-edit.component';
+import { List } from './static.model';
 
 @Component({
-  selector: 'app-crud-operations',
+  selector: 'app--crud-operations--static',
   template: `
     <div class="container" *mobxAutorun="{ dontDetach: true }">
 
       <div>
-        <mat-form-field class="example-full-width">
+        <mat-form-field>
           <input matInput placeholder="Primary" [(ngModel)]="$static.searchData.primary">
         </mat-form-field>
 
-        <mat-form-field class="example-full-width">
+        <mat-form-field>
           <input matInput placeholder="Accent" [(ngModel)]="$static.searchData.accent">
         </mat-form-field>
 
-        <button mat-raised-button color="primary" (click)="$static.searchItem($static.searchData.primary, $static.searchData.accent)">Search</button>
+        <button
+          mat-raised-button color="primary"
+          (click)="$static.searchItem($static.searchData.primary, $static.searchData.accent)"
+        >
+          Search
+        </button>
       </div>
 
       <div>
@@ -30,7 +37,12 @@ import { DialogDeleteComponent } from './components/dialog-delete.component';
           <input matInput placeholder="Accent" [(ngModel)]="$static.addData.accent">
         </mat-form-field>
 
-        <button mat-raised-button color="primary" (click)="$static.addItem($static.addData.primary, $static.addData.accent)">Add</button>
+        <button
+          mat-raised-button color="primary"
+          (click)="$static.addItem($static.addData.primary, $static.addData.accent)"
+        >
+          Add
+        </button>
       </div>
 
       <div>
@@ -47,7 +59,7 @@ import { DialogDeleteComponent } from './components/dialog-delete.component';
               <td>{{ item.accent }}</td>
               <td>
                 <button mat-button color="accent" (click)="openDeleteDialog(item.id)">Delete</button>
-                <button mat-button color="primary">Edit</button>
+                <button mat-button color="primary" (click)="openEditDialog(item)">Edit</button>
               </td>
             </tr>
           </tbody>
@@ -95,11 +107,16 @@ import { DialogDeleteComponent } from './components/dialog-delete.component';
 export class StaticComponent {
   constructor(
     public $static: StaticStore,
-    public deleteDialog: MatDialog
+    public dialog: MatDialog
   ) {}
 
   public openDeleteDialog(id: number): void {
-    this.deleteDialog.open(DialogDeleteComponent);
+    this.dialog.open(DialogDeleteComponent);
     this.$static.deleteData.id = id;
+  }
+
+  public openEditDialog(data: List): void {
+    this.dialog.open(DialogEditComponent);
+    this.$static.editData = { ...data };
   }
 }

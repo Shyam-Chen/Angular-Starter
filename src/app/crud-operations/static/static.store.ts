@@ -1,23 +1,23 @@
 import { Injectable } from '@angular/core';
 import { observable, action, computed } from 'mobx';
 
-import { Element } from './static.model';
+import { List } from './static.model';
 
 @Injectable()
 export class StaticStore {
-  protected initial: Element[] = [
+  protected initial: List[] = [
     { id: 4, primary: 'Vanilla', accent: 'Cordova' },
     { id: 3, primary: 'Angular', accent: 'Ionic' },
     { id: 2, primary: 'React', accent: 'React Native' },
     { id: 1, primary: 'Vue', accent: 'Weex' }
   ];
 
-  @observable dataset: Element[] = [...this.initial];
+  @observable dataset: List[] = [...this.initial];
 
-  @observable addData: Element = { primary: '', accent: '' };
-  @observable searchData: Element = { primary: '', accent: '' };
-  @observable editData: Element = { id: 0, primary: '', accent: '' };
-  @observable deleteData: Element = { id: 0 };
+  @observable addData: List = { primary: '', accent: '' };
+  @observable searchData: List = { primary: '', accent: '' };
+  @observable editData: List = { id: 0, primary: '', accent: '' };
+  @observable deleteData: List = { id: 0 };
 
   @action
   addItem(primary, accent) {
@@ -40,5 +40,14 @@ export class StaticStore {
   @action
   deleteItem(id: number): void {
     this.dataset = [...this.dataset.filter(item => item.id !== Number(id))];
+  }
+
+  @action
+  editItem({ id, primary, accent }: List): void {
+    this.dataset = [
+      ...this.dataset.map(item =>
+        item.id === id ? { ...item, primary, accent } : item
+      )
+    ];
   }
 }
