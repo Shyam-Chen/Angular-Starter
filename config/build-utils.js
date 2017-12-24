@@ -4,7 +4,7 @@ const fs = require('fs');
 const helpers = require('./helpers');
 
 const DEFAULT_METADATA = {
-  title: 'Angular by Example',
+  title: 'AngularNest by Example',
   baseUrl: '/',
   isDevServer: helpers.isWebpackDevServer(),
   HMR: helpers.hasProcessFlag('hot'),

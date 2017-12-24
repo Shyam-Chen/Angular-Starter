@@ -20,7 +20,7 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
         </svg>
       </div>
 
-      <span class="title" routerLink="" style="outline: none; cursor: pointer;">Angular by Example</span>
+      <span class="title" routerLink="" style="outline: none; cursor: pointer;">AngularNest by Example</span>
     </mat-toolbar>
 
     <mat-sidenav-container>
@@ -124,7 +124,7 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
           </div>
 
           <div>
-            Learn Angular
+            Learn Angular | Learn Nest
           </div>
         </footer>
       </mat-sidenav-content>
