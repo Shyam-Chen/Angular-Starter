@@ -1,41 +1,36 @@
 {
   "compilerOptions": {
-    "target": "es6",
     "module": "commonjs",
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "sourceMap": true,
-    "noEmit": true,
-    "noEmitHelpers": true,
-    "importHelpers": true,
-    "strictNullChecks": false,
+    "declaration": false,
+    "noImplicitAny": false,
+    "removeComments": true,
     "lib": [
       "es6"
     ],
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es6",
+    "sourceMap": true,
+    "allowJs": true,
     "baseUrl": "./src",
     "paths": {},
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "types": [
-      "hammerjs",
-      "jasmine",
-      "node",
-      "source-map",
-      "uglify-js",
-      "webpack"
-    ]
+    "outDir": "./dist"
   },
   "exclude": [
     "node_modules",
-    "dist"
+    "config",
+    "coverage",
+    "dist",
+    "jest.config.js",
+    "webpack.config.archived.js",
+    "webpack.config.js",
+    "src/app",
+    "src/environments",
+    "src/e2e.ts",
+    "src/main.browser.ts",
+    "src/polyfills.browser.ts",
+    "src/test.ts"
   ],
-  "awesomeTypescriptLoaderOptions": {
-    "forkChecker": true,
-    "useWebpackText": true
-  },
   "compileOnSave": false,
   "buildOnSave": false,
   "atom": {
