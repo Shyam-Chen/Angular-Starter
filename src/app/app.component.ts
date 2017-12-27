@@ -85,7 +85,6 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
 
         <header>
           <div>Examples {{ location.path() }}</div>
-
         </header>
 
         <div class="container" *ngIf="location.path() === ''">
@@ -108,23 +107,25 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
         </div>
 
         <footer>
-          <div style="width: 50px">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 250 250" style="enable-background:new 0 0 250 250" xml:space="preserve">
-              <g>
+          <div class="footer">
+            <div class="footer__logo">
+              <svg x="0px" y="0px" viewBox="0 0 250 250" style="enable-background: new 0 0 250 250" xml:space="preserve">
                 <g>
-                  <polygon fill="#fff" points="125,153.4 100.3,153.4 88.6,182.6 88.6,182.6 66.9,182.6 66.8,182.6 125,52.1 125,52.2 125,52.2 125,30 125,30 31.9,63.2 46.1,186.3 125,230 125,230 125,153.4"/>
-                  <polygon fill="#fff" points="108,135.4 125,135.4 125,135.4 125,94.5"/>
+                  <g>
+                    <polygon fill="#fff" points="125,153.4 100.3,153.4 88.6,182.6 88.6,182.6 66.9,182.6 66.8,182.6 125,52.1 125,52.2 125,52.2 125,30 125,30 31.9,63.2 46.1,186.3 125,230 125,230 125,153.4" />
+                    <polygon fill="#fff" points="108,135.4 125,135.4 125,135.4 125,94.5" />
+                  </g>
+                  <g opacity=".9">
+                    <polygon fill="#fff" points="125,153.4 149.7,153.4 161.4,182.6 161.4,182.6 183.1,182.6 183.2,182.6 125,52.1 125,52.2 125,52.2 125,30 125,30 218.1,63.2 203.9,186.3 125,230 125,230 125,153.4" />
+                    <polygon fill="#fff" points="142,135.4 125,135.4 125,135.4 125,94.5" />
+                  </g>
                 </g>
-                <g opacity=".9">
-                  <polygon fill="#fff" points="125,153.4 149.7,153.4 161.4,182.6 161.4,182.6 183.1,182.6 183.2,182.6 125,52.1 125,52.2 125,52.2 125,30 125,30 218.1,63.2 203.9,186.3 125,230 125,230 125,153.4"/>
-                  <polygon fill="#fff" points="142,135.4 125,135.4 125,135.4 125,94.5"/>
-                </g>
-              </g>
-            </svg>
-          </div>
+              </svg>
+            </div>
 
-          <div>
-            Learn Angular | Learn Nest
+            <div class="footer__links">
+              Learn Angular | Learn Nest
+            </div>
           </div>
         </footer>
       </mat-sidenav-content>
@@ -233,13 +234,23 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
       color: hsla(0,0%,100%,.87);
     }
 
-    footer {
-      height: 77px;
+    .footer {
       margin-top: 40px;
       padding: 12px;
       font-size: 12px;
       background: #3f51b5;
       color: hsla(0,0%,100%,.87);
+      display: flex;
+      flex-flow: row;
+    }
+
+    .footer__logo {
+      width: 50px;
+      height: 50px;
+    }
+
+    .footer__links {
+
     }
   `]
 })
