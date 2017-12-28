@@ -126,6 +126,12 @@ module.exports = function (options) {
           exclude: [helpers.root('src', 'styles')]
         },
 
+        {
+          test: /\.styl$/,
+          use: ['to-string-loader', 'css-loader', 'stylus-loader'],
+          exclude: [helpers.root('src', 'styles')]
+        },
+
         /**
          * Raw loader support for *.html
          * Returns file content as string
@@ -136,6 +142,11 @@ module.exports = function (options) {
           test: /\.html$/,
           use: 'raw-loader',
           exclude: [helpers.root('src/index.html')]
+        },
+
+        {
+          test: /\.pug$/,
+          use: ['apply-loader', 'pug-loader']
         },
 
         /**

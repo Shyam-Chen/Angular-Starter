@@ -1,0 +1,79 @@
+mat-toolbar.mat-elevation-z4.toolbar(color='primary', style='z-index: 10')
+  div(style='width: 2.5rem; height: 2.5rem; outline: none; cursor: pointer;', routerLink='')
+    svg(x='0px', y='0px', viewBox='0 0 250 250', style='enable-background: new 0 0 250 250', xml:space='preserve')
+      g
+        g
+          polygon(fill='#fff', points='125,153.4 100.3,153.4 88.6,182.6 88.6,182.6 66.9,182.6 66.8,182.6 125,52.1 125,52.2 125,52.2 125,30 125,30 31.9,63.2 46.1,186.3 125,230 125,230 125,153.4')
+          polygon(fill='#fff', points='108,135.4 125,135.4 125,135.4 125,94.5')
+        g(opacity='.9')
+          polygon(fill='#fff', points='125,153.4 149.7,153.4 161.4,182.6 161.4,182.6 183.1,182.6 183.2,182.6 125,52.1 125,52.2 125,52.2 125,30 125,30 218.1,63.2 203.9,186.3 125,230 125,230 125,153.4')
+          polygon(fill='#fff', points='142,135.4 125,135.4 125,135.4 125,94.5')
+  span.title(routerLink='', style='outline: none; cursor: pointer;') AngularNest by Example
+mat-sidenav-container
+  mat-sidenav(mode='side', opened='true', style='width: 240px; height: 100vh; box-sizing: border-box; box-shadow: 3px 0 6px rgba(0,0,0,.24);')
+    .filling
+    nav(style='margin: 0; padding: 0;')
+      h3.category CRUD Operations
+      ul.variety
+        li.enable(routerLink='crud-operations/static') Static
+        li.enable(routerLink='crud-operations/rest') REST
+        li.disabled GraphQL
+      h3.category Form Controls
+      ul.variety
+        li.enable(routerLink='form-controls/template-driven') Template-driven
+        li.enable(routerLink='form-controls/reactive-forms') Reactive Forms
+      h3.category Data Table
+      ul.variety
+        li.disabled Static
+        li.disabled REST
+        li.disabled GraphQL
+      h3.category Globalization
+      ul.variety
+        li.disabled Internationalization
+        li.disabled Localization
+      h3.category Authorization
+      ul.variety
+        li.disabled REST
+        li.disabled GraphQL
+      h3.category Data Chart
+      ul.variety
+        li.disabled SVG
+        li.disabled Canvas
+        li.disabled WebGL
+      h3.category Realtime
+      ul.variety
+        li.disabled WebSockets
+        li.disabled GraphQL Subscriptions
+      h3.category Playground
+      ul.variety
+        li.enable(routerLink='playground/counter') Counter
+  mat-sidenav-content.content
+    .filling
+    header
+      div Examples {{ location.path() }}
+    .container(*ngIf="location.path() === ''")
+      .plane
+        .plane__cards
+          mat-card.plane__card(routerLink='crud-operations') CRUD Operations
+          mat-card.plane__card(routerLink='form-controls') Form Controls
+          mat-card.plane__card.plane__card--disabled(routerLink='') Data Table
+          mat-card.plane__card.plane__card--disabled(routerLink='') Globalization
+          mat-card.plane__card.plane__card--disabled(routerLink='') Authorization
+          mat-card.plane__card.plane__card--disabled(routerLink='') Data Chart
+          mat-card.plane__card.plane__card--disabled(routerLink='') Realtime
+          mat-card.plane__card(routerLink='playground') Playground
+    .container
+      router-outlet
+    footer
+      .footer
+        .footer__logo
+          svg(x='0px', y='0px', viewBox='0 0 250 250', style='enable-background: new 0 0 250 250', xml:space='preserve')
+            g
+              g
+                polygon(fill='#fff', points='125,153.4 100.3,153.4 88.6,182.6 88.6,182.6 66.9,182.6 66.8,182.6 125,52.1 125,52.2 125,52.2 125,30 125,30 31.9,63.2 46.1,186.3 125,230 125,230 125,153.4')
+                polygon(fill='#fff', points='108,135.4 125,135.4 125,135.4 125,94.5')
+              g(opacity='.9')
+                polygon(fill='#fff', points='125,153.4 149.7,153.4 161.4,182.6 161.4,182.6 183.1,182.6 183.2,182.6 125,52.1 125,52.2 125,52.2 125,30 125,30 218.1,63.2 203.9,186.3 125,230 125,230 125,153.4')
+                polygon(fill='#fff', points='142,135.4 125,135.4 125,135.4 125,94.5')
+        .footer__links
+          | Learn Angular | Learn Nest
