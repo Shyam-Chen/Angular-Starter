@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 
+import { ReactiveFormsStore } from './reactive-forms.store';
+
 @Component({
-  selector: 'app-form-controls-reactive-forms',
+  selector: 'form-controls--reactive-forms',
   template: `
     <div class="container" *mobxAutorun="{ dontDetach: true }">
       <div class="container mat-elevation-z2" style="margin-top: 1rem">
@@ -41,4 +43,6 @@ import { Component } from '@angular/core';
     }
   `]
 })
-export class ReactiveFormsComponent {}
+export class ReactiveFormsComponent {
+  constructor(public $rf: ReactiveFormsStore) {}
+}

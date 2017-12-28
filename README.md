@@ -58,7 +58,7 @@ $ yarn test:api
 ## Practical Examples
 
 * [ ] CRUD Operations
-  * [ ] Static
+  * [x] Static
   * [x] REST
   * [ ] GraphQL
 * [ ] Form Controls

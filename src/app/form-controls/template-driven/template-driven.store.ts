@@ -9,7 +9,7 @@ export class TemplateDrivenStore {
   @observable nickname: string = '';
 
   // select
-  @observable age: number;
+  @observable age: number = 0;
 
   @observable
   listOfage: AgeList[] = [
@@ -53,13 +53,8 @@ export class TemplateDrivenStore {
   // switch
   @observable autoplay: boolean = false;
 
-  @computed
-  get displayAutoplay(): string {
-    return this.autoplay ? `${this.autoplay}`.charAt(0).toUpperCase() + `${this.autoplay}`.slice(1) : '';
-  }
-
   // slider
-  @observable kilometers: number = 100;
+  @observable kilometers: number = 0;
 
   @action
   kilometersChange(value: number): void {
