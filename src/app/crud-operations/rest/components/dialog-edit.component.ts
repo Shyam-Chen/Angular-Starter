@@ -3,7 +3,7 @@ import { Component, Inject } from '@angular/core';
 import { RESTStore } from '../rest.store';
 
 @Component({
-  selector: 'rest-dialog-edit',
+  selector: 'crud-operations--rest-dialog-edit',
   template: `
     <mat-input-container>
       <input matInput placeholder="Text" [(ngModel)]="rest.editData.text">

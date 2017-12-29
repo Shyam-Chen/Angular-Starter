@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { PlaygroundStore } from './playground.store';
 
 @Component({
-  selector: 'app-playground',
+  selector: 'playground',
   template: `
     <div *mobxAutorun="{ dontDetach: true }">
       <button mat-raised-button color="primary" routerLink="counter" routerLinkActive="active">Counter</button>

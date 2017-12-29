@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { CRUDOperationsStore } from './crud-operations.store';
 
 @Component({
-  selector: 'app-crud-operations',
+  selector: 'crud-operations',
   template: `
     <div class="container" *mobxAutorun="{ dontDetach: true }">
 

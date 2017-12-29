@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { RESTStore } from '../rest.store';
 
 @Component({
-  selector: 'rest-dialog-delete',
+  selector: 'crud-operations--rest-dialog-delete',
   template: `
     <p>Are you sure you want to delete it?</p>
 

@@ -3,7 +3,7 @@ import { Component, Inject } from '@angular/core';
 import { StaticStore } from '../static.store';
 
 @Component({
-  selector: 'app--crud-operations--static-edit',
+  selector: 'crud-operations--static-dialog-edit',
   template: `
     <mat-form-field>
       <input matInput placeholder="Primary" [(ngModel)]="$static.editData.primary">

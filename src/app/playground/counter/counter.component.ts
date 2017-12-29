@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { CounterStore } from './counter.store';
 
 @Component({
-  selector: 'app-counter',
+  selector: 'playground--counter',
   template: `
     <div *mobxAutorun="{ dontDetach: true }">
       <p>Clicked: {{ counter.value }} times, value is {{ counter.evenOrOdd }}.</p>

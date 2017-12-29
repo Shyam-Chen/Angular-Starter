@@ -7,7 +7,7 @@ import { DialogEditComponent } from './components/dialog-edit.component';
 import { List } from './static.model';
 
 @Component({
-  selector: 'app--crud-operations--static',
+  selector: 'crud-operations--static',
   template: `
     <div class="container" *mobxAutorun="{ dontDetach: true }">
 

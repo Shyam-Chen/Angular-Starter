@@ -6,7 +6,7 @@ import { DialogEditComponent } from './components/dialog-edit.component';
 import { DialogDeleteComponent } from './components/dialog-delete.component';
 
 @Component({
-  selector: 'app-rest',
+  selector: 'crud-operations--rest',
   template: `
     <div *mobxAutorun="{ dontDetach: true }">
       <div>
