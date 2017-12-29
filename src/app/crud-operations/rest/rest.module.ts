@@ -6,7 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatInputModule, MatButtonModule, MatTableModule, MatDialogModule, MatProgressBarModule } from '@angular/material';
 import { MobxAngularModule } from 'mobx-angular';
 
-import { ReversePipe } from '../../shared/pipes/reverse.pipe';
+import { ReversePipe } from '~/shared/pipes/reverse.pipe';
 
 import { RESTComponent } from './rest.component';
 import { DialogEditComponent } from './components/dialog-edit.component';

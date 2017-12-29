@@ -8,7 +8,7 @@ import { CommonModule, Location, APP_BASE_HREF, LocationStrategy, PathLocationSt
 import { MatToolbarModule, MatSidenavModule, MatButtonModule, MatIconModule, MatCardModule } from '@angular/material';
 import { MobxAngularModule } from 'mobx-angular';
 
-import { NotFoundComponent } from './shared/components/not-found.component';
+import { NotFoundComponent } from '~/shared/components/not-found.component';
 
 import { AppComponent } from './app.component';
 import { AppStore } from './app.store';
