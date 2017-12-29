@@ -4,31 +4,56 @@
   right 0
   position fixed
   width 100%
+  z-index 10
 
-.title
-  margin-left .5rem
+  &-logo
+    width 2.5rem
+    height 2.5rem
+    outline none
+    cursor pointer
 
-.filling
-  padding-top 64px
+  &-title
+    margin-left .5rem
+    outline none
+    cursor pointer
 
-.category
-  font-size 10px
-  letter-spacing 1px
-  line-height 24px
-  text-transform uppercase
-  font-weight 400
-  margin 0
-  padding 0 16px
-  background rgba(0, 0, 0, .32)
-  color hsla(0, 0%, 100%, .87)
+.sidenav
+  width 240px
+  height 100vh
+  box-sizing border-box
+  box-shadow 3px 0 6px rgba(0, 0, 0, .24)
 
-.variety
-  list-style-type none
-  margin 0
-  padding 0
-  color rgba(0, 0, 0, .54)
+  &-filling
+    padding-top 64px
 
-  & > li
+  &-nav
+    margin 0
+    padding 0
+
+  &-content
+    height 100vh
+    display flex
+    flex-flow column
+
+  &-category
+    font-size 10px
+    letter-spacing 1px
+    line-height 24px
+    text-transform uppercase
+    font-weight 400
+    margin 0
+    padding 0 16px
+    background rgba(0, 0, 0, .32)
+    color hsla(0, 0%, 100%, .87)
+    font-family Roboto, 'Helvetica Neue', sans-serif
+
+  &-variety
+    list-style-type none
+    margin 0
+    padding 0
+    color rgba(0, 0, 0, .54)
+
+  &-link
     box-sizing border-box
     display block
     font-size 14px
@@ -41,62 +66,66 @@
     border-bottom-width 1px
     border-bottom-style solid
     border-color rgba(0, 0, 0, .06)
+    font-family Roboto, 'Helvetica Neue', sans-serif
 
-.enable
-  cursor pointer
-  outline none
-
-.disabled
-  color rgba(0, 0, 0, .2)
-  cursor not-allowed
-
-.content
-  height 100vh
-  display flex
-  flex-direction column
-
-.container
-  padding 1rem
-  flex 1 0 auto
-
-.plane
-  display flex
-  justify-content center
-
-  &__cards
-    display flex
-    flex-flow row wrap
-
-  &__card
-    width 12.5rem
-    margin 20px
+    &--enable
+      cursor pointer
+      outline none
 
     &--disabled
-      background-color rgba(0, 0, 0, .12)
-      color rgba(0, 0, 0, .38)
+      color rgba(0, 0, 0, .2)
       cursor not-allowed
 
-header
+.header
   background #3f51b5
-  font-family 'Roboto'
+  font-family Roboto, 'Helvetica Neue', sans-serif
   font-weight 300
   padding 28px
   font-size 20px
   box-sizing border-box
   color hsla(0, 0%, 100%, .87)
 
+.main
+  padding 1rem
+  flex 1 0 auto
+
+  &-nav
+    display flex
+    justify-content center
+
+  &-links
+    display flex
+    flex-flow row wrap
+
+  &-link
+    width 12.5rem
+    margin 20px
+    cursor pointer
+
+    &--disabled
+      background-color rgba(0, 0, 0, .12)
+      color rgba(0, 0, 0, .38)
+      cursor not-allowed
+
 .footer
   margin-top 40px
-  padding 12px
+  padding 18px
   font-size 12px
   background #3f51b5
   color hsla(0, 0%, 100%, .87)
   display flex
   flex-flow row
 
-  &__logo
+  &-logo
     width 50px
     height 50px
 
-  &__links
-    // ...
+  &-links
+    display flex
+    flex-flow row
+    align-self center
+    margin-left 1.5rem
+    font-family Roboto, 'Helvetica Neue', sans-serif
+
+  &-link
+    padding 12px
