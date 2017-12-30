@@ -47,10 +47,12 @@
     "@nestjs/testing": "4.4.1",
     "@nestjs/websockets": "4.4.1",
     "core-js": "2.5.2",
+    "cors": "2.8.4",
     "express": "4.16.2",
     "express-history-api-fallback": "2.2.1",
     "mobx": "3.4.1",
     "mobx-angular": "2.0.1",
+    "morgan": "1.9.0",
     "redis": "2.8.0",
     "rxjs": "5.5.5",
     "zone.js": "0.8.18"
