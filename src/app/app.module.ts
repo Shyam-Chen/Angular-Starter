@@ -17,6 +17,7 @@ export const ROUTES: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '' },
   { path: 'crud-operations', loadChildren: './crud-operations/crud-operations.module#CRUDOperationsModule' },
   { path: 'form-controls', loadChildren: './form-controls/form-controls.module#FormControlsModule' },
+  { path: 'data-table', loadChildren: './data-table/data-table.module#DataTableModule' },
   { path: 'playground', loadChildren: './playground/playground.module#PlaygroundModule' },
   { path: '**', component: NotFoundComponent }
 ];

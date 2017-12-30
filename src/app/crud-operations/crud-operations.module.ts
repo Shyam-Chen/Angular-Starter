@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MatButtonModule } from '@angular/material';
+import { MatCardModule } from '@angular/material';
 import { MobxAngularModule } from 'mobx-angular';
 
 import { CRUDOperationsComponent } from './crud-operations.component';
@@ -19,7 +19,7 @@ const ROUTES: Routes = [
 @NgModule({
   imports: [
     MobxAngularModule,
-    MatButtonModule,
+    MatCardModule,
     RouterModule.forChild(ROUTES)
   ],
   declarations: [

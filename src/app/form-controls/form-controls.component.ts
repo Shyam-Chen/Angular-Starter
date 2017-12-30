@@ -6,12 +6,16 @@ import { FormControlsStore } from './form-controls.store';
   selector: 'form-controls',
   template: `
     <div *mobxAutorun="{ dontDetach: true }">
-      <button mat-raised-button color="primary" routerLink="template-driven" routerLinkActive="active">Template-driven</button>
-      <button mat-raised-button color="primary" routerLink="reactive-forms" routerLinkActive="active">Reactive Forms</button>
+      <div class="ans-nav">
+        <div class="ans-nav__links">
+          <mat-card class="ans-nav__link" routerLink="template-driven">Template-driven</mat-card>
+          <mat-card class="ans-nav__link" routerLink="reactive-forms">Reactive Forms</mat-card>
+        </div>
+      </div>
     </div>
   `,
   styles: [``]
 })
 export class FormControlsComponent {
-  constructor(public formControls: FormControlsStore) {}
+  constructor(public $fc: FormControlsStore) {}
 }

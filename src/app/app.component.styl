@@ -5,8 +5,15 @@
   position fixed
   width 100%
   z-index 10
+  display flex
+  flex-flow row
 
   &-logo
+    display flex
+    flex-flow row
+    flex 1 0 auto
+
+  &-svg
     width 2.5rem
     height 2.5rem
     outline none
@@ -16,6 +23,11 @@
     margin-left .5rem
     outline none
     cursor pointer
+    align-self center
+
+  &-github
+    color #ffffff
+    text-decoration none
 
 .sidenav
   width 240px
@@ -29,6 +41,7 @@
   &-nav
     margin 0
     padding 0
+    padding-bottom 72px
 
   &-content
     height 100vh
@@ -67,10 +80,8 @@
     border-bottom-style solid
     border-color rgba(0, 0, 0, .06)
     font-family Roboto, 'Helvetica Neue', sans-serif
-
-    &--enable
-      cursor pointer
-      outline none
+    cursor pointer
+    outline none
 
     &--disabled
       color rgba(0, 0, 0, .2)
@@ -89,28 +100,9 @@
   padding 1rem
   flex 1 0 auto
 
-  &-nav
-    display flex
-    justify-content center
-
-  &-links
-    display flex
-    flex-flow row wrap
-
-  &-link
-    width 12.5rem
-    margin 20px
-    cursor pointer
-
-    &--disabled
-      background-color rgba(0, 0, 0, .12)
-      color rgba(0, 0, 0, .38)
-      cursor not-allowed
-
 .footer
   margin-top 40px
   padding 18px
-  font-size 12px
   background #3f51b5
   color hsla(0, 0%, 100%, .87)
   display flex

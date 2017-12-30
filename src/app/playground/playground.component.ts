@@ -6,10 +6,14 @@ import { PlaygroundStore } from './playground.store';
   selector: 'playground',
   template: `
     <div *mobxAutorun="{ dontDetach: true }">
-      <button mat-raised-button color="primary" routerLink="counter" routerLinkActive="active">Counter</button>
+      <div class="ans-nav">
+        <div class="ans-nav__links">
+          <mat-card class="ans-nav__link" routerLink="counter">Counter</mat-card>
+        </div>
+      </div>
     </div>
   `
 })
 export class PlaygroundComponent {
-  constructor(public $playground: PlaygroundStore) {}
+  constructor(public $p: PlaygroundStore) {}
 }

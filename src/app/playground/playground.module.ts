@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MatButtonModule } from '@angular/material';
+import { MatCardModule } from '@angular/material';
 import { MobxAngularModule } from 'mobx-angular';
 
 import { PlaygroundComponent } from './playground.component';
@@ -17,7 +17,7 @@ const ROUTES: Routes = [
 
 @NgModule({
   imports: [
-    MatButtonModule,
+    MatCardModule,
     MobxAngularModule,
     RouterModule.forChild(ROUTES)
   ],
