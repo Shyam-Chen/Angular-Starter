@@ -4,7 +4,7 @@ import { TextListController } from './text-list.controller';
 import { TextListStore } from './text-list.store';
 
 @Module({
-  modules: [],
+  imports: [],
   controllers: [TextListController],
   components: [TextListStore],
   exports: [TextListStore]

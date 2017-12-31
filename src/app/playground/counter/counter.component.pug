@@ -1,0 +1,8 @@
+div(*mobxAutorun='{ dontDetach: true }')
+  p Clicked: {{ counter.value }} times, value is {{ counter.evenOrOdd }}.
+  button(mat-raised-button (click)='counter.increment()') Increment
+  button(mat-raised-button (click)='counter.decrement()') Decrement
+  button(mat-raised-button (click)='counter.incrementAsync()') Increment (Async)
+  button(mat-raised-button (click)='counter.decrementAsync()') Decrement (Async)
+  button(mat-raised-button (click)='counter.incrementIfOdd()') Increment (If Odd)
+  button(mat-raised-button (click)='counter.decrementIfEven()') Decrement (If Even)
