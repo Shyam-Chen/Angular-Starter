@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { Location } from '@angular/common';
+
+import { AppStore } from './app.store';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +9,5 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
   styleUrls: ['./app.component.styl']
 })
 export class AppComponent {
-  public location: Location;
-
-  constructor(location: Location) {
-    this.location = location;
-  }
+  constructor(public $app: AppStore, public location: Location) {}
 }

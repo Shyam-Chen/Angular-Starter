@@ -46,6 +46,16 @@ export class CounterStore {
       .subscribe(() => this.decrement());
   }
 
+  @action
+  startCount() {
+
+  }
+
+  @action
+  cancelCount() {
+
+  }
+
   @computed
   get evenOrOdd(): string {
     return this.value % 2 === 0 ? 'even' : 'odd';
