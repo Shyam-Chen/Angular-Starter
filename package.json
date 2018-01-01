@@ -7,8 +7,8 @@
     "start:api": "nodemon src/main.server.ts --exec ts-node",
     "build:app": "cross-env BUILD_AOT=1 webpack --config config/webpack.prod.js  --progress --profile --bail",
     "build:api": "tsc",
-    "test:app": "cross-env TEST_ENV=APP jest \"src/app/.*\\.ts$\" --coverage --forceExit",
-    "test:api": "cross-env TEST_ENV=API jest \"src/api/.*\\.ts$\" --coverage --forceExit",
+    "test:app": "cross-env TEST_ENV=app jest \"src/app/.*\\.ts$\" --coverage --forceExit",
+    "test:api": "cross-env TEST_ENV=api jest \"src/api/.*\\.ts$\" --coverage --forceExit",
     "deploy": "firebase deploy",
     "codecov": "codecov"
   },
