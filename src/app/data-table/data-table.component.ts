@@ -8,7 +8,7 @@ import { DataTableStore } from './data-table.store';
     <div *mobxAutorun="{ dontDetach: true }">
       <div class="ans-nav">
         <div class="ans-nav__links">
-          <mat-card class="ans-nav__link ans-nav__link--disabled">Static</mat-card>
+          <mat-card class="ans-nav__link" routerLink="static">Static</mat-card>
           <mat-card class="ans-nav__link ans-nav__link--disabled">REST</mat-card>
           <mat-card class="ans-nav__link ans-nav__link--disabled">GraphQL</mat-card>
         </div>

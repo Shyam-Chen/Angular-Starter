@@ -10,8 +10,9 @@ const ROUTES: Routes = [
   {
     path: '', children: [
       { path: '', component: DataTableComponent },
-      // { path: 'static', loadChildren: './static/static.module#StaticModule' },
-      // { path: 'rest', loadChildren: './rest/rest.module#RESTModule' }
+      { path: 'static', loadChildren: '^/data-table/static/static.module#StaticModule' },
+      // { path: 'rest', loadChildren: './rest/rest.module#RESTModule' },
+      // { path: 'graphql', loadChildren: './graphql/graphql.module#GraphQLModule' }
     ]
   }
 ];
