@@ -1,4 +1,4 @@
-describe('Counter', () => {
+describe('CounterStore', () => {
   it('nice', () => {
 
   });

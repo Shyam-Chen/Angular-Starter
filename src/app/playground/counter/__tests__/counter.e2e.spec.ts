@@ -2,7 +2,7 @@ import puppeteer from 'puppeteer';
 
 import server from '../../../../e2e';
 
-describe('Counter', () => {
+describe('CounterE2E', () => {
   let page = null;
   let browser = null;
 

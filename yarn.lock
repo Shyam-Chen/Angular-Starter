@@ -185,7 +185,7 @@
     iterare "0.0.8"
     optional "0.1.4"
 
-"@nestjs/microservices@4.5.4":
+"@nestjs/microservices@4.5.3":
   version "4.5.3"
   resolved "https://registry.yarnpkg.com/@nestjs/microservices/-/microservices-4.5.3.tgz#99739a311e5eca31bd64cf9d841064e1b8f950d1"
   dependencies:
@@ -204,7 +204,7 @@
   dependencies:
     optional "0.1.4"
 
-"@nestjs/websockets@4.5.4":
+"@nestjs/websockets@4.5.3":
   version "4.5.3"
   resolved "https://registry.yarnpkg.com/@nestjs/websockets/-/websockets-4.5.3.tgz#304d939e01327e8d09154e8f0d6a02923b676ef2"
   dependencies:
@@ -312,6 +312,10 @@
 "@types/hammerjs@2.0.35":
   version "2.0.35"
   resolved "https://registry.yarnpkg.com/@types/hammerjs/-/hammerjs-2.0.35.tgz#7b7c950c7d54593e23bffc8d2b4feba9866a7277"
+
+"@types/jest@22.0.0":
+  version "22.0.0"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-22.0.0.tgz#23009941178aad7979a9591e026f7a96054d7bc0"
 
 "@types/long@^3.0.32":
   version "3.0.32"
