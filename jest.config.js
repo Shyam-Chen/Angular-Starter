@@ -13,7 +13,11 @@ switch (process.env.TEST_ENV) {
     break;
   case 'api':
     module.exports = {
-
+      transform: {
+        '^.+\\.tsx?$': 'ts-jest'
+      },
+      testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
+      moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node']
     };
     break;
   default:

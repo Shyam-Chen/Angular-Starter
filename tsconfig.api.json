@@ -35,7 +35,8 @@
     "src/e2e.ts",
     "src/main.browser.ts",
     "src/polyfills.browser.ts",
-    "src/test.ts"
+    "src/test.ts",
+    "src/**/*.spec.ts"
   ],
   "compileOnSave": false,
   "buildOnSave": false,
