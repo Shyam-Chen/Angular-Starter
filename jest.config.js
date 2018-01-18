@@ -5,7 +5,7 @@ switch (process.env.TEST_ENV) {
       setupTestFrameworkScriptFile: '<rootDir>/src/test.ts',
       globals: {
         'ts-jest': {
-          'tsConfigFile': 'tsconfig.spec.json'
+          'tsConfigFile': 'tsconfig.app.json'
         },
         __TRANSFORM_HTML__: true
       }
