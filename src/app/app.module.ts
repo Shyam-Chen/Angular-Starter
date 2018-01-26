@@ -1,11 +1,11 @@
 import '../styles/styles.scss';
 
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { CommonModule, Location, APP_BASE_HREF, LocationStrategy, PathLocationStrategy } from '@angular/common';
-import { MatToolbarModule, MatSidenavModule, MatButtonModule, MatIconModule, MatCardModule } from '@angular/material';
+import { MatToolbarModule, MatSidenavModule, MatButtonModule, MatIconModule, MatCardModule, GestureConfig } from '@angular/material';
 import { MobxAngularModule } from 'mobx-angular';
 
 import { NotFoundComponent } from '~/shared/components/not-found.component';
@@ -43,6 +43,7 @@ export const ROUTES: Routes = [
     Location,
     { provide: APP_BASE_HREF, useValue: '/' },
     { provide: LocationStrategy, useClass: PathLocationStrategy },
+    { provide: HAMMER_GESTURE_CONFIG, useClass: GestureConfig },
     AppStore
   ],
   bootstrap: [AppComponent]
