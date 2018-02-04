@@ -3,11 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material';
 import { MobxAngularModule } from 'mobx-angular';
 
-import { ReactiveFormsComponent } from './reactive-forms.component';
-import { ReactiveFormsStore } from './reactive-forms.store';
+import { ReactiveComponent } from './reactive.component';
+import { ReactiveStore } from './reactive.store';
 
 const ROUTES: Routes = [
-  { path: '', component: ReactiveFormsComponent }
+  { path: '', component: ReactiveComponent }
 ];
 
 @NgModule({
@@ -16,7 +16,7 @@ const ROUTES: Routes = [
     MatButtonModule,
     RouterModule.forChild(ROUTES)
   ],
-  declarations: [ReactiveFormsComponent],
-  providers: [ReactiveFormsStore]
+  declarations: [ReactiveComponent],
+  providers: [ReactiveStore]
 })
-export class ReactiveFormsModule {}
+export class ReactiveModule {}

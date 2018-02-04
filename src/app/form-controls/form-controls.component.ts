@@ -9,7 +9,7 @@ import { FormControlsStore } from './form-controls.store';
       <div class="ans-nav">
         <div class="ans-nav__links">
           <mat-card class="ans-nav__link" routerLink="template-driven">Template-driven</mat-card>
-          <mat-card class="ans-nav__link" routerLink="reactive-forms">Reactive Forms</mat-card>
+          <mat-card class="ans-nav__link" routerLink="reactive">Reactive</mat-card>
         </div>
       </div>
     </div>

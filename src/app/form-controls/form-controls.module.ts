@@ -12,7 +12,7 @@ const ROUTES: Routes = [
     path: '', children: [
       { path: '', component: FormControlsComponent },
       { path: 'template-driven', loadChildren: './template-driven/template-driven.module#TemplateDrivenModule' },
-      { path: 'reactive-forms', loadChildren: './reactive-forms/reactive-forms.module#ReactiveFormsModule' }
+      { path: 'reactive', loadChildren: './reactive/reactive.module#ReactiveModule' }
     ]
   }
 ];
