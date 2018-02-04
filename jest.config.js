@@ -11,6 +11,7 @@ switch (process.env.TEST_ENV) {
       }
     };
     break;
+
   case 'api':
     module.exports = {
       transform: {
@@ -20,6 +21,7 @@ switch (process.env.TEST_ENV) {
       moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node']
     };
     break;
+
   default:
     module.exports = {};
 }

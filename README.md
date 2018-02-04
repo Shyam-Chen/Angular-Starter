@@ -79,12 +79,13 @@ $ yarn test:api
   * [ ] Canvas (`d3`)
   * [ ] WebGL (`three`)
 * [ ] Realtime
-  * [ ] WebSockets
-  * [ ] GraphQL Subscriptions
+  * [ ] Socket.IO (`socket.io`)
+  * [ ] GraphQL Subscriptions (`graphql-subscriptions`)
 * [ ] Playground
   * [x] Counter
-    * [x] State Management (`mobx`, `mobx-angular`)
+    * [x] State Management (`mobx`)
     * [x] Asynchronous
       * [x] Thunk
       * [x] Observable (`rxjs`)
+  * [ ] QR Code
   * [ ] ...
