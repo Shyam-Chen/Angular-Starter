@@ -5,7 +5,7 @@ jobs:
     docker:
       - image: circleci/node:8
 
-    working_directory: ~/Angular-FullStarter-Kit
+    working_directory: ~/Angular-Nest-Starter
 
     branches:
       only:
@@ -17,31 +17,35 @@ jobs:
       - setup_remote_docker
 
       - run:
-          name: Build the image
+          name: Start up containers
           command: docker-compose up -d
 
       - run:
-          name: Build the application
-          command: |
-            docker-compose exec app yarn build:app
-            docker-compose exec app yarn build:api
+          name: Build the app
+          command: docker-compose exec app yarn build:app
 
       - run:
-          name: Test the application
+          name: Build the api
+          command: docker-compose exec app yarn build:api
+
+      - run:
+          name: Test the app
           command: |
             docker-compose exec app yarn test:app
-            # docker-compose exec app yarn test:app
+            docker-compose exec app yarn codecov -- --token=${CODECOV_TOKEN}
 
-      - run:
-          name: Test coverage integration
-          command: docker-compose exec app yarn codecov -- --token=${CODECOV_TOKEN}
+      # - run:
+      #     name: Test the api
+      #     command: |
+      #       docker-compose exec app yarn test:app
+      #       docker-compose exec app yarn codecov -- --token=${CODECOV_TOKEN}
 
       - deploy:
-          name: Deploy to Firebase
+          name: Deploy the app
           command: docker-compose exec app yarn deploy -- --token ${FIREBASE_TOKEN}
 
       # - deploy:
-      #     name: Deploy to Heroku
+      #     name: Deploy the api
       #     command: |
       #       docker login -u="Shyam Chen" -p="${HEROKU_TOKEN}" registry.heroku.com
       #       docker build -f Dockerfile.prod -t registry.heroku.com/nest-by-example/web .
