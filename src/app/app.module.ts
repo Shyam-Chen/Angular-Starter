@@ -1,4 +1,4 @@
-import '../styles/styles.scss';
+import '../assets/styles/global.scss';
 
 import { NgModule } from '@angular/core';
 import { BrowserModule, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';

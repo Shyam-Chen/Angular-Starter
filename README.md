@@ -1,6 +1,6 @@
 # Angular Nest Starter
 
-A boilerplate for Angular, Nest, TypeScript, and ReactiveX.
+:tiger: A boilerplate for Angular, Material, Nest, Express, TypeScript, and ReactiveX.
 
 [![Build Status](https://img.shields.io/circleci/project/Shyam-Chen/Angular-Nest-Starter/master.svg)](https://circleci.com/gh/Shyam-Chen/Angular-Nest-Starter)
 [![Coverage Status](https://img.shields.io/codecov/c/github/Shyam-Chen/Angular-Nest-Starter/master.svg)](https://codecov.io/gh/Shyam-Chen/Angular-Nest-Starter)

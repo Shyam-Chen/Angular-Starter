@@ -112,7 +112,7 @@ module.exports = function (options) {
         {
           test: /\.css$/,
           use: ['to-string-loader', 'css-loader'],
-          exclude: [helpers.root('src', 'styles')]
+          exclude: [helpers.root('src', 'assets', 'styles')]
         },
 
         /**
@@ -123,13 +123,13 @@ module.exports = function (options) {
         {
           test: /\.scss$/,
           use: ['to-string-loader', 'css-loader', 'sass-loader'],
-          exclude: [helpers.root('src', 'styles')]
+          exclude: [helpers.root('src', 'assets', 'styles')]
         },
 
         {
           test: /\.styl$/,
           use: ['to-string-loader', 'css-loader', 'stylus-loader'],
-          exclude: [helpers.root('src', 'styles')]
+          exclude: [helpers.root('src', 'assets', 'styles')]
         },
 
         /**

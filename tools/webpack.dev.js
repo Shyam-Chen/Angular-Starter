@@ -87,7 +87,7 @@ module.exports = function (options) {
         {
           test: /\.css$/,
           use: ['style-loader', 'css-loader'],
-          include: [helpers.root('src', 'styles')]
+          include: [helpers.root('src', 'assets', 'styles')]
         },
 
         /**
@@ -98,7 +98,7 @@ module.exports = function (options) {
         {
           test: /\.scss$/,
           use: ['style-loader', 'css-loader', 'sass-loader'],
-          include: [helpers.root('src', 'styles')]
+          include: [helpers.root('src', 'assets', 'styles')]
         },
 
       ]

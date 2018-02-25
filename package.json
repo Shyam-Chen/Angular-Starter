@@ -1,11 +1,11 @@
 {
   "name": "Angular-Nest-Starter",
   "version": "1.0.0",
-  "description": "A boilerplate for Angular, Nest, TypeScript, and ReactiveX.",
+  "description": "A boilerplate for Angular, Material, Nest, Express, TypeScript, and ReactiveX.",
   "scripts": {
-    "start:app": "webpack-dev-server --config config/webpack.dev.js --progress --profile --watch --content-base src/",
+    "start:app": "webpack-dev-server --config tools/webpack.dev.js --progress --profile --watch --content-base src/",
     "start:api": "concurrently \"tsc -w -p tsconfig.api.json\" \"nodemon dist/main.server.js\"",
-    "build:app": "cross-env BUILD_AOT=1 webpack --config config/webpack.prod.js --progress --profile --bail",
+    "build:app": "cross-env BUILD_AOT=1 webpack --config tools/webpack.prod.js --progress --profile --bail",
     "build:api": "tsc -p tsconfig.api.json",
     "test:app": "cross-env TEST_ENV=app jest \"src/app/.*\\.ts$\" --coverage --forceExit",
     "test:api": "cross-env TEST_ENV=api jest \"src/api/.*\\.ts$\" --coverage --forceExit",
@@ -18,9 +18,7 @@
   },
   "keywords": [
     "Angular",
-    "Nest",
-    "TypeScript",
-    "ReactiveX"
+    "Nest"
   ],
   "author": "Yen-cheng Chen, 陳彥澄",
   "license": "MIT",
