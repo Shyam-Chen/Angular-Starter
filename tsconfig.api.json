@@ -24,7 +24,7 @@
   },
   "exclude": [
     "node_modules",
-    "config",
+    "tools",
     "coverage",
     "dist",
     "jest.config.js",
