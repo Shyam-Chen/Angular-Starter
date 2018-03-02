@@ -6,7 +6,7 @@ import { List } from './rest.model';
 
 @Injectable()
 export class RESTStore {
-  readonly API_LIST = 'https://web-go-demo.herokuapp.com/__/list';
+  readonly API_LIST = 'https://web-go-demo.herokuapp.com/__/text-list';
 
   constructor(private http: HttpClient) {}
 
