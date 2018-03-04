@@ -12,12 +12,12 @@ export class CounterStore {
 
   @action
   increment(): void {
-    this.value++;
+    this.value += 1;
   }
 
   @action
   decrement(): void {
-    this.value--;
+    this.value -= 1;
   }
 
   @action

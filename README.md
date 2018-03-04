@@ -60,17 +60,17 @@ $ yarn test:api
 * [ ] CRUD Operations
   * [x] Static
   * [x] REST
-  * [ ] GraphQL
+  * [ ] GraphQL (`apollo-angular`)
 * [ ] Form Controls
   * [x] Template-driven
-  * [ ] Reactive Forms
+  * [ ] Reactive (`rxjs`)
 * [ ] Data Table
   * [x] Static
   * [ ] REST
-  * [ ] GraphQL
+  * [ ] GraphQL (`apollo-angular`)
 * [ ] Globalization
-  * [ ] Internationalization
-  * [ ] Localization
+  * [ ] Internationalization (`ngx-translate`)
+  * [ ] Localization (`localize-router`)
 * [ ] Authorization
   * [ ] REST
   * [ ] GraphQL
