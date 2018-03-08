@@ -3,6 +3,10 @@ switch (process.env.TEST_ENV) {
     module.exports = {
       preset: 'jest-preset-angular',
       setupTestFrameworkScriptFile: '<rootDir>/src/test.ts',
+      transform: {
+        '^.+\\.(ts)$': '<rootDir>/node_modules/jest-preset-angular/preprocessor.js',
+        '\\.(pug)$': '<rootDir>/node_modules/pug-jest'
+      },
       globals: {
         'ts-jest': {
           'tsConfigFile': 'tsconfig.app.json'
