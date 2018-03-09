@@ -9,8 +9,8 @@
     "build:api": "tsc -p tsconfig.api.json",
     "test:app": "cross-env TEST_ENV=app jest \"src/app/.*\\.ts$\" --coverage --forceExit",
     "test:api": "cross-env TEST_ENV=api jest \"src/api/.*\\.ts$\" --coverage --forceExit",
-    "deploy": "firebase deploy",
-    "codecov": "codecov"
+    "codecov": "codecov",
+    "firebase": "firebase"
   },
   "repository": {
     "type": "git",

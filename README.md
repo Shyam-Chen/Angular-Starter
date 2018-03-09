@@ -8,7 +8,7 @@
 [![dependencies Status](https://david-dm.org/Shyam-Chen/Angular-Nest-Starter/status.svg)](https://david-dm.org/Shyam-Chen/Angular-Nest-Starter)
 [![devDependencies Status](https://david-dm.org/Shyam-Chen/Angular-Nest-Starter/dev-status.svg)](https://david-dm.org/Shyam-Chen/Angular-Nest-Starter?type=dev)
 
-[Live Demo](https://angular-by-example.firebaseapp.com/)
+[Live Demo (Firebase)](https://angular-by-example.firebaseapp.com/) | Live Demo (Heroku)
 
 ## Getting Started
 
