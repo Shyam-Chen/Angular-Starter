@@ -7,20 +7,16 @@ import { CounterComponent } from './counter.component';
 import { CounterStore } from './counter.store';
 
 const ROUTES: Routes = [
-  { path: '', component: CounterComponent }
+  { path: '', component: CounterComponent },
 ];
 
 @NgModule({
   imports: [
     MobxAngularModule,
     MatButtonModule,
-    RouterModule.forChild(ROUTES)
+    RouterModule.forChild(ROUTES),
   ],
-  declarations: [
-    CounterComponent
-  ],
-  providers: [
-    CounterStore
-  ]
+  declarations: [CounterComponent],
+  providers: [CounterStore],
 })
 export class CounterModule {}

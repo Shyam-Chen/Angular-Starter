@@ -19,7 +19,7 @@ export const ROUTES: Routes = [
   { path: 'form-controls', loadChildren: './form-controls/form-controls.module#FormControlsModule' },
   { path: 'data-table', loadChildren: './data-table/data-table.module#DataTableModule' },
   { path: 'playground', loadChildren: './playground/playground.module#PlaygroundModule' },
-  { path: '**', component: NotFoundComponent }
+  { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({
@@ -33,19 +33,19 @@ export const ROUTES: Routes = [
     MatIconModule,
     MatCardModule,
     MobxAngularModule,
-    RouterModule.forRoot(ROUTES, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(ROUTES, { preloadingStrategy: PreloadAllModules }),
   ],
   declarations: [
     AppComponent,
-    NotFoundComponent
+    NotFoundComponent,
   ],
   providers: [
     Location,
     { provide: APP_BASE_HREF, useValue: '/' },
     { provide: LocationStrategy, useClass: PathLocationStrategy },
     { provide: HAMMER_GESTURE_CONFIG, useClass: GestureConfig },
-    AppStore
+    AppStore,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -8,7 +8,7 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class CounterStore {
-  @observable value: number = 0;
+  @observable value = 0;
 
   @action
   increment(): void {
