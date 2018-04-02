@@ -5,40 +5,21 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const envify = require('process-envify');
+
+const SOURCE_ROOT = path.join(__dirname, 'src');
+const DIST_ROOT = path.join(__dirname, 'public');
 
 module.exports = ({ prod = false } = {}) => ({
-  cache: true,
-  context: __dirname,
-  devServer: {
-    contentBase: path.join(__dirname, 'build'),
-    historyApiFallback: true,
-    stats: {
-      chunks: false,
-      chunkModules: false,
-      chunkOrigins: false,
-      errors: true,
-      errorDetails: false,
-      hash: false,
-      timings: false,
-      modules: false,
-      warnings: false
-    },
-    port: 8000
-  },
-  devtool: 'sourcemap',
+  context: SOURCE_ROOT,
   entry: {
-    app: './src/client.ts'
+    client: './client.js',
   },
   output: {
-    path: path.join(__dirname, 'build'),
-    filename: '[name].[hash].js'
-  },
-  node: {
-    console: false,
-    global: true,
-    process: true,
-    Buffer: false,
-    setImmediate: false
+    path: DIST_ROOT,
+    filename: prod ? '[name].[hash].js' : '[name].js',
+    chunkFilename: prod ? '[id].[chunkhash].js' : '[name].js',
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -92,39 +73,72 @@ module.exports = ({ prod = false } = {}) => ({
     ].filter(Boolean)
   },
   resolve: {
-    extensions: ['.ts', '.js'],
+    extensions: ['.js', '.ts'],
     modules: [
       'src',
-      'node_modules'
-    ]
+      'node_modules',
+    ],
   },
   plugins: [
-    new HtmlWebpackPlugin({
+    new HtmlPlugin({
       filename: 'index.html',
-      template: 'src/index.html'
+      template: 'index.html',
+      inject: true,
+      minify: prod && {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeAttributeQuotes: true,
+      },
+      chunksSortMode: prod ? 'dependency' : 'auto',
     }),
-    new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-      }
+    new CopyPlugin([
+      {
+        from: 'assets/**/*',
+        to: DIST_ROOT,
+        ignore: ['assets/styles/**/*'],
+      },
+    ]),
+    new webpack.DefinePlugin(envify(env)),
+
+    !prod && new webpack.HotModuleReplacementPlugin(),
+    !prod && new webpack.NamedModulesPlugin(),
+    !prod && new webpack.NoEmitOnErrorsPlugin(),
+
+    prod && new UglifyJSPlugin({
+      uglifyOptions: {
+        compress: {
+          warnings: false,
+        },
+      },
+      sourceMap: true,
+      parallel: true,
     }),
-    new webpack.optimize.CommonsChunkPlugin({
+    prod && new webpack.HashedModuleIdsPlugin(),
+    prod && new webpack.optimize.ModuleConcatenationPlugin(),
+    prod && new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
-      minChunks: module => module.context && /node_modules/.test(module.context)
+      minChunks(module) {
+        return (
+          module.resource &&
+          /\.js$/.test(module.resource) &&
+          module.resource.indexOf(path.join(__dirname, 'node_modules')) === 0
+        );
+      },
     }),
+    prod && new webpack.optimize.CommonsChunkPlugin({
+      name: 'manifest',
+      minChunks: Infinity,
+    }),
+    prod && new webpack.optimize.CommonsChunkPlugin({
+      name: 'app',
+      async: 'vendor-async',
+      children: true,
+      minChunks: 3,
+    }),
+    prod && new RobotstxtPlugin(),
     prod && new AngularCompilerPlugin({
       tsConfigPath: 'tsconfig.json',
       entryModule: 'src/app/app.module#AppModule'
     }),
-    prod && new webpack.LoaderOptionsPlugin({
-      minimize: true,
-      debug: false
-    }),
-    prod && new webpack.optimize.UglifyJsPlugin({ sourceMap: false }),
-    !prod && new webpack.NamedModulesPlugin(),
-    !prod && new webpack.ContextReplacementPlugin(
-      /angular(\\|\/)core(\\|\/)@angular/,
-      path.resolve(__dirname, 'notfound')
-    )
   ].filter(Boolean)
 });
