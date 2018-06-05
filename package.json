@@ -7,8 +7,12 @@
     "start:api": "concurrently \"tsc -w -p tsconfig.api.json\" \"nodemon dist/main.server.js\"",
     "build:app": "cross-env BUILD_AOT=1 webpack --config tools/webpack.prod.js --progress --profile --bail",
     "build:api": "tsc -p tsconfig.api.json",
+    "lint:js": "echo \"TODO\"",
+    "lint:css": "echo \"TODO\"",
     "test:app": "cross-env TEST_ENV=app jest \"src/app/.*\\.ts$\" --coverage --forceExit",
     "test:api": "cross-env TEST_ENV=api jest \"src/api/.*\\.ts$\" --coverage --forceExit",
+    "e2e:app": "echo \"TODO\"",
+    "e2e:api": "echo \"TODO\"",
     "codecov": "codecov",
     "firebase": "firebase"
   },

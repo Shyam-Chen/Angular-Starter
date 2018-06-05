@@ -8,7 +8,7 @@
 [![dependencies Status](https://david-dm.org/Shyam-Chen/Angular-Nest-Starter/status.svg)](https://david-dm.org/Shyam-Chen/Angular-Nest-Starter)
 [![devDependencies Status](https://david-dm.org/Shyam-Chen/Angular-Nest-Starter/dev-status.svg)](https://david-dm.org/Shyam-Chen/Angular-Nest-Starter?type=dev)
 
-[Live Demo (Firebase)](https://angular-by-example.firebaseapp.com/) | Live Demo (Heroku)
+[Live Demo](https://angular-by-example.firebaseapp.com/)
 
 ## Getting Started
 
@@ -54,38 +54,3 @@ $ yarn test:app
 # back-end
 $ yarn test:api
 ```
-
-## Practical Examples
-
-* [ ] CRUD Operations
-  * [x] Static
-  * [x] REST
-  * [ ] GraphQL (`apollo-angular`)
-* [ ] Form Controls
-  * [x] Template-driven
-  * [ ] Reactive (`rxjs`)
-* [ ] Data Table
-  * [x] Static
-  * [ ] REST
-  * [ ] GraphQL (`apollo-angular`)
-* [ ] Globalization
-  * [ ] Internationalization (`ngx-translate`)
-  * [ ] Localization (`localize-router`)
-* [ ] Authorization
-  * [ ] REST
-  * [ ] GraphQL
-* [ ] Data Chart
-  * [ ] SVG (`d3`)
-  * [ ] Canvas (`d3`)
-  * [ ] WebGL (`three`)
-* [ ] Realtime
-  * [ ] Socket.IO (`socket.io`)
-  * [ ] GraphQL Subscriptions (`graphql-subscriptions`)
-* [ ] Playground
-  * [x] Counter
-    * [x] State Management (`mobx`)
-    * [x] Asynchronous
-      * [x] Thunk
-      * [x] Observable (`rxjs`)
-  * [ ] QR Code
-  * [ ] ...

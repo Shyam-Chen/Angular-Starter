@@ -22,8 +22,8 @@ export class RESTStore {
     this.loading = true;
     this.http
       .get<List[]>(text ? `${this.API_LIST}?text=${text}` : this.API_LIST)
-      .subscribe(data => {
-        this.dataset = data;
+      .subscribe((res: any) => {
+        this.dataset = res.data;
         this.searchData.text = '';
         this.loading = false;
       });
