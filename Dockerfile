@@ -1,6 +1,6 @@
 FROM buildpack-deps:jessie
 
-ENV HOME /Angular-FullStarter-Kit
+ENV HOME /AngularNest-Fullstack-Starter
 
 WORKDIR ${HOME}
 ADD . $HOME

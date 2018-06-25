@@ -1,14 +1,14 @@
 {
-  "name": "Angular-Nest-Starter",
+  "name": "AngularNest-Fullstack-Starter",
   "version": "1.0.0",
-  "description": "A boilerplate for Angular, Material, Nest, Express, TypeScript, and ReactiveX.",
+  "description": "A boilerplate for Angular, Nest, Material, Express, TypeScript, and ReactiveX.",
   "scripts": {
     "start:app": "webpack-dev-server --config tools/webpack.dev.js --progress --profile --watch --content-base src/",
     "start:api": "concurrently \"tsc -w -p tsconfig.api.json\" \"nodemon dist/main.server.js\"",
     "build:app": "cross-env BUILD_AOT=1 webpack --config tools/webpack.prod.js --progress --profile --bail",
     "build:api": "tsc -p tsconfig.api.json",
-    "lint:js": "echo \"TODO\"",
-    "lint:css": "echo \"TODO\"",
+    "lint:app": "echo \"TODO\"",
+    "lint:api": "echo \"TODO\"",
     "test:app": "cross-env TEST_ENV=app jest \"src/app/.*\\.ts$\" --coverage --forceExit",
     "test:api": "cross-env TEST_ENV=api jest \"src/api/.*\\.ts$\" --coverage --forceExit",
     "e2e:app": "echo \"TODO\"",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Shyam-Chen/Angular-Nest-Starter.git"
+    "url": "git+https://github.com/Shyam-Chen/AngularNest-Fullstack-Starter.git"
   },
   "keywords": [
     "Angular",
@@ -27,9 +27,9 @@
   "author": "Yen-cheng Chen, 陳彥澄",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Shyam-Chen/Angular-Nest-Starter/issues"
+    "url": "https://github.com/Shyam-Chen/AngularNest-Fullstack-Starter/issues"
   },
-  "homepage": "https://github.com/Shyam-Chen/Angular-Nest-Starter#readme",
+  "homepage": "https://github.com/Shyam-Chen/AngularNest-Fullstack-Starter#readme",
   "dependencies": {
     "@angular/animations": "5.2.0",
     "@angular/cdk": "5.0.4",

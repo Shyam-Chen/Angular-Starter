@@ -5,7 +5,7 @@ jobs:
     docker:
       - image: circleci/node:8
 
-    working_directory: ~/Angular-Nest-Starter
+    working_directory: ~/AngularNest-Fullstack-Starter
 
     branches:
       only:
