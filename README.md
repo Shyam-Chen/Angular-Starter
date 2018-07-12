@@ -12,6 +12,8 @@
 
 ## Getting Started
 
+Follow steps to execute this boilerplate.
+
 1. Clone this Boilerplate
 
 ```bash
@@ -19,13 +21,19 @@ $ git clone --depth 1 https://github.com/Shyam-Chen/AngularNest-Fullstack-Starte
 $ cd <PROJECT_NAME>
 ```
 
-2. Install Dependencies
+2. Install dependencies
 
 ```bash
 $ yarn install
 ```
 
-3. Run the Application
+3. Set an active project for working direct
+
+```bash
+$ yarn firebase use development
+```
+
+4. Start a local server
 
 ```bash
 # front-end
@@ -35,7 +43,7 @@ $ yarn start:app
 $ yarn start:api
 ```
 
-4. Build the Application
+5. Compile and bundle code
 
 ```bash
 # front-end
@@ -45,7 +53,17 @@ $ yarn build:app
 $ yarn build:api
 ```
 
-5. Test the Application
+6. Check the code quality (Not yet)
+
+```bash
+# front-end
+$ yarn lint:app
+
+# back-end
+$ yarn lint:api
+```
+
+7. Run the unit tests (Not yet)
 
 ```bash
 # front-end
@@ -53,4 +71,14 @@ $ yarn test:app
 
 # back-end
 $ yarn test:api
+```
+
+8. Run the end-to-end tests (Not yet)
+
+```bash
+# front-end
+$ yarn e2e:app
+
+# back-end
+$ yarn e2e:api
 ```

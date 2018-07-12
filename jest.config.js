@@ -1,17 +1,16 @@
-switch (process.env.TEST_ENV) {
+switch (process.env.JEST_ENV) {
   case 'app':
     module.exports = {
       preset: 'jest-preset-angular',
       setupTestFrameworkScriptFile: '<rootDir>/tools/setup-app.ts',
       transform: {
         '^.+\\.(ts)$': '<rootDir>/node_modules/jest-preset-angular/preprocessor.js',
-        '\\.(pug)$': '<rootDir>/node_modules/pug-jest'
       },
       globals: {
         'ts-jest': {
-          'tsConfigFile': 'tsconfig.app.json'
+          'tsConfigFile': 'tsconfig.app.json',
         },
-        __TRANSFORM_HTML__: true
+        __TRANSFORM_HTML__: true,
       }
     };
     break;
@@ -19,10 +18,23 @@ switch (process.env.TEST_ENV) {
   case 'api':
     module.exports = {
       transform: {
-        '^.+\\.tsx?$': 'ts-jest'
+        '^.+\\.ts$': 'ts-jest',
       },
       testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
-      moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node']
+      moduleFileExtensions: ['ts', 'js', 'json', 'node'],
+    };
+    break;
+
+  case 'e2e':
+    module.exports = {
+      setupTestFrameworkScriptFile: '<rootDir>/tools/setup-e2e.ts',
+      testPathIgnorePatterns: [
+        '<rootDir>/node_modules/',
+        '.*\\.spec.ts$',
+      ],
+      transform: {
+        '^.+\\.ts$': 'ts-jest',
+      },
     };
     break;
 
