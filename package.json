@@ -4,7 +4,7 @@
   "description": "A boilerplate for Angular, Nest, Material, Express, TypeScript, and ReactiveX.",
   "scripts": {
     "start:app": "rimraf public && webpack-dev-server --progress",
-    "start:api": "concurrently \"tsc -w -p tsconfig.api.json\" \"nodemon functions/server.js\"",
+    "start:api": "rimraf functions && tsc -p tsconfig.api.json && concurrently \"tsc -w -p tsconfig.api.json\" \"nodemon functions/server.js\"",
     "build:app": "rimraf public && webpack --env.prod",
     "build:api": "tsc -p tsconfig.api.json",
     "lint:app": "echo \"TODO\"",
