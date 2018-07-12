@@ -38,20 +38,21 @@ module.exports = ({ prod = false } = {}) => ({
       {
         test: /\.css$/,
         use: [
-          'style-loader',
+          'to-string-loader',
           { loader: 'css-loader', options: { importLoaders: 1 } },
-          // { loader: 'postcss-loader', options: { sourceMap: true } },
+          { loader: 'postcss-loader', options: { sourceMap: true } },
         ],
-        exclude: [path.join(SOURCE_ROOT, 'app')]
+        include: [path.join(SOURCE_ROOT, 'app')],
+        exclude: [path.join(SOURCE_ROOT, 'assets')],
       },
       {
         test: /\.css$/,
         use: [
-          'to-string-loader',
+          'style-loader',
           { loader: 'css-loader', options: { importLoaders: 1 } },
-          // { loader: 'postcss-loader', options: { sourceMap: true } },
+          { loader: 'postcss-loader', options: { sourceMap: true } },
         ],
-        exclude: [path.join(SOURCE_ROOT, 'assets/styles')],
+        exclude: [path.join(SOURCE_ROOT, 'app')],
       },
       {
         test: /\.html$/,
