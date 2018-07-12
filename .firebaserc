@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "angular-by-example"
+    "development": "angularnest-by-example",
+    "production": "angularnest-by-example"
   }
 }

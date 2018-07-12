@@ -1,46 +1,15 @@
 {
+  "extends": "./tsconfig.json",
   "compilerOptions": {
+    "outDir": "./functions",
     "module": "commonjs",
-    "declaration": false,
-    "noImplicitAny": false,
-    "removeComments": true,
-    "lib": [
-      "es6"
-    ],
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "target": "es6",
-    "sourceMap": true,
-    "allowJs": true,
-    "baseUrl": "./src",
-    "paths": {},
-    "outDir": "./dist",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "types": [
-      "node"
-    ]
+    "types": []
   },
   "exclude": [
-    "node_modules",
-    "tools",
-    "coverage",
-    "dist",
-    "jest.config.js",
-    "webpack.config.archived.js",
-    "webpack.config.js",
+    "src/client.ts",
     "src/app",
-    "src/environments",
-    "src/e2e.ts",
-    "src/main.browser.ts",
-    "src/polyfills.browser.ts",
-    "src/test.ts",
-    "src/**/*.spec.ts"
-  ],
-  "compileOnSave": false,
-  "buildOnSave": false,
-  "atom": {
-    "rewriteTsconfig": false
-  }
+    "**/*.spec.ts",
+    "**/*.spec-e2e.ts",
+    "tools"
+  ]
 }

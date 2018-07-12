@@ -1,5 +1,0 @@
-describe('CounterStore', () => {
-  it('nice', () => {
-
-  });
-});

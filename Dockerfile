@@ -1,20 +1,9 @@
-FROM buildpack-deps:jessie
+FROM node:8
 
 ENV HOME /AngularNest-Fullstack-Starter
 
 WORKDIR ${HOME}
 ADD . $HOME
-
-# node --
-ENV NODE 8
-
-RUN \
-  curl -sL https://deb.nodesource.com/setup_$NODE.x | bash - && \
-  curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
-  echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
-  apt-get update && \
-  apt-get install -y nodejs yarn
-# -- node
 
 # chrome --
 ENV CHROME_BIN /usr/bin/chromium
@@ -43,4 +32,4 @@ RUN \
 
 RUN yarn install
 
-EXPOSE 8000 8080
+EXPOSE 8000 5000

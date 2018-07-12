@@ -3,7 +3,5 @@
     "tslint-config-airbnb",
     "tslint-angular"
   ],
-  "rules": {
-
-  }
+  "rules": {}
 }

@@ -1,10 +1,36 @@
-version: "2"
+version: "3"
 
 services:
 
-  app:
-    build: .
+  default:
+    image: default
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "8000:8000"
-      - "8080:8080"
+      - "5000:5000"
+    volumes:
+      - yarn:/home/node/.cache/yarn
     tty: true
+
+  # dev:
+  #   image: dev
+  #   build:
+  #     context: .
+  #     dockerfile: tools/Dockerfile.dev
+  #   volumes:
+  #     - yarn:/home/node/.cache/yarn
+  #   tty: true
+
+  # prod:
+  #   image: prod
+  #   build:
+  #     context: .
+  #     dockerfile: tools/Dockerfile.prod
+  #   volumes:
+  #     - yarn:/home/node/.cache/yarn
+  #   tty: true
+
+volumes:
+  yarn:

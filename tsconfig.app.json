@@ -1,47 +1,15 @@
 {
+  "extends": "./tsconfig.json",
   "compilerOptions": {
-    "target": "es5",
+    "outDir": "./out-tsc/app",
     "module": "es2015",
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "sourceMap": true,
-    "noEmitHelpers": true,
-    "importHelpers": true,
-    "strictNullChecks": false,
-    "lib": [
-      "es2015",
-      "dom"
-    ],
-    "baseUrl": "./src",
-    "paths": {
-      "@angular/*": ["node_modules/@angular/*"],
-      "~/*": ["app/*"],
-      "^/data-table/*": ["app/data-table/*"]
-    },
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "types": [
-      "hammerjs",
-      "node"
-    ]
+    "types": []
   },
   "exclude": [
-    "node_modules",
-    "dist",
-    "src/**/*.spec.ts",
-    "src/**/*.e2e.ts",
-    "src/main.server.ts",
-    "src/api/**/*.ts"
-  ],
-  "angularCompilerOptions": {
-    "skipMetadataEmit": true
-  },
-  "compileOnSave": false,
-  "buildOnSave": false,
-  "atom": {
-    "rewriteTsconfig": false
-  }
+    "src/server.ts",
+    "src/api",
+    "**/*.spec.ts",
+    "**/*.spec-e2e.ts",
+    "tools"
+  ]
 }

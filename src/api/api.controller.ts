@@ -1,19 +1,13 @@
-import {
-  Controller,
-  Get, Post,
-  Request, Response, Next,
-  Param, Body, Query,
-  HttpStatus
-} from '@nestjs/common';
+import { Get, Controller } from '@nestjs/common';
 
-import { ApiStore } from './api.store';
+import { ApiService } from './api.service';
 
 @Controller()
 export class ApiController {
-  constructor(private api: ApiStore) {}
+  constructor(private readonly apiService: ApiService) {}
 
-	@Get()
-	findAll(): string[] {
-    return this.api.findAll();
+  @Get()
+  root(): string {
+    return this.apiService.root();
   }
 }

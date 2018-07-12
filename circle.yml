@@ -1,52 +1,98 @@
 version: 2
 
+base: &base
+  working_directory: ~/AngularNest-Fullstack-Starter
+  docker:
+    - image: circleci/node:8
+
 jobs:
+
   build:
-    docker:
-      - image: circleci/node:8
-
-    working_directory: ~/AngularNest-Fullstack-Starter
-
-    branches:
-      only:
-        - master
-
+    <<: *base
     steps:
       - checkout
-
       - setup_remote_docker
-
       - run:
-          name: Start up containers
-          command: docker-compose up -d
-
+          name: Combat preparation
+          command: docker-compose up -d default
       - run:
-          name: Build the app
-          command: docker-compose exec app yarn build:app
-
+          name: Build the application
+          command: docker-compose exec default yarn build:app
       - run:
-          name: Build the api
-          command: docker-compose exec app yarn build:api
+          name: Build cloud functions
+          command: docker-compose exec default yarn build:api
 
-      - run:
-          name: Test the app
-          command: |
-            docker-compose exec app yarn test:app
-            docker-compose exec app yarn codecov --token=${CODECOV_TOKEN}
+  # test:
+  #   <<: *base
+  #   steps:
+  #     - checkout
+  #     - setup_remote_docker
+  #     - run:
+  #         name: Combat preparation
+  #         command: |
+  #           docker-compose up -d default
+  #           docker-compose exec default yarn firebase use development --token $FIREBASE_TOKEN
+  #           docker-compose exec default yarn build:app
+  #           docker-compose exec default yarn build:api
+  #           docker-compose exec -d default yarn firebase serve --only functions --port 5000 --token $FIREBASE_TOKEN
+  #           docker-compose exec -d default yarn firebase serve --only hosting --port 8000 --token $FIREBASE_TOKEN
+  #     - run:
+  #         name: Check the code
+  #         command: |
+  #           docker-compose exec default yarn lint:app
+  #           docker-compose exec default yarn lint:api
+  #     - run:
+  #         name: Test the application
+  #         command: |
+  #           docker-compose exec default yarn test:app
+  #           docker-compose exec default yarn codecov --token=$CODECOV_TOKEN
+  #     - run:
+  #         name: Test cloud functions
+  #         command: |
+  #           docker-compose exec default yarn test:api
+  #           docker-compose exec default yarn codecov --token=$CODECOV_TOKEN
+  #     - run:
+  #         name: End-to-end UI tests
+  #         command: |
+  #           docker-compose exec default sh -c "sleep 10"
+  #           docker-compose exec default yarn e2e:app
+  #     - run:
+  #         name: End-to-end HTTP tests
+  #         command: |
+  #           # docker-compose exec default sh -c "sleep 10"
+  #           # docker-compose exec default yarn e2e:api
 
-      # - run:
-      #     name: Test the api
-      #     command: |
-      #       docker-compose exec app yarn test:app
-      #       docker-compose exec app yarn codecov --token=${CODECOV_TOKEN}
+  # deploy:
+  #   <<: *base
+  #   steps:
+  #     - checkout
+  #     - setup_remote_docker
+  #     - run:
+  #         name: Log in to Docker
+  #         command: echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  #     - run:
+  #         name: Deploy the project
+  #         command: |
+  #           if [[ "${CIRCLE_BRANCH}" == "develop" ]]; then
+  #             docker-compose up -d dev
+  #             docker-compose exec dev yarn firebase use development --token $FIREBASE_TOKEN
+  #             docker-compose exec dev yarn firebase deploy --token $FIREBASE_TOKEN
+  #           fi
+  #
+  #           if [[ "${CIRCLE_BRANCH}" == "master" ]]; then
+  #             docker-compose up -d prod
+  #             docker-compose exec prod yarn firebase use production --token $FIREBASE_TOKEN
+  #             docker-compose exec prod yarn firebase deploy --token $FIREBASE_TOKEN
+  #           fi
 
-      - run:
-          name: Deploy the app
-          command: docker-compose exec app yarn firebase deploy --token ${FIREBASE_TOKEN}
-
-      # - run:
-      #     name: Deploy the api
-      #     command: |
-      #       docker login -u="Shyam Chen" -p="${HEROKU_TOKEN}" registry.heroku.com
-      #       docker build -f Dockerfile.prod -t registry.heroku.com/nest-by-example/web .
-      #       docker push registry.heroku.com/nest-by-example/web
+workflows:
+  version: 2
+  build-test-deploy:
+    jobs:
+      - build
+      # - test:
+      #     requires:
+      #       - build
+      # - deploy:
+      #     requires:
+      #       - test

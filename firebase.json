@@ -1,11 +1,34 @@
 {
+  "database": {
+    "rules": "./tools/database.json"
+  },
+  "firestore": {
+    "rules": "./tools/firestore"
+  },
+  "storage": {
+    "rules": "./tools/storage"
+  },
   "hosting": {
-    "public": "dist",
+    "public": "public",
     "rewrites": [
       {
         "source": "**",
         "destination": "/index.html"
       }
+    ],
+    "headers": [
+      {
+        "source": "service-worker.js",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, no-store, must-revalidate"
+          }
+        ]
+      }
     ]
+  },
+  "functions": {
+    "source": "functions"
   }
 }

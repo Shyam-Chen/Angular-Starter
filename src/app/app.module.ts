@@ -1,51 +1,27 @@
-import '../assets/styles/global.scss';
-
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { BrowserModule, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Location, APP_BASE_HREF, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
-import { CommonModule, Location, APP_BASE_HREF, LocationStrategy, PathLocationStrategy } from '@angular/common';
-import { MatToolbarModule, MatSidenavModule, MatButtonModule, MatIconModule, MatCardModule, GestureConfig } from '@angular/material';
-import { MobxAngularModule } from 'mobx-angular';
-
-import { NotFoundComponent } from '~/shared/components/not-found.component';
 
 import { AppComponent } from './app.component';
-import { AppStore } from './app.store';
 
 export const ROUTES: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '' },
-  { path: 'crud-operations', loadChildren: './crud-operations/crud-operations.module#CRUDOperationsModule' },
-  { path: 'form-controls', loadChildren: './form-controls/form-controls.module#FormControlsModule' },
-  { path: 'data-table', loadChildren: './data-table/data-table.module#DataTableModule' },
-  { path: 'playground', loadChildren: './playground/playground.module#PlaygroundModule' },
-  { path: '**', component: NotFoundComponent },
+  { path: 'hello-world', loadChildren: './hello-world/hello-world.module#HelloWorldModule' },
+  // { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
-    CommonModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatButtonModule,
-    MatIconModule,
-    MatCardModule,
-    MobxAngularModule,
     RouterModule.forRoot(ROUTES, { preloadingStrategy: PreloadAllModules }),
   ],
-  declarations: [
-    AppComponent,
-    NotFoundComponent,
-  ],
+  declarations: [AppComponent],
   providers: [
     Location,
     { provide: APP_BASE_HREF, useValue: '/' },
     { provide: LocationStrategy, useClass: PathLocationStrategy },
-    { provide: HAMMER_GESTURE_CONFIG, useClass: GestureConfig },
-    AppStore,
   ],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}

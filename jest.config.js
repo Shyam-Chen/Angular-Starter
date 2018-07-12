@@ -2,7 +2,7 @@ switch (process.env.TEST_ENV) {
   case 'app':
     module.exports = {
       preset: 'jest-preset-angular',
-      setupTestFrameworkScriptFile: '<rootDir>/src/test.ts',
+      setupTestFrameworkScriptFile: '<rootDir>/tools/setup-app.ts',
       transform: {
         '^.+\\.(ts)$': '<rootDir>/node_modules/jest-preset-angular/preprocessor.js',
         '\\.(pug)$': '<rootDir>/node_modules/pug-jest'
