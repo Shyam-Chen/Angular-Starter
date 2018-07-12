@@ -1,1 +1,1 @@
-declare var process: any;
+// declare var process: any;

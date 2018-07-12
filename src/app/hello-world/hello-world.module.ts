@@ -16,7 +16,7 @@ const ROUTES: Routes = [
   imports: [
     RouterModule.forChild(ROUTES),
   ],
-  declarations: [HelloWorldComponent,],
+  declarations: [HelloWorldComponent],
   providers: [],
 })
 export class HelloWorldModule {}
