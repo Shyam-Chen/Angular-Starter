@@ -1,3 +1,13 @@
-.headline {
-  color: blue;
+.o-toolbar {
+  position: fixed;
+  left: auto;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.o-toolbar-image {
+  width: 40px;
+  height: 40px;
+  margin: auto 0.5rem auto 1rem;
 }

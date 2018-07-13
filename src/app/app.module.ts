@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 
 import { HomeModule } from './home/home.module';
 import { HomeComponent } from './home/home.component';
@@ -23,6 +25,8 @@ export const ROUTES: Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatToolbarModule,
+    MatIconModule,
     HomeModule,
     NotFoundModule,
     RouterModule.forRoot(ROUTES, { preloadingStrategy: PreloadAllModules }),
