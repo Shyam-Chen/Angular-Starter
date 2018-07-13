@@ -4,12 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HelloWorldComponent } from './hello-world.component';
 
 const ROUTES: Routes = [
-  {
-    path: '',
-    children: [
-      { path: '', component: HelloWorldComponent },
-    ],
-  },
+  { path: '', component: HelloWorldComponent },
 ];
 
 @NgModule({

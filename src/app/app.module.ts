@@ -5,12 +5,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 
+import { HomeModule } from './home/home.module';
+import { HomeComponent } from './home/home.component';
+import { NotFoundModule } from './not-found/not-found.module';
+import { NotFoundComponent } from './not-found/not-found.component';
+
 import { AppComponent } from './app.component';
 
 export const ROUTES: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '' },
+  { path: '', component: HomeComponent },
   { path: 'hello-world', loadChildren: './hello-world/hello-world.module#HelloWorldModule' },
-  // { path: '**', component: NotFoundComponent },
+  { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({
@@ -18,6 +23,8 @@ export const ROUTES: Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    HomeModule,
+    NotFoundModule,
     RouterModule.forRoot(ROUTES, { preloadingStrategy: PreloadAllModules }),
   ],
   declarations: [AppComponent],
@@ -26,6 +33,6 @@ export const ROUTES: Routes = [
     { provide: APP_BASE_HREF, useValue: '/' },
     { provide: LocationStrategy, useClass: PathLocationStrategy },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
