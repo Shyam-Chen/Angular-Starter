@@ -51,7 +51,7 @@ gulp.task('rebuild', (done) => {
 
 gulp.task('watch', () => {
   gulp.watch([
-    'src/server.js',
+    'src/server.ts',
     'src/api/**/*',
     '!src/api/**/__tests__/**/*',
   ], ['rebuild']);
