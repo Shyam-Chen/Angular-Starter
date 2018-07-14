@@ -14,6 +14,8 @@ const env = require('./env');
 const DIST_ROOT = path.join(__dirname, 'functions');
 
 gulp.task('build', () => {
+  const tsProject = typescript.createProject('tsconfig.api.json');
+
   return gulp
     .src([
       'src/**/*',
@@ -25,7 +27,7 @@ gulp.task('build', () => {
     ])
     .pipe(plumber())
     .pipe(replaces(envify(env)))
-    .pipe(typescript({ project: 'tsconfig.api.json' }))
+    .pipe(tsProject())
     .pipe(gulp.dest(DIST_ROOT));
 });
 

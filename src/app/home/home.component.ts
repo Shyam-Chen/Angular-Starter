@@ -4,7 +4,8 @@ import { Component } from '@angular/core';
   selector: 'home',
   template: `
     <div>
-      <div>Home Page</div>
+      <div>Oh My AngularNest</div>
+      <div>Building scalable web apps from Web Fundamentals to Firebase Platform and then to Google Cloud.</div>
 
       <div class="pa-3 o-promo">
           <svg width="100%" height="100%" viewBox="0 0 402 328" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet">
