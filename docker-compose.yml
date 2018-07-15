@@ -14,23 +14,23 @@ services:
       - yarn:/home/node/.cache/yarn
     tty: true
 
-  # dev:
-  #   image: dev
-  #   build:
-  #     context: .
-  #     dockerfile: tools/Dockerfile.dev
-  #   volumes:
-  #     - yarn:/home/node/.cache/yarn
-  #   tty: true
+  dev:
+    image: dev
+    build:
+      context: .
+      dockerfile: tools/Dockerfile.dev
+    volumes:
+      - yarn:/home/node/.cache/yarn
+    tty: true
 
-  # prod:
-  #   image: prod
-  #   build:
-  #     context: .
-  #     dockerfile: tools/Dockerfile.prod
-  #   volumes:
-  #     - yarn:/home/node/.cache/yarn
-  #   tty: true
+  prod:
+    image: prod
+    build:
+      context: .
+      dockerfile: tools/Dockerfile.prod
+    volumes:
+      - yarn:/home/node/.cache/yarn
+    tty: true
 
 volumes:
   yarn:
