@@ -5,7 +5,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 
 import { SortFilterListComponent } from './sort-filter-list.component';
+import { ConvertSecondsPipe } from './convert-seconds.pipe';
 import { TruncatePipe } from './truncate.pipe';
+import { TimeSincePipe } from './time-since.pipe';
 
 @NgModule({
   imports: [
@@ -16,7 +18,9 @@ import { TruncatePipe } from './truncate.pipe';
   ],
   declarations: [
     SortFilterListComponent,
+    ConvertSecondsPipe,
     TruncatePipe,
+    TimeSincePipe,
   ],
   providers: [],
   exports: [

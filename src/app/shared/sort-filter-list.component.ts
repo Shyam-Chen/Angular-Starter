@@ -31,13 +31,13 @@ type List = {
           <mat-card class="o-card">
             <div class="o-card-media">
               <img mat-card-image [src]="item.thumbnail" class="o-card-image">
-              <div class="o-card-time">{{ item.duration }}</div>
+              <div class="o-card-time">{{ item.duration | convertSeconds }}</div>
             </div>
 
             <mat-card-content>
               <div>{{ item.title | truncate: 50 }}</div>
               <div>{{ item.views.toLocaleString('en-US') }}</div>
-              <div>{{ item.publish * 1000 }}</div>
+              <div>{{ item.publish * 1000 | timeSince }}</div>
               <div>{{ item.collectCount.toLocaleString('en-US') }}</div>
             </mat-card-content>
           </mat-card>
