@@ -3,11 +3,15 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+
+import { ConvertSecondsPipe } from './pipes/convert-seconds.pipe';
+import { TruncatePipe } from './pipes/truncate.pipe';
+import { TimeSincePipe } from './pipes/time-since.pipe';
 
 import { SortFilterListComponent } from './sort-filter-list.component';
-import { ConvertSecondsPipe } from './convert-seconds.pipe';
-import { TruncatePipe } from './truncate.pipe';
-import { TimeSincePipe } from './time-since.pipe';
+import { SortListPipe } from './sort-list.pipe';
+import { FilterListPipe } from './filter-list.pipe';
 
 @NgModule({
   imports: [
@@ -15,12 +19,15 @@ import { TimeSincePipe } from './time-since.pipe';
     HttpClientModule,
     MatButtonModule,
     MatCardModule,
+    MatIconModule,
   ],
   declarations: [
-    SortFilterListComponent,
     ConvertSecondsPipe,
     TruncatePipe,
     TimeSincePipe,
+    SortFilterListComponent,
+    SortListPipe,
+    FilterListPipe,
   ],
   providers: [],
   exports: [
