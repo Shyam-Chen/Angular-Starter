@@ -1,6 +1,6 @@
 declare var process: any;
 
-import '@angular/material/prebuilt-themes/indigo-pink.css';
+// import '@angular/material/prebuilt-themes/indigo-pink.css';
 import 'core-js/es7/reflect';
 import 'zone.js/dist/zone';
 import 'hammerjs';
