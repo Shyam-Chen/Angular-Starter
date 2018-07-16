@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { ConvertSecondsPipe } from './pipes/convert-seconds.pipe';
 import { TruncatePipe } from './pipes/truncate.pipe';
@@ -20,6 +21,7 @@ import { FilterListPipe } from './filter-list.pipe';
     MatButtonModule,
     MatCardModule,
     MatIconModule,
+    MatProgressSpinnerModule,
   ],
   declarations: [
     ConvertSecondsPipe,

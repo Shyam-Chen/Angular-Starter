@@ -2,6 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'filterList',
+  pure: false,
 })
 export class FilterListPipe implements PipeTransform {
   transform(list: any[], length: string): any[] {

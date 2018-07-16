@@ -51,7 +51,7 @@ type List = {
       </div>
 
       <ng-template #loading>
-        <div>Loading...</div>
+        <mat-spinner></mat-spinner>
       </ng-template>
     </div>
   `,
@@ -100,7 +100,7 @@ export class SortFilterListComponent implements OnInit {
   public sort: string = 'published';
   public length: string = 'any';
   public list: Array<any> = [];
-  public isLoading: boolean = false;
+  public isLoading: boolean = true;
 
   constructor(private http: HttpClient) {}
 
@@ -109,6 +109,7 @@ export class SortFilterListComponent implements OnInit {
       .get<List[]>('https://us-central1-lithe-window-713.cloudfunctions.net/fronted-demo')
       .subscribe((res: any) => {
         this.list = res.data;
+        this.isLoading = false;
       });
   }
 }

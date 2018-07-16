@@ -2,6 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'sortList',
+  pure: false,
 })
 export class SortListPipe implements PipeTransform {
   transform(list: any[], sort: string): any[] {
