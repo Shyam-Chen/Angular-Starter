@@ -87,6 +87,8 @@
     "rucksack-css": "1.0.2",
     "run-sequence": "2.2.1",
     "script-ext-html-webpack-plugin": "2.0.1",
+    "stylelint": "9.3.0",
+    "stylelint-config-standard": "18.2.0",
     "to-string-loader": "1.1.5",
     "ts-node": "7.0.0",
     "tslint": "5.10.0",
