@@ -11,6 +11,7 @@ import { HomeModule } from './home/home.module';
 import { HomeComponent } from './home/home.component';
 import { NotFoundModule } from './not-found/not-found.module';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { SortFilterListModule } from './shared/sort-filter-list.module';
 
 import { AppComponent } from './app.component';
 
@@ -29,6 +30,7 @@ export const ROUTES: Routes = [
     MatIconModule,
     HomeModule,
     NotFoundModule,
+    SortFilterListModule,
     RouterModule.forRoot(ROUTES, { preloadingStrategy: PreloadAllModules }),
   ],
   declarations: [AppComponent],

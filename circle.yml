@@ -82,7 +82,8 @@ jobs:
             if [[ "${CIRCLE_BRANCH}" == "master" ]]; then
               docker-compose up -d prod
               docker-compose exec prod yarn firebase use production --token $FIREBASE_TOKEN
-              docker-compose exec prod yarn firebase deploy --token $FIREBASE_TOKEN
+              # docker-compose exec prod yarn firebase deploy --token $FIREBASE_TOKEN
+              docker-compose exec prod yarn firebase deploy --only hosting --token $FIREBASE_TOKEN
             fi
 
 workflows:
