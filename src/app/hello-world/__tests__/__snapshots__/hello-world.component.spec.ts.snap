@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HelloWorldComponent renders markup to snapshot 1`] = `
+<hello-world>
+  <div>
+    Hello, World!
+  </div>
+</hello-world>
+`;

@@ -9,7 +9,7 @@
     "src/server.ts",
     "src/api",
     "**/*.spec.ts",
-    "**/*.spec-e2e.ts",
+    "**/*.e2e-spec.ts",
     "tools"
   ]
 }

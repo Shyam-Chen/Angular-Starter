@@ -23,12 +23,9 @@ switch (process.env.JEST_ENV) {
         '.*\\.e2e-spec.ts$',
       ],
       transform: {
-        '^.+\\.(ts)$': '<rootDir>/node_modules/jest-preset-angular/preprocessor.js',
+        '^.+\\.ts$': '<rootDir>/node_modules/jest-preset-angular/preprocessor.js',
         '^[./a-zA-Z0-9$_-]+\\.(bmp|gif|jpg|jpeg|png|psd|svg|webp)$': '<rootDir>/tools/assets-transform.js',
       },
-      transformIgnorePatterns: [
-        '/node_modules/',
-      ],
     };
     break;
 
@@ -43,6 +40,7 @@ switch (process.env.JEST_ENV) {
           tsConfigFile: 'tsconfig.test.json',
         },
       },
+      moduleFileExtensions: ['js', 'ts'],
       moduleNameMapper: {
         '~(.*)': '<rootDir>/src/api$1',
       },
@@ -51,6 +49,7 @@ switch (process.env.JEST_ENV) {
         '<rootDir>/node_modules/',
         '.*\\.e2e-spec.ts$',
       ],
+      testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
       transform: {
         '^.+\\.ts$': 'ts-jest',
       },
@@ -59,16 +58,22 @@ switch (process.env.JEST_ENV) {
 
   case 'e2e':
     module.exports = {
+      coveragePathIgnorePatterns: [
+        '/node_modules/',
+        '/tools/',
+      ],
       globals: {
         'ts-jest': {
           tsConfigFile: 'tsconfig.test.json',
         },
       },
+      moduleFileExtensions: ['js', 'ts', 'json'],
       setupTestFrameworkScriptFile: '<rootDir>/tools/setup-e2e.ts',
       testPathIgnorePatterns: [
         '<rootDir>/node_modules/',
         '.*\\.spec.ts$',
       ],
+      testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
       transform: {
         '^.+\\.ts$': 'ts-jest',
       },

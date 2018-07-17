@@ -31,11 +31,11 @@ jobs:
           name: Combat preparation
           command: |
             docker-compose up -d default
-            # docker-compose exec default yarn firebase use development --token $FIREBASE_TOKEN
-            # docker-compose exec default yarn build:app
+            docker-compose exec default yarn firebase use development --token $FIREBASE_TOKEN
+            docker-compose exec default yarn build:app
             # docker-compose exec default yarn build:api
             # docker-compose exec -d default yarn firebase serve --only functions --port 5000 --token $FIREBASE_TOKEN
-            # docker-compose exec -d default yarn firebase serve --only hosting --port 8000 --token $FIREBASE_TOKEN
+            docker-compose exec -d default yarn firebase serve --only hosting --port 8000 --token $FIREBASE_TOKEN
       - run:
           name: Check the code
           command: |
@@ -54,8 +54,8 @@ jobs:
       - run:
           name: End-to-end UI tests
           command: |
-            # docker-compose exec default sh -c "sleep 10"
-            # docker-compose exec default yarn e2e:app
+            docker-compose exec default sh -c "sleep 10"
+            docker-compose exec default yarn e2e:app
       - run:
           name: End-to-end HTTP tests
           command: |
@@ -76,7 +76,8 @@ jobs:
             if [[ "${CIRCLE_BRANCH}" == "develop" ]]; then
               docker-compose up -d dev
               docker-compose exec dev yarn firebase use development --token $FIREBASE_TOKEN
-              docker-compose exec dev yarn firebase deploy --token $FIREBASE_TOKEN
+              # docker-compose exec prod yarn firebase deploy --token $FIREBASE_TOKEN
+              docker-compose exec prod yarn firebase deploy --only hosting --token $FIREBASE_TOKEN
             fi
 
             if [[ "${CIRCLE_BRANCH}" == "master" ]]; then

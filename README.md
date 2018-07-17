@@ -77,7 +77,7 @@ $ yarn test:api  # (not yet)
 
 ```bash
 # front-end
-$ yarn e2e:app  # (not yet)
+$ yarn e2e:app
 
 # back-end
 $ yarn e2e:api  # (not yet)
