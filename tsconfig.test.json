@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "module": "commonjs",
+    "types": []
+  },
+  "include": [
+    "**/*.spec.ts",
+    "**/*.spec-e2e.ts"
+  ]
+}

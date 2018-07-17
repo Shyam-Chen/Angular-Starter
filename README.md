@@ -8,8 +8,6 @@
 [![dependencies Status](https://david-dm.org/Shyam-Chen/AngularNest-Fullstack-Starter/status.svg)](https://david-dm.org/Shyam-Chen/AngularNest-Fullstack-Starter)
 [![devDependencies Status](https://david-dm.org/Shyam-Chen/AngularNest-Fullstack-Starter/dev-status.svg)](https://david-dm.org/Shyam-Chen/AngularNest-Fullstack-Starter?type=dev)
 
-[Live Demo](https://angular-by-example.firebaseapp.com/)
-
 [Live Demo](https://angularnest-by-example.firebaseapp.com/)
 
 ## Getting Started
