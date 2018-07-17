@@ -53,7 +53,7 @@ $ yarn build:app
 $ yarn build:api
 ```
 
-6. Check the code quality (Not yet)
+6. Check the code quality
 
 ```bash
 # front-end
@@ -63,22 +63,22 @@ $ yarn lint:app
 $ yarn lint:api
 ```
 
-7. Run the unit tests (Not yet)
+7. Run the unit tests
 
 ```bash
 # front-end
 $ yarn test:app
 
 # back-end
-$ yarn test:api
+$ yarn test:api  # (not yet)
 ```
 
-8. Run the end-to-end tests (Not yet)
+8. Run the end-to-end tests
 
 ```bash
 # front-end
-$ yarn e2e:app
+$ yarn e2e:app  # (not yet)
 
 # back-end
-$ yarn e2e:api
+$ yarn e2e:api  # (not yet)
 ```

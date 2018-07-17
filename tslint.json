@@ -3,5 +3,9 @@
     "tslint-config-airbnb",
     "tslint-angular"
   ],
-  "rules": {}
+  "rules": {
+    "curly": [true, "ignore-same-line"],
+    "max-line-length": false,
+    "no-inferrable-types": [true, "ignore-params", "ignore-properties"]
+  }
 }

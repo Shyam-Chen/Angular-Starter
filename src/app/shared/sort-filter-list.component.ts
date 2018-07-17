@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-type List = {
-  [value: string]: any,
-};
+interface List {
+  [value: string]: any;
+}
 
 @Component({
   selector: 'sort-filter-list',
@@ -99,7 +99,7 @@ type List = {
 export class SortFilterListComponent implements OnInit {
   public sort: string = 'published';
   public length: string = 'any';
-  public list: Array<any> = [];
+  public list: List[] = [];
   public isLoading: boolean = true;
 
   constructor(private http: HttpClient) {}
