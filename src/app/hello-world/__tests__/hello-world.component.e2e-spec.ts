@@ -19,7 +19,7 @@ describe('HelloWorld', () => {
     await page.goto(`${global.SITE_URL}/hello-world`);
   });
 
-  it('should get a text', async () => {
+  it('should display a text', async () => {
     const selector = 'hello-world > div';
     const text = await page.$eval(selector, el => el.textContent);
     expect(text).toMatch('Hello, World!');

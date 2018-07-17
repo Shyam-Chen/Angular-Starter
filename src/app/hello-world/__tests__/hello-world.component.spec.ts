@@ -16,7 +16,7 @@ describe('HelloWorldComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should render a component', () => {
+  it('should render an initial component', () => {
     expect(fixture).toMatchSnapshot();
   });
 });
