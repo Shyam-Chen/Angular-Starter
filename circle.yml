@@ -30,7 +30,7 @@ jobs:
       - run:
           name: Combat preparation
           command: |
-            # docker-compose up -d default
+            docker-compose up -d default
             # docker-compose exec default yarn firebase use development --token $FIREBASE_TOKEN
             # docker-compose exec default yarn build:app
             # docker-compose exec default yarn build:api
@@ -44,8 +44,8 @@ jobs:
       - run:
           name: Test the application
           command: |
-            # docker-compose exec default yarn test:app
-            # docker-compose exec default yarn codecov --token=$CODECOV_TOKEN
+            docker-compose exec default yarn test:app
+            docker-compose exec default yarn codecov --token=$CODECOV_TOKEN
       - run:
           name: Test cloud functions
           command: |
