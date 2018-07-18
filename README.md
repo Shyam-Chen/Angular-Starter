@@ -80,5 +80,5 @@ $ yarn test:api
 $ yarn e2e:app
 
 # back-end
-$ yarn e2e:api  # (not yet)
+$ yarn e2e:api
 ```
