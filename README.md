@@ -70,7 +70,7 @@ $ yarn lint:api
 $ yarn test:app
 
 # back-end
-$ yarn test:api  # (not yet)
+$ yarn test:api
 ```
 
 8. Run the end-to-end tests

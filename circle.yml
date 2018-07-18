@@ -49,8 +49,8 @@ jobs:
       - run:
           name: Test cloud functions
           command: |
-            # docker-compose exec default yarn test:api
-            # docker-compose exec default yarn codecov --token=$CODECOV_TOKEN
+            docker-compose exec default yarn test:api
+            docker-compose exec default yarn codecov --token=$CODECOV_TOKEN
       - run:
           name: End-to-end UI tests
           command: |

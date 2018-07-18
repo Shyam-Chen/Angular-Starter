@@ -19,8 +19,8 @@ vm.use(bodyParser.json());
 vm.use(bodyParser.urlencoded({ extended: false }));
 
 const bootstrap = async (instance) => {
-  const apiModule = await NestFactory.create(ApiModule, instance);
-  await apiModule.init();
+  const module = await NestFactory.create(ApiModule, instance);
+  await module.init();
 };
 
 bootstrap(vm);
