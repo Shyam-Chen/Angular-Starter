@@ -99,17 +99,23 @@ The structure follows the LIFT Guidelines.
 │   │   │   └── ...
 │   │   ├── <FEATURE>  -> feature modules
 │   │   │   ├── __tests__
-│   │   │   │   └── ...
+│   │   │   │   ├── <FEATURE>.controller.spec.ts
+│   │   │   │   └── <FEATURE>.e2e-spec.ts
 │   │   │   ├── _<THING>  -> feature of private things
 │   │   │   │   └── ...
-│   │   │   └── ...
+│   │   │   ├── <FEATURE>.controller.ts
+│   │   │   ├── <FEATURE>.module.ts
+│   │   │   └── <FEATURE>.service.ts
 │   │   ├── <GROUP>  -> module group
 │   │   │   └── <FEATURE>  -> feature modules
 │   │   │       ├── __tests__
-│   │   │       │   └── ...
+│   │   │       │   ├── <FEATURE>.controller.spec.ts
+│   │   │       │   └── <FEATURE>.e2e-spec.ts
 │   │   │       ├── _<THING>  -> feature of private things
 │   │   │       │   └── ...
-│   │   │       └── ...
+│   │   │       ├── <FEATURE>.controller.ts
+│   │   │       ├── <FEATURE>.module.ts
+│   │   │       └── <FEATURE>.service.ts
 │   │   ├── graphql
 │   │   │   ├── <FEATURE>  -> feature modules
 │   │   │   │   ├── __tests__
@@ -126,7 +132,9 @@ The structure follows the LIFT Guidelines.
 │   │   │           └── ...
 │   │   ├── shared  -> shared feature module
 │   │   │   └── ...
-│   │   └── index.js
+│   │   ├── api.controller.ts
+│   │   ├── api.module.ts
+│   │   └── api.service.ts
 │   ├── app
 │   │   ├── __tests__
 │   │   │   └── ...
@@ -136,54 +144,40 @@ The structure follows the LIFT Guidelines.
 │   │   │   └── ...
 │   │   ├── <FEATURE>  -> feature modules
 │   │   │   ├── __tests__
-│   │   │   │   ├── actions.spec.js
-│   │   │   │   ├── <FEATURE>.e2e-spec.js
-│   │   │   │   ├── <FEATURE>.spec.js
-│   │   │   │   ├── getters.spec.js
-│   │   │   │   └── mutations.spec.js
+│   │   │   │   ├── <FEATURE>.component.spec.js
+│   │   │   │   └── <FEATURE>.e2e-spec.js
 │   │   │   ├── _<THING>  -> feature of private things
 │   │   │   │   └── ...
-│   │   │   ├── actions.js
-│   │   │   ├── constants.js
-│   │   │   ├── <FEATURE>.vue
-│   │   │   ├── getters.js
-│   │   │   ├── mutations.js
-│   │   │   └── types.js
+│   │   │   ├── <FEATURE>.component.css
+│   │   │   ├── <FEATURE>.component.html
+│   │   │   ├── <FEATURE>.component.ts
+│   │   │   └── <FEATURE>.module.ts
 │   │   ├── <GROUP>  -> module group
 │   │   │   └── <FEATURE>  -> feature modules
 │   │   │       ├── __tests__
-│   │   │       │   ├── actions.spec.js
-│   │   │       │   ├── <FEATURE>.e2e-spec.js
-│   │   │       │   ├── <FEATURE>.spec.js
-│   │   │       │   ├── getters.spec.js
-│   │   │       │   └── mutations.spec.js
+│   │   │       │   ├── <FEATURE>.component.spec.js
+│   │   │       │   └── <FEATURE>.e2e-spec.js
 │   │   │       ├── _<THING>  -> feature of private things
 │   │   │       │   └── ...
-│   │   │       ├── actions.js
-│   │   │       ├── constants.js
-│   │   │       ├── <FEATURE>.vue
-│   │   │       ├── getters.js
-│   │   │       ├── mutations.js
-│   │   │       └── types.js
+│   │   │       ├── <FEATURE>.component.css
+│   │   │       ├── <FEATURE>.component.html
+│   │   │       ├── <FEATURE>.component.ts
+│   │   │       └── <FEATURE>.module.ts
 │   │   ├── shared  -> shared feature module
 │   │   │   └── ...
-│   │   ├── actions.js
-│   │   ├── App.vue
-│   │   ├── constants.js
-│   │   ├── getters.js
-│   │   ├── mutations.js
-│   │   └── types.js
+│   │   ├── app.component.css
+│   │   ├── app.component.html
+│   │   ├── app.component.ts
+│   │   └── app.module.ts
 │   ├── assets  -> datas, fonts, images, medias, styles
-│   ├── client.js
+│   │   └── ...
+│   ├── client.ts
 │   ├── index.html
-│   └── server.js
+│   └── server.ts
 ├── tools
 │   └── ...
-├── .babelrc
 ├── .editorconfig
-├── .eslintrc
 ├── .firebaserc
-├── .flowconfig
 ├── .gitignore
 ├── .postcssrc
 ├── .stylelintrc
@@ -197,6 +191,11 @@ The structure follows the LIFT Guidelines.
 ├── gulpfile.js
 ├── jest.config.js
 ├── package.json
+├── tsconfig.api.json
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.test.json
+├── tslint.json
 ├── webpack.config.js
 └── yarn.lock
 ```

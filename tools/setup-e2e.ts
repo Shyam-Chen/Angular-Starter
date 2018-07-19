@@ -1,10 +1,14 @@
 declare var global: any;
 
-// import test from 'firebase-functions-test';
+import * as test from 'firebase-functions-test';
 
 import { SITE_URL, FUNC_URL } from '../env';
 
-// test();
+test({
+  databaseURL: 'https://my-project.firebaseio.com',
+  storageBucket: 'my-project.appspot.com',
+  projectId: 'my-project',
+});
 
 global.SITE_URL = SITE_URL;
 global.FUNC_URL = FUNC_URL;
