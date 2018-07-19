@@ -59,8 +59,8 @@ jobs:
       - run:
           name: End-to-end HTTP tests
           command: |
-            docker-compose exec default sh -c "sleep 10"
-            docker-compose exec default yarn e2e:api
+            # docker-compose exec default sh -c "sleep 10"
+            # docker-compose exec default yarn e2e:api
 
   deploy:
     <<: *base
