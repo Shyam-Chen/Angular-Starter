@@ -82,3 +82,121 @@ $ yarn e2e:app
 # back-end
 $ yarn e2e:api
 ```
+
+## Directory Structure
+
+The structure follows the LIFT Guidelines.
+
+```coffee
+.
+├── src
+│   ├── api
+│   │   ├── __tests__
+│   │   │   └── ...
+│   │   ├── _<THING>  -> api of private things
+│   │   │   └── ...
+│   │   ├── core  -> core feature module
+│   │   │   └── ...
+│   │   ├── <FEATURE>  -> feature modules
+│   │   │   ├── __tests__
+│   │   │   │   └── ...
+│   │   │   ├── _<THING>  -> feature of private things
+│   │   │   │   └── ...
+│   │   │   └── ...
+│   │   ├── <GROUP>  -> module group
+│   │   │   └── <FEATURE>  -> feature modules
+│   │   │       ├── __tests__
+│   │   │       │   └── ...
+│   │   │       ├── _<THING>  -> feature of private things
+│   │   │       │   └── ...
+│   │   │       └── ...
+│   │   ├── graphql
+│   │   │   ├── <FEATURE>  -> feature modules
+│   │   │   │   ├── __tests__
+│   │   │   │   │   └── ...
+│   │   │   │   ├── _<THING>  -> feature of private things
+│   │   │   │   │   └── ...
+│   │   │   │   └── ...
+│   │   │   └── <GROUP>  -> module group
+│   │   │       └── <FEATURE>  -> feature modules
+│   │   │           ├── __tests__
+│   │   │           │   └── ...
+│   │   │           ├── _<THING>  -> feature of private things
+│   │   │           │   └── ...
+│   │   │           └── ...
+│   │   ├── shared  -> shared feature module
+│   │   │   └── ...
+│   │   └── index.js
+│   ├── app
+│   │   ├── __tests__
+│   │   │   └── ...
+│   │   ├── _<THING>  -> app of private things
+│   │   │   └── ...
+│   │   ├── core  -> core feature module
+│   │   │   └── ...
+│   │   ├── <FEATURE>  -> feature modules
+│   │   │   ├── __tests__
+│   │   │   │   ├── actions.spec.js
+│   │   │   │   ├── <FEATURE>.e2e-spec.js
+│   │   │   │   ├── <FEATURE>.spec.js
+│   │   │   │   ├── getters.spec.js
+│   │   │   │   └── mutations.spec.js
+│   │   │   ├── _<THING>  -> feature of private things
+│   │   │   │   └── ...
+│   │   │   ├── actions.js
+│   │   │   ├── constants.js
+│   │   │   ├── <FEATURE>.vue
+│   │   │   ├── getters.js
+│   │   │   ├── mutations.js
+│   │   │   └── types.js
+│   │   ├── <GROUP>  -> module group
+│   │   │   └── <FEATURE>  -> feature modules
+│   │   │       ├── __tests__
+│   │   │       │   ├── actions.spec.js
+│   │   │       │   ├── <FEATURE>.e2e-spec.js
+│   │   │       │   ├── <FEATURE>.spec.js
+│   │   │       │   ├── getters.spec.js
+│   │   │       │   └── mutations.spec.js
+│   │   │       ├── _<THING>  -> feature of private things
+│   │   │       │   └── ...
+│   │   │       ├── actions.js
+│   │   │       ├── constants.js
+│   │   │       ├── <FEATURE>.vue
+│   │   │       ├── getters.js
+│   │   │       ├── mutations.js
+│   │   │       └── types.js
+│   │   ├── shared  -> shared feature module
+│   │   │   └── ...
+│   │   ├── actions.js
+│   │   ├── App.vue
+│   │   ├── constants.js
+│   │   ├── getters.js
+│   │   ├── mutations.js
+│   │   └── types.js
+│   ├── assets  -> datas, fonts, images, medias, styles
+│   ├── client.js
+│   ├── index.html
+│   └── server.js
+├── tools
+│   └── ...
+├── .babelrc
+├── .editorconfig
+├── .eslintrc
+├── .firebaserc
+├── .flowconfig
+├── .gitignore
+├── .postcssrc
+├── .stylelintrc
+├── Dockerfile
+├── LICENSE
+├── README.md
+├── circle.yml
+├── docker-compose.yml
+├── env.js
+├── firebase.json
+├── gulpfile.js
+├── jest.config.js
+├── package.json
+├── webpack.config.js
+└── yarn.lock
+```
