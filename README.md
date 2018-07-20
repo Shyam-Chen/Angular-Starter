@@ -2,8 +2,8 @@
 
 :tiger: A boilerplate for Angular, Nest, Material, Express, TypeScript, and ReactiveX.
 
-[![Build Status](https://img.shields.io/circleci/project/Shyam-Chen/AngularNest-Fullstack-Starter/master.svg)](https://circleci.com/gh/Shyam-Chen/AngularNest-Fullstack-Starter)
-[![Coverage Status](https://img.shields.io/codecov/c/github/Shyam-Chen/AngularNest-Fullstack-Starter/master.svg)](https://codecov.io/gh/Shyam-Chen/AngularNest-Fullstack-Starter)
+[![Build Status](https://img.shields.io/circleci/project/Shyam-Chen/AngularNest-Fullstack-Starter/develop.svg)](https://circleci.com/gh/Shyam-Chen/AngularNest-Fullstack-Starter)
+[![Coverage Status](https://img.shields.io/codecov/c/github/Shyam-Chen/AngularNest-Fullstack-Starter/develop.svg)](https://codecov.io/gh/Shyam-Chen/AngularNest-Fullstack-Starter)
  //
 [![dependencies Status](https://david-dm.org/Shyam-Chen/AngularNest-Fullstack-Starter/status.svg)](https://david-dm.org/Shyam-Chen/AngularNest-Fullstack-Starter)
 [![devDependencies Status](https://david-dm.org/Shyam-Chen/AngularNest-Fullstack-Starter/dev-status.svg)](https://david-dm.org/Shyam-Chen/AngularNest-Fullstack-Starter?type=dev)
