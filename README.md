@@ -14,9 +14,9 @@
 
 * [Getting Started](#getting-started)
 * [Key Features](#key-features)
-* Project Template
-* Dockerization
-* Configuration
+* [Project Template](#project-template)
+* [Dockerization](#dockerization)
+* [Configuration](#configuration)
 * [Directory Structure](#directory-structure)
 
 ## Getting Started
@@ -122,7 +122,201 @@ This seed repository provides the following features:
 * [x] [ReactiveX](https://github.com/ReactiveX/rxjs)
 * [ ] [TensorFlow](https://github.com/tensorflow/tfjs)
 * [x] [TypeScript](https://github.com/Microsoft/TypeScript)
+* [x] [TSLint](https://github.com/palantir/tslint)
 * [x] [Jest](https://github.com/facebook/jest)
+
+## Project Template
+
+TODO
+
+## Dockerization
+
+Dockerize an application.
+
+1. Build and run the container in the background
+
+```bash
+$ docker-compose up -d <SERVICE>
+```
+
+2. Run a command in a running container
+
+```bash
+$ docker-compose exec <SERVICE> <COMMAND>
+```
+
+3. Remove the old container before creating the new one
+
+```bash
+$ docker-compose rm -fs
+```
+
+4. Restart up the container in the background
+
+```bash
+$ docker-compose up -d --build <SERVICE>
+```
+
+5. Push images to Docker Cloud
+
+```diff
+# .gitignore
+
+  .DS_Store
+  node_modules
+  npm
+  public
+  functions
+  coverage
++ Dockerfile.dev
++ Dockerfile.prod
+  *.log
+```
+
+```bash
+$ docker login
+$ docker build -f tools/Dockerfile.<dev|prod> -t <IMAGE_NAME>:<IMAGE_TAG> .
+
+# checkout
+$ docker images
+
+$ docker tag <IMAGE_NAME>:<IMAGE_TAG> <DOCKER_ID_USER>/<IMAGE_NAME>:<IMAGE_TAG>
+$ docker push <DOCKER_ID_USER>/<IMAGE_NAME>:<IMAGE_TAG>
+
+# remove
+$ docker rmi <REPOSITORY>:<TAG>
+# or
+$ docker rmi <IMAGE_ID>
+```
+
+6. Pull images from Docker Cloud
+
+```diff
+# docker-compose.yml
+
+  <dev|prod>:
+-   image: <dev|prod>
+-   build:
+-     context: .
+-     dockerfile: tools/Dockerfile.<dev|prod>
++   image: <DOCKER_ID_USER>/<IMAGE_NAME>:<IMAGE_TAG>
+    volumes:
+      - yarn:/home/node/.cache/yarn
+    tty: true
+```
+
+## Configuration
+
+### Project environments
+
+Change to your project.
+
+```js
+// .firebaserc
+{
+  "projects": {
+    "development": "<PROJECT_NAME>",
+    "production": "<PROJECT_NAME>"
+  }
+}
+```
+
+### Default environments
+
+Set your local environment variables. (use `this.<ENV_NAME> = process.env.<ENV_NAME> || <LOCAL_ENV>;`)
+
+```js
+// env.js
+function Environments() {
+  this.NODE_ENV = process.env.NODE_ENV || 'development';
+
+  this.PROJECT_NAME = process.env.PROJECT_NAME || '<PROJECT_NAME>';
+
+  this.HOST_NAME = process.env.HOST_NAME || '0.0.0.0';
+
+  this.SITE_PORT = process.env.SITE_PORT || 8000;
+  this.SITE_URL = process.env.SITE_URL || `http://${this.HOST_NAME}:${this.SITE_PORT}`;
+
+  this.FUNC_PORT = process.env.FUNC_PORT || 5000;
+  this.FUNC_URL = process.env.FUNC_URL || `http://${this.HOST_NAME}:${this.FUNC_PORT}/${this.PROJECT_NAME}/us-central1`;
+
+  this.APP_BASE = process.env.APP_BASE || '/';
+
+  this.FIREBASE_CONFIG = process.env.FIREBASE_CONFIG || {
+    apiKey: process.env.FIREBASE_API_KEY || '<API_KEY>',
+    authDomain: process.env.FIREBASE_AUTH_DOMAIN || '<FIREBASE_AUTH_DOMAIN>',
+    databaseURL: process.env.FIREBASE_DATABASE_URL || '<FIREBASE_DATABASE_URL>',
+    projectId: process.env.FIREBASE_PROJECT_ID || '<FIREBASE_PROJECT_ID>',
+    storageBucket: process.env.FIREBASE_STORAGE_BUCKET || '<FIREBASE_STORAGE_BUCKET>',
+    messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID || '<FIREBASE_MESSAGING_SENDER_ID>',
+  };
+
+  this.GOOGLE_ANALYTICS = process.env.GOOGLE_ANALYTICS || '<GOOGLE_ANALYTICS>';
+
+  this.SENTRY_DSN = process.env.SENTRY_DSN || null;
+  this.RENDERTRON_URL = process.env.RENDERTRON_URL || null;
+}
+```
+
+### Deployment environment
+
+Set your deployment environment variables.
+
+```dockerfile
+# tools/Dockerfile.<dev|prod>
+
+# envs --
+ENV SITE_URL <SITE_URL>
+ENV FUNC_URL <FUNC_URL>
+# -- envs
+```
+
+### CI environment
+
+Add environment variables to the CircleCI build.
+
+```yml
+CODECOV_TOKEN
+DOCKER_PASSWORD
+DOCKER_USERNAME
+FIREBASE_TOKEN
+```
+
+### SEO friendly
+
+Enable billing on your Firebase Platform and Google Cloud the project by switching to the Blaze plan.
+
+Serve dynamic content for bots.
+
+```diff
+// firebase.json
+    "rewrites": [
+      {
+        "source": "**",
+-       "destination": "/index.html"
++       "function": "app"
+      }
+    ],
+```
+
+Deploy rendertron instance to Google App Engine.
+
+```bash
+$ git clone https://github.com/GoogleChrome/rendertron
+$ cd rendertron
+$ gcloud auth login
+$ gcloud app deploy app.yaml --project <RENDERTRON_NAME>
+```
+
+Set your rendertron instance in deployment environment.
+
+```dockerfile
+# tools/Dockerfile.<dev|prod>
+
+# envs --
+ENV RENDERTRON_URL <RENDERTRON_URL>
+# -- envs
+```
 
 ## Directory Structure
 
