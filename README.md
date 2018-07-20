@@ -8,7 +8,16 @@
 [![dependencies Status](https://david-dm.org/Shyam-Chen/AngularNest-Fullstack-Starter/status.svg)](https://david-dm.org/Shyam-Chen/AngularNest-Fullstack-Starter)
 [![devDependencies Status](https://david-dm.org/Shyam-Chen/AngularNest-Fullstack-Starter/dev-status.svg)](https://david-dm.org/Shyam-Chen/AngularNest-Fullstack-Starter?type=dev)
 
-[Live Demo](https://angularnest-by-example.firebaseapp.com/)
+:rainbow: Live Demo: Develop | [Master](https://angularnest-by-example.firebaseapp.com/)
+
+## Table of Contents
+
+* [Getting Started](#getting-started)
+* [Key Features](#key-features)
+* Project Template
+* Dockerization
+* Configuration
+* [Directory Structure](#directory-structure)
 
 ## Getting Started
 
@@ -82,6 +91,38 @@ $ yarn e2e:app
 # back-end
 $ yarn e2e:api
 ```
+
+## Key Features
+
+This seed repository provides the following features:
+
+* ---------- **Core** ----------
+* [x] [Web Fundamentals](https://developers.google.com/web/fundamentals/)
+* [x] [Firebase Platform](https://firebase.google.com/)
+* [x] [Google Cloud](https://cloud.google.com/)
+* [x] [Docker](https://www.docker.com/)
+* [x] [CircleCI](https://circleci.com/)
+* [x] [Codecov](https://codecov.io/)
+* ---------- **Front-end** ----------
+* [x] [Angular](https://github.com/angular/angular)
+* [x] [Angular Material](https://github.com/angular/material2)
+* [ ] [NGXS](https://github.com/ngxs/store)
+* [x] [Webpack](https://github.com/webpack/webpack)
+* [x] [PostCSS](https://github.com/postcss/postcss)
+* [x] [StyleLint](https://github.com/stylelint/stylelint)
+* [x] [Puppeteer](https://github.com/GoogleChrome/puppeteer)
+* ---------- **Back-end** ----------
+* [x] [Nest](https://github.com/nestjs/nest)
+* [x] [Express](https://github.com/expressjs/express)
+* [ ] [Request](https://github.com/request/request)
+* [x] [Gulp](https://github.com/gulpjs/gulp)
+* [x] [SuperTest](https://github.com/visionmedia/supertest)
+* ---------- **Shared** ----------
+* [ ] [Apollo GraphQL](https://github.com/apollographql)
+* [x] [ReactiveX](https://github.com/ReactiveX/rxjs)
+* [ ] [TensorFlow](https://github.com/tensorflow/tfjs)
+* [x] [TypeScript](https://github.com/Microsoft/TypeScript)
+* [x] [Jest](https://github.com/facebook/jest)
 
 ## Directory Structure
 
