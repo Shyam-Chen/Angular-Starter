@@ -23,7 +23,7 @@
 
 Follow steps to execute this boilerplate.
 
-1. Clone this Boilerplate
+1. Clone this boilerplate
 
 ```bash
 $ git clone --depth 1 https://github.com/Shyam-Chen/AngularNest-Fullstack-Starter <PROJECT_NAME>

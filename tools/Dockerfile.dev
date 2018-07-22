@@ -10,8 +10,8 @@ RUN yarn install
 ENV NODE_ENV production
 
 # envs --
-ENV SITE_URL https://angularnest-by-example.firebaseapp.com
-ENV FUNC_URL https://us-central1-angularnest-by-example.cloudfunctions.net
+ENV SITE_URL https://angularnest-by-example-dev.firebaseapp.com
+ENV FUNC_URL https://us-central1-angularnest-by-example-dev.cloudfunctions.net
 
 # ENV FIREBASE_API_KEY <FIREBASE_API_KEY>
 # ENV FIREBASE_AUTH_DOMAIN <FIREBASE_AUTH_DOMAIN>
