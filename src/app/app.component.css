@@ -11,3 +11,23 @@
   height: 40px;
   margin: auto 0.5rem auto 1rem;
 }
+
+.o-filling {
+  padding-top: 64px;
+
+  @media (max-width: 600px) {
+    padding-top: 56px;
+  }
+}
+
+.o-drawer-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.o-drawer {
+  position: fixed;
+  width: 300px;
+}

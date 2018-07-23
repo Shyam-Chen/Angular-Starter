@@ -5,4 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {}
+export class AppComponent {
+  // TODO: CDK
+  public opened: boolean = !(window.innerWidth < 600);
+  public mode: string = window.innerWidth < 600 ? 'over' : 'side';
+}

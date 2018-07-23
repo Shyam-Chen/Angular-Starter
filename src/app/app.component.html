@@ -1,5 +1,5 @@
 <mat-toolbar color="primary" class="mat-elevation-z4 o-toolbar">
-  <button mat-icon-button>
+  <button mat-icon-button (click)="drawer.toggle()">
     <mat-icon>menu</mat-icon>
   </button>
 
@@ -15,17 +15,30 @@
   </div>
 
   <span>Oh My AngularNest</span>
-
-  <img src="/assets/images/logo.svg" alt="Logo" width="40" height="40" class="o-toolbar-image">
 </mat-toolbar>
 
-<br><br><br><br><br>
+<mat-drawer-container class="o-drawer-container">
+  <mat-drawer #drawer [mode]="mode" [opened]="opened" class="o-drawer">
+    <div class="o-filling"></div>
+    Drawer content
+  </mat-drawer>
 
-<sort-filter-list></sort-filter-list>
+  <mat-drawer-content>
+    <div class="o-filling"></div>
 
-<br><br><br><br><br>
+    <sort-filter-list></sort-filter-list>
 
-<button mat-raised-button color="primary" routerLink="">Home</button>
-<button mat-raised-button color="primary" routerLink="hello-world">Hello World</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
-<router-outlet></router-outlet>
+    <button mat-raised-button color="primary" routerLink="">Home</button>
+    <button mat-raised-button color="primary" routerLink="hello-world">Hello World</button>
+
+    <router-outlet></router-outlet>
+
+    <img src="/assets/images/logo.svg" alt="Logo" width="40" height="40" class="o-toolbar-image">
+  </mat-drawer-content>
+</mat-drawer-container>

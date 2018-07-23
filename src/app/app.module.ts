@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 
 import { HomeModule } from './home/home.module';
@@ -27,6 +28,7 @@ export const ROUTES: Routes = [
     BrowserAnimationsModule,
     MatButtonModule,
     MatToolbarModule,
+    MatSidenavModule,
     MatIconModule,
     HomeModule,
     NotFoundModule,
