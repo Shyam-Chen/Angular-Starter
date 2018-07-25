@@ -2,6 +2,9 @@
   "name": "AngularNest-Fullstack-Starter",
   "version": "1.0.0",
   "description": "A boilerplate for Angular, Nest, Material, Express, TypeScript, and ReactiveX.",
+  "engines": {
+    "node": "8"
+  },
   "scripts": {
     "start:app": "rimraf public && webpack-dev-server --progress",
     "start:api": "rimraf functions && gulp",
