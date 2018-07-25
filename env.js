@@ -1,7 +1,7 @@
 function Environments() {
   this.NODE_ENV = process.env.NODE_ENV || 'development';
 
-  this.PROJECT_NAME = process.env.PROJECT_NAME || 'angularnest-by-example';
+  this.PROJECT_NAME = process.env.PROJECT_NAME || 'angularnest-by-example-dev';
 
   this.HOST_NAME = process.env.HOST_NAME || '0.0.0.0';
 
