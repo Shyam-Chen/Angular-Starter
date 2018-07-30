@@ -14,7 +14,6 @@
 
 * [Getting Started](#getting-started)
 * [Key Features](#key-features)
-* [Project Template](#project-template)
 * [Dockerization](#dockerization)
 * [Configuration](#configuration)
 * [Directory Structure](#directory-structure)
@@ -124,10 +123,6 @@ This seed repository provides the following features:
 * [x] [TypeScript](https://github.com/Microsoft/TypeScript)
 * [x] [TSLint](https://github.com/palantir/tslint)
 * [x] [Jest](https://github.com/facebook/jest)
-
-## Project Template
-
-TODO
 
 ## Dockerization
 
