@@ -18,9 +18,14 @@
 </mat-toolbar>
 
 <mat-drawer-container class="o-drawer-container">
-  <mat-drawer #drawer [mode]="mode" [opened]="opened" class="o-drawer">
+  <mat-drawer #drawer [mode]="mode" [opened]="opened" class="mat-elevation-z2 o-drawer">
     <div class="o-filling"></div>
-    Drawer content
+
+    <mat-list role="list">
+      <mat-list-item role="listitem">Item 1</mat-list-item>
+      <mat-list-item role="listitem">Item 2</mat-list-item>
+      <mat-list-item role="listitem">Item 3</mat-list-item>
+    </mat-list>
   </mat-drawer>
 
   <mat-drawer-content>
