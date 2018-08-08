@@ -1,5 +1,5 @@
 {
-  "extends": "../tsconfig.json",
+  "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "../dist",
     "module": "commonjs",
@@ -8,5 +8,6 @@
   "include": [
     "**/*.spec.ts",
     "**/*.e2e-spec.ts"
-  ]
+  ],
+  "exclude": []
 }
