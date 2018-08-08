@@ -7,7 +7,7 @@ switch (process.env.JEST_ENV) {
       ],
       globals: {
         'ts-jest': {
-          tsConfigFile: 'tsconfig.test.json',
+          tsConfigFile: './tools/tsconfig.test.json',
         },
         __TRANSFORM_HTML__: true,
       },
@@ -37,7 +37,7 @@ switch (process.env.JEST_ENV) {
       ],
       globals: {
         'ts-jest': {
-          tsConfigFile: 'tsconfig.test.json',
+          tsConfigFile: './tools/tsconfig.test.json',
         },
       },
       moduleFileExtensions: ['js', 'ts'],
@@ -64,7 +64,7 @@ switch (process.env.JEST_ENV) {
       ],
       globals: {
         'ts-jest': {
-          tsConfigFile: 'tsconfig.test.json',
+          tsConfigFile: './tools/tsconfig.test.json',
         },
       },
       moduleFileExtensions: ['js', 'ts', 'json'],
