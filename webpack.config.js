@@ -114,7 +114,7 @@ module.exports = ({ prod = false } = {}) => ({
       },
     }),
     new AngularCompilerPlugin({
-      tsConfigPath: './tsconfig.app.json',
+      tsConfigPath: './tools/tsconfig.app.json',
       entryModule: './src/app/app.module#AppModule',
       sourceMap: true,
     }),

@@ -1,0 +1,8 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../public",
+    "module": "es2015",
+    "types": []
+  }
+}
