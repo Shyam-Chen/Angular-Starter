@@ -22,28 +22,13 @@
     <div class="o-filling"></div>
 
     <mat-list role="list">
-      <mat-list-item role="listitem">Item 1</mat-list-item>
-      <mat-list-item role="listitem">Item 2</mat-list-item>
-      <mat-list-item role="listitem">Item 3</mat-list-item>
+      <mat-list-item role="listitem" routerLink="hello-world">Hello World</mat-list-item>
+      <mat-list-item role="listitem" routerLink="sort-filter-list">Sort Filter List</mat-list-item>
     </mat-list>
   </mat-drawer>
 
   <mat-drawer-content>
     <div class="o-filling"></div>
-
-    <sort-filter-list></sort-filter-list>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <button mat-raised-button color="primary" routerLink="">Home</button>
-    <button mat-raised-button color="primary" routerLink="hello-world">Hello World</button>
-
     <router-outlet></router-outlet>
-
-    <img src="/assets/images/logo.svg" alt="Logo" width="40" height="40" class="o-toolbar-image">
   </mat-drawer-content>
 </mat-drawer-container>

@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
     <div>
       <div>Whoops, 404!</div>
       <div>The page you were looking for does not exist.</div>
-      <button>Get me out of here!</button>
+      <button routerLink="">Get me out of here!</button>
     </div>
   `,
 })
