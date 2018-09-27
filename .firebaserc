@@ -1,6 +1,7 @@
 {
   "projects": {
     "development": "angularnest-by-example-dev",
+    "staging": "angularnest-by-example-stage",
     "production": "angularnest-by-example-prod"
   }
 }
