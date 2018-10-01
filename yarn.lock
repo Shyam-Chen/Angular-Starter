@@ -505,6 +505,30 @@
     tree-kill "^1.0.0"
     webpack-sources "^1.1.0"
 
+"@ngxs/devtools-plugin@3.2.0":
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/@ngxs/devtools-plugin/-/devtools-plugin-3.2.0.tgz#4cca564022b91e7f84c86671f078092441bcd0f5"
+  dependencies:
+    tslib "^1.9.0"
+
+"@ngxs/logger-plugin@3.2.0":
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/@ngxs/logger-plugin/-/logger-plugin-3.2.0.tgz#c2b40b79c7b41ca0ef930b25bd19e07043cf7774"
+  dependencies:
+    tslib "^1.9.0"
+
+"@ngxs/router-plugin@3.2.0":
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/@ngxs/router-plugin/-/router-plugin-3.2.0.tgz#d78777bd83fde2ea08a37ef3719ba45067b9400d"
+  dependencies:
+    tslib "^1.9.0"
+
+"@ngxs/store@3.2.0":
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/@ngxs/store/-/store-3.2.0.tgz#533939acb41a948a34886943314d2a0d866045c9"
+  dependencies:
+    tslib "^1.9.0"
+
 "@nodelib/fs.stat@^1.0.1":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.0.tgz#50c1e2260ac0ed9439a181de3725a0168d59c48a"
