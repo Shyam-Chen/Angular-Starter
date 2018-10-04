@@ -12,6 +12,10 @@
   margin: auto 0.5rem auto 1rem;
 }
 
+.o-toolbar-title {
+  font-size: 1.1rem;
+}
+
 .o-filling {
   padding-top: 64px;
 
