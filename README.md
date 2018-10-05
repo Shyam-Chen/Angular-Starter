@@ -106,6 +106,7 @@ This seed repository provides the following features:
 * [x] [Angular](https://github.com/angular/angular)
 * [x] [Angular Material](https://github.com/angular/material2)
 * [ ] [NGXS](https://github.com/ngxs/store)
+* [ ] [Ngx Translate](https://github.com/ngx-translate/core)
 * [x] [Webpack](https://github.com/webpack/webpack)
 * [x] [PostCSS](https://github.com/postcss/postcss)
 * [x] [StyleLint](https://github.com/stylelint/stylelint)
