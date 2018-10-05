@@ -25,6 +25,55 @@
       <mat-list-item role="listitem" routerLink="hello-world">Hello World</mat-list-item>
       <mat-list-item role="listitem" routerLink="sort-filter-list">Sort Filter List</mat-list-item>
     </mat-list>
+
+    <mat-divider></mat-divider>
+
+    <div class="mat-typography o-subheader">Group 1</div>
+
+    <mat-expansion-panel class="o-expansion-panel">
+      <mat-expansion-panel-header>
+        <mat-panel-title>Link A</mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-list role="list">
+        <mat-list-item role="listitem" routerLink="">Link A-1</mat-list-item>
+        <mat-list-item role="listitem" routerLink="">Link A-2</mat-list-item>
+      </mat-list>
+
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>arrow_drop_down</mat-icon>
+            Link A-3
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list role="list">
+          <mat-list-item role="listitem" routerLink="">Link A-3-1</mat-list-item>
+          <mat-list-item role="listitem" routerLink="">Link A-3-2</mat-list-item>
+        </mat-list>
+      </mat-expansion-panel>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel class="o-expansion-panel">
+      <mat-expansion-panel-header>
+        <mat-panel-title>Link B</mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-list role="list">
+        <mat-list-item role="listitem" routerLink="">Link B-1</mat-list-item>
+        <mat-list-item role="listitem" routerLink="">Link B-2</mat-list-item>
+      </mat-list>
+    </mat-expansion-panel>
+
+    <mat-list role="list">
+      <mat-list-item role="listitem" routerLink="">Link C</mat-list-item>
+    </mat-list>
+
+    <mat-divider></mat-divider>
+
+    <div class="mat-typography o-subheader">Group 2</div>
+
+    <mat-list role="list">
+      <mat-list-item role="listitem" routerLink="">Link D</mat-list-item>
+    </mat-list>
   </mat-drawer>
 
   <mat-drawer-content>

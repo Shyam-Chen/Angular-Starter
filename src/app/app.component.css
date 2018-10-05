@@ -35,3 +35,11 @@
   position: fixed;
   width: 300px;
 }
+
+.o-subheader {
+  height: 40px;
+  color: rgba(0, 0, 0, 0.54);
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+}
