@@ -10,8 +10,8 @@ import { Increment } from './counter.action';
   selector: 'counter',
   template: `
     <div>
-      <div>Clicked: {{ c$.value }} times, value is {{ evenOrOdd | async }}.</div>
-      <button (click)="onIncrement()">Increment</button>
+      <div>Clicked: <strong>{{ c$.value }}</strong> times, value is <strong>{{ evenOrOdd | async }}</strong>.</div>
+      <button mat-raised-button color="primary" (click)="onIncrement()">Increment</button>
     </div>
   `,
 })
