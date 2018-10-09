@@ -1,4 +1,4 @@
-import { State, Action } from '@ngxs/store';
+import { State, StateContext, Action, Selector } from '@ngxs/store';
 
 import { CounterModel } from './counter.model';
 import { Increment } from './counter.action';
@@ -10,13 +10,14 @@ import { Increment } from './counter.action';
   },
 })
 export class CounterState {
-  @Action(Increment)
-  increment({ getState, setState }) {
-    const state = getState();
+  @Selector()
+  static evenOrOdd(state: CounterModel): string {
+    return state.value % 2 === 0 ? 'even' : 'odd';
+  }
 
-    setState({
-      ...state,
-      value: state.value + 1,
-    });
+  @Action(Increment)
+  public increment({ getState, setState }: StateContext<CounterModel>): void {
+    const state = getState();
+    setState({ ...state, value: state.value + 1 });
   }
 }

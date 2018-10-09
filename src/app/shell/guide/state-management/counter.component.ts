@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Store, Select } from '@ngxs/store';
 import { Observable } from 'rxjs';
 
+import { CounterState } from './counter.state';
 import { CounterModel } from './counter.model';
 import { Increment } from './counter.action';
 
@@ -9,17 +10,24 @@ import { Increment } from './counter.action';
   selector: 'counter',
   template: `
     <div>
-      <div>Clicked: {{ value | async }} times</div>
+      <div>Clicked: {{ c$.value }} times, value is {{ evenOrOdd | async }}.</div>
       <button (click)="onIncrement()">Increment</button>
     </div>
   `,
 })
 export class CounterComponent {
-  @Select('counter.value') value: Observable<CounterModel>;
+  public c$: CounterModel;
 
-  constructor(private store: Store) {}
+  @Select(CounterState) public counter$: Observable<CounterModel>;
+  @Select(CounterState.evenOrOdd) public evenOrOdd: Observable<CounterModel>;
 
-  onIncrement() {
+  constructor(private store: Store) {
+    this.counter$.subscribe((state: CounterModel): void => {
+      this.c$ = { ...state };
+    });
+  }
+
+  public onIncrement(): void {
     this.store.dispatch(new Increment());
   }
 }
