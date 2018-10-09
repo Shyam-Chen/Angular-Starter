@@ -12,6 +12,7 @@ export const ROUTES: Routes = [
   { path: 'hello-world', loadChildren: './shell/hello-world/hello-world.module#HelloWorldModule' },
   { path: 'sort-filter-list', loadChildren: './shell/sort-filter-list.module#SortFilterListModule' },
   // { path: 'guide', loadChildren: './shell/guide/guide.module#GuideModule' },
+  { path: 'counter', loadChildren: './shell/guide/state-management/state-management.module#StateManagementModule' },
   { path: '**', component: NotFoundComponent },
 ];
 

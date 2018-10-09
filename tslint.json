@@ -5,6 +5,7 @@
   ],
   "rules": {
     "curly": [true, "ignore-same-line"],
+    "max-classes-per-file": false,
     "max-line-length": false,
     "no-inferrable-types": [true, "ignore-params", "ignore-properties"]
   }
