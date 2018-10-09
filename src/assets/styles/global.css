@@ -2,3 +2,15 @@
 @import '_root';
 @import '_medias';
 @import '_selectors';
+
+.o-expansion-panel .mat-expansion-panel-body {
+  padding: 0 !important;
+}
+
+/* .o-expansion-panel .mat-expansion-panel-header {
+  height: 48px !important;
+} */
+
+.o-list-item .mat-list-item-content {
+  padding: 0 24px !important;
+}

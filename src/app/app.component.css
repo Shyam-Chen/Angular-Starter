@@ -44,6 +44,34 @@
   align-items: center;
 }
 
+.o-expansion-panel {
+  box-shadow: none !important;
+}
+
+.o-nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.o-nav-icon {
+  margin-right: 1rem;
+}
+
+.o-list {
+  padding: 0;
+}
+
+.o-list-item {
+  &:hover {
+    background: rgba(0, 0, 0, 0.04);
+  }
+}
+
+.o-list-item--child {
+  font-size: 15px;
+  padding-left: 40px;
+}
+
 .o-page {
   display: flex;
   flex-flow: column;
