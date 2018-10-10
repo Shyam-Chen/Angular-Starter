@@ -62,6 +62,8 @@
 }
 
 .o-list-item {
+  font-size: 15px;
+
   &:hover {
     background: rgba(0, 0, 0, 0.04);
   }
