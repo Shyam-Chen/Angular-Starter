@@ -6,7 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  // TODO: CDK
+  public state: boolean = false;
   public opened: boolean = !(window.innerWidth < 600);
   public mode: string = window.innerWidth < 600 ? 'over' : 'side';
+
+  click() {
+    this.state = !this.state;
+  }
 }
