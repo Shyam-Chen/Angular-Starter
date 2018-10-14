@@ -1,12 +1,9 @@
-// import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
-// @Component({
-//   selector: 'guide-pipes',
-//   template: ``,
-//   styles: [``],
-// })
-// export class PipesComponent implements OnInit {
-//   constructor() { }
-
-//   ngOnInit(): void { }
-// }
+@Component({
+  selector: 'guide-pipes',
+  template: `
+    <sort-filter-list></sort-filter-list>
+  `,
+})
+export class PipesComponent {}
