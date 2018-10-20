@@ -11,5 +11,7 @@ export class AppComponent {
   public mode: string = window.innerWidth < 600 ? 'over' : 'side';
   public logo = this.sanitizer.bypassSecurityTrustResourceUrl(require('../assets/images/logo.svg'));
 
-  constructor(private sanitizer: DomSanitizer) { }
+  constructor(
+    private sanitizer: DomSanitizer,
+  ) {}
 }
