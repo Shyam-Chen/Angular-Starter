@@ -103,6 +103,60 @@
         </mat-list>
       </mat-expansion-panel>
     </mat-expansion-panel>
+
+
+
+<!-- <ng-template ngFor let-item [ngForOf]="navigation" let-i="index">
+  <div *ngIf="item.subheader" class="mat-typography o-subheader">{{ item.subheader }}</div>
+
+  <mat-expansion-panel class="o-expansion-panel">
+    <mat-expansion-panel-header expandedHeight="48px">
+      <mat-panel-title class="o-nav-item">
+        <mat-icon class="o-nav-icon">face</mat-icon>Link A
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-list role="list" class="o-list">
+      <mat-list-item role="listitem" routerLink="" class="o-list-item o-list-item--child">Link A-1</mat-list-item>
+      <mat-list-item role="listitem" routerLink="" class="o-list-item o-list-item--child">Link A-2</mat-list-item>
+    </mat-list>
+
+    <mat-expansion-panel #expansionPanelRef1 class="o-expansion-panel" hideToggle>
+      <mat-expansion-panel-header expandedHeight="48px" class="o-list-item o-list-item--child" style="padding-left: 32px;">
+        <mat-panel-title>
+          <mat-icon style="margin-right: 0.5rem;">{{ expansionPanelRef1.expanded ? 'arrow_drop_up' : 'arrow_drop_down' }}</mat-icon>Link
+          A-3
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-list role="list" class="o-list">
+        <mat-list-item role="listitem" routerLink="" class="o-list-item o-list-item--child">Link A-3-1</mat-list-item>
+        <mat-list-item role="listitem" routerLink="" class="o-list-item o-list-item--child">Link A-3-2</mat-list-item>
+      </mat-list>
+    </mat-expansion-panel>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel class="o-expansion-panel">
+    <mat-expansion-panel-header expandedHeight="48px">
+      <mat-panel-title class="o-nav-item">
+        <mat-icon class="o-nav-icon">face</mat-icon>Link B
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-list role="list" class="o-list">
+      <mat-list-item role="listitem" routerLink="" class="o-list-item o-list-item--child">Link B-1</mat-list-item>
+      <mat-list-item role="listitem" routerLink="" class="o-list-item o-list-item--child">Link B-2</mat-list-item>
+    </mat-list>
+  </mat-expansion-panel>
+
+  <mat-list role="list" class="o-list">
+    <mat-list-item role="listitem" routerLink="" class="o-list-item">
+      <mat-icon class="o-nav-icon">face</mat-icon>Link C
+    </mat-list-item>
+  </mat-list>
+
+  <mat-divider></mat-divider>
+</ng-template> -->
+
+
+
   </mat-drawer>
 
   <mat-drawer-content>
