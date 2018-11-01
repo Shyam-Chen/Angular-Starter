@@ -37,6 +37,7 @@ export class AppComponent {
     { icon: 'face', text: 'Link C', route: '' },
     {
       subheader: 'Group 2',
+      divider: true,
       icon: 'loyalty',
       text: 'Link D',
       route: '',
