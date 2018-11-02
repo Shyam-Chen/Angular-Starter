@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFoundComponent should render an initial component 1`] = `
+<not-found>
+  <div>
+    <div>
+      Whoops, 404!
+    </div>
+    <div>
+      The page you were looking for does not exist.
+    </div>
+    <button
+      routerlink=""
+    >
+      Get me out of here!
+    </button>
+  </div>
+</not-found>
+`;
