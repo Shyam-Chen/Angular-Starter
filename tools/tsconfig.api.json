@@ -2,8 +2,7 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "outDir": "../functions",
-    "module": "commonjs",
-    "types": []
+    "module": "commonjs"
   },
   "exclude": [
     "src/client.ts",
