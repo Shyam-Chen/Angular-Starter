@@ -46,6 +46,11 @@
 
 .o-expansion-panel {
   box-shadow: none !important;
+
+  &.mat-expanded {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-width: 1px 0;
+  }
 }
 
 .o-nav-item {
@@ -71,7 +76,6 @@
 
 .o-list-item--child {
   font-size: 15px;
-  padding-left: 40px;
 }
 
 .o-page {

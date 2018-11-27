@@ -46,7 +46,7 @@
 
             <ng-template ngFor let-subChildItem [ngForOf]="childItem.children">
               <mat-list role="list" class="o-list">
-                <mat-list-item role="listitem" [routerLink]="subChildItem.route" class="o-list-item o-list-item--child">{{ subChildItem.text }}</mat-list-item>
+                <mat-list-item role="listitem" [routerLink]="subChildItem.route" class="o-list-item o-list-item--child" style="padding: 0 48px;">{{ subChildItem.text }}</mat-list-item>
               </mat-list>
             </ng-template>
           </mat-expansion-panel>
@@ -54,7 +54,7 @@
           <!-- else not sub-children -->
           <ng-template #notSubChildren>
             <mat-list role="list" class="o-list">
-              <mat-list-item role="listitem" [routerLink]="childItem.route" class="o-list-item o-list-item--child">{{ childItem.text }}</mat-list-item>
+              <mat-list-item role="listitem" [routerLink]="childItem.route" class="o-list-item o-list-item--child" style="padding: 0 48px;">{{ childItem.text }}</mat-list-item>
             </mat-list>
           </ng-template>
         </ng-template>
@@ -63,7 +63,7 @@
       <!-- else not children -->
       <ng-template #notChildren>
         <mat-list role="list" class="o-list">
-          <mat-list-item role="listitem" [routerLink]="item.route" class="o-list-item">
+          <mat-list-item role="listitem" [routerLink]="item.route" class="o-list-item" style="padding-left: 8px;">
             <mat-icon class="o-nav-icon">{{ item.icon }}</mat-icon>{{ item.text }}
           </mat-list-item>
         </mat-list>

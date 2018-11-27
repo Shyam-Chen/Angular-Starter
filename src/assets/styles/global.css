@@ -6,12 +6,3 @@
 .o-expansion-panel .mat-expansion-panel-body {
   padding: 0 !important;
 }
-
-.o-list-item .mat-list-item-content {
-  padding: 0 24px !important;
-}
-
-.o-expansion-panel.mat-expanded {
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  border-width: 1px 0;
-}
