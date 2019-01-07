@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Store, Select } from '@ngxs/store';
 import { Observable } from 'rxjs';
 
@@ -15,13 +15,16 @@ import { Increment } from './counter.action';
     </div>
   `,
 })
-export class CounterComponent {
+export class CounterComponent implements OnInit {
   public c$: CounterModel;
 
-  @Select(CounterState) public counter$: Observable<CounterModel>;
+  @Select(CounterState) private counter$: Observable<CounterModel>;
+
   @Select(CounterState.evenOrOdd) public evenOrOdd: Observable<CounterModel>;
 
-  constructor(private store: Store) {
+  constructor(private store: Store) {}
+
+  ngOnInit(): void {
     this.counter$.subscribe((state: CounterModel): void => {
       this.c$ = { ...state };
     });
