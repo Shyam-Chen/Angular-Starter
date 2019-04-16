@@ -1,4 +1,5 @@
 import { NestFactory } from '@nestjs/core';
+import { ExpressAdapter } from '@nestjs/platform-express';
 import * as functions from 'firebase-functions';
 import * as admin from 'firebase-admin';
 import * as express from 'express';
@@ -19,7 +20,7 @@ vm.use(bodyParser.json());
 vm.use(bodyParser.urlencoded({ extended: false }));
 
 const bootstrap = async (instance) => {
-  const module = await NestFactory.create(ApiModule, instance);
+  const module = await NestFactory.create(ApiModule, new ExpressAdapter(instance));
   await module.init();
 };
 
