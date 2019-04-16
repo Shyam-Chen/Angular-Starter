@@ -668,12 +668,11 @@
   dependencies:
     socket.io "2.2.0"
 
-"@nestjs/testing@5.3.7":
-  version "5.3.7"
-  resolved "https://registry.yarnpkg.com/@nestjs/testing/-/testing-5.3.7.tgz#ce077b7777269cac0e1263c733c16babc1b8e274"
-  integrity sha512-5rLWshgcHndJeJ5vjjmOTwin94ro/RaMNMIlwDPbYYgdoUeI7piKLOR7nEx+li8CXY4qQk/vRU8gpj4wy4Vi1g==
+"@nestjs/testing@6.1.1":
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/@nestjs/testing/-/testing-6.1.1.tgz#cc871867f9bd053069467a5a2f1b429945413313"
+  integrity sha512-EQLRES20n8zWkFRXgwFKjCE0s/WsHvqv3v22umqq2XHiep7WiJub0hNG/FcC00WltXPDPAaEDu0XDPr56UWZhQ==
   dependencies:
-    deprecate "1.0.0"
     optional "0.1.4"
 
 "@nestjs/websockets@6.1.1":
@@ -3677,11 +3676,6 @@ dependency-graph@^0.7.2:
   version "0.7.2"
   resolved "https://registry.yarnpkg.com/dependency-graph/-/dependency-graph-0.7.2.tgz#91db9de6eb72699209d88aea4c1fd5221cac1c49"
   integrity sha512-KqtH4/EZdtdfWX0p6MGP9jljvxSY6msy/pRUD4jgNwVpv3v1QmNLlsB3LDSSUg79BRVSn7jI1QPRtArGABovAQ==
-
-deprecate@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/deprecate/-/deprecate-1.0.0.tgz#661490ed2428916a6c8883d8834e5646f4e4a4a8"
-  integrity sha1-ZhSQ7SQokWpsiIPYg05WRvTkpKg=
 
 deprecated@^0.0.1:
   version "0.0.1"
