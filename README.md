@@ -35,60 +35,34 @@ $ cd <PROJECT_NAME>
 $ yarn install
 ```
 
-3. Set an active project for working direct
+3. Start a local server
 
 ```bash
-$ yarn firebase use development
+$ yarn start
 ```
 
-4. Start a local server
+4. Compile and bundle code
 
 ```bash
-# front-end
-$ yarn start:app
-
-# back-end
-$ yarn start:api
+$ yarn build
 ```
 
-5. Compile and bundle code
+5. Check code quality
 
 ```bash
-# front-end
-$ yarn build:app
-
-# back-end
-$ yarn build:api
+$ yarn lint
 ```
 
-6. Check the code quality
+6. Runs unit tests
 
 ```bash
-# front-end
-$ yarn lint:app
-
-# back-end
-$ yarn lint:api
+$ yarn unit
 ```
 
-7. Run the unit tests
+7. Runs end-to-end tests
 
 ```bash
-# front-end
-$ yarn test:app
-
-# back-end
-$ yarn test:api
-```
-
-8. Run the end-to-end tests
-
-```bash
-# front-end
-$ yarn e2e:app
-
-# back-end
-$ yarn e2e:api
+$ yarn e2e
 ```
 
 ## Key Features
@@ -105,7 +79,6 @@ This seed repository provides the following features:
 * ---------- **Front-end** ----------
 * [x] [Angular](https://github.com/angular/angular)
 * [x] [Angular Material](https://github.com/angular/material2)
-* [x] [NGXS](https://github.com/ngxs/store)
 * [ ] [Ngx Translate](https://github.com/ngx-translate/core)
 * [x] [Webpack](https://github.com/webpack/webpack)
 * [x] [PostCSS](https://github.com/postcss/postcss)

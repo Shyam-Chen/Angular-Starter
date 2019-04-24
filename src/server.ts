@@ -1,70 +1,42 @@
-import { NestFactory } from '@nestjs/core';
-import { ExpressAdapter } from '@nestjs/platform-express';
 import * as functions from 'firebase-functions';
-import * as admin from 'firebase-admin';
 import * as express from 'express';
-import * as cors from 'cors';
-import * as morgan from 'morgan';
-import * as bodyParser from 'body-parser';
-// import * as request from 'request';
+import * as request from 'request';
 
-import { ApiModule } from './api/api.module';
+const sh = express();
 
-admin.initializeApp();
+sh.get('*', (req, res) => {
+  const botUserAgents = [
+    'W3C_Validator',
+    'baiduspider',
+    'bingbot',
+    'embedly',
+    'facebookexternalhit',
+    'linkedinbot',
+    'outbrain',
+    'pinterest',
+    'quora link preview',
+    'rogerbot',
+    'showyoubot',
+    'slackbot',
+    'twitterbot',
+    'vkShare',
+  ];
 
-const vm = express();
+  const rendertronUrl = process.env.RENDERTRON_URL;
+  const targetUrl = process.env.SITE_URL + req.originalUrl;
 
-vm.use(cors());
-vm.use(morgan('tiny'));
-vm.use(bodyParser.json());
-vm.use(bodyParser.urlencoded({ extended: false }));
+  if (new RegExp(botUserAgents.join('|'), 'i').test(req.headers['user-agent'])) {
+    request(`${rendertronUrl}/render/${targetUrl}`, (error, response, body) => {
+      res.set('Cache-Control', 'public, max-age=300, s-maxage=600');
+      res.set('Vary', 'User-Agent');
 
-const bootstrap = async (instance) => {
-  const module = await NestFactory.create(ApiModule, new ExpressAdapter(instance));
-  await module.init();
-};
+      res.send(`${body}`);
+    });
+  } else {
+    request(process.env.SITE_URL, (error, response, body) => {
+      res.send(`${body}`);
+    });
+  }
+});
 
-bootstrap(vm);
-
-export const api = functions.https.onRequest(vm);
-
-// -
-
-// const sh = express();
-
-// sh.get('*', (req, res) => {
-//   const botUserAgents = [
-//     'W3C_Validator',
-//     'baiduspider',
-//     'bingbot',
-//     'embedly',
-//     'facebookexternalhit',
-//     'linkedinbot',
-//     'outbrain',
-//     'pinterest',
-//     'quora link preview',
-//     'rogerbot',
-//     'showyoubot',
-//     'slackbot',
-//     'twitterbot',
-//     'vkShare',
-//   ];
-
-//   const rendertronUrl = process.env.RENDERTRON_URL;
-//   const targetUrl = process.env.SITE_URL + req.originalUrl;
-
-//   if (new RegExp(botUserAgents.join('|'), 'i').test(req.headers['user-agent'])) {
-//     request(`${rendertronUrl}/render/${targetUrl}`, (error, response, body) => {
-//       res.set('Cache-Control', 'public, max-age=300, s-maxage=600');
-//       res.set('Vary', 'User-Agent');
-
-//       res.send(`${body}`);
-//     });
-//   } else {
-//     request(process.env.SITE_URL, (error, response, body) => {
-//       res.send(`${body}`);
-//     });
-//   }
-// });
-
-// export const app = functions.https.onRequest(sh);
+export const app = functions.https.onRequest(sh);

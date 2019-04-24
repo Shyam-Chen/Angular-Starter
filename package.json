@@ -6,16 +6,11 @@
     "node": "8"
   },
   "scripts": {
-    "start:app": "rimraf public && webpack-dev-server --progress",
-    "start:api": "rimraf functions && gulp",
-    "build:app": "rimraf public && webpack --env.prod",
-    "build:api": "rimraf functions && gulp --prod",
-    "lint:app": "tslint src/client.ts 'src/app/**/*.ts' && stylelint 'src/**/*.css'",
-    "lint:api": "tslint src/server.ts 'src/api/**/*.ts'",
-    "test:app": "cross-env JEST_ENV=app jest \"src/app/.*\\.ts$\" --coverage --forceExit",
-    "test:api": "cross-env JEST_ENV=api jest \"src/api/.*\\.ts$\" --coverage --forceExit",
-    "e2e:app": "cross-env JEST_ENV=e2e jest \"src/app/.*\\.ts$\" --forceExit",
-    "e2e:api": "cross-env JEST_ENV=e2e jest \"src/api/.*\\.ts$\" --forceExit",
+    "start": "rimraf public && webpack-dev-server --progress",
+    "build": "rimraf public functions && webpack --env.prod && gulp --prod",
+    "lint": "tslint src/client.ts 'src/app/**/*.ts' && stylelint 'src/**/*.css'",
+    "unit": "cross-env JEST_ENV=app jest \"src/app/.*\\.ts$\" --coverage --forceExit",
+    "e2e": "cross-env JEST_ENV=e2e jest \"src/app/.*\\.ts$\" --forceExit",
     "codecov": "codecov",
     "firebase": "firebase"
   },

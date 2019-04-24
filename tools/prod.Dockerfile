@@ -23,5 +23,5 @@ ENV FUNC_URL https://us-central1-angularnest-by-example-prod.cloudfunctions.net
 # ENV SENTRY_DSN <SENTRY_DSN>
 # -- envs
 
-RUN yarn build:app
+RUN yarn build
 RUN yarn build:api && cd functions && yarn install
