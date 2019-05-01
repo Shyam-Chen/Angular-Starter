@@ -1,12 +1,11 @@
-import * as functions from 'firebase-functions';
-import * as express from 'express';
-import * as request from 'request';
+const functions = require('firebase-functions');
+const express = require('express');
+const request = require('request');
 
-const sh = express();
+const app = express();
 
-sh.get('*', (req, res) => {
+app.get('*', (req, res) => {
   const botUserAgents = [
-    'W3C_Validator',
     'baiduspider',
     'bingbot',
     'embedly',
@@ -18,8 +17,11 @@ sh.get('*', (req, res) => {
     'rogerbot',
     'showyoubot',
     'slackbot',
+    'TelegramBot',
     'twitterbot',
     'vkShare',
+    'W3C_Validator',
+    'whatsapp',
   ];
 
   const rendertronUrl = process.env.RENDERTRON_URL;
@@ -30,13 +32,13 @@ sh.get('*', (req, res) => {
       res.set('Cache-Control', 'public, max-age=300, s-maxage=600');
       res.set('Vary', 'User-Agent');
 
-      res.send(`${body}`);
+      res.send(String(body));
     });
   } else {
     request(process.env.SITE_URL, (error, response, body) => {
-      res.send(`${body}`);
+      res.send(String(body));
     });
   }
 });
 
-export const app = functions.https.onRequest(sh);
+exports.app = functions.https.onRequest(app);

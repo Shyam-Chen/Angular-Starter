@@ -20,9 +20,7 @@ const DIST_ROOT = path.join(__dirname, 'public');
 module.exports = ({ prod = false } = {}) => ({
   mode: prod ? 'production' : 'development',
   context: SOURCE_ROOT,
-  entry: {
-    client: './client.ts',
-  },
+  entry: ['./main.ts'],
   output: {
     path: DIST_ROOT,
     filename: prod ? '[name].[hash].js' : '[name].js',

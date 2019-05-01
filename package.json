@@ -1,13 +1,13 @@
 {
-  "name": "angularnest-fullstack-starter",
+  "name": "angular-play",
   "version": "1.0.0",
-  "description": "A boilerplate for Angular, Nest, Material, Express, TypeScript, and ReactiveX.",
+  "description": "A boilerplate for Angular, Material, TypeScript, and ReactiveX.",
   "engines": {
-    "node": "8"
+    "node": "10"
   },
   "scripts": {
     "start": "rimraf public && webpack-dev-server --progress",
-    "build": "rimraf public functions && webpack --env.prod && gulp --prod",
+    "build": "rimraf public functions && webpack --env.prod",
     "lint": "tslint src/client.ts 'src/app/**/*.ts' && stylelint 'src/**/*.css'",
     "unit": "cross-env JEST_ENV=app jest \"src/app/.*\\.ts$\" --coverage --forceExit",
     "e2e": "cross-env JEST_ENV=e2e jest \"src/app/.*\\.ts$\" --forceExit",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Shyam-Chen/AngularNest-Fullstack-Starter.git"
+    "url": "git+https://github.com/Shyam-Chen/Angular-Play.git"
   },
   "keywords": [
     "Angular",
@@ -26,9 +26,9 @@
   "author": "Yen-cheng Chen, 陳彥澄",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Shyam-Chen/AngularNest-Fullstack-Starter/issues"
+    "url": "https://github.com/Shyam-Chen/Angular-Play/issues"
   },
-  "homepage": "https://github.com/Shyam-Chen/AngularNest-Fullstack-Starter#readme",
+  "homepage": "https://github.com/Shyam-Chen/Angular-Play#readme",
   "dependencies": {
     "@angular/animations": "7.1.0",
     "@angular/cdk": "7.1.0",
@@ -42,24 +42,14 @@
     "@angular/platform-browser": "7.1.0",
     "@angular/platform-browser-dynamic": "7.1.0",
     "@angular/router": "7.1.0",
-    "@nestjs/common": "6.1.1",
-    "@nestjs/core": "6.1.1",
-    "@nestjs/microservices": "6.1.1",
-    "@nestjs/platform-express": "6.1.1",
-    "@nestjs/platform-socket.io": "6.1.1",
-    "@nestjs/websockets": "6.1.1",
     "@ngxs/devtools-plugin": "3.2.0",
     "@ngxs/logger-plugin": "3.2.0",
     "@ngxs/router-plugin": "3.2.0",
     "@ngxs/store": "3.2.0",
     "core-js": "2.5.7",
     "firebase": "5.9.4",
-    "firebase-admin": "7.2.0",
-    "firebase-functions": "2.2.1",
     "hammerjs": "2.0.8",
-    "morgan": "1.9.1",
     "reflect-metadata": "0.1.12",
-    "request": "2.88.0",
     "rxjs": "6.3.3",
     "zone.js": "0.8.26"
   },
@@ -67,8 +57,6 @@
     "@angular-devkit/build-angular": "0.8.2",
     "@angular/compiler-cli": "7.1.0",
     "@angular/language-service": "7.1.0",
-    "@google-cloud/functions-emulator": "1.0.0-beta.6.0",
-    "@nestjs/testing": "6.1.1",
     "@ngtools/webpack": "6.2.2",
     "@types/jest": "23.3.2",
     "@types/node": "10.9.4",
@@ -81,13 +69,6 @@
     "file-loader": "2.0.0",
     "firebase-functions-test": "0.1.6",
     "firebase-tools": "6.6.0",
-    "gulp": "3.9.1",
-    "gulp-plumber": "1.2.1",
-    "gulp-rename": "1.4.0",
-    "gulp-replaces": "0.1.5",
-    "gulp-shell": "0.6.5",
-    "gulp-typescript": "5.0.0-alpha.3",
-    "gulp-util": "3.0.8",
     "html-webpack-plugin": "4.0.0-alpha",
     "jest": "23.6.0",
     "jest-preset-angular": "6.0.1",
@@ -103,7 +84,6 @@
     "script-ext-html-webpack-plugin": "2.1.3",
     "stylelint": "9.9.0",
     "stylelint-config-standard": "18.2.0",
-    "supertest": "3.3.0",
     "to-string-loader": "1.1.5",
     "ts-jest": "23.10.5",
     "ts-node": "7.0.1",
@@ -115,8 +95,5 @@
     "webpack": "4.28.3",
     "webpack-cli": "3.2.1",
     "webpack-dev-server": "3.1.14"
-  },
-  "resolutions": {
-    "ajv": "6.6.1"
   }
 }

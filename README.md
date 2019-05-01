@@ -1,12 +1,12 @@
-# AngularNest Fullstack Starter
+# Angular-Play
 
-:tiger: A boilerplate for Angular, Nest, Material, Express, TypeScript, and ReactiveX.
+:tiger: A boilerplate for Angular, Material, TypeScript, and ReactiveX.
 
-[![Build Status](https://img.shields.io/circleci/project/github/Shyam-Chen/AngularNest-Fullstack-Starter/develop.svg)](https://circleci.com/gh/Shyam-Chen/AngularNest-Fullstack-Starter)
-[![Coverage Status](https://img.shields.io/codecov/c/github/Shyam-Chen/AngularNest-Fullstack-Starter/develop.svg)](https://codecov.io/gh/Shyam-Chen/AngularNest-Fullstack-Starter)
+[![Build Status](https://img.shields.io/circleci/project/github/Shyam-Chen/Angular-Play/develop.svg)](https://circleci.com/gh/Shyam-Chen/Angular-Play)
+[![Coverage Status](https://img.shields.io/codecov/c/github/Shyam-Chen/Angular-Play/develop.svg)](https://codecov.io/gh/Shyam-Chen/Angular-Play)
  //
-[![dependencies Status](https://img.shields.io/david/Shyam-Chen/AngularNest-Fullstack-Starter.svg)](https://david-dm.org/Shyam-Chen/AngularNest-Fullstack-Starter)
-[![devDependencies Status](https://img.shields.io/david/dev/Shyam-Chen/AngularNest-Fullstack-Starter.svg)](https://david-dm.org/Shyam-Chen/AngularNest-Fullstack-Starter?type=dev)
+[![dependencies Status](https://img.shields.io/david/Shyam-Chen/Angular-Play.svg)](https://david-dm.org/Shyam-Chen/Angular-Play)
+[![devDependencies Status](https://img.shields.io/david/dev/Shyam-Chen/Angular-Play.svg)](https://david-dm.org/Shyam-Chen/Angular-Play?type=dev)
 
 :rainbow: Live Demo: [Develop](https://angularnest-by-example-dev.firebaseapp.com/) | [Master](https://angularnest-by-example-prod.firebaseapp.com/)
 
@@ -25,7 +25,7 @@ Follow steps to execute this boilerplate.
 1. Clone this boilerplate
 
 ```bash
-$ git clone --depth 1 https://github.com/Shyam-Chen/AngularNest-Fullstack-Starter <PROJECT_NAME>
+$ git clone --depth 1 https://github.com/Shyam-Chen/Angular-Play <PROJECT_NAME>
 $ cd <PROJECT_NAME>
 ```
 
@@ -69,14 +69,14 @@ $ yarn e2e
 
 This seed repository provides the following features:
 
-* ---------- **Core** ----------
+* ----------
 * [x] [Web Fundamentals](https://developers.google.com/web/fundamentals/)
 * [x] [Firebase Platform](https://firebase.google.com/)
 * [x] [Google Cloud](https://cloud.google.com/)
 * [x] [Docker](https://www.docker.com/)
 * [x] [CircleCI](https://circleci.com/)
 * [x] [Codecov](https://codecov.io/)
-* ---------- **Front-end** ----------
+* ----------
 * [x] [Angular](https://github.com/angular/angular)
 * [x] [Angular Material](https://github.com/angular/material2)
 * [ ] [Ngx Translate](https://github.com/ngx-translate/core)
@@ -84,13 +84,7 @@ This seed repository provides the following features:
 * [x] [PostCSS](https://github.com/postcss/postcss)
 * [x] [StyleLint](https://github.com/stylelint/stylelint)
 * [x] [Puppeteer](https://github.com/GoogleChrome/puppeteer)
-* ---------- **Back-end** ----------
-* [x] [Nest](https://github.com/nestjs/nest)
-* [x] [Express](https://github.com/expressjs/express)
-* [ ] [Request](https://github.com/request/request)
-* [x] [Gulp](https://github.com/gulpjs/gulp)
-* [x] [SuperTest](https://github.com/visionmedia/supertest)
-* ---------- **Shared** ----------
+* ----------
 * [ ] [Apollo GraphQL](https://github.com/apollographql)
 * [x] [ReactiveX](https://github.com/ReactiveX/rxjs)
 * [ ] [TensorFlow](https://github.com/tensorflow/tfjs)
@@ -190,6 +184,12 @@ Change to your project.
     "production": "<PROD_PROJECT_NAME>"
   }
 }
+```
+
+Set an active project for working direct
+
+```bash
+$ yarn firebase use development
 ```
 
 ### Default environments

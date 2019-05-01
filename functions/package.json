@@ -1,0 +1,11 @@
+{
+  "name": "angular-play-functions",
+  "engines": {
+    "node": "10"
+  },
+  "dependencies": {
+    "express": "4.16.4",
+    "firebase-functions": "2.3.0",
+    "request": "2.88.0"
+  }
+}
