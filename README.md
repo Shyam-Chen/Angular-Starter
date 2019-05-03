@@ -1,4 +1,4 @@
-# Angular-Play
+# Angular Play
 
 :tiger: A boilerplate for Angular, Material, TypeScript, and ReactiveX.
 

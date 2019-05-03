@@ -1,6 +1,6 @@
 FROM node:10
 
-ENV HOME /AngularNest-Fullstack-Starter
+ENV HOME /Angular-Play
 
 WORKDIR ${HOME}
 ADD . $HOME

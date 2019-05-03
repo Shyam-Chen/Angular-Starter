@@ -40,7 +40,6 @@ module.exports = ({ prod = false } = {}) => ({
           { loader: 'css-loader', options: { importLoaders: 1 } },
           { loader: 'postcss-loader', options: { sourceMap: true } },
         ],
-        include: [path.join(SOURCE_ROOT, 'app')],
         exclude: [path.join(SOURCE_ROOT, 'assets')],
       },
       {
@@ -50,7 +49,7 @@ module.exports = ({ prod = false } = {}) => ({
           { loader: 'css-loader', options: { importLoaders: 1 } },
           { loader: 'postcss-loader', options: { sourceMap: true } },
         ],
-        exclude: [path.join(SOURCE_ROOT, 'app')],
+        include: [path.join(SOURCE_ROOT, 'assets')],
       },
       {
         test: /\.html$/,
@@ -85,8 +84,7 @@ module.exports = ({ prod = false } = {}) => ({
   resolve: {
     extensions: ['.js', '.ts'],
     alias: {
-      '~': path.join(SOURCE_ROOT, 'app'),
-      '~assets': path.join(SOURCE_ROOT, 'assets'),
+      '~': SOURCE_ROOT,
     },
   },
   plugins: [
@@ -113,7 +111,7 @@ module.exports = ({ prod = false } = {}) => ({
     }),
     new AngularCompilerPlugin({
       tsConfigPath: './tools/tsconfig.app.json',
-      entryModule: './src/app/app.module#AppModule',
+      entryModule: './src/app.module#AppModule',
       sourceMap: true,
     }),
     new CopyPlugin([
@@ -138,7 +136,7 @@ module.exports = ({ prod = false } = {}) => ({
     // }),
     // prod && new PurgecssPlugin({
     //   paths: glob.sync([
-    //     path.join(SOURCE_ROOT, './app/**/*.html'),
+    //     path.join(SOURCE_ROOT, './**/*.html'),
     //   ]),
     //   whitelist: ['html', 'body'],
     // }),

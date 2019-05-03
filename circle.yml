@@ -1,7 +1,7 @@
 version: 2
 
 base: &base
-  working_directory: ~/AngularNest-Fullstack-Starter
+  working_directory: ~/Angular-Play
   docker:
     - image: circleci/node:10
 
