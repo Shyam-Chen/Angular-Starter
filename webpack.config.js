@@ -110,9 +110,10 @@ module.exports = ({ prod = false } = {}) => ({
       },
     }),
     new AngularCompilerPlugin({
-      tsConfigPath: './tools/tsconfig.app.json',
-      entryModule: './src/app.module#AppModule',
+      tsConfigPath: path.join(__dirname, 'tools/tsconfig.app.json'),
+      entryModule: path.join(SOURCE_ROOT, 'app.module#AppModule'),
       sourceMap: true,
+      skipCodeGeneration: true,
     }),
     new CopyPlugin([
       {
