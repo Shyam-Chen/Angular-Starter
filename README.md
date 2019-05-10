@@ -2,13 +2,32 @@
 
 :tiger: A boilerplate for Angular, Material, TypeScript, and ReactiveX.
 
-[![Build Status](https://img.shields.io/circleci/project/github/Shyam-Chen/Angular-Play/develop.svg)](https://circleci.com/gh/Shyam-Chen/Angular-Play)
-[![Coverage Status](https://img.shields.io/codecov/c/github/Shyam-Chen/Angular-Play/develop.svg)](https://codecov.io/gh/Shyam-Chen/Angular-Play)
- //
-[![dependencies Status](https://img.shields.io/david/Shyam-Chen/Angular-Play.svg)](https://david-dm.org/Shyam-Chen/Angular-Play)
-[![devDependencies Status](https://img.shields.io/david/dev/Shyam-Chen/Angular-Play.svg)](https://david-dm.org/Shyam-Chen/Angular-Play?type=dev)
+|    | Project Information |
+|:--:|---------------------|
+| Live Demo | [![Develop Demo][demo-develop-image]][demo-develop-link] [![Master Demo][demo-master-image]][demo-master-link] |
+| Develop Branch | [![Build Status][develop-build-image]][develop-build-link] [![Coverage Status][develop-coverage-image]][develop-coverage-link] |
+| Master Branch | [![Build Status][master-build-image]][master-build-link] [![Coverage Status][master-coverage-image]][master-coverage-link] |
+| Npm Package | [![dependencies Status][package-dependencies-image]][package-dependencies-link] [![devDependencies Status][package-devDependencies-image]][package-devDependencies-link] |
 
-:rainbow: Live Demo: [Develop](https://angularnest-by-example-dev.firebaseapp.com/) | [Master](https://angularnest-by-example-prod.firebaseapp.com/)
+[demo-develop-image]: https://img.shields.io/badge/link-develop-blue.svg
+[demo-develop-link]: https://angularnest-by-example-dev.firebaseapp.com/
+[demo-master-image]: https://img.shields.io/badge/link-master-blue.svg
+[demo-master-link]: https://angularnest-by-example-prod.firebaseapp.com/
+
+[develop-build-image]: https://img.shields.io/circleci/project/github/Shyam-Chen/Angular-Play/develop.svg
+[develop-build-link]: https://circleci.com/gh/Shyam-Chen/workflows/Angular-Play
+[develop-coverage-image]: https://img.shields.io/codecov/c/github/Shyam-Chen/Angular-Play/develop.svg
+[develop-coverage-link]: https://codecov.io/gh/Shyam-Chen/Angular-Play
+
+[master-build-image]: https://img.shields.io/circleci/project/github/Shyam-Chen/Angular-Play/master.svg
+[master-build-link]: https://circleci.com/gh/Shyam-Chen/workflows/Angular-Play
+[master-coverage-image]: https://img.shields.io/codecov/c/github/Shyam-Chen/Angular-Play/master.svg
+[master-coverage-link]: https://codecov.io/gh/Shyam-Chen/Angular-Play
+
+[package-dependencies-image]: https://img.shields.io/david/Shyam-Chen/Angular-Play.svg
+[package-dependencies-link]: https://david-dm.org/Shyam-Chen/Angular-Play
+[package-devDependencies-image]: https://img.shields.io/david/dev/Shyam-Chen/Angular-Play.svg
+[package-devDependencies-link]: https://david-dm.org/Shyam-Chen/Angular-Play?type=dev
 
 ## Table of Contents
 
@@ -69,28 +88,27 @@ $ yarn e2e
 
 This seed repository provides the following features:
 
-* ----------
-* [x] [Web Fundamentals](https://developers.google.com/web/fundamentals/)
-* [x] [Firebase Platform](https://firebase.google.com/)
-* [x] [Google Cloud](https://cloud.google.com/)
-* [x] [Docker](https://www.docker.com/)
-* [x] [CircleCI](https://circleci.com/)
-* [x] [Codecov](https://codecov.io/)
-* ----------
+* ---------- **Essentials** ----------
 * [x] [Angular](https://github.com/angular/angular)
 * [x] [Angular Material](https://github.com/angular/material2)
-* [ ] [Ngx Translate](https://github.com/ngx-translate/core)
-* [x] [Webpack](https://github.com/webpack/webpack)
-* [x] [PostCSS](https://github.com/postcss/postcss)
-* [x] [StyleLint](https://github.com/stylelint/stylelint)
-* [x] [Puppeteer](https://github.com/GoogleChrome/puppeteer)
-* ----------
-* [ ] [Apollo GraphQL](https://github.com/apollographql)
 * [x] [ReactiveX](https://github.com/ReactiveX/rxjs)
+* [x] [NGXS](https://github.com/ngxs/store)
+* [ ] [Ngx Translate](https://github.com/ngx-translate/core)
+* [ ] [Apollo GraphQL](https://github.com/apollographql)
 * [ ] [TensorFlow](https://github.com/tensorflow/tfjs)
+* ---------- **Tools** ----------
+* [x] [Webpack](https://github.com/webpack/webpack)
 * [x] [TypeScript](https://github.com/Microsoft/TypeScript)
+* [x] [PostCSS](https://github.com/postcss/postcss)
 * [x] [TSLint](https://github.com/palantir/tslint)
+* [x] [StyleLint](https://github.com/stylelint/stylelint)
 * [x] [Jest](https://github.com/facebook/jest)
+* [x] [Puppeteer](https://github.com/GoogleChrome/puppeteer)
+* ---------- **Environments** ----------
+* [x] [Firebase](https://firebase.google.com/)
+* [x] [CircleCI](https://circleci.com/)
+* [x] [Codecov](https://codecov.io/)
+* [x] [Docker](https://www.docker.com/)
 
 ## Dockerization
 
@@ -213,15 +231,6 @@ function Environments() {
 
   this.APP_BASE = process.env.APP_BASE || '/';
 
-  this.FIREBASE_CONFIG = process.env.FIREBASE_CONFIG || {
-    apiKey: process.env.FIREBASE_API_KEY || '<API_KEY>',
-    authDomain: process.env.FIREBASE_AUTH_DOMAIN || '<FIREBASE_AUTH_DOMAIN>',
-    databaseURL: process.env.FIREBASE_DATABASE_URL || '<FIREBASE_DATABASE_URL>',
-    projectId: process.env.FIREBASE_PROJECT_ID || '<FIREBASE_PROJECT_ID>',
-    storageBucket: process.env.FIREBASE_STORAGE_BUCKET || '<FIREBASE_STORAGE_BUCKET>',
-    messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID || '<FIREBASE_MESSAGING_SENDER_ID>',
-  };
-
   this.GOOGLE_ANALYTICS = process.env.GOOGLE_ANALYTICS || '<GOOGLE_ANALYTICS>';
 
   this.SENTRY_DSN = process.env.SENTRY_DSN || null;
@@ -295,91 +304,49 @@ The structure follows the LIFT Guidelines.
 
 ```coffee
 .
+├── functions
+│   ├── index.js
+│   ├── package.json
+│   └── yarn.lock
 ├── src
-│   ├── api
-│   │   ├── __tests__
-│   │   │   └── ...
-│   │   ├── _<THING>  -> api of private things
-│   │   │   └── ...
-│   │   ├── core  -> core feature module
-│   │   │   └── ...
-│   │   ├── <FEATURE>  -> feature modules
-│   │   │   ├── __tests__
-│   │   │   │   ├── <FEATURE>.controller.spec.ts
-│   │   │   │   └── <FEATURE>.e2e-spec.ts
-│   │   │   ├── _<THING>  -> feature of private things
-│   │   │   │   └── ...
-│   │   │   ├── <FEATURE>.controller.ts
-│   │   │   ├── <FEATURE>.module.ts
-│   │   │   └── <FEATURE>.service.ts
-│   │   ├── <GROUP>  -> module group
-│   │   │   └── <FEATURE>  -> feature modules
-│   │   │       ├── __tests__
-│   │   │       │   ├── <FEATURE>.controller.spec.ts
-│   │   │       │   └── <FEATURE>.e2e-spec.ts
-│   │   │       ├── _<THING>  -> feature of private things
-│   │   │       │   └── ...
-│   │   │       ├── <FEATURE>.controller.ts
-│   │   │       ├── <FEATURE>.module.ts
-│   │   │       └── <FEATURE>.service.ts
-│   │   ├── graphql
-│   │   │   ├── <FEATURE>  -> feature modules
-│   │   │   │   ├── __tests__
-│   │   │   │   │   └── ...
-│   │   │   │   ├── _<THING>  -> feature of private things
-│   │   │   │   │   └── ...
-│   │   │   │   └── ...
-│   │   │   └── <GROUP>  -> module group
-│   │   │       └── <FEATURE>  -> feature modules
-│   │   │           ├── __tests__
-│   │   │           │   └── ...
-│   │   │           ├── _<THING>  -> feature of private things
-│   │   │           │   └── ...
-│   │   │           └── ...
-│   │   ├── shared  -> shared feature module
-│   │   │   └── ...
-│   │   ├── api.controller.ts
-│   │   ├── api.module.ts
-│   │   └── api.service.ts
-│   ├── app
-│   │   ├── __tests__
-│   │   │   └── ...
-│   │   ├── _<THING>  -> app of private things
-│   │   │   └── ...
-│   │   ├── core  -> core feature module
-│   │   │   └── ...
-│   │   ├── <FEATURE>  -> feature modules
-│   │   │   ├── __tests__
-│   │   │   │   ├── <FEATURE>.component.spec.js
-│   │   │   │   └── <FEATURE>.e2e-spec.js
-│   │   │   ├── _<THING>  -> feature of private things
-│   │   │   │   └── ...
-│   │   │   ├── <FEATURE>.component.css
-│   │   │   ├── <FEATURE>.component.html
-│   │   │   ├── <FEATURE>.component.ts
-│   │   │   └── <FEATURE>.module.ts
-│   │   ├── <GROUP>  -> module group
-│   │   │   └── <FEATURE>  -> feature modules
-│   │   │       ├── __tests__
-│   │   │       │   ├── <FEATURE>.component.spec.js
-│   │   │       │   └── <FEATURE>.e2e-spec.js
-│   │   │       ├── _<THING>  -> feature of private things
-│   │   │       │   └── ...
-│   │   │       ├── <FEATURE>.component.css
-│   │   │       ├── <FEATURE>.component.html
-│   │   │       ├── <FEATURE>.component.ts
-│   │   │       └── <FEATURE>.module.ts
-│   │   ├── shared  -> shared feature module
-│   │   │   └── ...
-│   │   ├── app.component.css
-│   │   ├── app.component.html
-│   │   ├── app.component.ts
-│   │   └── app.module.ts
+│   ├── __tests__
+│   │   └── ...
+│   ├── _<THING>  -> app of private or protected things
+│   │   └── ...
 │   ├── assets  -> datas, fonts, images, medias, styles
 │   │   └── ...
-│   ├── client.ts
+│   ├── core  -> core feature module
+│   │   └── ...
+│   ├── <FEATURE>  -> feature modules
+│   │   ├── __tests__
+│   │   │   ├── <FEATURE>.component.spec.js
+│   │   │   └── <FEATURE>.e2e-spec.js
+│   │   ├── _<THING>  -> feature of private or protected things
+│   │   │   └── ...
+│   │   ├── <FEATURE>.component.css
+│   │   ├── <FEATURE>.component.html
+│   │   ├── <FEATURE>.component.ts
+│   │   └── <FEATURE>.module.ts
+│   ├── <GROUP>  -> module group
+│   │   └── <FEATURE>  -> feature modules
+│   │       ├── __tests__
+│   │       │   ├── <FEATURE>.component.spec.js
+│   │       │   └── <FEATURE>.e2e-spec.js
+│   │       ├── _<THING>  -> feature of private or protected things
+│   │       │   └── ...
+│   │       ├── <FEATURE>.component.css
+│   │       ├── <FEATURE>.component.html
+│   │       ├── <FEATURE>.component.ts
+│   │       └── <FEATURE>.module.ts
+│   ├── shared  -> shared feature module
+│   │   └── ...
+│   ├── app-routing.module.ts
+│   ├── app.component.css
+│   ├── app.component.html
+│   ├── app.component.ts
+│   ├── app.module.ts
 │   ├── index.html
-│   └── server.ts
+│   └── main.ts
 ├── tools
 │   └── ...
 ├── .editorconfig
@@ -394,7 +361,6 @@ The structure follows the LIFT Guidelines.
 ├── docker-compose.yml
 ├── env.js
 ├── firebase.json
-├── gulpfile.js
 ├── jest.config.js
 ├── package.json
 ├── tsconfig.json
