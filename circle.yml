@@ -1,14 +1,15 @@
-version: 2
+version: 2.1
 
-base: &base
-  working_directory: ~/Angular-Play
-  docker:
-    - image: circleci/node:10
+executors:
+  angular-play:
+    docker:
+      - image: circleci/node:10
+    working_directory: ~/Angular-Play
 
 jobs:
 
   build:
-    <<: *base
+    executor: angular-play
     steps:
       - checkout
       - setup_remote_docker
@@ -20,7 +21,7 @@ jobs:
           command: docker-compose exec default yarn build
 
   test:
-    <<: *base
+    executor: angular-play
     steps:
       - checkout
       - setup_remote_docker
@@ -47,7 +48,7 @@ jobs:
             docker-compose exec default yarn e2e
 
   deploy:
-    <<: *base
+    executor: angular-play
     steps:
       - checkout
       - setup_remote_docker
