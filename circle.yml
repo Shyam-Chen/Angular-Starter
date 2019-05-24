@@ -90,3 +90,18 @@ workflows:
       - deploy:
           requires:
             - test
+  # weekly-regression:
+  #   triggers:
+  #     - schedule:
+  #         cron: "0 13 * * 1"
+  #         filters:
+  #           branches:
+  #             only: develop
+  #   jobs:
+  #     - build
+  #     - test:
+  #         requires:
+  #           - build
+  #     - deploy:
+  #         requires:
+  #           - test
