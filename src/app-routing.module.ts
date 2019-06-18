@@ -9,9 +9,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
 
 export const ROUTES: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'hello-world', loadChildren: './shell/hello-world/hello-world.module#HelloWorldModule' },
-  { path: 'sort-filter-list', loadChildren: './shell/guide/pipes/pipes.module#PipesModule' },
-  { path: 'counter', loadChildren: './shell/guide/state-management/state-management.module#StateManagementModule' },
+  { path: 'hello-world', loadChildren: () => import('./shell/hello-world/hello-world.module').then(m => m.HelloWorldModule) },
+  { path: 'sort-filter-list', loadChildren: () => import('./shell/guide/pipes/pipes.module').then(m => m.PipesModule) },
+  { path: 'counter', loadChildren: () => import('./shell/guide/state-management/state-management.module').then(m => m.StateManagementModule) },
   { path: '**', component: NotFoundComponent },
 ];
 
