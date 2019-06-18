@@ -28,24 +28,24 @@ export class RoutingCacheService implements RouteReuseStrategy {
   }
 
   private getRoutePath(route: ActivatedRouteSnapshot): string {
-    let namedOutletCount: number = 0;  // tslint:disable-line
+    let namedOutletCount: number = 0;
 
     const namedRoutes = route.pathFromRoot.reduce((path, curRoute) => {
       const config = curRoute.routeConfig;
 
       if (config) {
         if (config.outlet) {
-          path += `(${config.outlet}:`;  // tslint:disable-line
+          path += `(${config.outlet}:`;
           namedOutletCount += 1;
         } else {
-          path += '/';  // tslint:disable-line
+          path += '/';
         }
 
-        return path += config.path;  // tslint:disable-line
+        return path += config.path;
       }
 
       return path;
-    }, '');  // tslint:disable-line
+    }, '');
 
     return namedRoutes + (namedOutletCount ? new Array(namedOutletCount + 1).join(')') : '');  // tslint:disable-line
   }

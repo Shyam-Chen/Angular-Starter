@@ -1,8 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-@Pipe({
-  name: 'timeSince',
-})
+@Pipe({ name: 'timeSince' })
 export class TimeSincePipe implements PipeTransform {
   transform(value: any): string {
     const ago = new Date(value);

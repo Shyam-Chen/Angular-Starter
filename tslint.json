@@ -1,7 +1,7 @@
 {
   "extends": [
     "tslint-config-airbnb",
-    "tslint-angular"
+    // "tslint-angular"
   ],
   "rules": {
     "curly": [true, "ignore-same-line"],

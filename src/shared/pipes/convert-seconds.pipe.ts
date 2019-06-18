@@ -1,8 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-@Pipe({
-  name: 'convertSeconds',
-})
+@Pipe({ name: 'convertSeconds' })
 export class ConvertSecondsPipe implements PipeTransform {
   transform(value: number): string {
     const timeSubstr = (start: number = 11, end: number = 8): string => (

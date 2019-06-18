@@ -1,8 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-@Pipe({
-  name: 'mark',
-})
+@Pipe({ name: 'mark' })
 export class MarkPipe implements PipeTransform {
   transform(value: string, args: string): string {
     if (!args) return value;
