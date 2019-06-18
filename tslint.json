@@ -1,9 +1,12 @@
 {
   "extends": [
-    "tslint-config-airbnb",
-    // "tslint-angular"
+    "tslint:latest",
+    "tslint-config-prettier",
+    "tslint-plugin-prettier"
   ],
   "rules": {
+    "prettier": true,
+
     "curly": [true, "ignore-same-line"],
     "max-classes-per-file": false,
     "max-line-length": false,

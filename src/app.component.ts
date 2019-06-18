@@ -18,10 +18,7 @@ export class AppComponent {
         { text: 'Link A-1', route: '' },
         {
           text: 'Link A-2',
-          children: [
-            { text: 'Link A-2-1', route: '' },
-            { text: 'Link A-2-2', route: '' },
-          ],
+          children: [{ text: 'Link A-2-1', route: '' }, { text: 'Link A-2-2', route: '' }],
         },
       ],
     },
@@ -29,10 +26,7 @@ export class AppComponent {
       icon: 'business',
       text: 'Link B',
       route: '',
-      children: [
-        { text: 'Link B-1', route: '' },
-        { text: 'Link B-2', route: '' },
-      ],
+      children: [{ text: 'Link B-1', route: '' }, { text: 'Link B-2', route: '' }],
     },
     { icon: 'face', text: 'Link C', route: '' },
     {
@@ -45,10 +39,7 @@ export class AppComponent {
         { text: 'Link D-1', route: '' },
         {
           text: 'Link D-2',
-          children: [
-            { text: 'Link D-2-1', route: '' },
-            { text: 'Link D-2-2', route: '' },
-          ],
+          children: [{ text: 'Link D-2-1', route: '' }, { text: 'Link D-2-2', route: '' }],
         },
       ],
     },
@@ -56,10 +47,7 @@ export class AppComponent {
       icon: 'business',
       text: 'Link E',
       route: '',
-      children: [
-        { text: 'Link E-1', route: '' },
-        { text: 'Link E-2', route: '' },
-      ],
+      children: [{ text: 'Link E-1', route: '' }, { text: 'Link E-2', route: '' }],
     },
     { icon: 'face', text: 'Link F', route: '' },
   ];
@@ -68,7 +56,5 @@ export class AppComponent {
   public mode: string = window.innerWidth < 600 ? 'over' : 'side';
   public logo = this.sanitizer.bypassSecurityTrustResourceUrl(require('./assets/images/logo.svg'));
 
-  constructor(
-    private sanitizer: DomSanitizer,
-  ) {}
+  constructor(private sanitizer: DomSanitizer) {}
 }

@@ -36,17 +36,21 @@
 
         <ng-template ngFor let-childItem [ngForOf]="item.children">
           <!-- if sub-children -->
-          <mat-expansion-panel *ngIf="childItem.children; else notSubChildren" #expansionPanelRef class="o-expansion-panel" hideToggle>
-            <mat-expansion-panel-header expandedHeight="48px" class="o-list-item o-list-item--child" style="padding-left: 32px;">
+          <mat-expansion-panel *ngIf="childItem.children; else notSubChildren" #expansionPanelRef
+            class="o-expansion-panel" hideToggle>
+            <mat-expansion-panel-header expandedHeight="48px" class="o-list-item o-list-item--child"
+              style="padding-left: 32px;">
               <mat-panel-title>
-                <mat-icon style="margin-right: 0.5rem;">{{ expansionPanelRef.expanded ? 'arrow_drop_up' : 'arrow_drop_down' }}</mat-icon>
+                <mat-icon style="margin-right: 0.5rem;">
+                  {{ expansionPanelRef.expanded ? 'arrow_drop_up' : 'arrow_drop_down' }}</mat-icon>
                 {{ childItem.text }}
               </mat-panel-title>
             </mat-expansion-panel-header>
 
             <ng-template ngFor let-subChildItem [ngForOf]="childItem.children">
               <mat-list role="list" class="o-list">
-                <mat-list-item role="listitem" [routerLink]="subChildItem.route" class="o-list-item o-list-item--child" style="padding: 0 48px;">{{ subChildItem.text }}</mat-list-item>
+                <mat-list-item role="listitem" [routerLink]="subChildItem.route" class="o-list-item o-list-item--child"
+                  style="padding: 0 48px;">{{ subChildItem.text }}</mat-list-item>
               </mat-list>
             </ng-template>
           </mat-expansion-panel>
@@ -54,7 +58,8 @@
           <!-- else not sub-children -->
           <ng-template #notSubChildren>
             <mat-list role="list" class="o-list">
-              <mat-list-item role="listitem" [routerLink]="childItem.route" class="o-list-item o-list-item--child" style="padding: 0 48px;">{{ childItem.text }}</mat-list-item>
+              <mat-list-item role="listitem" [routerLink]="childItem.route" class="o-list-item o-list-item--child"
+                style="padding: 0 48px;">{{ childItem.text }}</mat-list-item>
             </mat-list>
           </ng-template>
         </ng-template>
