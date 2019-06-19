@@ -1,4 +1,5 @@
 declare var process: any;
+declare var module: any;
 
 // import '@angular/material/prebuilt-themes/indigo-pink.css';
 import 'core-js/es7/reflect';
@@ -17,3 +18,7 @@ if (process.env.NODE_ENV === 'production') {
 platformBrowserDynamic()
   .bootstrapModule(AppModule)
   .catch(err => console.log(err));
+
+if (module.hot) {
+  module.hot.accept();
+}
