@@ -30,11 +30,11 @@ import { NotFoundComponent } from './not-found/not-found.component';
 
 export const ROUTES: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'hello-world', loadChildren: './shell/hello-world/hello-world.module#HelloWorldModule' },
-  { path: 'sort-filter-list', loadChildren: './shell/guide/pipes/pipes.module#PipesModule' },
+  { path: 'hello-world', loadChildren: '~/shell/hello-world/hello-world.module#HelloWorldModule' },
+  { path: 'sort-filter-list', loadChildren: '~/shell/guide/pipes/pipes.module#PipesModule' },
   {
     path: 'counter',
-    loadChildren: './shell/guide/state-management/state-management.module#StateManagementModule',
+    loadChildren: '~/shell/guide/state-management/state-management.module#StateManagementModule',
   },
   { path: '**', component: NotFoundComponent },
 ];

@@ -3,5 +3,8 @@
   "compilerOptions": {
     "outDir": "../public",
     "module": "esNext"
+  },
+  "angularCompilerOptions": {
+    "enableIvy": false
   }
 }

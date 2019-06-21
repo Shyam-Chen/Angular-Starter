@@ -17,4 +17,3 @@ ENV FUNC_URL https://us-central1-angularnest-by-example-dev.cloudfunctions.net
 # -- envs
 
 RUN yarn build
-RUN cd functions && yarn install
