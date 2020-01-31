@@ -5,24 +5,21 @@ const ScriptExtHtmlPlugin = require('script-ext-html-webpack-plugin');
 const { AngularCompilerPlugin } = require('@ngtools/webpack');
 const CopyPlugin = require('copy-webpack-plugin');
 // const { GenerateSW } = require('workbox-webpack-plugin');
-// const PurgecssPlugin = require('purgecss-webpack-plugin');
-// const RobotstxtPlugin = require('robotstxt-webpack-plugin').default;
-// const SitemapPlugin = require('sitemap-webpack-plugin').default;
+// const RobotstxtPlugin = require('robotstxt-webpack-plugin');
 const envify = require('process-envify');
-// const glob = require('glob-all');
 
 const env = require('./env');
 const pkg = require('./package');
 
 const SOURCE_ROOT = path.join(__dirname, 'src');
-const DIST_ROOT = path.join(__dirname, 'public');
+const DISTRIBUTION_ROOT = path.join(__dirname, 'public');
 
 module.exports = ({ prod = false } = {}) => ({
   mode: prod ? 'production' : 'development',
   context: SOURCE_ROOT,
   entry: ['./main.ts'],
   output: {
-    path: DIST_ROOT,
+    path: DISTRIBUTION_ROOT,
     filename: prod ? '[name].[hash].js' : '[name].js',
     chunkFilename: prod ? '[id].[chunkhash].js' : '[name].js',
     publicPath: '/',
@@ -124,7 +121,7 @@ module.exports = ({ prod = false } = {}) => ({
     new CopyPlugin([
       {
         from: 'assets/**/*',
-        to: DIST_ROOT,
+        to: DISTRIBUTION_ROOT,
         ignore: ['assets/styles/**/*'],
       },
     ]),
@@ -141,36 +138,23 @@ module.exports = ({ prod = false } = {}) => ({
     //   navigateFallbackWhitelist: [/^(?!\/__).*/],
     //   cacheId: pkg.name,
     // }),
-    // prod && new PurgecssPlugin({
-    //   paths: glob.sync([
-    //     path.join(SOURCE_ROOT, './**/*.html'),
-    //   ]),
-    //   whitelist: ['html', 'body'],
-    // }),
     // prod && new RobotstxtPlugin(),
-    // prod && new SitemapPlugin(env.SITE_URL, [{ path: '/' }]),
   ].filter(Boolean),
   optimization: {
+    runtimeChunk: 'single',
     splitChunks: {
+      chunks: 'all',
+      maxInitialRequests: Infinity,
+      minSize: 0,
       cacheGroups: {
-        common: {
-          name: 'common',
-          chunks: 'initial',
-          minChunks: 2,
-        },
         vendor: {
           test: /[\\/]node_modules[\\/]/,
-          name: 'vendor',
-          chunks: 'all',
         },
       },
     },
-    runtimeChunk: {
-      name: 'manifest',
-    },
   },
   devServer: {
-    contentBase: DIST_ROOT,
+    contentBase: DISTRIBUTION_ROOT,
     historyApiFallback: true,
     host: env.HOST_NAME,
     hot: true,
