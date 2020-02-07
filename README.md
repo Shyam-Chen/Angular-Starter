@@ -1,4 +1,4 @@
-# Angular Play
+# Angular Starter
 
 :tiger: A boilerplate for Angular, Material, TypeScript, and ReactiveX.
 
@@ -14,20 +14,20 @@
 [demo-master-image]: https://img.shields.io/badge/link-master-blue.svg
 [demo-master-link]: https://angularnest-by-example-prod.firebaseapp.com/
 
-[develop-build-image]: https://img.shields.io/circleci/project/github/Shyam-Chen/Angular-Play/develop.svg
-[develop-build-link]: https://circleci.com/gh/Shyam-Chen/workflows/Angular-Play
-[develop-coverage-image]: https://img.shields.io/codecov/c/github/Shyam-Chen/Angular-Play/develop.svg
-[develop-coverage-link]: https://codecov.io/gh/Shyam-Chen/Angular-Play
+[develop-build-image]: https://img.shields.io/circleci/project/github/Shyam-Chen/Angular-Starter/develop.svg
+[develop-build-link]: https://circleci.com/gh/Shyam-Chen/workflows/Angular-Starter
+[develop-coverage-image]: https://img.shields.io/codecov/c/github/Shyam-Chen/Angular-Starter/develop.svg
+[develop-coverage-link]: https://codecov.io/gh/Shyam-Chen/Angular-Starter
 
-[master-build-image]: https://img.shields.io/circleci/project/github/Shyam-Chen/Angular-Play/master.svg
-[master-build-link]: https://circleci.com/gh/Shyam-Chen/workflows/Angular-Play
-[master-coverage-image]: https://img.shields.io/codecov/c/github/Shyam-Chen/Angular-Play/master.svg
-[master-coverage-link]: https://codecov.io/gh/Shyam-Chen/Angular-Play
+[master-build-image]: https://img.shields.io/circleci/project/github/Shyam-Chen/Angular-Starter/master.svg
+[master-build-link]: https://circleci.com/gh/Shyam-Chen/workflows/Angular-Starter
+[master-coverage-image]: https://img.shields.io/codecov/c/github/Shyam-Chen/Angular-Starter/master.svg
+[master-coverage-link]: https://codecov.io/gh/Shyam-Chen/Angular-Starter
 
-[package-dependencies-image]: https://img.shields.io/david/Shyam-Chen/Angular-Play.svg
-[package-dependencies-link]: https://david-dm.org/Shyam-Chen/Angular-Play
-[package-devDependencies-image]: https://img.shields.io/david/dev/Shyam-Chen/Angular-Play.svg
-[package-devDependencies-link]: https://david-dm.org/Shyam-Chen/Angular-Play?type=dev
+[package-dependencies-image]: https://img.shields.io/david/Shyam-Chen/Angular-Starter.svg
+[package-dependencies-link]: https://david-dm.org/Shyam-Chen/Angular-Starter
+[package-devDependencies-image]: https://img.shields.io/david/dev/Shyam-Chen/Angular-Starter.svg
+[package-devDependencies-link]: https://david-dm.org/Shyam-Chen/Angular-Starter?type=dev
 
 ## Table of Contents
 
@@ -44,7 +44,7 @@ Follow steps to execute this boilerplate.
 1. Clone this boilerplate
 
 ```bash
-$ git clone --depth 1 https://github.com/Shyam-Chen/Angular-Play <PROJECT_NAME>
+$ git clone --depth 1 https://github.com/Shyam-Chen/Angular-Starter <PROJECT_NAME>
 $ cd <PROJECT_NAME>
 ```
 
@@ -95,7 +95,6 @@ This seed repository provides the following features:
 * [x] [NGXS](https://github.com/ngxs/store)
 * [ ] [Ngx Translate](https://github.com/ngx-translate/core)
 * [ ] [Apollo GraphQL](https://github.com/apollographql)
-* [ ] [TensorFlow](https://github.com/tensorflow/tfjs)
 * ---------- **Tools** ----------
 * [x] [Webpack](https://github.com/webpack/webpack)
 * [x] [TypeScript](https://github.com/Microsoft/TypeScript)
