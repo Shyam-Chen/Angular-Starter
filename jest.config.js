@@ -1,13 +1,15 @@
 switch (process.env.JEST_ENV) {
   case 'app':
     module.exports = {
-      coveragePathIgnorePatterns: [
-        '/node_modules/',
-        '/tools/',
-      ],
+      coveragePathIgnorePatterns: ['/node_modules/', '/tools/'],
       globals: {
         'ts-jest': {
           tsConfigFile: './tools/tsconfig.test.json',
+          stringifyContentPathRegex: '\\.html$',
+          astTransformers: [
+            'jest-preset-angular/build/InlineFilesTransformer',
+            'jest-preset-angular/build/StripStylesTransformer',
+          ],
         },
         __TRANSFORM_HTML__: true,
       },
@@ -17,23 +19,23 @@ switch (process.env.JEST_ENV) {
       },
       preset: 'jest-preset-angular',
       setupTestFrameworkScriptFile: '<rootDir>/tools/setup-app.ts',
-      testPathIgnorePatterns: [
-        '<rootDir>/node_modules/',
-        '.*\\.e2e-spec.ts$',
+      snapshotSerializers: [
+        'jest-preset-angular/build/AngularSnapshotSerializer.js',
+        'jest-preset-angular/build/HTMLCommentSerializer.js',
       ],
+      testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
+      testPathIgnorePatterns: ['<rootDir>/node_modules/', '.*\\.e2e-spec.ts$'],
       transform: {
-        '^.+\\.ts$': '<rootDir>/node_modules/jest-preset-angular/preprocessor.js',
-        '^[./a-zA-Z0-9$_-]+\\.(bmp|gif|jpg|jpeg|png|psd|svg|webp)$': '<rootDir>/tools/assets-transform.js',
+        '^.+\\.(ts|js|html)$': 'ts-jest',
+        '^[./a-zA-Z0-9$_-]+\\.(bmp|gif|jpg|jpeg|png|psd|svg|webp)$':
+          '<rootDir>/tools/assets-transform.js',
       },
     };
     break;
 
   case 'e2e':
     module.exports = {
-      coveragePathIgnorePatterns: [
-        '/node_modules/',
-        '/tools/',
-      ],
+      coveragePathIgnorePatterns: ['/node_modules/', '/tools/'],
       globals: {
         'ts-jest': {
           tsConfigFile: './tools/tsconfig.test.json',
@@ -41,10 +43,7 @@ switch (process.env.JEST_ENV) {
       },
       moduleFileExtensions: ['js', 'ts', 'json'],
       setupTestFrameworkScriptFile: '<rootDir>/tools/setup-e2e.ts',
-      testPathIgnorePatterns: [
-        '<rootDir>/node_modules/',
-        '.*\\.spec.ts$',
-      ],
+      testPathIgnorePatterns: ['<rootDir>/node_modules/', '.*\\.spec.ts$'],
       testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
       transform: {
         '^.+\\.ts$': 'ts-jest',

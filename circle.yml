@@ -1,19 +1,16 @@
 version: 2.1
 
 executors:
-  angular-play:
+  angular-starter:
     docker:
       - image: circleci/node:10
-    working_directory: ~/Angular-Play
 
 jobs:
-
   build:
-    executor: angular-play
+    executor: angular-starter
     steps:
       - checkout
-      - setup_remote_docker:
-          docker_layer_caching: true
+      - setup_remote_docker
       - run:
           name: Combat preparation
           command: docker-compose up -d default
@@ -22,11 +19,10 @@ jobs:
           command: docker-compose exec default yarn build
 
   test:
-    executor: angular-play
+    executor: angular-starter
     steps:
       - checkout
-      - setup_remote_docker:
-          docker_layer_caching: true
+      - setup_remote_docker
       - run:
           name: Combat preparation
           command: |
@@ -37,12 +33,12 @@ jobs:
       - run:
           name: Check the code
           command: |
-            docker-compose exec default yarn lint
+            # docker-compose exec default yarn lint
       - run:
           name: Test the application
           command: |
             docker-compose exec default yarn unit
-            docker-compose exec default yarn codecov --token=$CODECOV_TOKEN
+            docker-compose exec default yarn codecov -t $CODECOV_TOKEN
       - run:
           name: End-to-end UI tests
           command: |
@@ -50,34 +46,33 @@ jobs:
             docker-compose exec default yarn e2e
 
   deploy:
-    executor: angular-play
+    executor: angular-starter
     steps:
       - checkout
-      - setup_remote_docker:
-          docker_layer_caching: true
-      - run:
-          name: Log in to Docker
-          command: echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-      - run:
-          name: Deploy the project
-          command: |
-            if [[ "${CIRCLE_BRANCH}" == "develop" ]]; then
-              docker-compose up -d dev
-              docker-compose exec dev yarn firebase use development --token $FIREBASE_TOKEN
-              docker-compose exec dev yarn firebase deploy --only hosting --token $FIREBASE_TOKEN
-            fi
+      - setup_remote_docker
+      # - run:
+      #     name: Log in to Docker
+      #     command: echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+      # - run:
+      #     name: Deploy the project
+      #     command: |
+      #       if [[ "${CIRCLE_BRANCH}" == "develop" ]]; then
+      #         docker-compose up -d dev
+      #         docker-compose exec dev yarn firebase use development --token $FIREBASE_TOKEN
+      #         docker-compose exec dev yarn firebase deploy --only hosting --token $FIREBASE_TOKEN
+      #       fi
 
-            if [[ "${CIRCLE_BRANCH}" == *"release"* ]]; then
-              docker-compose up -d stage
-              docker-compose exec stage yarn firebase use staging --token $FIREBASE_TOKEN
-              docker-compose exec stage yarn firebase deploy --only hosting --token $FIREBASE_TOKEN
-            fi
+      #       if [[ "${CIRCLE_BRANCH}" == *"release"* ]]; then
+      #         docker-compose up -d stage
+      #         docker-compose exec stage yarn firebase use staging --token $FIREBASE_TOKEN
+      #         docker-compose exec stage yarn firebase deploy --only hosting --token $FIREBASE_TOKEN
+      #       fi
 
-            if [[ "${CIRCLE_BRANCH}" == "master" ]]; then
-              docker-compose up -d prod
-              docker-compose exec prod yarn firebase use production --token $FIREBASE_TOKEN
-              docker-compose exec prod yarn firebase deploy --only hosting --token $FIREBASE_TOKEN
-            fi
+      #       if [[ "${CIRCLE_BRANCH}" == "master" ]]; then
+      #         docker-compose up -d prod
+      #         docker-compose exec prod yarn firebase use production --token $FIREBASE_TOKEN
+      #         docker-compose exec prod yarn firebase deploy --only hosting --token $FIREBASE_TOKEN
+      #       fi
 
 workflows:
   version: 2

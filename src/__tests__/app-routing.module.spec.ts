@@ -31,9 +31,9 @@ describe('AppRoutingModule', () => {
       ],
     });
 
-    router = TestBed.get(Router);
-    location = TestBed.get(Location);
-    ngZone = TestBed.get(NgZone);
+    router = TestBed.inject(Router);
+    location = TestBed.inject(Location);
+    ngZone = TestBed.inject(NgZone);
   });
 
   it('should work', fakeAsync(() => {
