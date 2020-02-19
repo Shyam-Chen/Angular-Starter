@@ -48,7 +48,7 @@
     "@ngtools/webpack": "9.0.1",
     "@types/jest": "23.3.2",
     "@types/node": "10.17.14",
-    "codecov": "3.1.0",
+    "codecov": "3.6.5",
     "codelyzer": "4.4.4",
     "copy-webpack-plugin": "4.6.0",
     "cross-env": "5.2.0",
