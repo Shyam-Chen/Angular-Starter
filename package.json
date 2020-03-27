@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A boilerplate for HTML5, Angular, Material, TypeScript, and ReactiveX.",
   "engines": {
-    "node": "10"
+    "node": "12"
   },
   "scripts": {
     "start": "rimraf public && webpack-dev-server --progress",
