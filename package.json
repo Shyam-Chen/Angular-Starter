@@ -8,8 +8,7 @@
     "lint": "tslint 'src/**/*.ts' && stylelint 'src/**/*.css'",
     "unit": "cross-env JEST_ENV=app jest \"src/.*\\.ts$\" --coverage --forceExit --detectOpenHandles",
     "e2e": "cross-env JEST_ENV=e2e jest \"src/.*\\.ts$\" --forceExit --detectOpenHandles",
-    "codecov": "codecov",
-    "firebase": "firebase"
+    "codecov": "codecov"
   },
   "repository": {
     "type": "git",
@@ -52,7 +51,6 @@
     "css-loader": "1.0.1",
     "cssnano": "4.1.7",
     "file-loader": "2.0.0",
-    "firebase-tools": "6.6.0",
     "html-webpack-plugin": "4.0.0-alpha",
     "jest": "23.6.0",
     "jest-preset-angular": "8.0.0",
