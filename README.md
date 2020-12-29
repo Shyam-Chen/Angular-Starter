@@ -57,7 +57,7 @@ $ yarn install
 3. Start a local server
 
 ```bash
-$ yarn start
+$ yarn serve
 ```
 
 4. Compile and bundle code

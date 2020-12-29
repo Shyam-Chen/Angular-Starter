@@ -1,6 +1,6 @@
 FROM node:12
 
-ENV HOME /Angular-Play
+ENV HOME /Angular-Starter
 
 WORKDIR ${HOME}
 ADD . $HOME
@@ -30,6 +30,6 @@ RUN \
   rm -rf /var/lib/apt/lists/* && \
   rm -rf /src/*.deb
 
-RUN yarn install
+RUN npm install
 
 EXPOSE 8000 5000

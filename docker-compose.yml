@@ -10,8 +10,6 @@ services:
     ports:
       - "8000:8000"
       - "5000:5000"
-    volumes:
-      - yarn:/home/node/.cache/yarn
     tty: true
 
   dev:
@@ -19,8 +17,6 @@ services:
     build:
       context: .
       dockerfile: tools/dev.Dockerfile
-    volumes:
-      - yarn:/home/node/.cache/yarn
     tty: true
 
   stage:
@@ -28,8 +24,6 @@ services:
     build:
       context: .
       dockerfile: ./tools/stage.Dockerfile
-    volumes:
-      - yarn:/home/node/.cache/yarn
     tty: true
 
   prod:
@@ -37,9 +31,4 @@ services:
     build:
       context: .
       dockerfile: tools/prod.Dockerfile
-    volumes:
-      - yarn:/home/node/.cache/yarn
     tty: true
-
-volumes:
-  yarn:
