@@ -1,16 +1,24 @@
 declare var global: any;
 
+import { chromium } from 'playwright';
+
 import { SITE_URL, FUNC_URL } from '../env';
 
+jest.setTimeout(100 * 1000);
+
 global.SITE_URL = SITE_URL;
-global.FUNC_URL = FUNC_URL;
 
-const [width, height] = [1280, 800];
+global.mobileViewport = { width: 375, height: 667 };
+global.desktopViewport = { width: 1366, height: 768 };
 
-global.viewport = { width, height };
+beforeAll(async () => {
+  global.browser = await chromium.launch({
+    headless: false,
+    slowMo: 80,
+    args: ['--no-sandbox'],
+  });
+});
 
-global.launch = {
-  headless: false,
-  slowMo: 80,
-  args: [`--window-size=${width},${height}`, '--no-sandbox'],
-};
+afterAll(async () => {
+  await global.browser.close();
+});
